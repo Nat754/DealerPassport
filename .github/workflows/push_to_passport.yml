@@ -1,0 +1,64 @@
+name: PushToPassportDealer
+on:
+  push:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - name: Pass credentials
+      run: |
+        sudo echo "${{ secrets.CREDENTIALS }}" > data.py
+
+    - name: Set up Python 3.12
+      uses: actions/setup-python@v5
+      with:
+        python-version: "3.12"
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install flake8 pytest
+        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+
+    - name: Lint with flake8
+      run: |
+        flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
+        flake8 . --count --exit-zero --max-complexity=10 --max-line-length=220 --statistics
+
+    - name: Run Pytest
+      env:
+        SEO_ADMIN: ${{ secrets.SEO_ADMIN }}
+        SEO_TEST: ${{ secrets.SEO_TEST }}
+        TEST_ADMIN: ${{ secrets.TEST_ADMIN }}
+        TEST_TEST: ${{ secrets.TEST_TEST }}
+        PROD_ADMIN: ${{ secrets.PROD_ADMIN }}
+        PROD_TEST: ${{ secrets.PROD_TEST }}
+        MAIN_URL_SEO: ${{ secrets.MAIN_URL_SEO }}
+        MAIN_URL_PROD: ${{ secrets.MAIN_URL_PROD }}
+        MAIN_URL_TEST: ${{ secrets.MAIN_URL_TEST }}
+      run: |
+        pytest -s -v --alluredir=allure-results
+
+    - name: Get Allure history
+      uses: actions/checkout@v4
+      if: always()
+      with:
+        ref: gh-pages
+        path: gh-pages
+
+    - name: Allure Report action
+      uses: simple-elf/allure-report-action@v1.6
+      if: always()
+      with:
+        allure_results: allure-results
+        allure_history: allure-history
+        keep_reports: 20
+
+    - name: Commit Allure report
+      if: always()
+      uses: peaceiris/actions-gh-pages@v2
+      env:
+        PERSONAL_TOKEN: ${{ secrets.MY_TOKEN }}
+        PUBLISH_BRANCH: gh-pages
+        PUBLISH_DIR: allure-history
