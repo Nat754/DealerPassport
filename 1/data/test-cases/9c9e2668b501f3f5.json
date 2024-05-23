@@ -1,0 +1,200 @@
+{
+  "uid" : "9c9e2668b501f3f5",
+  "name" : "Проверка корректности перехода по ссылке Отчеты СЕО",
+  "fullName" : "tests.main_page_test.TestMainPageRegression#test_clickable_and_redirect_button_reports",
+  "historyId" : "40a60482d299ed56ef5959429874b73c",
+  "time" : {
+    "start" : 1716443650093,
+    "stop" : 1716443655156,
+    "duration" : 5063
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "driver",
+    "time" : {
+      "start" : 1716443647447,
+      "stop" : 1716443647645,
+      "duration" : 198
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "clear_allure_results_folder",
+    "time" : {
+      "start" : 1716442987057,
+      "stop" : 1716442987057,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "auth_user_admin_to_seo_prod",
+    "time" : {
+      "start" : 1716443647645,
+      "stop" : 1716443650092,
+      "duration" : 2447
+    },
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Проверка видимости кнопки '('xpath', '//span[text()=\"Согласен\"]')' на главной странице",
+      "time" : {
+        "start" : 1716443650014,
+        "stop" : 1716443650045,
+        "duration" : 31
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 1,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  } ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Проверка кликабельности кнопки '('xpath', '//span[text()=\"Отчеты\"]')' на главной странице",
+      "time" : {
+        "start" : 1716443652093,
+        "stop" : 1716443652118,
+        "duration" : 25
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 1,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "driver::0",
+    "time" : {
+      "start" : 1716443655157,
+      "stop" : 1716443655217,
+      "duration" : 60
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "epic",
+    "value" : "Test Main Page regression_test"
+  }, {
+    "name" : "tag",
+    "value" : "regression_test"
+  }, {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "main_page_test"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestMainPageRegression"
+  }, {
+    "name" : "host",
+    "value" : "fv-az849-463"
+  }, {
+    "name" : "thread",
+    "value" : "2429-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.main_page_test"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 4,
+        "unknown" : 0,
+        "total" : 4
+      },
+      "items" : [ {
+        "uid" : "488468f0aec62cbb",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/1//#testresult/488468f0aec62cbb",
+        "status" : "passed",
+        "time" : {
+          "start" : 1716430131847,
+          "stop" : 1716430136908,
+          "duration" : 5061
+        }
+      }, {
+        "uid" : "3c60f4b941232b42",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/2//#testresult/3c60f4b941232b42",
+        "status" : "passed",
+        "time" : {
+          "start" : 1716384844461,
+          "stop" : 1716384849524,
+          "duration" : 5063
+        }
+      }, {
+        "uid" : "4d1a418d8dadce86",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/1//#testresult/4d1a418d8dadce86",
+        "status" : "passed",
+        "time" : {
+          "start" : 1716383749567,
+          "stop" : 1716383754632,
+          "duration" : 5065
+        }
+      } ]
+    },
+    "tags" : [ "regression_test" ]
+  },
+  "source" : "9c9e2668b501f3f5.json",
+  "parameterValues" : [ ]
+}
