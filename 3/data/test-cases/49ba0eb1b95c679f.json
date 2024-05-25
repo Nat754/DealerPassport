@@ -1,0 +1,221 @@
+{
+  "uid" : "49ba0eb1b95c679f",
+  "name" : "Проверить отсутствие ошибок при открытии https://dealer-passport.vaz.ru/srr/ на сервере prod",
+  "fullName" : "tests.main_page_test.TestMainPageSmoke#test_open_prod",
+  "historyId" : "b1beea41d0f6358793df59fedc0c3b40",
+  "time" : {
+    "start" : 1716602754371,
+    "stop" : 1716602765231,
+    "duration" : 10860
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "clear_allure_results_folder",
+    "time" : {
+      "start" : 1716602203489,
+      "stop" : 1716602203489,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "auth_user_admin_to_prod",
+    "time" : {
+      "start" : 1716602750913,
+      "stop" : 1716602754370,
+      "duration" : 3457
+    },
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Проверка видимости кнопки '('xpath', '//span[text()=\"Согласен\"]')' на главной странице",
+      "time" : {
+        "start" : 1716602754288,
+        "stop" : 1716602754322,
+        "duration" : 34
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 1,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  }, {
+    "name" : "driver",
+    "time" : {
+      "start" : 1716602750716,
+      "stop" : 1716602750913,
+      "duration" : 197
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Проверить отсутствие ошибок",
+      "time" : {
+        "start" : 1716602754972,
+        "stop" : 1716602765231,
+        "duration" : 10259
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 1,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "driver::0",
+    "time" : {
+      "start" : 1716602765232,
+      "stop" : 1716602765294,
+      "duration" : 62
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "epic",
+    "value" : "Test Main Page smoke_test"
+  }, {
+    "name" : "tag",
+    "value" : "smoke_test"
+  }, {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "main_page_test"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestMainPageSmoke"
+  }, {
+    "name" : "host",
+    "value" : "fv-az1198-380"
+  }, {
+    "name" : "thread",
+    "value" : "2309-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.main_page_test"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "url",
+    "value" : "'https://dealer-passport.vaz.ru/srr/'"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 6,
+        "unknown" : 0,
+        "total" : 6
+      },
+      "items" : [ {
+        "uid" : "7f555dd909bb59dd",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/2//#testresult/7f555dd909bb59dd",
+        "status" : "passed",
+        "time" : {
+          "start" : 1716516438278,
+          "stop" : 1716516449047,
+          "duration" : 10769
+        }
+      }, {
+        "uid" : "25d9c8ce34072808",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/1//#testresult/25d9c8ce34072808",
+        "status" : "passed",
+        "time" : {
+          "start" : 1716443494507,
+          "stop" : 1716443505144,
+          "duration" : 10637
+        }
+      }, {
+        "uid" : "4e0f5d7e2f3475b0",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/1//#testresult/4e0f5d7e2f3475b0",
+        "status" : "passed",
+        "time" : {
+          "start" : 1716429975549,
+          "stop" : 1716429986293,
+          "duration" : 10744
+        }
+      }, {
+        "uid" : "fb962ad545bf0c0f",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/2//#testresult/fb962ad545bf0c0f",
+        "status" : "passed",
+        "time" : {
+          "start" : 1716384687515,
+          "stop" : 1716384698273,
+          "duration" : 10758
+        }
+      }, {
+        "uid" : "5d4e09b7016dca3a",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/1//#testresult/5d4e09b7016dca3a",
+        "status" : "passed",
+        "time" : {
+          "start" : 1716383576020,
+          "stop" : 1716383586819,
+          "duration" : 10799
+        }
+      } ]
+    },
+    "tags" : [ "smoke_test" ]
+  },
+  "source" : "49ba0eb1b95c679f.json",
+  "parameterValues" : [ "'https://dealer-passport.vaz.ru/srr/'" ]
+}
