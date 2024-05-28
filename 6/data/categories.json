@@ -1,0 +1,1135 @@
+{
+  "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "children" : [ {
+    "name" : "Test defects",
+    "children" : [ {
+      "name" : "selenium.common.exceptions.WebDriverException: Message: unknown error: net::ERR_CONNECTION_TIMED_OUT\n  (Session info: chrome-headless-shell=125.0.6422.60)\nStacktrace:\n#0 0x55f4af70ceca <unknown>\n#1 0x55f4af3f645c <unknown>\n#2 0x55f4af3edfd0 <unknown>\n#3 0x55f4af3ddb32 <unknown>\n#4 0x55f4af3df162 <unknown>\n#5 0x55f4af3ddded <unknown>\n#6 0x55f4af3dd503 <unknown>\n#7 0x55f4af3dd3f5 <unknown>\n#8 0x55f4af3db336 <unknown>\n#9 0x55f4af3db83a <unknown>\n#10 0x55f4af3f8ea7 <unknown>\n#11 0x55f4af484ed5 <unknown>\n#12 0x55f4af4654b2 <unknown>\n#13 0x55f4af4842cc <unknown>\n#14 0x55f4af465253 <unknown>\n#15 0x55f4af4351c7 <unknown>\n#16 0x55f4af435b3e <unknown>\n#17 0x55f4af6d330b <unknown>\n#18 0x55f4af6d73b7 <unknown>\n#19 0x55f4af6bfe3e <unknown>\n#20 0x55f4af6d7e82 <unknown>\n#21 0x55f4af6a47df <unknown>\n#22 0x55f4af6fc1b8 <unknown>\n#23 0x55f4af6fc38b <unknown>\n#24 0x55f4af70bffc <unknown>\n#25 0x7f34d7c94ac3 <unknown>",
+      "children" : [ {
+        "name" : "Проверить доступность меню в редакторе на seo",
+        "uid" : "a2aeb18848ddc3a6",
+        "parentUid" : "6f0729dd5e0af0b6663a172e20c2d6a6",
+        "status" : "broken",
+        "time" : {
+          "start" : 1716861599243,
+          "stop" : 1716861599243,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "6f0729dd5e0af0b6663a172e20c2d6a6"
+    }, {
+      "name" : "selenium.common.exceptions.WebDriverException: Message: unknown error: net::ERR_CONNECTION_TIMED_OUT\n  (Session info: chrome-headless-shell=125.0.6422.60)\nStacktrace:\n#0 0x560582afbeca <unknown>\n#1 0x5605827e545c <unknown>\n#2 0x5605827dcfd0 <unknown>\n#3 0x5605827ccb32 <unknown>\n#4 0x5605827ce162 <unknown>\n#5 0x5605827ccded <unknown>\n#6 0x5605827cc503 <unknown>\n#7 0x5605827cc3f5 <unknown>\n#8 0x5605827ca336 <unknown>\n#9 0x5605827ca83a <unknown>\n#10 0x5605827e7ea7 <unknown>\n#11 0x560582873ed5 <unknown>\n#12 0x5605828544b2 <unknown>\n#13 0x5605828732cc <unknown>\n#14 0x560582854253 <unknown>\n#15 0x5605828241c7 <unknown>\n#16 0x560582824b3e <unknown>\n#17 0x560582ac230b <unknown>\n#18 0x560582ac63b7 <unknown>\n#19 0x560582aaee3e <unknown>\n#20 0x560582ac6e82 <unknown>\n#21 0x560582a937df <unknown>\n#22 0x560582aeb1b8 <unknown>\n#23 0x560582aeb38b <unknown>\n#24 0x560582afaffc <unknown>\n#25 0x7f75a8494ac3 <unknown>",
+      "children" : [ {
+        "name" : "Проверить доступность меню в редакторе на seo prod",
+        "uid" : "70ff687c674161e3",
+        "parentUid" : "8352c5a1dac285b2144ac8ff8a6941b6",
+        "status" : "broken",
+        "time" : {
+          "start" : 1716861736304,
+          "stop" : 1716861736304,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "8352c5a1dac285b2144ac8ff8a6941b6"
+    }, {
+      "name" : "requests.exceptions.ConnectTimeout: HTTPSConnectionPool(host='dealer-passport-test.xsfera.ru', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f91ac5ce9f0>, 'Connection to dealer-passport-test.xsfera.ru timed out. (connect timeout=None)'))",
+      "children" : [ {
+        "name" : "Проверка доступности https://dealer-passport-test.xsfera.ru",
+        "uid" : "2849567ef9d6262d",
+        "parentUid" : "c8bf9603468587e274a7160fcd28c9bd",
+        "status" : "broken",
+        "time" : {
+          "start" : 1716861876059,
+          "stop" : 1716862010594,
+          "duration" : 134535
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'https://dealer-passport-test.xsfera.ru'" ]
+      } ],
+      "uid" : "c8bf9603468587e274a7160fcd28c9bd"
+    }, {
+      "name" : "requests.exceptions.ConnectTimeout: HTTPSConnectionPool(host='dealer-passport-test.xsfera.ru', port=443): Max retries exceeded with url: /editor/ (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f91ac5cc4a0>, 'Connection to dealer-passport-test.xsfera.ru timed out. (connect timeout=None)'))",
+      "children" : [ {
+        "name" : "Проверка доступности https://dealer-passport-test.xsfera.ru/editor/",
+        "uid" : "5639e6c547236fc4",
+        "parentUid" : "bca5d4ecdc52da5d7be975009d44d746",
+        "status" : "broken",
+        "time" : {
+          "start" : 1716862010688,
+          "stop" : 1716862145762,
+          "duration" : 135074
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'https://dealer-passport-test.xsfera.ru/editor/'" ]
+      } ],
+      "uid" : "bca5d4ecdc52da5d7be975009d44d746"
+    }, {
+      "name" : "requests.exceptions.ConnectTimeout: HTTPSConnectionPool(host='dealer-passport-test.xsfera.ru', port=443): Max retries exceeded with url: /reports/ (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f91ac5cea80>, 'Connection to dealer-passport-test.xsfera.ru timed out. (connect timeout=None)'))",
+      "children" : [ {
+        "name" : "Проверка доступности https://dealer-passport-test.xsfera.ru/reports/",
+        "uid" : "25b6c8aefdc92f0",
+        "parentUid" : "5bc7980e7462dfc71fe61758bb05de8f",
+        "status" : "broken",
+        "time" : {
+          "start" : 1716862145865,
+          "stop" : 1716862280930,
+          "duration" : 135065
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'https://dealer-passport-test.xsfera.ru/reports/'" ]
+      } ],
+      "uid" : "5bc7980e7462dfc71fe61758bb05de8f"
+    }, {
+      "name" : "requests.exceptions.ConnectTimeout: HTTPSConnectionPool(host='dealer-passport-test.xsfera.ru', port=443): Max retries exceeded with url: /logs/ (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f91ac61c800>, 'Connection to dealer-passport-test.xsfera.ru timed out. (connect timeout=None)'))",
+      "children" : [ {
+        "name" : "Проверка доступности https://dealer-passport-test.xsfera.ru/logs/",
+        "uid" : "7df42d89de737097",
+        "parentUid" : "912868e1bf81d6686a1bce80218c4358",
+        "status" : "broken",
+        "time" : {
+          "start" : 1716862281022,
+          "stop" : 1716862416098,
+          "duration" : 135076
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'https://dealer-passport-test.xsfera.ru/logs/'" ]
+      } ],
+      "uid" : "912868e1bf81d6686a1bce80218c4358"
+    }, {
+      "name" : "requests.exceptions.ConnectTimeout: HTTPSConnectionPool(host='dealer-passport-test.xsfera.ru', port=443): Max retries exceeded with url: /srr/ (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f91ac61d610>, 'Connection to dealer-passport-test.xsfera.ru timed out. (connect timeout=None)'))",
+      "children" : [ {
+        "name" : "Проверка доступности https://dealer-passport-test.xsfera.ru/srr/",
+        "uid" : "fd271483f7a6a86d",
+        "parentUid" : "d81cf77af05ad5e27188573f144a8a7b",
+        "status" : "broken",
+        "time" : {
+          "start" : 1716862416190,
+          "stop" : 1716862551266,
+          "duration" : 135076
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'https://dealer-passport-test.xsfera.ru/srr/'" ]
+      } ],
+      "uid" : "d81cf77af05ad5e27188573f144a8a7b"
+    }, {
+      "name" : "requests.exceptions.ConnectTimeout: HTTPSConnectionPool(host='dealer-passport-test.xsfera.ru', port=443): Max retries exceeded with url: /accounting/ (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f91ac618560>, 'Connection to dealer-passport-test.xsfera.ru timed out. (connect timeout=None)'))",
+      "children" : [ {
+        "name" : "Проверка доступности https://dealer-passport-test.xsfera.ru/accounting/",
+        "uid" : "4a1dcac72c1611bd",
+        "parentUid" : "904984919a177bf82374ee2dfed36cb4",
+        "status" : "broken",
+        "time" : {
+          "start" : 1716862551356,
+          "stop" : 1716862686434,
+          "duration" : 135078
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'https://dealer-passport-test.xsfera.ru/accounting/'" ]
+      } ],
+      "uid" : "904984919a177bf82374ee2dfed36cb4"
+    }, {
+      "name" : "requests.exceptions.ConnectTimeout: HTTPSConnectionPool(host='dealer-passport-test.xsfera.ru', port=443): Max retries exceeded with url: /documents/ (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f91ac619040>, 'Connection to dealer-passport-test.xsfera.ru timed out. (connect timeout=None)'))",
+      "children" : [ {
+        "name" : "Проверка доступности https://dealer-passport-test.xsfera.ru/documents/",
+        "uid" : "ae8015c1986bfe9e",
+        "parentUid" : "8889bf3e46fcff765296667d96663b16",
+        "status" : "broken",
+        "time" : {
+          "start" : 1716862686525,
+          "stop" : 1716862821602,
+          "duration" : 135077
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'https://dealer-passport-test.xsfera.ru/documents/'" ]
+      } ],
+      "uid" : "8889bf3e46fcff765296667d96663b16"
+    }, {
+      "name" : "requests.exceptions.ConnectTimeout: HTTPSConnectionPool(host='dealer-passport-test.xsfera.ru', port=443): Max retries exceeded with url: /zd/ (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f91ac61bc50>, 'Connection to dealer-passport-test.xsfera.ru timed out. (connect timeout=None)'))",
+      "children" : [ {
+        "name" : "Проверка доступности https://dealer-passport-test.xsfera.ru/zd/",
+        "uid" : "66cb523417aa6487",
+        "parentUid" : "021e022d0ff24c13e1c6c55838dff27e",
+        "status" : "broken",
+        "time" : {
+          "start" : 1716862821692,
+          "stop" : 1716862956770,
+          "duration" : 135078
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'https://dealer-passport-test.xsfera.ru/zd/'" ]
+      } ],
+      "uid" : "021e022d0ff24c13e1c6c55838dff27e"
+    }, {
+      "name" : "requests.exceptions.ConnectTimeout: HTTPSConnectionPool(host='dealer-passport-test.xsfera.ru', port=443): Max retries exceeded with url: /gr/ (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f91ac5c89b0>, 'Connection to dealer-passport-test.xsfera.ru timed out. (connect timeout=None)'))",
+      "children" : [ {
+        "name" : "Проверка доступности https://dealer-passport-test.xsfera.ru/gr/",
+        "uid" : "82836adfb4f5eb79",
+        "parentUid" : "21cea315da5be1491c015515f270f4c2",
+        "status" : "broken",
+        "time" : {
+          "start" : 1716862956860,
+          "stop" : 1716863091938,
+          "duration" : 135078
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'https://dealer-passport-test.xsfera.ru/gr/'" ]
+      } ],
+      "uid" : "21cea315da5be1491c015515f270f4c2"
+    }, {
+      "name" : "requests.exceptions.ConnectTimeout: HTTPSConnectionPool(host='dealer-passport-test.xsfera.ru', port=443): Max retries exceeded with url: /q/ (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f91ac5cb380>, 'Connection to dealer-passport-test.xsfera.ru timed out. (connect timeout=None)'))",
+      "children" : [ {
+        "name" : "Проверка доступности https://dealer-passport-test.xsfera.ru/q/",
+        "uid" : "933a894bfa9423b0",
+        "parentUid" : "baf7cf6a553015f9cf3d01e5a977cd93",
+        "status" : "broken",
+        "time" : {
+          "start" : 1716863092030,
+          "stop" : 1716863227106,
+          "duration" : 135076
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'https://dealer-passport-test.xsfera.ru/q/'" ]
+      } ],
+      "uid" : "baf7cf6a553015f9cf3d01e5a977cd93"
+    }, {
+      "name" : "requests.exceptions.ConnectTimeout: HTTPSConnectionPool(host='dealer-passport-test.xsfera.ru', port=443): Max retries exceeded with url: /staff/ (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f91ac2e1550>, 'Connection to dealer-passport-test.xsfera.ru timed out. (connect timeout=None)'))",
+      "children" : [ {
+        "name" : "Проверка доступности https://dealer-passport-test.xsfera.ru/staff/",
+        "uid" : "5d0a11de53913bdc",
+        "parentUid" : "060b9db61f97322273b26ae357478a63",
+        "status" : "broken",
+        "time" : {
+          "start" : 1716863227197,
+          "stop" : 1716863362274,
+          "duration" : 135077
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'https://dealer-passport-test.xsfera.ru/staff/'" ]
+      } ],
+      "uid" : "060b9db61f97322273b26ae357478a63"
+    }, {
+      "name" : "requests.exceptions.ConnectTimeout: HTTPSConnectionPool(host='dealer-passport-test.xsfera.ru', port=443): Max retries exceeded with url: /dealers/ (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f91ac2e2870>, 'Connection to dealer-passport-test.xsfera.ru timed out. (connect timeout=None)'))",
+      "children" : [ {
+        "name" : "Проверка доступности https://dealer-passport-test.xsfera.ru/dealers/",
+        "uid" : "17a8902a0ad06a93",
+        "parentUid" : "fda4f6cfee97dcb1af87595c8270e780",
+        "status" : "broken",
+        "time" : {
+          "start" : 1716863362365,
+          "stop" : 1716863497442,
+          "duration" : 135077
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'https://dealer-passport-test.xsfera.ru/dealers/'" ]
+      } ],
+      "uid" : "fda4f6cfee97dcb1af87595c8270e780"
+    }, {
+      "name" : "requests.exceptions.ConnectTimeout: HTTPSConnectionPool(host='dealer-passport-test.xsfera.ru', port=443): Max retries exceeded with url: /users/ (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f91ac348da0>, 'Connection to dealer-passport-test.xsfera.ru timed out. (connect timeout=None)'))",
+      "children" : [ {
+        "name" : "Проверка доступности https://dealer-passport-test.xsfera.ru/users/",
+        "uid" : "20d64bf01fe5992f",
+        "parentUid" : "03a546d6a1816a030dfdf71b24537228",
+        "status" : "broken",
+        "time" : {
+          "start" : 1716863497532,
+          "stop" : 1716863632610,
+          "duration" : 135078
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'https://dealer-passport-test.xsfera.ru/users/'" ]
+      } ],
+      "uid" : "03a546d6a1816a030dfdf71b24537228"
+    }, {
+      "name" : "requests.exceptions.ConnectTimeout: HTTPSConnectionPool(host='dealer-passport-test.xsfera.ru', port=443): Max retries exceeded with url: /indicators/ (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f91ac349c70>, 'Connection to dealer-passport-test.xsfera.ru timed out. (connect timeout=None)'))",
+      "children" : [ {
+        "name" : "Проверка доступности https://dealer-passport-test.xsfera.ru/indicators/",
+        "uid" : "2d3978b12654f09e",
+        "parentUid" : "54b3156ecfcc573873e233411e25e270",
+        "status" : "broken",
+        "time" : {
+          "start" : 1716863632700,
+          "stop" : 1716863767778,
+          "duration" : 135078
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'https://dealer-passport-test.xsfera.ru/indicators/'" ]
+      } ],
+      "uid" : "54b3156ecfcc573873e233411e25e270"
+    }, {
+      "name" : "requests.exceptions.ConnectTimeout: HTTPSConnectionPool(host='dealer-passport-test.xsfera.ru', port=443): Max retries exceeded with url: /uploads/ (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f91ac2ccb90>, 'Connection to dealer-passport-test.xsfera.ru timed out. (connect timeout=None)'))",
+      "children" : [ {
+        "name" : "Проверка доступности https://dealer-passport-test.xsfera.ru/uploads/",
+        "uid" : "f5f2bc55577d28f1",
+        "parentUid" : "0a4e7991487cf6698f2ff207c7ae9e85",
+        "status" : "broken",
+        "time" : {
+          "start" : 1716863767870,
+          "stop" : 1716863902946,
+          "duration" : 135076
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'https://dealer-passport-test.xsfera.ru/uploads/'" ]
+      } ],
+      "uid" : "0a4e7991487cf6698f2ff207c7ae9e85"
+    }, {
+      "name" : "requests.exceptions.ConnectTimeout: HTTPSConnectionPool(host='dealer-passport-test.xsfera.ru', port=3001): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f91ac2ced20>, 'Connection to dealer-passport-test.xsfera.ru timed out. (connect timeout=None)'))",
+      "children" : [ {
+        "name" : "Проверка доступности https://dealer-passport-test.xsfera.ru:3001",
+        "uid" : "82635d213ba96a4",
+        "parentUid" : "dedfed2998d17c8966799301beb03fac",
+        "status" : "broken",
+        "time" : {
+          "start" : 1716863903037,
+          "stop" : 1716864038114,
+          "duration" : 135077
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'https://dealer-passport-test.xsfera.ru:3001'" ]
+      } ],
+      "uid" : "dedfed2998d17c8966799301beb03fac"
+    }, {
+      "name" : "requests.exceptions.ConnectTimeout: HTTPSConnectionPool(host='dealer-passport-test.xsfera.ru', port=3001): Max retries exceeded with url: /editor/ (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f91ac299850>, 'Connection to dealer-passport-test.xsfera.ru timed out. (connect timeout=None)'))",
+      "children" : [ {
+        "name" : "Проверка доступности https://dealer-passport-test.xsfera.ru:3001/editor/",
+        "uid" : "bca2eeb3009c8171",
+        "parentUid" : "a612992983d130d4aff5b8cc620e21ec",
+        "status" : "broken",
+        "time" : {
+          "start" : 1716864038205,
+          "stop" : 1716864173282,
+          "duration" : 135077
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'https://dealer-passport-test.xsfera.ru:3001/editor/'" ]
+      } ],
+      "uid" : "a612992983d130d4aff5b8cc620e21ec"
+    }, {
+      "name" : "requests.exceptions.ConnectTimeout: HTTPSConnectionPool(host='dealer-passport-test.xsfera.ru', port=3001): Max retries exceeded with url: /reports/ (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f91ac29a030>, 'Connection to dealer-passport-test.xsfera.ru timed out. (connect timeout=None)'))",
+      "children" : [ {
+        "name" : "Проверка доступности https://dealer-passport-test.xsfera.ru:3001/reports/",
+        "uid" : "85fc80841612086d",
+        "parentUid" : "ba7fcf99fd7e545f6daf6ab8d29a3732",
+        "status" : "broken",
+        "time" : {
+          "start" : 1716864173374,
+          "stop" : 1716864308450,
+          "duration" : 135076
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'https://dealer-passport-test.xsfera.ru:3001/reports/'" ]
+      } ],
+      "uid" : "ba7fcf99fd7e545f6daf6ab8d29a3732"
+    }, {
+      "name" : "requests.exceptions.ConnectTimeout: HTTPSConnectionPool(host='dealer-passport-test.xsfera.ru', port=3001): Max retries exceeded with url: /logs/ (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f91ac29b8c0>, 'Connection to dealer-passport-test.xsfera.ru timed out. (connect timeout=None)'))",
+      "children" : [ {
+        "name" : "Проверка доступности https://dealer-passport-test.xsfera.ru:3001/logs/",
+        "uid" : "50cba230f43b5812",
+        "parentUid" : "5e9a1d335dfb47305bc97bb1ff3ed1f5",
+        "status" : "broken",
+        "time" : {
+          "start" : 1716864308541,
+          "stop" : 1716864443618,
+          "duration" : 135077
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'https://dealer-passport-test.xsfera.ru:3001/logs/'" ]
+      } ],
+      "uid" : "5e9a1d335dfb47305bc97bb1ff3ed1f5"
+    }, {
+      "name" : "requests.exceptions.ConnectTimeout: HTTPSConnectionPool(host='dealer-passport-test.xsfera.ru', port=3001): Max retries exceeded with url: /srr/ (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f91ac3c4fe0>, 'Connection to dealer-passport-test.xsfera.ru timed out. (connect timeout=None)'))",
+      "children" : [ {
+        "name" : "Проверка доступности https://dealer-passport-test.xsfera.ru:3001/srr/",
+        "uid" : "8727a739f16f70f3",
+        "parentUid" : "34e774c6ccbdc89d498317068e7163ab",
+        "status" : "broken",
+        "time" : {
+          "start" : 1716864443709,
+          "stop" : 1716864578786,
+          "duration" : 135077
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'https://dealer-passport-test.xsfera.ru:3001/srr/'" ]
+      } ],
+      "uid" : "34e774c6ccbdc89d498317068e7163ab"
+    }, {
+      "name" : "requests.exceptions.ConnectTimeout: HTTPSConnectionPool(host='dealer-passport-test.xsfera.ru', port=3001): Max retries exceeded with url: /accounting/ (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f91ac3c6ab0>, 'Connection to dealer-passport-test.xsfera.ru timed out. (connect timeout=None)'))",
+      "children" : [ {
+        "name" : "Проверка доступности https://dealer-passport-test.xsfera.ru:3001/accounting/",
+        "uid" : "255ab9bd3509a7ad",
+        "parentUid" : "5c5f494b1122a388dd8327784196ff50",
+        "status" : "broken",
+        "time" : {
+          "start" : 1716864578877,
+          "stop" : 1716864713954,
+          "duration" : 135077
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'https://dealer-passport-test.xsfera.ru:3001/accounting/'" ]
+      } ],
+      "uid" : "5c5f494b1122a388dd8327784196ff50"
+    }, {
+      "name" : "requests.exceptions.ConnectTimeout: HTTPSConnectionPool(host='dealer-passport-test.xsfera.ru', port=3001): Max retries exceeded with url: /documents/ (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f91ac2992b0>, 'Connection to dealer-passport-test.xsfera.ru timed out. (connect timeout=None)'))",
+      "children" : [ {
+        "name" : "Проверка доступности https://dealer-passport-test.xsfera.ru:3001/documents/",
+        "uid" : "a5383cd65bb19b42",
+        "parentUid" : "6c412e94ed3b18c820e1c5b4d1742493",
+        "status" : "broken",
+        "time" : {
+          "start" : 1716864714058,
+          "stop" : 1716864849122,
+          "duration" : 135064
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'https://dealer-passport-test.xsfera.ru:3001/documents/'" ]
+      } ],
+      "uid" : "6c412e94ed3b18c820e1c5b4d1742493"
+    }, {
+      "name" : "requests.exceptions.ConnectTimeout: HTTPSConnectionPool(host='dealer-passport-test.xsfera.ru', port=3001): Max retries exceeded with url: /zd/ (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f91ac3482c0>, 'Connection to dealer-passport-test.xsfera.ru timed out. (connect timeout=None)'))",
+      "children" : [ {
+        "name" : "Проверка доступности https://dealer-passport-test.xsfera.ru:3001/zd/",
+        "uid" : "f1a646a57724b95b",
+        "parentUid" : "fbbf883c973fe285d100d2bf50bafaac",
+        "status" : "broken",
+        "time" : {
+          "start" : 1716864849212,
+          "stop" : 1716864984290,
+          "duration" : 135078
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'https://dealer-passport-test.xsfera.ru:3001/zd/'" ]
+      } ],
+      "uid" : "fbbf883c973fe285d100d2bf50bafaac"
+    }, {
+      "name" : "requests.exceptions.ConnectTimeout: HTTPSConnectionPool(host='dealer-passport-test.xsfera.ru', port=3001): Max retries exceeded with url: /gr/ (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f91ac348a70>, 'Connection to dealer-passport-test.xsfera.ru timed out. (connect timeout=None)'))",
+      "children" : [ {
+        "name" : "Проверка доступности https://dealer-passport-test.xsfera.ru:3001/gr/",
+        "uid" : "65764d45f8482971",
+        "parentUid" : "39d2fc50c1e5211045fc1d1c4739529e",
+        "status" : "broken",
+        "time" : {
+          "start" : 1716864984382,
+          "stop" : 1716865119458,
+          "duration" : 135076
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'https://dealer-passport-test.xsfera.ru:3001/gr/'" ]
+      } ],
+      "uid" : "39d2fc50c1e5211045fc1d1c4739529e"
+    }, {
+      "name" : "requests.exceptions.ConnectTimeout: HTTPSConnectionPool(host='dealer-passport-test.xsfera.ru', port=3001): Max retries exceeded with url: /q/ (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f91ac5c89b0>, 'Connection to dealer-passport-test.xsfera.ru timed out. (connect timeout=None)'))",
+      "children" : [ {
+        "name" : "Проверка доступности https://dealer-passport-test.xsfera.ru:3001/q/",
+        "uid" : "4524cffea2eaf451",
+        "parentUid" : "4b2852bce1a62ea2bf18dd2146647c07",
+        "status" : "broken",
+        "time" : {
+          "start" : 1716865119549,
+          "stop" : 1716865254626,
+          "duration" : 135077
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'https://dealer-passport-test.xsfera.ru:3001/q/'" ]
+      } ],
+      "uid" : "4b2852bce1a62ea2bf18dd2146647c07"
+    }, {
+      "name" : "requests.exceptions.ConnectTimeout: HTTPSConnectionPool(host='dealer-passport-test.xsfera.ru', port=3001): Max retries exceeded with url: /staff/ (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f91ac61b2f0>, 'Connection to dealer-passport-test.xsfera.ru timed out. (connect timeout=None)'))",
+      "children" : [ {
+        "name" : "Проверка доступности https://dealer-passport-test.xsfera.ru:3001/staff/",
+        "uid" : "c73441150d564e5d",
+        "parentUid" : "287c0ec6be0b95a3a8843621589ea538",
+        "status" : "broken",
+        "time" : {
+          "start" : 1716865254717,
+          "stop" : 1716865389794,
+          "duration" : 135077
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'https://dealer-passport-test.xsfera.ru:3001/staff/'" ]
+      } ],
+      "uid" : "287c0ec6be0b95a3a8843621589ea538"
+    }, {
+      "name" : "requests.exceptions.ConnectTimeout: HTTPSConnectionPool(host='dealer-passport-test.xsfera.ru', port=3001): Max retries exceeded with url: /dealers/ (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f91ac61cdd0>, 'Connection to dealer-passport-test.xsfera.ru timed out. (connect timeout=None)'))",
+      "children" : [ {
+        "name" : "Проверка доступности https://dealer-passport-test.xsfera.ru:3001/dealers/",
+        "uid" : "6e6d9693ac25951a",
+        "parentUid" : "63934ae13ed0ba1ea28a5e602575f326",
+        "status" : "broken",
+        "time" : {
+          "start" : 1716865389884,
+          "stop" : 1716865524962,
+          "duration" : 135078
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'https://dealer-passport-test.xsfera.ru:3001/dealers/'" ]
+      } ],
+      "uid" : "63934ae13ed0ba1ea28a5e602575f326"
+    }, {
+      "name" : "requests.exceptions.ConnectTimeout: HTTPSConnectionPool(host='dealer-passport-test.xsfera.ru', port=3001): Max retries exceeded with url: /users/ (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f91ac5cf380>, 'Connection to dealer-passport-test.xsfera.ru timed out. (connect timeout=None)'))",
+      "children" : [ {
+        "name" : "Проверка доступности https://dealer-passport-test.xsfera.ru:3001/users/",
+        "uid" : "12b1d742d87d1a2e",
+        "parentUid" : "25ee104de0e96b5b89955e834abdaca8",
+        "status" : "broken",
+        "time" : {
+          "start" : 1716865525053,
+          "stop" : 1716865660130,
+          "duration" : 135077
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'https://dealer-passport-test.xsfera.ru:3001/users/'" ]
+      } ],
+      "uid" : "25ee104de0e96b5b89955e834abdaca8"
+    }, {
+      "name" : "requests.exceptions.ConnectTimeout: HTTPSConnectionPool(host='dealer-passport-test.xsfera.ru', port=3001): Max retries exceeded with url: /indicators/ (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f91ac439310>, 'Connection to dealer-passport-test.xsfera.ru timed out. (connect timeout=None)'))",
+      "children" : [ {
+        "name" : "Проверка доступности https://dealer-passport-test.xsfera.ru:3001/indicators/",
+        "uid" : "a9be37252ac03a02",
+        "parentUid" : "cfb64d0387f33c55504feaa525d5a530",
+        "status" : "broken",
+        "time" : {
+          "start" : 1716865660222,
+          "stop" : 1716865795298,
+          "duration" : 135076
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'https://dealer-passport-test.xsfera.ru:3001/indicators/'" ]
+      } ],
+      "uid" : "cfb64d0387f33c55504feaa525d5a530"
+    }, {
+      "name" : "requests.exceptions.ConnectTimeout: HTTPSConnectionPool(host='dealer-passport-test.xsfera.ru', port=3001): Max retries exceeded with url: /uploads/ (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f91ac48c1a0>, 'Connection to dealer-passport-test.xsfera.ru timed out. (connect timeout=None)'))",
+      "children" : [ {
+        "name" : "Проверка доступности https://dealer-passport-test.xsfera.ru:3001/uploads/",
+        "uid" : "dd08cfe647494cd9",
+        "parentUid" : "8d1ec89f0d68e188c01b0f7e9241e363",
+        "status" : "broken",
+        "time" : {
+          "start" : 1716865795389,
+          "stop" : 1716865930466,
+          "duration" : 135077
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'https://dealer-passport-test.xsfera.ru:3001/uploads/'" ]
+      } ],
+      "uid" : "8d1ec89f0d68e188c01b0f7e9241e363"
+    }, {
+      "name" : "selenium.common.exceptions.WebDriverException: Message: unknown error: net::ERR_CONNECTION_TIMED_OUT\n  (Session info: chrome-headless-shell=125.0.6422.60)\nStacktrace:\n#0 0x55abca411eca <unknown>\n#1 0x55abca0fb45c <unknown>\n#2 0x55abca0f2fd0 <unknown>\n#3 0x55abca0e2b32 <unknown>\n#4 0x55abca0e4162 <unknown>\n#5 0x55abca0e2ded <unknown>\n#6 0x55abca0e2503 <unknown>\n#7 0x55abca0e23f5 <unknown>\n#8 0x55abca0e0336 <unknown>\n#9 0x55abca0e083a <unknown>\n#10 0x55abca0fdea7 <unknown>\n#11 0x55abca189ed5 <unknown>\n#12 0x55abca16a4b2 <unknown>\n#13 0x55abca1892cc <unknown>\n#14 0x55abca16a253 <unknown>\n#15 0x55abca13a1c7 <unknown>\n#16 0x55abca13ab3e <unknown>\n#17 0x55abca3d830b <unknown>\n#18 0x55abca3dc3b7 <unknown>\n#19 0x55abca3c4e3e <unknown>\n#20 0x55abca3dce82 <unknown>\n#21 0x55abca3a97df <unknown>\n#22 0x55abca4011b8 <unknown>\n#23 0x55abca40138b <unknown>\n#24 0x55abca410ffc <unknown>\n#25 0x7f0bc8094ac3 <unknown>",
+      "children" : [ {
+        "name" : "test_open_seo[https://dealer-passport-test.xsfera.ru]",
+        "uid" : "1cb6ed86083d3926",
+        "parentUid" : "502a9ade47aaa32578026f013ad3a56e",
+        "status" : "broken",
+        "time" : {
+          "start" : 1716865944066,
+          "stop" : 1716865944066,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'https://dealer-passport-test.xsfera.ru'" ]
+      } ],
+      "uid" : "502a9ade47aaa32578026f013ad3a56e"
+    }, {
+      "name" : "selenium.common.exceptions.WebDriverException: Message: unknown error: net::ERR_CONNECTION_TIMED_OUT\n  (Session info: chrome-headless-shell=125.0.6422.60)\nStacktrace:\n#0 0x56132c4a5eca <unknown>\n#1 0x56132c18f45c <unknown>\n#2 0x56132c186fd0 <unknown>\n#3 0x56132c176b32 <unknown>\n#4 0x56132c178162 <unknown>\n#5 0x56132c176ded <unknown>\n#6 0x56132c176503 <unknown>\n#7 0x56132c1763f5 <unknown>\n#8 0x56132c174336 <unknown>\n#9 0x56132c17483a <unknown>\n#10 0x56132c191ea7 <unknown>\n#11 0x56132c21ded5 <unknown>\n#12 0x56132c1fe4b2 <unknown>\n#13 0x56132c21d2cc <unknown>\n#14 0x56132c1fe253 <unknown>\n#15 0x56132c1ce1c7 <unknown>\n#16 0x56132c1ceb3e <unknown>\n#17 0x56132c46c30b <unknown>\n#18 0x56132c4703b7 <unknown>\n#19 0x56132c458e3e <unknown>\n#20 0x56132c470e82 <unknown>\n#21 0x56132c43d7df <unknown>\n#22 0x56132c4951b8 <unknown>\n#23 0x56132c49538b <unknown>\n#24 0x56132c4a4ffc <unknown>\n#25 0x7fa788094ac3 <unknown>",
+      "children" : [ {
+        "name" : "test_open_seo[https://dealer-passport-test.xsfera.ru/editor/]",
+        "uid" : "eba3e03ccb2fe1b7",
+        "parentUid" : "6dda54777a967da1801510179b10d2e9",
+        "status" : "broken",
+        "time" : {
+          "start" : 1716866078033,
+          "stop" : 1716866078033,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'https://dealer-passport-test.xsfera.ru/editor/'" ]
+      } ],
+      "uid" : "6dda54777a967da1801510179b10d2e9"
+    }, {
+      "name" : "selenium.common.exceptions.WebDriverException: Message: unknown error: net::ERR_CONNECTION_TIMED_OUT\n  (Session info: chrome-headless-shell=125.0.6422.60)\nStacktrace:\n#0 0x55f567fdeeca <unknown>\n#1 0x55f567cc845c <unknown>\n#2 0x55f567cbffd0 <unknown>\n#3 0x55f567cafb32 <unknown>\n#4 0x55f567cb1162 <unknown>\n#5 0x55f567cafded <unknown>\n#6 0x55f567caf503 <unknown>\n#7 0x55f567caf3f5 <unknown>\n#8 0x55f567cad336 <unknown>\n#9 0x55f567cad83a <unknown>\n#10 0x55f567ccaea7 <unknown>\n#11 0x55f567d56ed5 <unknown>\n#12 0x55f567d374b2 <unknown>\n#13 0x55f567d562cc <unknown>\n#14 0x55f567d37253 <unknown>\n#15 0x55f567d071c7 <unknown>\n#16 0x55f567d07b3e <unknown>\n#17 0x55f567fa530b <unknown>\n#18 0x55f567fa93b7 <unknown>\n#19 0x55f567f91e3e <unknown>\n#20 0x55f567fa9e82 <unknown>\n#21 0x55f567f767df <unknown>\n#22 0x55f567fce1b8 <unknown>\n#23 0x55f567fce38b <unknown>\n#24 0x55f567fddffc <unknown>\n#25 0x7f7304894ac3 <unknown>",
+      "children" : [ {
+        "name" : "test_open_seo[https://dealer-passport-test.xsfera.ru/reports/]",
+        "uid" : "ab56cc7c9755b5c1",
+        "parentUid" : "ceeaea4881a3ff5a135f0a76c7bd3b87",
+        "status" : "broken",
+        "time" : {
+          "start" : 1716866213201,
+          "stop" : 1716866213201,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'https://dealer-passport-test.xsfera.ru/reports/'" ]
+      } ],
+      "uid" : "ceeaea4881a3ff5a135f0a76c7bd3b87"
+    }, {
+      "name" : "selenium.common.exceptions.WebDriverException: Message: unknown error: net::ERR_CONNECTION_TIMED_OUT\n  (Session info: chrome-headless-shell=125.0.6422.60)\nStacktrace:\n#0 0x5606d0628eca <unknown>\n#1 0x5606d031245c <unknown>\n#2 0x5606d0309fd0 <unknown>\n#3 0x5606d02f9b32 <unknown>\n#4 0x5606d02fb162 <unknown>\n#5 0x5606d02f9ded <unknown>\n#6 0x5606d02f9503 <unknown>\n#7 0x5606d02f93f5 <unknown>\n#8 0x5606d02f7336 <unknown>\n#9 0x5606d02f783a <unknown>\n#10 0x5606d0314ea7 <unknown>\n#11 0x5606d03a0ed5 <unknown>\n#12 0x5606d03814b2 <unknown>\n#13 0x5606d03a02cc <unknown>\n#14 0x5606d0381253 <unknown>\n#15 0x5606d03511c7 <unknown>\n#16 0x5606d0351b3e <unknown>\n#17 0x5606d05ef30b <unknown>\n#18 0x5606d05f33b7 <unknown>\n#19 0x5606d05dbe3e <unknown>\n#20 0x5606d05f3e82 <unknown>\n#21 0x5606d05c07df <unknown>\n#22 0x5606d06181b8 <unknown>\n#23 0x5606d061838b <unknown>\n#24 0x5606d0627ffc <unknown>\n#25 0x7f73d6294ac3 <unknown>",
+      "children" : [ {
+        "name" : "test_open_seo[https://dealer-passport-test.xsfera.ru/logs/]",
+        "uid" : "262507299bd565b",
+        "parentUid" : "ea116c22d3eefe6f7fc3429499db4858",
+        "status" : "broken",
+        "time" : {
+          "start" : 1716866348369,
+          "stop" : 1716866348369,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'https://dealer-passport-test.xsfera.ru/logs/'" ]
+      } ],
+      "uid" : "ea116c22d3eefe6f7fc3429499db4858"
+    }, {
+      "name" : "selenium.common.exceptions.WebDriverException: Message: unknown error: net::ERR_CONNECTION_TIMED_OUT\n  (Session info: chrome-headless-shell=125.0.6422.60)\nStacktrace:\n#0 0x557e8fe59eca <unknown>\n#1 0x557e8fb4345c <unknown>\n#2 0x557e8fb3afd0 <unknown>\n#3 0x557e8fb2ab32 <unknown>\n#4 0x557e8fb2c162 <unknown>\n#5 0x557e8fb2aded <unknown>\n#6 0x557e8fb2a503 <unknown>\n#7 0x557e8fb2a3f5 <unknown>\n#8 0x557e8fb28336 <unknown>\n#9 0x557e8fb2883a <unknown>\n#10 0x557e8fb45ea7 <unknown>\n#11 0x557e8fbd1ed5 <unknown>\n#12 0x557e8fbb24b2 <unknown>\n#13 0x557e8fbd12cc <unknown>\n#14 0x557e8fbb2253 <unknown>\n#15 0x557e8fb821c7 <unknown>\n#16 0x557e8fb82b3e <unknown>\n#17 0x557e8fe2030b <unknown>\n#18 0x557e8fe243b7 <unknown>\n#19 0x557e8fe0ce3e <unknown>\n#20 0x557e8fe24e82 <unknown>\n#21 0x557e8fdf17df <unknown>\n#22 0x557e8fe491b8 <unknown>\n#23 0x557e8fe4938b <unknown>\n#24 0x557e8fe58ffc <unknown>\n#25 0x7f13d9294ac3 <unknown>",
+      "children" : [ {
+        "name" : "test_open_seo[https://dealer-passport-test.xsfera.ru/srr/]",
+        "uid" : "7dc73e5e37d1f60d",
+        "parentUid" : "8f99226e6446515d5b3ab951a02a5d37",
+        "status" : "broken",
+        "time" : {
+          "start" : 1716866483537,
+          "stop" : 1716866483537,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'https://dealer-passport-test.xsfera.ru/srr/'" ]
+      } ],
+      "uid" : "8f99226e6446515d5b3ab951a02a5d37"
+    }, {
+      "name" : "selenium.common.exceptions.WebDriverException: Message: unknown error: net::ERR_CONNECTION_TIMED_OUT\n  (Session info: chrome-headless-shell=125.0.6422.60)\nStacktrace:\n#0 0x55e3a1da7eca <unknown>\n#1 0x55e3a1a9145c <unknown>\n#2 0x55e3a1a88fd0 <unknown>\n#3 0x55e3a1a78b32 <unknown>\n#4 0x55e3a1a7a162 <unknown>\n#5 0x55e3a1a78ded <unknown>\n#6 0x55e3a1a78503 <unknown>\n#7 0x55e3a1a783f5 <unknown>\n#8 0x55e3a1a76336 <unknown>\n#9 0x55e3a1a7683a <unknown>\n#10 0x55e3a1a93ea7 <unknown>\n#11 0x55e3a1b1fed5 <unknown>\n#12 0x55e3a1b004b2 <unknown>\n#13 0x55e3a1b1f2cc <unknown>\n#14 0x55e3a1b00253 <unknown>\n#15 0x55e3a1ad01c7 <unknown>\n#16 0x55e3a1ad0b3e <unknown>\n#17 0x55e3a1d6e30b <unknown>\n#18 0x55e3a1d723b7 <unknown>\n#19 0x55e3a1d5ae3e <unknown>\n#20 0x55e3a1d72e82 <unknown>\n#21 0x55e3a1d3f7df <unknown>\n#22 0x55e3a1d971b8 <unknown>\n#23 0x55e3a1d9738b <unknown>\n#24 0x55e3a1da6ffc <unknown>\n#25 0x7f4838894ac3 <unknown>",
+      "children" : [ {
+        "name" : "test_open_seo[https://dealer-passport-test.xsfera.ru/accounting/]",
+        "uid" : "98ba402410ac99af",
+        "parentUid" : "be93fbe145b478639241954cfb74f089",
+        "status" : "broken",
+        "time" : {
+          "start" : 1716866618707,
+          "stop" : 1716866618707,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'https://dealer-passport-test.xsfera.ru/accounting/'" ]
+      } ],
+      "uid" : "be93fbe145b478639241954cfb74f089"
+    }, {
+      "name" : "selenium.common.exceptions.WebDriverException: Message: unknown error: net::ERR_CONNECTION_TIMED_OUT\n  (Session info: chrome-headless-shell=125.0.6422.60)\nStacktrace:\n#0 0x55f1b489beca <unknown>\n#1 0x55f1b458545c <unknown>\n#2 0x55f1b457cfd0 <unknown>\n#3 0x55f1b456cb32 <unknown>\n#4 0x55f1b456e162 <unknown>\n#5 0x55f1b456cded <unknown>\n#6 0x55f1b456c503 <unknown>\n#7 0x55f1b456c3f5 <unknown>\n#8 0x55f1b456a336 <unknown>\n#9 0x55f1b456a83a <unknown>\n#10 0x55f1b4587ea7 <unknown>\n#11 0x55f1b4613ed5 <unknown>\n#12 0x55f1b45f44b2 <unknown>\n#13 0x55f1b46132cc <unknown>\n#14 0x55f1b45f4253 <unknown>\n#15 0x55f1b45c41c7 <unknown>\n#16 0x55f1b45c4b3e <unknown>\n#17 0x55f1b486230b <unknown>\n#18 0x55f1b48663b7 <unknown>\n#19 0x55f1b484ee3e <unknown>\n#20 0x55f1b4866e82 <unknown>\n#21 0x55f1b48337df <unknown>\n#22 0x55f1b488b1b8 <unknown>\n#23 0x55f1b488b38b <unknown>\n#24 0x55f1b489affc <unknown>\n#25 0x7f17cbe94ac3 <unknown>",
+      "children" : [ {
+        "name" : "test_open_seo[https://dealer-passport-test.xsfera.ru/documents/]",
+        "uid" : "a9a015d52eddb2b",
+        "parentUid" : "29ac58b87f0e1d4da39a56504f6cc69d",
+        "status" : "broken",
+        "time" : {
+          "start" : 1716866753872,
+          "stop" : 1716866753872,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'https://dealer-passport-test.xsfera.ru/documents/'" ]
+      } ],
+      "uid" : "29ac58b87f0e1d4da39a56504f6cc69d"
+    }, {
+      "name" : "selenium.common.exceptions.WebDriverException: Message: unknown error: net::ERR_CONNECTION_TIMED_OUT\n  (Session info: chrome-headless-shell=125.0.6422.60)\nStacktrace:\n#0 0x55d6bd39ceca <unknown>\n#1 0x55d6bd08645c <unknown>\n#2 0x55d6bd07dfd0 <unknown>\n#3 0x55d6bd06db32 <unknown>\n#4 0x55d6bd06f162 <unknown>\n#5 0x55d6bd06dded <unknown>\n#6 0x55d6bd06d503 <unknown>\n#7 0x55d6bd06d3f5 <unknown>\n#8 0x55d6bd06b336 <unknown>\n#9 0x55d6bd06b83a <unknown>\n#10 0x55d6bd088ea7 <unknown>\n#11 0x55d6bd114ed5 <unknown>\n#12 0x55d6bd0f54b2 <unknown>\n#13 0x55d6bd1142cc <unknown>\n#14 0x55d6bd0f5253 <unknown>\n#15 0x55d6bd0c51c7 <unknown>\n#16 0x55d6bd0c5b3e <unknown>\n#17 0x55d6bd36330b <unknown>\n#18 0x55d6bd3673b7 <unknown>\n#19 0x55d6bd34fe3e <unknown>\n#20 0x55d6bd367e82 <unknown>\n#21 0x55d6bd3347df <unknown>\n#22 0x55d6bd38c1b8 <unknown>\n#23 0x55d6bd38c38b <unknown>\n#24 0x55d6bd39bffc <unknown>\n#25 0x7fa615694ac3 <unknown>",
+      "children" : [ {
+        "name" : "test_open_seo[https://dealer-passport-test.xsfera.ru/zd/]",
+        "uid" : "7f838822b7156b42",
+        "parentUid" : "185f30ebea2d09b187b8623d87924cce",
+        "status" : "broken",
+        "time" : {
+          "start" : 1716866889040,
+          "stop" : 1716866889040,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'https://dealer-passport-test.xsfera.ru/zd/'" ]
+      } ],
+      "uid" : "185f30ebea2d09b187b8623d87924cce"
+    }, {
+      "name" : "selenium.common.exceptions.WebDriverException: Message: unknown error: net::ERR_CONNECTION_TIMED_OUT\n  (Session info: chrome-headless-shell=125.0.6422.60)\nStacktrace:\n#0 0x5602260ffeca <unknown>\n#1 0x560225de945c <unknown>\n#2 0x560225de0fd0 <unknown>\n#3 0x560225dd0b32 <unknown>\n#4 0x560225dd2162 <unknown>\n#5 0x560225dd0ded <unknown>\n#6 0x560225dd0503 <unknown>\n#7 0x560225dd03f5 <unknown>\n#8 0x560225dce336 <unknown>\n#9 0x560225dce83a <unknown>\n#10 0x560225debea7 <unknown>\n#11 0x560225e77ed5 <unknown>\n#12 0x560225e584b2 <unknown>\n#13 0x560225e772cc <unknown>\n#14 0x560225e58253 <unknown>\n#15 0x560225e281c7 <unknown>\n#16 0x560225e28b3e <unknown>\n#17 0x5602260c630b <unknown>\n#18 0x5602260ca3b7 <unknown>\n#19 0x5602260b2e3e <unknown>\n#20 0x5602260cae82 <unknown>\n#21 0x5602260977df <unknown>\n#22 0x5602260ef1b8 <unknown>\n#23 0x5602260ef38b <unknown>\n#24 0x5602260feffc <unknown>\n#25 0x7f8720494ac3 <unknown>",
+      "children" : [ {
+        "name" : "test_open_seo[https://dealer-passport-test.xsfera.ru/gr/]",
+        "uid" : "64263b08d209b7a",
+        "parentUid" : "6ea5cd2b580c8adcf98e9b22995183ae",
+        "status" : "broken",
+        "time" : {
+          "start" : 1716867024211,
+          "stop" : 1716867024211,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'https://dealer-passport-test.xsfera.ru/gr/'" ]
+      } ],
+      "uid" : "6ea5cd2b580c8adcf98e9b22995183ae"
+    }, {
+      "name" : "selenium.common.exceptions.WebDriverException: Message: unknown error: net::ERR_CONNECTION_TIMED_OUT\n  (Session info: chrome-headless-shell=125.0.6422.60)\nStacktrace:\n#0 0x55efbdfc4eca <unknown>\n#1 0x55efbdcae45c <unknown>\n#2 0x55efbdca5fd0 <unknown>\n#3 0x55efbdc95b32 <unknown>\n#4 0x55efbdc97162 <unknown>\n#5 0x55efbdc95ded <unknown>\n#6 0x55efbdc95503 <unknown>\n#7 0x55efbdc953f5 <unknown>\n#8 0x55efbdc93336 <unknown>\n#9 0x55efbdc9383a <unknown>\n#10 0x55efbdcb0ea7 <unknown>\n#11 0x55efbdd3ced5 <unknown>\n#12 0x55efbdd1d4b2 <unknown>\n#13 0x55efbdd3c2cc <unknown>\n#14 0x55efbdd1d253 <unknown>\n#15 0x55efbdced1c7 <unknown>\n#16 0x55efbdcedb3e <unknown>\n#17 0x55efbdf8b30b <unknown>\n#18 0x55efbdf8f3b7 <unknown>\n#19 0x55efbdf77e3e <unknown>\n#20 0x55efbdf8fe82 <unknown>\n#21 0x55efbdf5c7df <unknown>\n#22 0x55efbdfb41b8 <unknown>\n#23 0x55efbdfb438b <unknown>\n#24 0x55efbdfc3ffc <unknown>\n#25 0x7f4e58694ac3 <unknown>",
+      "children" : [ {
+        "name" : "test_open_seo[https://dealer-passport-test.xsfera.ru/q/]",
+        "uid" : "97115d901348611f",
+        "parentUid" : "62a24197a14b45c60f6736d1f605d8d0",
+        "status" : "broken",
+        "time" : {
+          "start" : 1716867159377,
+          "stop" : 1716867159377,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'https://dealer-passport-test.xsfera.ru/q/'" ]
+      } ],
+      "uid" : "62a24197a14b45c60f6736d1f605d8d0"
+    }, {
+      "name" : "selenium.common.exceptions.WebDriverException: Message: unknown error: net::ERR_CONNECTION_TIMED_OUT\n  (Session info: chrome-headless-shell=125.0.6422.60)\nStacktrace:\n#0 0x5596dffa0eca <unknown>\n#1 0x5596dfc8a45c <unknown>\n#2 0x5596dfc81fd0 <unknown>\n#3 0x5596dfc71b32 <unknown>\n#4 0x5596dfc73162 <unknown>\n#5 0x5596dfc71ded <unknown>\n#6 0x5596dfc71503 <unknown>\n#7 0x5596dfc713f5 <unknown>\n#8 0x5596dfc6f336 <unknown>\n#9 0x5596dfc6f83a <unknown>\n#10 0x5596dfc8cea7 <unknown>\n#11 0x5596dfd18ed5 <unknown>\n#12 0x5596dfcf94b2 <unknown>\n#13 0x5596dfd182cc <unknown>\n#14 0x5596dfcf9253 <unknown>\n#15 0x5596dfcc91c7 <unknown>\n#16 0x5596dfcc9b3e <unknown>\n#17 0x5596dff6730b <unknown>\n#18 0x5596dff6b3b7 <unknown>\n#19 0x5596dff53e3e <unknown>\n#20 0x5596dff6be82 <unknown>\n#21 0x5596dff387df <unknown>\n#22 0x5596dff901b8 <unknown>\n#23 0x5596dff9038b <unknown>\n#24 0x5596dff9fffc <unknown>\n#25 0x7f56d7494ac3 <unknown>",
+      "children" : [ {
+        "name" : "test_open_seo[https://dealer-passport-test.xsfera.ru/staff/]",
+        "uid" : "bb5c70972579103b",
+        "parentUid" : "95a08a872fc2aa2a8fc5abc05d2db17e",
+        "status" : "broken",
+        "time" : {
+          "start" : 1716867294545,
+          "stop" : 1716867294545,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'https://dealer-passport-test.xsfera.ru/staff/'" ]
+      } ],
+      "uid" : "95a08a872fc2aa2a8fc5abc05d2db17e"
+    }, {
+      "name" : "selenium.common.exceptions.WebDriverException: Message: unknown error: net::ERR_CONNECTION_TIMED_OUT\n  (Session info: chrome-headless-shell=125.0.6422.60)\nStacktrace:\n#0 0x5654a5060eca <unknown>\n#1 0x5654a4d4a45c <unknown>\n#2 0x5654a4d41fd0 <unknown>\n#3 0x5654a4d31b32 <unknown>\n#4 0x5654a4d33162 <unknown>\n#5 0x5654a4d31ded <unknown>\n#6 0x5654a4d31503 <unknown>\n#7 0x5654a4d313f5 <unknown>\n#8 0x5654a4d2f336 <unknown>\n#9 0x5654a4d2f83a <unknown>\n#10 0x5654a4d4cea7 <unknown>\n#11 0x5654a4dd8ed5 <unknown>\n#12 0x5654a4db94b2 <unknown>\n#13 0x5654a4dd82cc <unknown>\n#14 0x5654a4db9253 <unknown>\n#15 0x5654a4d891c7 <unknown>\n#16 0x5654a4d89b3e <unknown>\n#17 0x5654a502730b <unknown>\n#18 0x5654a502b3b7 <unknown>\n#19 0x5654a5013e3e <unknown>\n#20 0x5654a502be82 <unknown>\n#21 0x5654a4ff87df <unknown>\n#22 0x5654a50501b8 <unknown>\n#23 0x5654a505038b <unknown>\n#24 0x5654a505fffc <unknown>\n#25 0x7ff169494ac3 <unknown>",
+      "children" : [ {
+        "name" : "test_open_seo[https://dealer-passport-test.xsfera.ru/dealers/]",
+        "uid" : "e4058b76973acc95",
+        "parentUid" : "ea545c05646d6a2c0e5feea74f309a42",
+        "status" : "broken",
+        "time" : {
+          "start" : 1716867429714,
+          "stop" : 1716867429714,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'https://dealer-passport-test.xsfera.ru/dealers/'" ]
+      } ],
+      "uid" : "ea545c05646d6a2c0e5feea74f309a42"
+    }, {
+      "name" : "selenium.common.exceptions.WebDriverException: Message: unknown error: net::ERR_CONNECTION_TIMED_OUT\n  (Session info: chrome-headless-shell=125.0.6422.60)\nStacktrace:\n#0 0x55f4a531ceca <unknown>\n#1 0x55f4a500645c <unknown>\n#2 0x55f4a4ffdfd0 <unknown>\n#3 0x55f4a4fedb32 <unknown>\n#4 0x55f4a4fef162 <unknown>\n#5 0x55f4a4fedded <unknown>\n#6 0x55f4a4fed503 <unknown>\n#7 0x55f4a4fed3f5 <unknown>\n#8 0x55f4a4feb336 <unknown>\n#9 0x55f4a4feb83a <unknown>\n#10 0x55f4a5008ea7 <unknown>\n#11 0x55f4a5094ed5 <unknown>\n#12 0x55f4a50754b2 <unknown>\n#13 0x55f4a50942cc <unknown>\n#14 0x55f4a5075253 <unknown>\n#15 0x55f4a50451c7 <unknown>\n#16 0x55f4a5045b3e <unknown>\n#17 0x55f4a52e330b <unknown>\n#18 0x55f4a52e73b7 <unknown>\n#19 0x55f4a52cfe3e <unknown>\n#20 0x55f4a52e7e82 <unknown>\n#21 0x55f4a52b47df <unknown>\n#22 0x55f4a530c1b8 <unknown>\n#23 0x55f4a530c38b <unknown>\n#24 0x55f4a531bffc <unknown>\n#25 0x7fe258a94ac3 <unknown>",
+      "children" : [ {
+        "name" : "test_open_seo[https://dealer-passport-test.xsfera.ru/users/]",
+        "uid" : "ee8e4e26bbaa5d6c",
+        "parentUid" : "88971f484136aaff17a8fb33bbfd525b",
+        "status" : "broken",
+        "time" : {
+          "start" : 1716867564881,
+          "stop" : 1716867564881,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'https://dealer-passport-test.xsfera.ru/users/'" ]
+      } ],
+      "uid" : "88971f484136aaff17a8fb33bbfd525b"
+    }, {
+      "name" : "selenium.common.exceptions.WebDriverException: Message: unknown error: net::ERR_CONNECTION_TIMED_OUT\n  (Session info: chrome-headless-shell=125.0.6422.60)\nStacktrace:\n#0 0x55618a70eeca <unknown>\n#1 0x55618a3f845c <unknown>\n#2 0x55618a3effd0 <unknown>\n#3 0x55618a3dfb32 <unknown>\n#4 0x55618a3e1162 <unknown>\n#5 0x55618a3dfded <unknown>\n#6 0x55618a3df503 <unknown>\n#7 0x55618a3df3f5 <unknown>\n#8 0x55618a3dd336 <unknown>\n#9 0x55618a3dd83a <unknown>\n#10 0x55618a3faea7 <unknown>\n#11 0x55618a486ed5 <unknown>\n#12 0x55618a4674b2 <unknown>\n#13 0x55618a4862cc <unknown>\n#14 0x55618a467253 <unknown>\n#15 0x55618a4371c7 <unknown>\n#16 0x55618a437b3e <unknown>\n#17 0x55618a6d530b <unknown>\n#18 0x55618a6d93b7 <unknown>\n#19 0x55618a6c1e3e <unknown>\n#20 0x55618a6d9e82 <unknown>\n#21 0x55618a6a67df <unknown>\n#22 0x55618a6fe1b8 <unknown>\n#23 0x55618a6fe38b <unknown>\n#24 0x55618a70dffc <unknown>\n#25 0x7f43cba94ac3 <unknown>",
+      "children" : [ {
+        "name" : "test_open_seo[https://dealer-passport-test.xsfera.ru/indicators/]",
+        "uid" : "480235ca10f0d280",
+        "parentUid" : "439c50055ad38d8adcc691c32a235e62",
+        "status" : "broken",
+        "time" : {
+          "start" : 1716867700049,
+          "stop" : 1716867700049,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'https://dealer-passport-test.xsfera.ru/indicators/'" ]
+      } ],
+      "uid" : "439c50055ad38d8adcc691c32a235e62"
+    }, {
+      "name" : "selenium.common.exceptions.WebDriverException: Message: unknown error: net::ERR_CONNECTION_TIMED_OUT\n  (Session info: chrome-headless-shell=125.0.6422.60)\nStacktrace:\n#0 0x56320899ceca <unknown>\n#1 0x56320868645c <unknown>\n#2 0x56320867dfd0 <unknown>\n#3 0x56320866db32 <unknown>\n#4 0x56320866f162 <unknown>\n#5 0x56320866dded <unknown>\n#6 0x56320866d503 <unknown>\n#7 0x56320866d3f5 <unknown>\n#8 0x56320866b336 <unknown>\n#9 0x56320866b83a <unknown>\n#10 0x563208688ea7 <unknown>\n#11 0x563208714ed5 <unknown>\n#12 0x5632086f54b2 <unknown>\n#13 0x5632087142cc <unknown>\n#14 0x5632086f5253 <unknown>\n#15 0x5632086c51c7 <unknown>\n#16 0x5632086c5b3e <unknown>\n#17 0x56320896330b <unknown>\n#18 0x5632089673b7 <unknown>\n#19 0x56320894fe3e <unknown>\n#20 0x563208967e82 <unknown>\n#21 0x5632089347df <unknown>\n#22 0x56320898c1b8 <unknown>\n#23 0x56320898c38b <unknown>\n#24 0x56320899bffc <unknown>\n#25 0x7fb680a94ac3 <unknown>",
+      "children" : [ {
+        "name" : "test_open_seo[https://dealer-passport-test.xsfera.ru/uploads/]",
+        "uid" : "8c5cfb8b7ab98ab0",
+        "parentUid" : "520de01c73345b8fc8f7fba39ecc458d",
+        "status" : "broken",
+        "time" : {
+          "start" : 1716867835217,
+          "stop" : 1716867835217,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'https://dealer-passport-test.xsfera.ru/uploads/'" ]
+      } ],
+      "uid" : "520de01c73345b8fc8f7fba39ecc458d"
+    }, {
+      "name" : "selenium.common.exceptions.WebDriverException: Message: unknown error: net::ERR_CONNECTION_TIMED_OUT\n  (Session info: chrome-headless-shell=125.0.6422.60)\nStacktrace:\n#0 0x56069548feca <unknown>\n#1 0x56069517945c <unknown>\n#2 0x560695170fd0 <unknown>\n#3 0x560695160b32 <unknown>\n#4 0x560695162162 <unknown>\n#5 0x560695160ded <unknown>\n#6 0x560695160503 <unknown>\n#7 0x5606951603f5 <unknown>\n#8 0x56069515e336 <unknown>\n#9 0x56069515e83a <unknown>\n#10 0x56069517bea7 <unknown>\n#11 0x560695207ed5 <unknown>\n#12 0x5606951e84b2 <unknown>\n#13 0x5606952072cc <unknown>\n#14 0x5606951e8253 <unknown>\n#15 0x5606951b81c7 <unknown>\n#16 0x5606951b8b3e <unknown>\n#17 0x56069545630b <unknown>\n#18 0x56069545a3b7 <unknown>\n#19 0x560695442e3e <unknown>\n#20 0x56069545ae82 <unknown>\n#21 0x5606954277df <unknown>\n#22 0x56069547f1b8 <unknown>\n#23 0x56069547f38b <unknown>\n#24 0x56069548effc <unknown>\n#25 0x7f9123294ac3 <unknown>",
+      "children" : [ {
+        "name" : "test_open_seo_prod[https://dealer-passport-test.xsfera.ru:3001]",
+        "uid" : "16d2ab20ba2c67b5",
+        "parentUid" : "f9f1a6464fe917d61a076f83f95b8301",
+        "status" : "broken",
+        "time" : {
+          "start" : 1716867970384,
+          "stop" : 1716867970384,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'https://dealer-passport-test.xsfera.ru:3001'" ]
+      } ],
+      "uid" : "f9f1a6464fe917d61a076f83f95b8301"
+    }, {
+      "name" : "selenium.common.exceptions.WebDriverException: Message: unknown error: net::ERR_CONNECTION_TIMED_OUT\n  (Session info: chrome-headless-shell=125.0.6422.60)\nStacktrace:\n#0 0x5585dae32eca <unknown>\n#1 0x5585dab1c45c <unknown>\n#2 0x5585dab13fd0 <unknown>\n#3 0x5585dab03b32 <unknown>\n#4 0x5585dab05162 <unknown>\n#5 0x5585dab03ded <unknown>\n#6 0x5585dab03503 <unknown>\n#7 0x5585dab033f5 <unknown>\n#8 0x5585dab01336 <unknown>\n#9 0x5585dab0183a <unknown>\n#10 0x5585dab1eea7 <unknown>\n#11 0x5585dabaaed5 <unknown>\n#12 0x5585dab8b4b2 <unknown>\n#13 0x5585dabaa2cc <unknown>\n#14 0x5585dab8b253 <unknown>\n#15 0x5585dab5b1c7 <unknown>\n#16 0x5585dab5bb3e <unknown>\n#17 0x5585dadf930b <unknown>\n#18 0x5585dadfd3b7 <unknown>\n#19 0x5585dade5e3e <unknown>\n#20 0x5585dadfde82 <unknown>\n#21 0x5585dadca7df <unknown>\n#22 0x5585dae221b8 <unknown>\n#23 0x5585dae2238b <unknown>\n#24 0x5585dae31ffc <unknown>\n#25 0x7fcacf694ac3 <unknown>",
+      "children" : [ {
+        "name" : "test_open_seo_prod[https://dealer-passport-test.xsfera.ru:3001/editor/]",
+        "uid" : "384fb0db00ddc32d",
+        "parentUid" : "ada72a2678fa2c0185aa8344d623ee4b",
+        "status" : "broken",
+        "time" : {
+          "start" : 1716868105552,
+          "stop" : 1716868105552,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'https://dealer-passport-test.xsfera.ru:3001/editor/'" ]
+      } ],
+      "uid" : "ada72a2678fa2c0185aa8344d623ee4b"
+    }, {
+      "name" : "selenium.common.exceptions.WebDriverException: Message: unknown error: net::ERR_CONNECTION_TIMED_OUT\n  (Session info: chrome-headless-shell=125.0.6422.60)\nStacktrace:\n#0 0x56017c6ebeca <unknown>\n#1 0x56017c3d545c <unknown>\n#2 0x56017c3ccfd0 <unknown>\n#3 0x56017c3bcb32 <unknown>\n#4 0x56017c3be162 <unknown>\n#5 0x56017c3bcded <unknown>\n#6 0x56017c3bc503 <unknown>\n#7 0x56017c3bc3f5 <unknown>\n#8 0x56017c3ba336 <unknown>\n#9 0x56017c3ba83a <unknown>\n#10 0x56017c3d7ea7 <unknown>\n#11 0x56017c463ed5 <unknown>\n#12 0x56017c4444b2 <unknown>\n#13 0x56017c4632cc <unknown>\n#14 0x56017c444253 <unknown>\n#15 0x56017c4141c7 <unknown>\n#16 0x56017c414b3e <unknown>\n#17 0x56017c6b230b <unknown>\n#18 0x56017c6b63b7 <unknown>\n#19 0x56017c69ee3e <unknown>\n#20 0x56017c6b6e82 <unknown>\n#21 0x56017c6837df <unknown>\n#22 0x56017c6db1b8 <unknown>\n#23 0x56017c6db38b <unknown>\n#24 0x56017c6eaffc <unknown>\n#25 0x7fcb37c94ac3 <unknown>",
+      "children" : [ {
+        "name" : "test_open_seo_prod[https://dealer-passport-test.xsfera.ru:3001/reports/]",
+        "uid" : "3de06c8178412e31",
+        "parentUid" : "257366705bbda1e1e9343b58b93a0fc4",
+        "status" : "broken",
+        "time" : {
+          "start" : 1716868240735,
+          "stop" : 1716868240735,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'https://dealer-passport-test.xsfera.ru:3001/reports/'" ]
+      } ],
+      "uid" : "257366705bbda1e1e9343b58b93a0fc4"
+    }, {
+      "name" : "selenium.common.exceptions.WebDriverException: Message: unknown error: net::ERR_CONNECTION_TIMED_OUT\n  (Session info: chrome-headless-shell=125.0.6422.60)\nStacktrace:\n#0 0x5583e657deca <unknown>\n#1 0x5583e626745c <unknown>\n#2 0x5583e625efd0 <unknown>\n#3 0x5583e624eb32 <unknown>\n#4 0x5583e6250162 <unknown>\n#5 0x5583e624eded <unknown>\n#6 0x5583e624e503 <unknown>\n#7 0x5583e624e3f5 <unknown>\n#8 0x5583e624c336 <unknown>\n#9 0x5583e624c83a <unknown>\n#10 0x5583e6269ea7 <unknown>\n#11 0x5583e62f5ed5 <unknown>\n#12 0x5583e62d64b2 <unknown>\n#13 0x5583e62f52cc <unknown>\n#14 0x5583e62d6253 <unknown>\n#15 0x5583e62a61c7 <unknown>\n#16 0x5583e62a6b3e <unknown>\n#17 0x5583e654430b <unknown>\n#18 0x5583e65483b7 <unknown>\n#19 0x5583e6530e3e <unknown>\n#20 0x5583e6548e82 <unknown>\n#21 0x5583e65157df <unknown>\n#22 0x5583e656d1b8 <unknown>\n#23 0x5583e656d38b <unknown>\n#24 0x5583e657cffc <unknown>\n#25 0x7f0682e94ac3 <unknown>",
+      "children" : [ {
+        "name" : "test_open_seo_prod[https://dealer-passport-test.xsfera.ru:3001/logs/]",
+        "uid" : "559f269cb48d1423",
+        "parentUid" : "1eaf3dbf49c54a1523f6cd8ddf86dc72",
+        "status" : "broken",
+        "time" : {
+          "start" : 1716868375889,
+          "stop" : 1716868375889,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'https://dealer-passport-test.xsfera.ru:3001/logs/'" ]
+      } ],
+      "uid" : "1eaf3dbf49c54a1523f6cd8ddf86dc72"
+    }, {
+      "name" : "selenium.common.exceptions.WebDriverException: Message: unknown error: net::ERR_CONNECTION_TIMED_OUT\n  (Session info: chrome-headless-shell=125.0.6422.60)\nStacktrace:\n#0 0x5588718a6eca <unknown>\n#1 0x55887159045c <unknown>\n#2 0x558871587fd0 <unknown>\n#3 0x558871577b32 <unknown>\n#4 0x558871579162 <unknown>\n#5 0x558871577ded <unknown>\n#6 0x558871577503 <unknown>\n#7 0x5588715773f5 <unknown>\n#8 0x558871575336 <unknown>\n#9 0x55887157583a <unknown>\n#10 0x558871592ea7 <unknown>\n#11 0x55887161eed5 <unknown>\n#12 0x5588715ff4b2 <unknown>\n#13 0x55887161e2cc <unknown>\n#14 0x5588715ff253 <unknown>\n#15 0x5588715cf1c7 <unknown>\n#16 0x5588715cfb3e <unknown>\n#17 0x55887186d30b <unknown>\n#18 0x5588718713b7 <unknown>\n#19 0x558871859e3e <unknown>\n#20 0x558871871e82 <unknown>\n#21 0x55887183e7df <unknown>\n#22 0x5588718961b8 <unknown>\n#23 0x55887189638b <unknown>\n#24 0x5588718a5ffc <unknown>\n#25 0x7f7d65494ac3 <unknown>",
+      "children" : [ {
+        "name" : "test_open_seo_prod[https://dealer-passport-test.xsfera.ru:3001/srr/]",
+        "uid" : "a1b53d34b1cdb526",
+        "parentUid" : "2c366ac9f3a5d2ab19b5d7dec970cb3f",
+        "status" : "broken",
+        "time" : {
+          "start" : 1716868511057,
+          "stop" : 1716868511057,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'https://dealer-passport-test.xsfera.ru:3001/srr/'" ]
+      } ],
+      "uid" : "2c366ac9f3a5d2ab19b5d7dec970cb3f"
+    }, {
+      "name" : "selenium.common.exceptions.WebDriverException: Message: unknown error: net::ERR_CONNECTION_TIMED_OUT\n  (Session info: chrome-headless-shell=125.0.6422.60)\nStacktrace:\n#0 0x55a521205eca <unknown>\n#1 0x55a520eef45c <unknown>\n#2 0x55a520ee6fd0 <unknown>\n#3 0x55a520ed6b32 <unknown>\n#4 0x55a520ed8162 <unknown>\n#5 0x55a520ed6ded <unknown>\n#6 0x55a520ed6503 <unknown>\n#7 0x55a520ed63f5 <unknown>\n#8 0x55a520ed4336 <unknown>\n#9 0x55a520ed483a <unknown>\n#10 0x55a520ef1ea7 <unknown>\n#11 0x55a520f7ded5 <unknown>\n#12 0x55a520f5e4b2 <unknown>\n#13 0x55a520f7d2cc <unknown>\n#14 0x55a520f5e253 <unknown>\n#15 0x55a520f2e1c7 <unknown>\n#16 0x55a520f2eb3e <unknown>\n#17 0x55a5211cc30b <unknown>\n#18 0x55a5211d03b7 <unknown>\n#19 0x55a5211b8e3e <unknown>\n#20 0x55a5211d0e82 <unknown>\n#21 0x55a52119d7df <unknown>\n#22 0x55a5211f51b8 <unknown>\n#23 0x55a5211f538b <unknown>\n#24 0x55a521204ffc <unknown>\n#25 0x7f3d4c694ac3 <unknown>",
+      "children" : [ {
+        "name" : "test_open_seo_prod[https://dealer-passport-test.xsfera.ru:3001/accounting/]",
+        "uid" : "1fc61cec740fb3a1",
+        "parentUid" : "b0d148ff78e65e29603a5c790df11f17",
+        "status" : "broken",
+        "time" : {
+          "start" : 1716868646226,
+          "stop" : 1716868646226,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'https://dealer-passport-test.xsfera.ru:3001/accounting/'" ]
+      } ],
+      "uid" : "b0d148ff78e65e29603a5c790df11f17"
+    }, {
+      "name" : "selenium.common.exceptions.WebDriverException: Message: unknown error: net::ERR_CONNECTION_TIMED_OUT\n  (Session info: chrome-headless-shell=125.0.6422.60)\nStacktrace:\n#0 0x5569d74cdeca <unknown>\n#1 0x5569d71b745c <unknown>\n#2 0x5569d71aefd0 <unknown>\n#3 0x5569d719eb32 <unknown>\n#4 0x5569d71a0162 <unknown>\n#5 0x5569d719eded <unknown>\n#6 0x5569d719e503 <unknown>\n#7 0x5569d719e3f5 <unknown>\n#8 0x5569d719c336 <unknown>\n#9 0x5569d719c83a <unknown>\n#10 0x5569d71b9ea7 <unknown>\n#11 0x5569d7245ed5 <unknown>\n#12 0x5569d72264b2 <unknown>\n#13 0x5569d72452cc <unknown>\n#14 0x5569d7226253 <unknown>\n#15 0x5569d71f61c7 <unknown>\n#16 0x5569d71f6b3e <unknown>\n#17 0x5569d749430b <unknown>\n#18 0x5569d74983b7 <unknown>\n#19 0x5569d7480e3e <unknown>\n#20 0x5569d7498e82 <unknown>\n#21 0x5569d74657df <unknown>\n#22 0x5569d74bd1b8 <unknown>\n#23 0x5569d74bd38b <unknown>\n#24 0x5569d74ccffc <unknown>\n#25 0x7fd929094ac3 <unknown>",
+      "children" : [ {
+        "name" : "test_open_seo_prod[https://dealer-passport-test.xsfera.ru:3001/documents/]",
+        "uid" : "55a0eb3eb2e2fee",
+        "parentUid" : "2eeafbf84976e8c739ea1e06315d0345",
+        "status" : "broken",
+        "time" : {
+          "start" : 1716868781394,
+          "stop" : 1716868781394,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'https://dealer-passport-test.xsfera.ru:3001/documents/'" ]
+      } ],
+      "uid" : "2eeafbf84976e8c739ea1e06315d0345"
+    }, {
+      "name" : "selenium.common.exceptions.WebDriverException: Message: unknown error: net::ERR_CONNECTION_TIMED_OUT\n  (Session info: chrome-headless-shell=125.0.6422.60)\nStacktrace:\n#0 0x5644a9e22eca <unknown>\n#1 0x5644a9b0c45c <unknown>\n#2 0x5644a9b03fd0 <unknown>\n#3 0x5644a9af3b32 <unknown>\n#4 0x5644a9af5162 <unknown>\n#5 0x5644a9af3ded <unknown>\n#6 0x5644a9af3503 <unknown>\n#7 0x5644a9af33f5 <unknown>\n#8 0x5644a9af1336 <unknown>\n#9 0x5644a9af183a <unknown>\n#10 0x5644a9b0eea7 <unknown>\n#11 0x5644a9b9aed5 <unknown>\n#12 0x5644a9b7b4b2 <unknown>\n#13 0x5644a9b9a2cc <unknown>\n#14 0x5644a9b7b253 <unknown>\n#15 0x5644a9b4b1c7 <unknown>\n#16 0x5644a9b4bb3e <unknown>\n#17 0x5644a9de930b <unknown>\n#18 0x5644a9ded3b7 <unknown>\n#19 0x5644a9dd5e3e <unknown>\n#20 0x5644a9dede82 <unknown>\n#21 0x5644a9dba7df <unknown>\n#22 0x5644a9e121b8 <unknown>\n#23 0x5644a9e1238b <unknown>\n#24 0x5644a9e21ffc <unknown>\n#25 0x7fd2ad094ac3 <unknown>",
+      "children" : [ {
+        "name" : "test_open_seo_prod[https://dealer-passport-test.xsfera.ru:3001/zd/]",
+        "uid" : "ddbc1242464e41f3",
+        "parentUid" : "01c2986a08278901870831c0dac00d56",
+        "status" : "broken",
+        "time" : {
+          "start" : 1716868916561,
+          "stop" : 1716868916561,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'https://dealer-passport-test.xsfera.ru:3001/zd/'" ]
+      } ],
+      "uid" : "01c2986a08278901870831c0dac00d56"
+    }, {
+      "name" : "selenium.common.exceptions.WebDriverException: Message: unknown error: net::ERR_CONNECTION_TIMED_OUT\n  (Session info: chrome-headless-shell=125.0.6422.60)\nStacktrace:\n#0 0x557ea9d16eca <unknown>\n#1 0x557ea9a0045c <unknown>\n#2 0x557ea99f7fd0 <unknown>\n#3 0x557ea99e7b32 <unknown>\n#4 0x557ea99e9162 <unknown>\n#5 0x557ea99e7ded <unknown>\n#6 0x557ea99e7503 <unknown>\n#7 0x557ea99e73f5 <unknown>\n#8 0x557ea99e5336 <unknown>\n#9 0x557ea99e583a <unknown>\n#10 0x557ea9a02ea7 <unknown>\n#11 0x557ea9a8eed5 <unknown>\n#12 0x557ea9a6f4b2 <unknown>\n#13 0x557ea9a8e2cc <unknown>\n#14 0x557ea9a6f253 <unknown>\n#15 0x557ea9a3f1c7 <unknown>\n#16 0x557ea9a3fb3e <unknown>\n#17 0x557ea9cdd30b <unknown>\n#18 0x557ea9ce13b7 <unknown>\n#19 0x557ea9cc9e3e <unknown>\n#20 0x557ea9ce1e82 <unknown>\n#21 0x557ea9cae7df <unknown>\n#22 0x557ea9d061b8 <unknown>\n#23 0x557ea9d0638b <unknown>\n#24 0x557ea9d15ffc <unknown>\n#25 0x7fa8a1294ac3 <unknown>",
+      "children" : [ {
+        "name" : "test_open_seo_prod[https://dealer-passport-test.xsfera.ru:3001/gr/]",
+        "uid" : "73251d39930ff301",
+        "parentUid" : "258c7a834f0dd4cbd464e70af4ef8d93",
+        "status" : "broken",
+        "time" : {
+          "start" : 1716869051730,
+          "stop" : 1716869051730,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'https://dealer-passport-test.xsfera.ru:3001/gr/'" ]
+      } ],
+      "uid" : "258c7a834f0dd4cbd464e70af4ef8d93"
+    }, {
+      "name" : "selenium.common.exceptions.WebDriverException: Message: unknown error: net::ERR_CONNECTION_TIMED_OUT\n  (Session info: chrome-headless-shell=125.0.6422.60)\nStacktrace:\n#0 0x55791f476eca <unknown>\n#1 0x55791f16045c <unknown>\n#2 0x55791f157fd0 <unknown>\n#3 0x55791f147b32 <unknown>\n#4 0x55791f149162 <unknown>\n#5 0x55791f147ded <unknown>\n#6 0x55791f147503 <unknown>\n#7 0x55791f1473f5 <unknown>\n#8 0x55791f145336 <unknown>\n#9 0x55791f14583a <unknown>\n#10 0x55791f162ea7 <unknown>\n#11 0x55791f1eeed5 <unknown>\n#12 0x55791f1cf4b2 <unknown>\n#13 0x55791f1ee2cc <unknown>\n#14 0x55791f1cf253 <unknown>\n#15 0x55791f19f1c7 <unknown>\n#16 0x55791f19fb3e <unknown>\n#17 0x55791f43d30b <unknown>\n#18 0x55791f4413b7 <unknown>\n#19 0x55791f429e3e <unknown>\n#20 0x55791f441e82 <unknown>\n#21 0x55791f40e7df <unknown>\n#22 0x55791f4661b8 <unknown>\n#23 0x55791f46638b <unknown>\n#24 0x55791f475ffc <unknown>\n#25 0x7ff1cb094ac3 <unknown>",
+      "children" : [ {
+        "name" : "test_open_seo_prod[https://dealer-passport-test.xsfera.ru:3001/q/]",
+        "uid" : "5e3b206c59c6b956",
+        "parentUid" : "203231ed7889943f9531b270ac9593ff",
+        "status" : "broken",
+        "time" : {
+          "start" : 1716869186897,
+          "stop" : 1716869186897,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'https://dealer-passport-test.xsfera.ru:3001/q/'" ]
+      } ],
+      "uid" : "203231ed7889943f9531b270ac9593ff"
+    }, {
+      "name" : "selenium.common.exceptions.WebDriverException: Message: unknown error: net::ERR_CONNECTION_TIMED_OUT\n  (Session info: chrome-headless-shell=125.0.6422.60)\nStacktrace:\n#0 0x564e12543eca <unknown>\n#1 0x564e1222d45c <unknown>\n#2 0x564e12224fd0 <unknown>\n#3 0x564e12214b32 <unknown>\n#4 0x564e12216162 <unknown>\n#5 0x564e12214ded <unknown>\n#6 0x564e12214503 <unknown>\n#7 0x564e122143f5 <unknown>\n#8 0x564e12212336 <unknown>\n#9 0x564e1221283a <unknown>\n#10 0x564e1222fea7 <unknown>\n#11 0x564e122bbed5 <unknown>\n#12 0x564e1229c4b2 <unknown>\n#13 0x564e122bb2cc <unknown>\n#14 0x564e1229c253 <unknown>\n#15 0x564e1226c1c7 <unknown>\n#16 0x564e1226cb3e <unknown>\n#17 0x564e1250a30b <unknown>\n#18 0x564e1250e3b7 <unknown>\n#19 0x564e124f6e3e <unknown>\n#20 0x564e1250ee82 <unknown>\n#21 0x564e124db7df <unknown>\n#22 0x564e125331b8 <unknown>\n#23 0x564e1253338b <unknown>\n#24 0x564e12542ffc <unknown>\n#25 0x7f5884a94ac3 <unknown>",
+      "children" : [ {
+        "name" : "test_open_seo_prod[https://dealer-passport-test.xsfera.ru:3001/staff/]",
+        "uid" : "b9e76bcb2487ff58",
+        "parentUid" : "36bb00432d837b690978d2901e79f8e4",
+        "status" : "broken",
+        "time" : {
+          "start" : 1716869322066,
+          "stop" : 1716869322066,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'https://dealer-passport-test.xsfera.ru:3001/staff/'" ]
+      } ],
+      "uid" : "36bb00432d837b690978d2901e79f8e4"
+    }, {
+      "name" : "selenium.common.exceptions.WebDriverException: Message: unknown error: net::ERR_CONNECTION_TIMED_OUT\n  (Session info: chrome-headless-shell=125.0.6422.60)\nStacktrace:\n#0 0x557510a3ceca <unknown>\n#1 0x55751072645c <unknown>\n#2 0x55751071dfd0 <unknown>\n#3 0x55751070db32 <unknown>\n#4 0x55751070f162 <unknown>\n#5 0x55751070dded <unknown>\n#6 0x55751070d503 <unknown>\n#7 0x55751070d3f5 <unknown>\n#8 0x55751070b336 <unknown>\n#9 0x55751070b83a <unknown>\n#10 0x557510728ea7 <unknown>\n#11 0x5575107b4ed5 <unknown>\n#12 0x5575107954b2 <unknown>\n#13 0x5575107b42cc <unknown>\n#14 0x557510795253 <unknown>\n#15 0x5575107651c7 <unknown>\n#16 0x557510765b3e <unknown>\n#17 0x557510a0330b <unknown>\n#18 0x557510a073b7 <unknown>\n#19 0x5575109efe3e <unknown>\n#20 0x557510a07e82 <unknown>\n#21 0x5575109d47df <unknown>\n#22 0x557510a2c1b8 <unknown>\n#23 0x557510a2c38b <unknown>\n#24 0x557510a3bffc <unknown>\n#25 0x7ff493c94ac3 <unknown>",
+      "children" : [ {
+        "name" : "test_open_seo_prod[https://dealer-passport-test.xsfera.ru:3001/dealers/]",
+        "uid" : "f91547c6ca87fb5",
+        "parentUid" : "ed33aad5181f2ddbff566d13ef9416a5",
+        "status" : "broken",
+        "time" : {
+          "start" : 1716869457235,
+          "stop" : 1716869457235,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'https://dealer-passport-test.xsfera.ru:3001/dealers/'" ]
+      } ],
+      "uid" : "ed33aad5181f2ddbff566d13ef9416a5"
+    }, {
+      "name" : "selenium.common.exceptions.WebDriverException: Message: unknown error: net::ERR_CONNECTION_TIMED_OUT\n  (Session info: chrome-headless-shell=125.0.6422.60)\nStacktrace:\n#0 0x56131e804eca <unknown>\n#1 0x56131e4ee45c <unknown>\n#2 0x56131e4e5fd0 <unknown>\n#3 0x56131e4d5b32 <unknown>\n#4 0x56131e4d7162 <unknown>\n#5 0x56131e4d5ded <unknown>\n#6 0x56131e4d5503 <unknown>\n#7 0x56131e4d53f5 <unknown>\n#8 0x56131e4d3336 <unknown>\n#9 0x56131e4d383a <unknown>\n#10 0x56131e4f0ea7 <unknown>\n#11 0x56131e57ced5 <unknown>\n#12 0x56131e55d4b2 <unknown>\n#13 0x56131e57c2cc <unknown>\n#14 0x56131e55d253 <unknown>\n#15 0x56131e52d1c7 <unknown>\n#16 0x56131e52db3e <unknown>\n#17 0x56131e7cb30b <unknown>\n#18 0x56131e7cf3b7 <unknown>\n#19 0x56131e7b7e3e <unknown>\n#20 0x56131e7cfe82 <unknown>\n#21 0x56131e79c7df <unknown>\n#22 0x56131e7f41b8 <unknown>\n#23 0x56131e7f438b <unknown>\n#24 0x56131e803ffc <unknown>\n#25 0x7ff125e94ac3 <unknown>",
+      "children" : [ {
+        "name" : "test_open_seo_prod[https://dealer-passport-test.xsfera.ru:3001/users/]",
+        "uid" : "17639eca561de83f",
+        "parentUid" : "0f3686f82803f442fb1d8e6173505382",
+        "status" : "broken",
+        "time" : {
+          "start" : 1716869592401,
+          "stop" : 1716869592401,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'https://dealer-passport-test.xsfera.ru:3001/users/'" ]
+      } ],
+      "uid" : "0f3686f82803f442fb1d8e6173505382"
+    }, {
+      "name" : "selenium.common.exceptions.WebDriverException: Message: unknown error: net::ERR_CONNECTION_TIMED_OUT\n  (Session info: chrome-headless-shell=125.0.6422.60)\nStacktrace:\n#0 0x562e28ec6eca <unknown>\n#1 0x562e28bb045c <unknown>\n#2 0x562e28ba7fd0 <unknown>\n#3 0x562e28b97b32 <unknown>\n#4 0x562e28b99162 <unknown>\n#5 0x562e28b97ded <unknown>\n#6 0x562e28b97503 <unknown>\n#7 0x562e28b973f5 <unknown>\n#8 0x562e28b95336 <unknown>\n#9 0x562e28b9583a <unknown>\n#10 0x562e28bb2ea7 <unknown>\n#11 0x562e28c3eed5 <unknown>\n#12 0x562e28c1f4b2 <unknown>\n#13 0x562e28c3e2cc <unknown>\n#14 0x562e28c1f253 <unknown>\n#15 0x562e28bef1c7 <unknown>\n#16 0x562e28befb3e <unknown>\n#17 0x562e28e8d30b <unknown>\n#18 0x562e28e913b7 <unknown>\n#19 0x562e28e79e3e <unknown>\n#20 0x562e28e91e82 <unknown>\n#21 0x562e28e5e7df <unknown>\n#22 0x562e28eb61b8 <unknown>\n#23 0x562e28eb638b <unknown>\n#24 0x562e28ec5ffc <unknown>\n#25 0x7febd9c94ac3 <unknown>",
+      "children" : [ {
+        "name" : "test_open_seo_prod[https://dealer-passport-test.xsfera.ru:3001/indicators/]",
+        "uid" : "d4cd2d0bf1a3372c",
+        "parentUid" : "cb037223d7cf32493fb1c27f9135224f",
+        "status" : "broken",
+        "time" : {
+          "start" : 1716869727568,
+          "stop" : 1716869727568,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'https://dealer-passport-test.xsfera.ru:3001/indicators/'" ]
+      } ],
+      "uid" : "cb037223d7cf32493fb1c27f9135224f"
+    }, {
+      "name" : "selenium.common.exceptions.WebDriverException: Message: unknown error: net::ERR_CONNECTION_TIMED_OUT\n  (Session info: chrome-headless-shell=125.0.6422.60)\nStacktrace:\n#0 0x56022dd26eca <unknown>\n#1 0x56022da1045c <unknown>\n#2 0x56022da07fd0 <unknown>\n#3 0x56022d9f7b32 <unknown>\n#4 0x56022d9f9162 <unknown>\n#5 0x56022d9f7ded <unknown>\n#6 0x56022d9f7503 <unknown>\n#7 0x56022d9f73f5 <unknown>\n#8 0x56022d9f5336 <unknown>\n#9 0x56022d9f583a <unknown>\n#10 0x56022da12ea7 <unknown>\n#11 0x56022da9eed5 <unknown>\n#12 0x56022da7f4b2 <unknown>\n#13 0x56022da9e2cc <unknown>\n#14 0x56022da7f253 <unknown>\n#15 0x56022da4f1c7 <unknown>\n#16 0x56022da4fb3e <unknown>\n#17 0x56022dced30b <unknown>\n#18 0x56022dcf13b7 <unknown>\n#19 0x56022dcd9e3e <unknown>\n#20 0x56022dcf1e82 <unknown>\n#21 0x56022dcbe7df <unknown>\n#22 0x56022dd161b8 <unknown>\n#23 0x56022dd1638b <unknown>\n#24 0x56022dd25ffc <unknown>\n#25 0x7f81f1a94ac3 <unknown>",
+      "children" : [ {
+        "name" : "test_open_seo_prod[https://dealer-passport-test.xsfera.ru:3001/uploads/]",
+        "uid" : "ffd630787faa6d13",
+        "parentUid" : "1f3afbf694cacaa11ce052021159890a",
+        "status" : "broken",
+        "time" : {
+          "start" : 1716869862738,
+          "stop" : 1716869862738,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'https://dealer-passport-test.xsfera.ru:3001/uploads/'" ]
+      } ],
+      "uid" : "1f3afbf694cacaa11ce052021159890a"
+    }, {
+      "name" : "selenium.common.exceptions.WebDriverException: Message: unknown error: net::ERR_CONNECTION_TIMED_OUT\n  (Session info: chrome-headless-shell=125.0.6422.60)\nStacktrace:\n#0 0x564cae311eca <unknown>\n#1 0x564cadffb45c <unknown>\n#2 0x564cadff2fd0 <unknown>\n#3 0x564cadfe2b32 <unknown>\n#4 0x564cadfe4162 <unknown>\n#5 0x564cadfe2ded <unknown>\n#6 0x564cadfe2503 <unknown>\n#7 0x564cadfe23f5 <unknown>\n#8 0x564cadfe0336 <unknown>\n#9 0x564cadfe083a <unknown>\n#10 0x564cadffdea7 <unknown>\n#11 0x564cae089ed5 <unknown>\n#12 0x564cae06a4b2 <unknown>\n#13 0x564cae0892cc <unknown>\n#14 0x564cae06a253 <unknown>\n#15 0x564cae03a1c7 <unknown>\n#16 0x564cae03ab3e <unknown>\n#17 0x564cae2d830b <unknown>\n#18 0x564cae2dc3b7 <unknown>\n#19 0x564cae2c4e3e <unknown>\n#20 0x564cae2dce82 <unknown>\n#21 0x564cae2a97df <unknown>\n#22 0x564cae3011b8 <unknown>\n#23 0x564cae30138b <unknown>\n#24 0x564cae310ffc <unknown>\n#25 0x7f0cb5494ac3 <unknown>",
+      "children" : [ {
+        "name" : "Проверка корректности перехода по ссылке Редактор СЕО",
+        "uid" : "cd86a80cfbee01e4",
+        "parentUid" : "414973cab8b0095d02e47abdfb8239eb",
+        "status" : "broken",
+        "time" : {
+          "start" : 1716870205743,
+          "stop" : 1716870205743,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "414973cab8b0095d02e47abdfb8239eb"
+    }, {
+      "name" : "selenium.common.exceptions.WebDriverException: Message: unknown error: net::ERR_CONNECTION_TIMED_OUT\n  (Session info: chrome-headless-shell=125.0.6422.60)\nStacktrace:\n#0 0x55c817f09eca <unknown>\n#1 0x55c817bf345c <unknown>\n#2 0x55c817beafd0 <unknown>\n#3 0x55c817bdab32 <unknown>\n#4 0x55c817bdc162 <unknown>\n#5 0x55c817bdaded <unknown>\n#6 0x55c817bda503 <unknown>\n#7 0x55c817bda3f5 <unknown>\n#8 0x55c817bd8336 <unknown>\n#9 0x55c817bd883a <unknown>\n#10 0x55c817bf5ea7 <unknown>\n#11 0x55c817c81ed5 <unknown>\n#12 0x55c817c624b2 <unknown>\n#13 0x55c817c812cc <unknown>\n#14 0x55c817c62253 <unknown>\n#15 0x55c817c321c7 <unknown>\n#16 0x55c817c32b3e <unknown>\n#17 0x55c817ed030b <unknown>\n#18 0x55c817ed43b7 <unknown>\n#19 0x55c817ebce3e <unknown>\n#20 0x55c817ed4e82 <unknown>\n#21 0x55c817ea17df <unknown>\n#22 0x55c817ef91b8 <unknown>\n#23 0x55c817ef938b <unknown>\n#24 0x55c817f08ffc <unknown>\n#25 0x7ff211294ac3 <unknown>",
+      "children" : [ {
+        "name" : "Проверка корректности перехода по ссылке Отчеты СЕО",
+        "uid" : "c9cc58027127e788",
+        "parentUid" : "68416ffba7947ea00e336f577eed8fca",
+        "status" : "broken",
+        "time" : {
+          "start" : 1716870339921,
+          "stop" : 1716870339921,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "68416ffba7947ea00e336f577eed8fca"
+    }, {
+      "name" : "selenium.common.exceptions.WebDriverException: Message: unknown error: net::ERR_CONNECTION_TIMED_OUT\n  (Session info: chrome-headless-shell=125.0.6422.60)\nStacktrace:\n#0 0x55d979b00eca <unknown>\n#1 0x55d9797ea45c <unknown>\n#2 0x55d9797e1fd0 <unknown>\n#3 0x55d9797d1b32 <unknown>\n#4 0x55d9797d3162 <unknown>\n#5 0x55d9797d1ded <unknown>\n#6 0x55d9797d1503 <unknown>\n#7 0x55d9797d13f5 <unknown>\n#8 0x55d9797cf336 <unknown>\n#9 0x55d9797cf83a <unknown>\n#10 0x55d9797ecea7 <unknown>\n#11 0x55d979878ed5 <unknown>\n#12 0x55d9798594b2 <unknown>\n#13 0x55d9798782cc <unknown>\n#14 0x55d979859253 <unknown>\n#15 0x55d9798291c7 <unknown>\n#16 0x55d979829b3e <unknown>\n#17 0x55d979ac730b <unknown>\n#18 0x55d979acb3b7 <unknown>\n#19 0x55d979ab3e3e <unknown>\n#20 0x55d979acbe82 <unknown>\n#21 0x55d979a987df <unknown>\n#22 0x55d979af01b8 <unknown>\n#23 0x55d979af038b <unknown>\n#24 0x55d979affffc <unknown>\n#25 0x7f15fbc94ac3 <unknown>",
+      "children" : [ {
+        "name" : "Проверить формирование отчета SRR в файл excell и на экран на seo prod",
+        "uid" : "12d09cc6546e8b24",
+        "parentUid" : "693b8d82e1611fc53ebc098624f9d23e",
+        "status" : "broken",
+        "time" : {
+          "start" : 1716870509448,
+          "stop" : 1716870509448,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "693b8d82e1611fc53ebc098624f9d23e"
+    } ],
+    "uid" : "bdbf199525818fae7a8651db9eafe741"
+  }, {
+    "name" : "Product defects",
+    "children" : [ {
+      "name" : "AssertionError: Меню редактора изменилось\nassert ['Глобальный ...рушений', ...] == ['Глобальный ...рушений', ...]\n  \n  At index 11 diff: 'Справочник зон камер' != 'Справочник информационных систем'\n  Left contains one more item: 'Справочник информационных систем'\n  \n  Full diff:\n    [\n        'Глобальный рейтинг',\n        'Квартили',\n        'Персонал',\n        'База сотрудников',\n        'Подразделения',\n        'Виды нарушений',\n        'Редактор форм заявок-деклараций',\n        'Справочник должностей',\n        'Каталог учебных программ',\n        'Справочники библиотеки документов',\n        'Редактор отчетов',\n  +     'Справочник зон камер',\n        'Справочник информационных систем',\n    ]",
+      "children" : [ {
+        "name" : "Проверить доступность меню в редакторе на prod",
+        "uid" : "31c3487361496f8c",
+        "parentUid" : "b9fe3adcfcfa97f52f6662d59aaf962e",
+        "status" : "failed",
+        "time" : {
+          "start" : 1716861874702,
+          "stop" : 1716861875887,
+          "duration" : 1185
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "b9fe3adcfcfa97f52f6662d59aaf962e"
+    } ],
+    "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
+  } ],
+  "name" : "categories"
+}

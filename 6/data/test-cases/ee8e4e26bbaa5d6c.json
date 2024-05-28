@@ -1,0 +1,217 @@
+{
+  "uid" : "ee8e4e26bbaa5d6c",
+  "name" : "test_open_seo[https://dealer-passport-test.xsfera.ru/users/]",
+  "fullName" : "tests.main_page_test.TestMainPageSmoke#test_open_seo",
+  "historyId" : "d440e270cffee55c166bb9d25e4ce1f0",
+  "time" : {
+    "start" : 1716867564881,
+    "stop" : 1716867564881,
+    "duration" : 0
+  },
+  "status" : "broken",
+  "statusMessage" : "selenium.common.exceptions.WebDriverException: Message: unknown error: net::ERR_CONNECTION_TIMED_OUT\n  (Session info: chrome-headless-shell=125.0.6422.60)\nStacktrace:\n#0 0x55f4a531ceca <unknown>\n#1 0x55f4a500645c <unknown>\n#2 0x55f4a4ffdfd0 <unknown>\n#3 0x55f4a4fedb32 <unknown>\n#4 0x55f4a4fef162 <unknown>\n#5 0x55f4a4fedded <unknown>\n#6 0x55f4a4fed503 <unknown>\n#7 0x55f4a4fed3f5 <unknown>\n#8 0x55f4a4feb336 <unknown>\n#9 0x55f4a4feb83a <unknown>\n#10 0x55f4a5008ea7 <unknown>\n#11 0x55f4a5094ed5 <unknown>\n#12 0x55f4a50754b2 <unknown>\n#13 0x55f4a50942cc <unknown>\n#14 0x55f4a5075253 <unknown>\n#15 0x55f4a50451c7 <unknown>\n#16 0x55f4a5045b3e <unknown>\n#17 0x55f4a52e330b <unknown>\n#18 0x55f4a52e73b7 <unknown>\n#19 0x55f4a52cfe3e <unknown>\n#20 0x55f4a52e7e82 <unknown>\n#21 0x55f4a52b47df <unknown>\n#22 0x55f4a530c1b8 <unknown>\n#23 0x55f4a530c38b <unknown>\n#24 0x55f4a531bffc <unknown>\n#25 0x7fe258a94ac3 <unknown>",
+  "statusTrace" : "driver = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"8bcf72853aeda86d165fd145eebde503\")>\n\n    @pytest.fixture\n    def auth_user_admin_to_seo(driver):\n        main_page = MainPage(driver)\n        url = Urls.MAIN_URL_SEO + Urls.AUTH\n        cookies = {'name': 'token', 'value': os.environ[\"SEO_ADMIN\"]}\n>       driver.get(url)\n\ntests/conftest.py:15: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n/opt/hostedtoolcache/Python/3.12.3/x64/lib/python3.12/site-packages/selenium/webdriver/remote/webdriver.py:356: in get\n    self.execute(Command.GET, {\"url\": url})\n/opt/hostedtoolcache/Python/3.12.3/x64/lib/python3.12/site-packages/selenium/webdriver/remote/webdriver.py:347: in execute\n    self.error_handler.check_response(response)\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <selenium.webdriver.remote.errorhandler.ErrorHandler object at 0x7f91ac4bd700>\nresponse = {'status': 500, 'value': '{\"value\":{\"error\":\"unknown error\",\"message\":\"unknown error: net::ERR_CONNECTION_TIMED_OUT\\\\n...\\\\n#23 0x55f4a530c38b \\\\u003Cunknown>\\\\n#24 0x55f4a531bffc \\\\u003Cunknown>\\\\n#25 0x7fe258a94ac3 \\\\u003Cunknown>\\\\n\"}}'}\n\n    def check_response(self, response: Dict[str, Any]) -> None:\n        \"\"\"Checks that a JSON response from the WebDriver does not have an\n        error.\n    \n        :Args:\n         - response - The JSON response from the WebDriver server as a dictionary\n           object.\n    \n        :Raises: If the response contains an error message.\n        \"\"\"\n        status = response.get(\"status\", None)\n        if not status or status == ErrorCode.SUCCESS:\n            return\n        value = None\n        message = response.get(\"message\", \"\")\n        screen: str = response.get(\"screen\", \"\")\n        stacktrace = None\n        if isinstance(status, int):\n            value_json = response.get(\"value\", None)\n            if value_json and isinstance(value_json, str):\n                import json\n    \n                try:\n                    value = json.loads(value_json)\n                    if len(value) == 1:\n                        value = value[\"value\"]\n                    status = value.get(\"error\", None)\n                    if not status:\n                        status = value.get(\"status\", ErrorCode.UNKNOWN_ERROR)\n                        message = value.get(\"value\") or value.get(\"message\")\n                        if not isinstance(message, str):\n                            value = message\n                            message = message.get(\"message\")\n                    else:\n                        message = value.get(\"message\", None)\n                except ValueError:\n                    pass\n    \n        exception_class: Type[WebDriverException]\n        e = ErrorCode()\n        error_codes = [item for item in dir(e) if not item.startswith(\"__\")]\n        for error_code in error_codes:\n            error_info = getattr(ErrorCode, error_code)\n            if isinstance(error_info, list) and status in error_info:\n                exception_class = getattr(ExceptionMapping, error_code, WebDriverException)\n                break\n        else:\n            exception_class = WebDriverException\n    \n        if not value:\n            value = response[\"value\"]\n        if isinstance(value, str):\n            raise exception_class(value)\n        if message == \"\" and \"message\" in value:\n            message = value[\"message\"]\n    \n        screen = None  # type: ignore[assignment]\n        if \"screen\" in value:\n            screen = value[\"screen\"]\n    \n        stacktrace = None\n        st_value = value.get(\"stackTrace\") or value.get(\"stacktrace\")\n        if st_value:\n            if isinstance(st_value, str):\n                stacktrace = st_value.split(\"\\n\")\n            else:\n                stacktrace = []\n                try:\n                    for frame in st_value:\n                        line = frame.get(\"lineNumber\", \"\")\n                        file = frame.get(\"fileName\", \"<anonymous>\")\n                        if line:\n                            file = f\"{file}:{line}\"\n                        meth = frame.get(\"methodName\", \"<anonymous>\")\n                        if \"className\" in frame:\n                            meth = f\"{frame['className']}.{meth}\"\n                        msg = \"    at %s (%s)\"\n                        msg = msg % (meth, file)\n                        stacktrace.append(msg)\n                except TypeError:\n                    pass\n        if exception_class == UnexpectedAlertPresentException:\n            alert_text = None\n            if \"data\" in value:\n                alert_text = value[\"data\"].get(\"text\")\n            elif \"alert\" in value:\n                alert_text = value[\"alert\"].get(\"text\")\n            raise exception_class(message, screen, stacktrace, alert_text)  # type: ignore[call-arg]  # mypy is not smart enough here\n>       raise exception_class(message, screen, stacktrace)\nE       selenium.common.exceptions.WebDriverException: Message: unknown error: net::ERR_CONNECTION_TIMED_OUT\nE         (Session info: chrome-headless-shell=125.0.6422.60)\nE       Stacktrace:\nE       #0 0x55f4a531ceca <unknown>\nE       #1 0x55f4a500645c <unknown>\nE       #2 0x55f4a4ffdfd0 <unknown>\nE       #3 0x55f4a4fedb32 <unknown>\nE       #4 0x55f4a4fef162 <unknown>\nE       #5 0x55f4a4fedded <unknown>\nE       #6 0x55f4a4fed503 <unknown>\nE       #7 0x55f4a4fed3f5 <unknown>\nE       #8 0x55f4a4feb336 <unknown>\nE       #9 0x55f4a4feb83a <unknown>\nE       #10 0x55f4a5008ea7 <unknown>\nE       #11 0x55f4a5094ed5 <unknown>\nE       #12 0x55f4a50754b2 <unknown>\nE       #13 0x55f4a50942cc <unknown>\nE       #14 0x55f4a5075253 <unknown>\nE       #15 0x55f4a50451c7 <unknown>\nE       #16 0x55f4a5045b3e <unknown>\nE       #17 0x55f4a52e330b <unknown>\nE       #18 0x55f4a52e73b7 <unknown>\nE       #19 0x55f4a52cfe3e <unknown>\nE       #20 0x55f4a52e7e82 <unknown>\nE       #21 0x55f4a52b47df <unknown>\nE       #22 0x55f4a530c1b8 <unknown>\nE       #23 0x55f4a530c38b <unknown>\nE       #24 0x55f4a531bffc <unknown>\nE       #25 0x7fe258a94ac3 <unknown>\n\n/opt/hostedtoolcache/Python/3.12.3/x64/lib/python3.12/site-packages/selenium/webdriver/remote/errorhandler.py:229: WebDriverException",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "clear_allure_results_folder",
+    "time" : {
+      "start" : 1716861599244,
+      "stop" : 1716861599244,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "auth_user_admin_to_seo",
+    "time" : {
+      "start" : 1716867565078,
+      "stop" : 1716867699960,
+      "duration" : 134882
+    },
+    "status" : "broken",
+    "statusMessage" : "selenium.common.exceptions.WebDriverException: Message: unknown error: net::ERR_CONNECTION_TIMED_OUT\n  (Session info: chrome-headless-shell=125.0.6422.60)\nStacktrace:\n#0 0x55f4a531ceca <unknown>\n#1 0x55f4a500645c <unknown>\n#2 0x55f4a4ffdfd0 <unknown>\n#3 0x55f4a4fedb32 <unknown>\n#4 0x55f4a4fef162 <unknown>\n#5 0x55f4a4fedded <unknown>\n#6 0x55f4a4fed503 <unknown>\n#7 0x55f4a4fed3f5 <unknown>\n#8 0x55f4a4feb336 <unknown>\n#9 0x55f4a4feb83a <unknown>\n#10 0x55f4a5008ea7 <unknown>\n#11 0x55f4a5094ed5 <unknown>\n#12 0x55f4a50754b2 <unknown>\n#13 0x55f4a50942cc <unknown>\n#14 0x55f4a5075253 <unknown>\n#15 0x55f4a50451c7 <unknown>\n#16 0x55f4a5045b3e <unknown>\n#17 0x55f4a52e330b <unknown>\n#18 0x55f4a52e73b7 <unknown>\n#19 0x55f4a52cfe3e <unknown>\n#20 0x55f4a52e7e82 <unknown>\n#21 0x55f4a52b47df <unknown>\n#22 0x55f4a530c1b8 <unknown>\n#23 0x55f4a530c38b <unknown>\n#24 0x55f4a531bffc <unknown>\n#25 0x7fe258a94ac3 <unknown>\n\n",
+    "statusTrace" : "  File \"/opt/hostedtoolcache/Python/3.12.3/x64/lib/python3.12/site-packages/pluggy/_callers.py\", line 167, in _multicall\n    teardown.throw(outcome._exception)\n  File \"/opt/hostedtoolcache/Python/3.12.3/x64/lib/python3.12/site-packages/_pytest/setuponly.py\", line 36, in pytest_fixture_setup\n    return (yield)\n            ^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.3/x64/lib/python3.12/site-packages/pluggy/_callers.py\", line 103, in _multicall\n    res = hook_impl.function(*args)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.3/x64/lib/python3.12/site-packages/_pytest/fixtures.py\", line 1140, in pytest_fixture_setup\n    result = call_fixture_func(fixturefunc, request, kwargs)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.3/x64/lib/python3.12/site-packages/_pytest/fixtures.py\", line 917, in call_fixture_func\n    fixture_result = fixturefunc(**kwargs)\n                     ^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/DealerPassport/DealerPassport/tests/conftest.py\", line 15, in auth_user_admin_to_seo\n    driver.get(url)\n  File \"/opt/hostedtoolcache/Python/3.12.3/x64/lib/python3.12/site-packages/selenium/webdriver/remote/webdriver.py\", line 356, in get\n    self.execute(Command.GET, {\"url\": url})\n  File \"/opt/hostedtoolcache/Python/3.12.3/x64/lib/python3.12/site-packages/selenium/webdriver/remote/webdriver.py\", line 347, in execute\n    self.error_handler.check_response(response)\n  File \"/opt/hostedtoolcache/Python/3.12.3/x64/lib/python3.12/site-packages/selenium/webdriver/remote/errorhandler.py\", line 229, in check_response\n    raise exception_class(message, screen, stacktrace)\n",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : true,
+    "hasContent" : true
+  }, {
+    "name" : "driver",
+    "time" : {
+      "start" : 1716867564882,
+      "stop" : 1716867565078,
+      "duration" : 196
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "afterStages" : [ {
+    "name" : "driver::0",
+    "time" : {
+      "start" : 1716867699991,
+      "stop" : 1716867700048,
+      "duration" : 57
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "epic",
+    "value" : "Test Main Page smoke_test"
+  }, {
+    "name" : "tag",
+    "value" : "smoke_test"
+  }, {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "main_page_test"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestMainPageSmoke"
+  }, {
+    "name" : "host",
+    "value" : "fv-az570-22"
+  }, {
+    "name" : "thread",
+    "value" : "2362-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.main_page_test"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "url",
+    "value" : "'https://dealer-passport-test.xsfera.ru/users/'"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Test defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 2,
+        "skipped" : 0,
+        "passed" : 7,
+        "unknown" : 0,
+        "total" : 9
+      },
+      "items" : [ {
+        "uid" : "90233ed9ff666004",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/5//#testresult/90233ed9ff666004",
+        "status" : "passed",
+        "time" : {
+          "start" : 1716775431251,
+          "stop" : 1716775442566,
+          "duration" : 11315
+        }
+      }, {
+        "uid" : "6bb090f2edc44579",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/4//#testresult/6bb090f2edc44579",
+        "status" : "passed",
+        "time" : {
+          "start" : 1716689155579,
+          "stop" : 1716689166423,
+          "duration" : 10844
+        }
+      }, {
+        "uid" : "52b88038889c9b67",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/3//#testresult/52b88038889c9b67",
+        "status" : "passed",
+        "time" : {
+          "start" : 1716602432248,
+          "stop" : 1716602443141,
+          "duration" : 10893
+        }
+      }, {
+        "uid" : "d71a526f4645e9b2",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/2//#testresult/d71a526f4645e9b2",
+        "status" : "passed",
+        "time" : {
+          "start" : 1716516132173,
+          "stop" : 1716516142982,
+          "duration" : 10809
+        }
+      }, {
+        "uid" : "5a14dc5f930e1e3e",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/1//#testresult/5a14dc5f930e1e3e",
+        "status" : "passed",
+        "time" : {
+          "start" : 1716443195747,
+          "stop" : 1716443206552,
+          "duration" : 10805
+        }
+      }, {
+        "uid" : "54c903589fcc2dea",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/1//#testresult/54c903589fcc2dea",
+        "status" : "broken",
+        "statusDetails" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x5589b2462eca <unknown>\n#1 0x5589b214c45c <unknown>\n#2 0x5589b21985b5 <unknown>\n#3 0x5589b2198671 <unknown>\n#4 0x5589b21dcf14 <unknown>\n#5 0x5589b21bb4dd <unknown>\n#6 0x5589b21da2cc <unknown>\n#7 0x5589b21bb253 <unknown>\n#8 0x5589b218b1c7 <unknown>\n#9 0x5589b218bb3e <unknown>\n#10 0x5589b242930b <unknown>\n#11 0x5589b242d3b7 <unknown>\n#12 0x5589b2415e3e <unknown>\n#13 0x5589b242de82 <unknown>\n#14 0x5589b23fa7df <unknown>\n#15 0x5589b24521b8 <unknown>\n#16 0x5589b245238b <unknown>\n#17 0x5589b2461ffc <unknown>\n#18 0x7f36dc094ac3 <unknown>",
+        "time" : {
+          "start" : 1716429675778,
+          "stop" : 1716429675778,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "ce948fed6b205c34",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/2//#testresult/ce948fed6b205c34",
+        "status" : "passed",
+        "time" : {
+          "start" : 1716384385348,
+          "stop" : 1716384396206,
+          "duration" : 10858
+        }
+      }, {
+        "uid" : "3b31ea96eddd886",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/1//#testresult/3b31ea96eddd886",
+        "status" : "passed",
+        "time" : {
+          "start" : 1716383274821,
+          "stop" : 1716383285650,
+          "duration" : 10829
+        }
+      } ]
+    },
+    "tags" : [ "smoke_test" ]
+  },
+  "source" : "ee8e4e26bbaa5d6c.json",
+  "parameterValues" : [ "'https://dealer-passport-test.xsfera.ru/users/'" ]
+}
