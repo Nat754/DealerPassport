@@ -1,0 +1,244 @@
+{
+  "uid" : "739f525e618fa8a9",
+  "name" : "test_open_seo[https://dealer-passport-test.xsfera.ru/accounting/]",
+  "fullName" : "tests.main_page_test.TestMainPageSmoke#test_open_seo",
+  "historyId" : "edf033d6d1f4135ca46b722dff366ad0",
+  "time" : {
+    "start" : 1716948201087,
+    "stop" : 1716948201087,
+    "duration" : 0
+  },
+  "status" : "broken",
+  "statusMessage" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x56480bedbe8a <unknown>\n#1 0x56480bbc545c <unknown>\n#2 0x56480bc115b5 <unknown>\n#3 0x56480bc11671 <unknown>\n#4 0x56480bc55f14 <unknown>\n#5 0x56480bc344dd <unknown>\n#6 0x56480bc532cc <unknown>\n#7 0x56480bc34253 <unknown>\n#8 0x56480bc041c7 <unknown>\n#9 0x56480bc04b3e <unknown>\n#10 0x56480bea22cb <unknown>\n#11 0x56480bea6377 <unknown>\n#12 0x56480be8edfe <unknown>\n#13 0x56480bea6e42 <unknown>\n#14 0x56480be7379f <unknown>\n#15 0x56480becb178 <unknown>\n#16 0x56480becb34b <unknown>\n#17 0x56480bedafbc <unknown>\n#18 0x7fd9fb694ac3 <unknown>",
+  "statusTrace" : "driver = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"4e6f2dff90792a290b3260f4ec46de4f\")>\n\n    @pytest.fixture\n    def auth_user_admin_to_seo(driver):\n        main_page = MainPage(driver)\n        url = Urls.MAIN_URL_SEO + Urls.AUTH\n        cookies = {'name': 'token', 'value': os.environ[\"SEO_ADMIN\"]}\n        driver.get(url)\n        driver.add_cookie(cookies)\n        driver.get(Urls.MAIN_URL_SEO)\n>       main_page.check_button_agree().click()\n\ntests/conftest.py:18: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \npages/main_page.py:15: in check_button_agree\n    return self.element_is_visible(self.locator.AGREE_BUTTON)\npages/base_page.py:18: in element_is_visible\n    self.go_to_element(self.element_is_present(locator))\npages/base_page.py:34: in element_is_present\n    return Wait(self.driver, self.timeout).until(ec.presence_of_element_located(locator))\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <selenium.webdriver.support.wait.WebDriverWait (session=\"4e6f2dff90792a290b3260f4ec46de4f\")>\nmethod = <function presence_of_element_located.<locals>._predicate at 0x7f3ff7c6d3a0>\nmessage = ''\n\n    def until(self, method: Callable[[D], Union[Literal[False], T]], message: str = \"\") -> T:\n        \"\"\"Calls the method provided with the driver as an argument until the \\\n        return value does not evaluate to ``False``.\n    \n        :param method: callable(WebDriver)\n        :param message: optional message for :exc:`TimeoutException`\n        :returns: the result of the last call to `method`\n        :raises: :exc:`selenium.common.exceptions.TimeoutException` if timeout occurs\n        \"\"\"\n        screen = None\n        stacktrace = None\n    \n        end_time = time.monotonic() + self._timeout\n        while True:\n            try:\n                value = method(self._driver)\n                if value:\n                    return value\n            except self._ignored_exceptions as exc:\n                screen = getattr(exc, \"screen\", None)\n                stacktrace = getattr(exc, \"stacktrace\", None)\n            time.sleep(self._poll)\n            if time.monotonic() > end_time:\n                break\n>       raise TimeoutException(message, screen, stacktrace)\nE       selenium.common.exceptions.TimeoutException: Message: \nE       Stacktrace:\nE       #0 0x56480bedbe8a <unknown>\nE       #1 0x56480bbc545c <unknown>\nE       #2 0x56480bc115b5 <unknown>\nE       #3 0x56480bc11671 <unknown>\nE       #4 0x56480bc55f14 <unknown>\nE       #5 0x56480bc344dd <unknown>\nE       #6 0x56480bc532cc <unknown>\nE       #7 0x56480bc34253 <unknown>\nE       #8 0x56480bc041c7 <unknown>\nE       #9 0x56480bc04b3e <unknown>\nE       #10 0x56480bea22cb <unknown>\nE       #11 0x56480bea6377 <unknown>\nE       #12 0x56480be8edfe <unknown>\nE       #13 0x56480bea6e42 <unknown>\nE       #14 0x56480be7379f <unknown>\nE       #15 0x56480becb178 <unknown>\nE       #16 0x56480becb34b <unknown>\nE       #17 0x56480bedafbc <unknown>\nE       #18 0x7fd9fb694ac3 <unknown>\n\n/opt/hostedtoolcache/Python/3.12.3/x64/lib/python3.12/site-packages/selenium/webdriver/support/wait.py:105: TimeoutException",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "auth_user_admin_to_seo",
+    "time" : {
+      "start" : 1716948201284,
+      "stop" : 1716948213914,
+      "duration" : 12630
+    },
+    "status" : "broken",
+    "statusMessage" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x56480bedbe8a <unknown>\n#1 0x56480bbc545c <unknown>\n#2 0x56480bc115b5 <unknown>\n#3 0x56480bc11671 <unknown>\n#4 0x56480bc55f14 <unknown>\n#5 0x56480bc344dd <unknown>\n#6 0x56480bc532cc <unknown>\n#7 0x56480bc34253 <unknown>\n#8 0x56480bc041c7 <unknown>\n#9 0x56480bc04b3e <unknown>\n#10 0x56480bea22cb <unknown>\n#11 0x56480bea6377 <unknown>\n#12 0x56480be8edfe <unknown>\n#13 0x56480bea6e42 <unknown>\n#14 0x56480be7379f <unknown>\n#15 0x56480becb178 <unknown>\n#16 0x56480becb34b <unknown>\n#17 0x56480bedafbc <unknown>\n#18 0x7fd9fb694ac3 <unknown>\n\n",
+    "statusTrace" : "  File \"/opt/hostedtoolcache/Python/3.12.3/x64/lib/python3.12/site-packages/pluggy/_callers.py\", line 167, in _multicall\n    teardown.throw(outcome._exception)\n  File \"/opt/hostedtoolcache/Python/3.12.3/x64/lib/python3.12/site-packages/_pytest/setuponly.py\", line 36, in pytest_fixture_setup\n    return (yield)\n            ^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.3/x64/lib/python3.12/site-packages/pluggy/_callers.py\", line 103, in _multicall\n    res = hook_impl.function(*args)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.3/x64/lib/python3.12/site-packages/_pytest/fixtures.py\", line 1140, in pytest_fixture_setup\n    result = call_fixture_func(fixturefunc, request, kwargs)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.3/x64/lib/python3.12/site-packages/_pytest/fixtures.py\", line 917, in call_fixture_func\n    fixture_result = fixturefunc(**kwargs)\n                     ^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/DealerPassport/DealerPassport/tests/conftest.py\", line 18, in auth_user_admin_to_seo\n    main_page.check_button_agree().click()\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.3/x64/lib/python3.12/site-packages/allure_commons/_allure.py\", line 192, in impl\n    return func(*a, **kw)\n           ^^^^^^^^^^^^^^\n  File \"/home/runner/work/DealerPassport/DealerPassport/pages/main_page.py\", line 15, in check_button_agree\n    return self.element_is_visible(self.locator.AGREE_BUTTON)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/DealerPassport/DealerPassport/pages/base_page.py\", line 18, in element_is_visible\n    self.go_to_element(self.element_is_present(locator))\n                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/DealerPassport/DealerPassport/pages/base_page.py\", line 34, in element_is_present\n    return Wait(self.driver, self.timeout).until(ec.presence_of_element_located(locator))\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.3/x64/lib/python3.12/site-packages/selenium/webdriver/support/wait.py\", line 105, in until\n    raise TimeoutException(message, screen, stacktrace)\n",
+    "steps" : [ {
+      "name" : "Проверка видимости кнопки '('xpath', '//span[text()=\"Согласен\"]')' на главной странице",
+      "time" : {
+        "start" : 1716948203688,
+        "stop" : 1716948213914,
+        "duration" : 10226
+      },
+      "status" : "broken",
+      "statusMessage" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x56480bedbe8a <unknown>\n#1 0x56480bbc545c <unknown>\n#2 0x56480bc115b5 <unknown>\n#3 0x56480bc11671 <unknown>\n#4 0x56480bc55f14 <unknown>\n#5 0x56480bc344dd <unknown>\n#6 0x56480bc532cc <unknown>\n#7 0x56480bc34253 <unknown>\n#8 0x56480bc041c7 <unknown>\n#9 0x56480bc04b3e <unknown>\n#10 0x56480bea22cb <unknown>\n#11 0x56480bea6377 <unknown>\n#12 0x56480be8edfe <unknown>\n#13 0x56480bea6e42 <unknown>\n#14 0x56480be7379f <unknown>\n#15 0x56480becb178 <unknown>\n#16 0x56480becb34b <unknown>\n#17 0x56480bedafbc <unknown>\n#18 0x7fd9fb694ac3 <unknown>\n\n",
+      "statusTrace" : "  File \"/opt/hostedtoolcache/Python/3.12.3/x64/lib/python3.12/site-packages/allure_commons/_allure.py\", line 192, in impl\n    return func(*a, **kw)\n           ^^^^^^^^^^^^^^\n  File \"/home/runner/work/DealerPassport/DealerPassport/pages/main_page.py\", line 15, in check_button_agree\n    return self.element_is_visible(self.locator.AGREE_BUTTON)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/DealerPassport/DealerPassport/pages/base_page.py\", line 18, in element_is_visible\n    self.go_to_element(self.element_is_present(locator))\n                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/DealerPassport/DealerPassport/pages/base_page.py\", line 34, in element_is_present\n    return Wait(self.driver, self.timeout).until(ec.presence_of_element_located(locator))\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.3/x64/lib/python3.12/site-packages/selenium/webdriver/support/wait.py\", line 105, in until\n    raise TimeoutException(message, screen, stacktrace)\n",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : true,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 1,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  }, {
+    "name" : "clear_allure_results_folder",
+    "time" : {
+      "start" : 1716948078838,
+      "stop" : 1716948078838,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "driver",
+    "time" : {
+      "start" : 1716948201088,
+      "stop" : 1716948201284,
+      "duration" : 196
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "afterStages" : [ {
+    "name" : "driver::0",
+    "time" : {
+      "start" : 1716948213929,
+      "stop" : 1716948213988,
+      "duration" : 59
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "epic",
+    "value" : "Test Main Page smoke_test"
+  }, {
+    "name" : "tag",
+    "value" : "smoke_test"
+  }, {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "main_page_test"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestMainPageSmoke"
+  }, {
+    "name" : "host",
+    "value" : "fv-az1435-859"
+  }, {
+    "name" : "thread",
+    "value" : "2237-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.main_page_test"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "url",
+    "value" : "'https://dealer-passport-test.xsfera.ru/accounting/'"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Test defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 3,
+        "skipped" : 0,
+        "passed" : 7,
+        "unknown" : 0,
+        "total" : 10
+      },
+      "items" : [ {
+        "uid" : "98ba402410ac99af",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/6//#testresult/98ba402410ac99af",
+        "status" : "broken",
+        "statusDetails" : "selenium.common.exceptions.WebDriverException: Message: unknown error: net::ERR_CONNECTION_TIMED_OUT\n  (Session info: chrome-headless-shell=125.0.6422.60)\nStacktrace:\n#0 0x55e3a1da7eca <unknown>\n#1 0x55e3a1a9145c <unknown>\n#2 0x55e3a1a88fd0 <unknown>\n#3 0x55e3a1a78b32 <unknown>\n#4 0x55e3a1a7a162 <unknown>\n#5 0x55e3a1a78ded <unknown>\n#6 0x55e3a1a78503 <unknown>\n#7 0x55e3a1a783f5 <unknown>\n#8 0x55e3a1a76336 <unknown>\n#9 0x55e3a1a7683a <unknown>\n#10 0x55e3a1a93ea7 <unknown>\n#11 0x55e3a1b1fed5 <unknown>\n#12 0x55e3a1b004b2 <unknown>\n#13 0x55e3a1b1f2cc <unknown>\n#14 0x55e3a1b00253 <unknown>\n#15 0x55e3a1ad01c7 <unknown>\n#16 0x55e3a1ad0b3e <unknown>\n#17 0x55e3a1d6e30b <unknown>\n#18 0x55e3a1d723b7 <unknown>\n#19 0x55e3a1d5ae3e <unknown>\n#20 0x55e3a1d72e82 <unknown>\n#21 0x55e3a1d3f7df <unknown>\n#22 0x55e3a1d971b8 <unknown>\n#23 0x55e3a1d9738b <unknown>\n#24 0x55e3a1da6ffc <unknown>\n#25 0x7f4838894ac3 <unknown>",
+        "time" : {
+          "start" : 1716866618707,
+          "stop" : 1716866618707,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "f70fa767e0c5308a",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/5//#testresult/f70fa767e0c5308a",
+        "status" : "passed",
+        "time" : {
+          "start" : 1716775329533,
+          "stop" : 1716775340423,
+          "duration" : 10890
+        }
+      }, {
+        "uid" : "e56fb827956a1b17",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/4//#testresult/e56fb827956a1b17",
+        "status" : "passed",
+        "time" : {
+          "start" : 1716689052204,
+          "stop" : 1716689063078,
+          "duration" : 10874
+        }
+      }, {
+        "uid" : "dde9fe4f6a52fc84",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/3//#testresult/dde9fe4f6a52fc84",
+        "status" : "passed",
+        "time" : {
+          "start" : 1716602328498,
+          "stop" : 1716602339465,
+          "duration" : 10967
+        }
+      }, {
+        "uid" : "bce269dfc422b819",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/2//#testresult/bce269dfc422b819",
+        "status" : "passed",
+        "time" : {
+          "start" : 1716516035588,
+          "stop" : 1716516046436,
+          "duration" : 10848
+        }
+      }, {
+        "uid" : "e637e2eee0f90771",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/1//#testresult/e637e2eee0f90771",
+        "status" : "passed",
+        "time" : {
+          "start" : 1716443100446,
+          "stop" : 1716443111293,
+          "duration" : 10847
+        }
+      }, {
+        "uid" : "25ef21dc1653bd65",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/1//#testresult/25ef21dc1653bd65",
+        "status" : "broken",
+        "statusDetails" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x5628f6e69eca <unknown>\n#1 0x5628f6b5345c <unknown>\n#2 0x5628f6b9f5b5 <unknown>\n#3 0x5628f6b9f671 <unknown>\n#4 0x5628f6be3f14 <unknown>\n#5 0x5628f6bc24dd <unknown>\n#6 0x5628f6be12cc <unknown>\n#7 0x5628f6bc2253 <unknown>\n#8 0x5628f6b921c7 <unknown>\n#9 0x5628f6b92b3e <unknown>\n#10 0x5628f6e3030b <unknown>\n#11 0x5628f6e343b7 <unknown>\n#12 0x5628f6e1ce3e <unknown>\n#13 0x5628f6e34e82 <unknown>\n#14 0x5628f6e017df <unknown>\n#15 0x5628f6e591b8 <unknown>\n#16 0x5628f6e5938b <unknown>\n#17 0x5628f6e68ffc <unknown>\n#18 0x7ffb22a94ac3 <unknown>",
+        "time" : {
+          "start" : 1716429585557,
+          "stop" : 1716429585557,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "59cd89819adc42a9",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/2//#testresult/59cd89819adc42a9",
+        "status" : "passed",
+        "time" : {
+          "start" : 1716384289028,
+          "stop" : 1716384299903,
+          "duration" : 10875
+        }
+      }, {
+        "uid" : "2ce59b021b8cda21",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/1//#testresult/2ce59b021b8cda21",
+        "status" : "passed",
+        "time" : {
+          "start" : 1716383177663,
+          "stop" : 1716383188484,
+          "duration" : 10821
+        }
+      } ]
+    },
+    "tags" : [ "smoke_test" ]
+  },
+  "source" : "739f525e618fa8a9.json",
+  "parameterValues" : [ "'https://dealer-passport-test.xsfera.ru/accounting/'" ]
+}
