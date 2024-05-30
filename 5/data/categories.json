@@ -3,24 +3,96 @@
   "children" : [ {
     "name" : "Product defects",
     "children" : [ {
-      "name" : "AssertionError: Меню редактора изменилось\nassert ['Глобальный ...рушений', ...] == ['Глобальный ...рушений', ...]\n  \n  At index 11 diff: 'Справочник зон камер' != 'Справочник информационных систем'\n  Left contains one more item: 'Справочник информационных систем'\n  \n  Full diff:\n    [\n        'Глобальный рейтинг',\n        'Квартили',\n        'Персонал',\n        'База сотрудников',\n        'Подразделения',\n        'Виды нарушений',\n        'Редактор форм заявок-деклараций',\n        'Справочник должностей',\n        'Каталог учебных программ',\n        'Справочники библиотеки документов',\n        'Редактор отчетов',\n  +     'Справочник зон камер',\n        'Справочник информационных систем',\n    ]",
+      "name" : "AssertionError: Меню редактора изменилось\nassert ['Глобальный ...рушений', ...] == ['Глобальный ...рушений', ...]\n  \n  Right contains one more item: 'Справочник разделов фотогалереи'\n  \n  Full diff:\n    [\n        'Глобальный рейтинг',\n        'Квартили',\n        'Персонал',\n        'База сотрудников',\n        'Подразделения',\n        'Виды нарушений',\n        'Редактор форм заявок-деклараций',\n        'Справочник должностей',\n        'Каталог учебных программ',\n        'Справочники библиотеки документов',\n        'Редактор отчетов',\n        'Справочник зон камер',\n        'Справочник информационных систем',\n  -     'Справочник разделов фотогалереи',\n    ]",
       "children" : [ {
-        "name" : "Проверить доступность меню в редакторе на prod",
-        "uid" : "e706572b27d101",
-        "parentUid" : "b9fe3adcfcfa97f52f6662d59aaf962e",
+        "name" : "Проверить доступность меню в редакторе на seo",
+        "uid" : "6425bb0a9d5ba4c",
+        "parentUid" : "5c4a36faa01f7d0730a4412acb8638b1",
         "status" : "failed",
         "time" : {
-          "start" : 1716775225534,
-          "stop" : 1716775226783,
-          "duration" : 1249
+          "start" : 1717080462450,
+          "stop" : 1717080463723,
+          "duration" : 1273
+        },
+        "flaky" : false,
+        "newFailed" : true,
+        "parameters" : [ ]
+      } ],
+      "uid" : "5c4a36faa01f7d0730a4412acb8638b1"
+    }, {
+      "name" : "AssertionError: Ошибка: ['[Network error]: ServerError: Response not successful: Received status code 400\\nПроизошла ошибка: errors.GRAPHQL_VALIDATION_FAILED\\nПроизошла ошибка: errors.GRAPHQL_VALIDATION_FAILED\\nПроизошла ошибка: errors.GRAPHQL_VALIDATION_FAILED\\nПроизошла ошибка: errors.GRAPHQL_VALIDATION_FAILED\\nПроизошла ошибка: errors.GRAPHQL_VALIDATION_FAILED\\nПроизошла ошибка: errors.GRAPHQL_VALIDATION_FAILED\\nПроизошла ошибка: errors.GRAPHQL_VALIDATION_FAILED']\nassert None\n +  where None = <bound method MainPage.check_not_errors of <pages.main_page.MainPage object at 0x7f6cc7947e00>>()\n +    where <bound method MainPage.check_not_errors of <pages.main_page.MainPage object at 0x7f6cc7947e00>> = <pages.main_page.MainPage object at 0x7f6cc7947e00>.check_not_errors",
+      "children" : [ {
+        "name" : "Проверить отсутствие ошибок при открытии https://dealer-passport-test.xsfera.ru:3001/staff/ на сервере СЕО prod",
+        "uid" : "d99c2e2fbed104bf",
+        "parentUid" : "c4409620934d032a84a57e6aca390134",
+        "status" : "failed",
+        "time" : {
+          "start" : 1717080874811,
+          "stop" : 1717080878045,
+          "duration" : 3234
+        },
+        "flaky" : false,
+        "newFailed" : true,
+        "parameters" : [ "'https://dealer-passport-test.xsfera.ru:3001/staff/'" ]
+      } ],
+      "uid" : "c4409620934d032a84a57e6aca390134"
+    }, {
+      "name" : "AssertionError: Ошибка: ['Произошла ошибка: errors.GRAPHQL_VALIDATION_FAILED\\nПроизошла ошибка: errors.GRAPHQL_VALIDATION_FAILED\\nПроизошла ошибка: errors.GRAPHQL_VALIDATION_FAILED\\nПроизошла ошибка: errors.GRAPHQL_VALIDATION_FAILED\\nПроизошла ошибка: errors.GRAPHQL_VALIDATION_FAILED\\n[Network error]: ServerError: Response not successful: Received status code 400\\nПроизошла ошибка: errors.GRAPHQL_VALIDATION_FAILED\\nПроизошла ошибка: errors.GRAPHQL_VALIDATION_FAILED\\nПроизошла ошибка: errors.GRAPHQL_VALIDATION_FAILED\\nПроизошла ошибка: errors.GRAPHQL_VALIDATION_FAILED\\nПроизошла ошибка: errors.GRAPHQL_VALIDATION_FAILED\\nПроизошла ошибка: errors.GRAPHQL_VALIDATION_FAILED\\nПроизошла ошибка: errors.GRAPHQL_VALIDATION_FAILED']\nassert None\n +  where None = <bound method MainPage.check_not_errors of <pages.main_page.MainPage object at 0x7f6cc7cb65d0>>()\n +    where <bound method MainPage.check_not_errors of <pages.main_page.MainPage object at 0x7f6cc7cb65d0>> = <pages.main_page.MainPage object at 0x7f6cc7cb65d0>.check_not_errors",
+      "children" : [ {
+        "name" : "Проверить отсутствие ошибок при открытии https://dealer-passport-test.xsfera.ru:3001/dealers/ на сервере СЕО prod",
+        "uid" : "fbc9e1589882a5df",
+        "parentUid" : "3a48b9624179d413384243a340c8096e",
+        "status" : "failed",
+        "time" : {
+          "start" : 1717080881399,
+          "stop" : 1717080883086,
+          "duration" : 1687
+        },
+        "flaky" : false,
+        "newFailed" : true,
+        "parameters" : [ "'https://dealer-passport-test.xsfera.ru:3001/dealers/'" ]
+      } ],
+      "uid" : "3a48b9624179d413384243a340c8096e"
+    }, {
+      "name" : "AssertionError: Ошибка: ['[Network error]: ServerError: Response not successful: Received status code 400\\nПроизошла ошибка: errors.GRAPHQL_VALIDATION_FAILED\\nПроизошла ошибка: errors.GRAPHQL_VALIDATION_FAILED\\nПроизошла ошибка: errors.GRAPHQL_VALIDATION_FAILED\\nПроизошла ошибка: errors.GRAPHQL_VALIDATION_FAILED\\nПроизошла ошибка: errors.GRAPHQL_VALIDATION_FAILED\\nПроизошла ошибка: errors.GRAPHQL_VALIDATION_FAILED']\nassert None\n +  where None = <bound method MainPage.check_not_errors of <pages.main_page.MainPage object at 0x7f6cc7963710>>()\n +    where <bound method MainPage.check_not_errors of <pages.main_page.MainPage object at 0x7f6cc7963710>> = <pages.main_page.MainPage object at 0x7f6cc7963710>.check_not_errors",
+      "children" : [ {
+        "name" : "Проверить отсутствие ошибок при открытии https://dealer-passport-test.xsfera.ru:3001/users/ на сервере СЕО prod",
+        "uid" : "598811524945bf8e",
+        "parentUid" : "c9b005350c6a8cd35eae2c4571fade25",
+        "status" : "failed",
+        "time" : {
+          "start" : 1717080887492,
+          "stop" : 1717080891729,
+          "duration" : 4237
+        },
+        "flaky" : false,
+        "newFailed" : true,
+        "parameters" : [ "'https://dealer-passport-test.xsfera.ru:3001/users/'" ]
+      } ],
+      "uid" : "c9b005350c6a8cd35eae2c4571fade25"
+    } ],
+    "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
+  }, {
+    "name" : "Test defects",
+    "children" : [ {
+      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x556c7d9c8e8a <unknown>\n#1 0x556c7d6b245c <unknown>\n#2 0x556c7d6fe5b5 <unknown>\n#3 0x556c7d6fe671 <unknown>\n#4 0x556c7d742f14 <unknown>\n#5 0x556c7d7214dd <unknown>\n#6 0x556c7d7402cc <unknown>\n#7 0x556c7d721253 <unknown>\n#8 0x556c7d6f11c7 <unknown>\n#9 0x556c7d6f1b3e <unknown>\n#10 0x556c7d98f2cb <unknown>\n#11 0x556c7d993377 <unknown>\n#12 0x556c7d97bdfe <unknown>\n#13 0x556c7d993e42 <unknown>\n#14 0x556c7d96079f <unknown>\n#15 0x556c7d9b8178 <unknown>\n#16 0x556c7d9b834b <unknown>\n#17 0x556c7d9c7fbc <unknown>\n#18 0x7f96c4294ac3 <unknown>",
+      "children" : [ {
+        "name" : "test_open_seo_prod[https://dealer-passport-test.xsfera.ru:3001]",
+        "uid" : "29115de1fb974907",
+        "parentUid" : "aa40b791e1ce7ee60d008523d57f4490",
+        "status" : "broken",
+        "time" : {
+          "start" : 1717080716005,
+          "stop" : 1717080716005,
+          "duration" : 0
         },
         "flaky" : false,
         "newFailed" : false,
-        "parameters" : [ ]
+        "parameters" : [ "'https://dealer-passport-test.xsfera.ru:3001'" ]
       } ],
-      "uid" : "b9fe3adcfcfa97f52f6662d59aaf962e"
+      "uid" : "aa40b791e1ce7ee60d008523d57f4490"
     } ],
-    "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
+    "uid" : "bdbf199525818fae7a8651db9eafe741"
   } ],
   "name" : "categories"
 }
