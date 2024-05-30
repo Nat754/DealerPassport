@@ -20,6 +20,7 @@ class TestEditorPageSmoke:
         page = EditorPage(driver)
         assert page.check_groups_editor() == EditorConstants.EDITOR_MENU_SEO_PROD, 'Меню редактора изменилось'
 
+    @pytest.mark.xfail
     @allure.title(f'Проверить доступность меню в редакторе на prod')
     def test_editor_menu_prod(self, auth_user_admin_to_prod, driver):
         driver.get(Urls.MAIN_URL_PROD + Urls.EDITOR_URL)

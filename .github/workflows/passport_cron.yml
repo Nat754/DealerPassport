@@ -38,6 +38,10 @@ jobs:
         MAIN_URL_SEO: ${{ secrets.MAIN_URL_SEO }}
         MAIN_URL_PROD: ${{ secrets.MAIN_URL_PROD }}
         MAIN_URL_TEST: ${{ secrets.MAIN_URL_TEST }}
+        MS_PROD: ${{ secrets.MS_PROD }}
+        MS_TEST: ${{ secrets.MS_TEST }}
+        MS_URL_TEST: ${{ secrets.MS_URL_TEST }}
+        MS_URL_PROD: ${{ secrets.MS_URL_PROD }}
       run: |
         pytest -s -v --alluredir=allure-results
 
