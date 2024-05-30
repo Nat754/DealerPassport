@@ -1,5 +1,7 @@
 import os
 from dotenv import load_dotenv
+from datetime import datetime
+
 
 load_dotenv()
 
@@ -9,6 +11,8 @@ class Tokens:
     TOKEN_SEO = {'Authorization': f'{os.environ["SEO_ADMIN"]}'}
     TOKEN_TEST = {'Authorization': f'{os.environ["TEST_ADMIN"]}'}
     TOKEN_PROD = {'Authorization': f'{os.environ["PROD_ADMIN"]}'}
+    MS_PROD = {'Authorization': f'{os.environ["MS_PROD"]}'}
+    MS_TEST = {'Authorization': f'{os.environ["MS_TEST"]}'}
 
 
 class Urls:
@@ -31,6 +35,8 @@ class Urls:
     MAIN_URL_SEO_PROD = MAIN_URL_SEO + ":3001"
     MAIN_URL_TEST = os.environ["MAIN_URL_TEST"]
     MAIN_URL_PROD = os.environ["MAIN_URL_PROD"]
+    MS_URL_TEST = os.environ["MS_URL_TEST"]
+    MS_URL_PROD = os.environ["MS_URL_PROD"]
 
     LIST_URLS_SEO = [MAIN_URL_SEO,
                      MAIN_URL_SEO + EDITOR_URL,
@@ -117,8 +123,17 @@ class EditorConstants:
     EDITOR_MENU_SEO = ['Глобальный рейтинг', 'Квартили', 'Персонал', 'База сотрудников', 'Подразделения',
                        'Виды нарушений', 'Редактор форм заявок-деклараций', 'Справочник должностей',
                        'Каталог учебных программ', 'Справочники библиотеки документов', 'Редактор отчетов',
-                       'Справочник зон камер', 'Справочник информационных систем']
-    EDITOR_MENU_TEST = ['Глобальный рейтинг', 'Квартили', 'Персонал', 'База сотрудников', 'Подразделения',
-                        'Виды нарушений', 'Редактор форм заявок-деклараций', 'Справочник должностей',
-                        'Каталог учебных программ', 'Справочники библиотеки документов', 'Редактор отчетов',
-                        'Справочник зон камер', 'Справочник информационных систем']
+                       'Справочник зон камер', 'Справочник информационных систем',
+                       'Справочник разделов фотогалереи']
+    EDITOR_MENU_SEO_PROD = ['Глобальный рейтинг', 'Квартили', 'Персонал', 'База сотрудников', 'Подразделения',
+                            'Виды нарушений', 'Редактор форм заявок-деклараций', 'Справочник должностей',
+                            'Каталог учебных программ', 'Справочники библиотеки документов', 'Редактор отчетов',
+                            'Справочник зон камер', 'Справочник информационных систем']
+
+
+class MSConstants:
+    YEAR = datetime.now().year
+    QUARTER = datetime.now().month // 3
+    DEALER_ID = '1197057857'
+    url_test = f'{Urls.MS_URL_TEST}?year={YEAR}&quarter={QUARTER}'
+    url_prod = f'{Urls.MS_URL_PROD}?year={YEAR}&quarter={QUARTER}'
