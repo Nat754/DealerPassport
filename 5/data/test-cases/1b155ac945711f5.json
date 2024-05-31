@@ -1,0 +1,222 @@
+{
+  "uid" : "1b155ac945711f5",
+  "name" : "Проверить доступность меню в редакторе на prod",
+  "fullName" : "tests.editor_page_test.TestEditorPageSmoke#test_editor_menu_prod",
+  "historyId" : "82c3a674d6e3706fadbaed7321fc3e09",
+  "time" : {
+    "start" : 1717143742749,
+    "stop" : 1717143744063,
+    "duration" : 1314
+  },
+  "status" : "skipped",
+  "statusMessage" : "XFAIL\n\nAssertionError: Меню редактора изменилось\nassert ['Глобальный ...рушений', ...] == ['Глобальный ...рушений', ...]\n  \n  At index 11 diff: 'Справочник зон камер' != 'Справочник информационных систем'\n  Left contains one more item: 'Справочник информационных систем'\n  \n  Full diff:\n    [\n        'Глобальный рейтинг',\n        'Квартили',\n        'Персонал',\n        'База сотрудников',\n        'Подразделения',\n        'Виды нарушений',\n        'Редактор форм заявок-деклараций',\n        'Справочник должностей',\n        'Каталог учебных программ',\n        'Справочники библиотеки документов',\n        'Редактор отчетов',\n  +     'Справочник зон камер',\n        'Справочник информационных систем',\n    ]",
+  "statusTrace" : "self = <tests.editor_page_test.TestEditorPageSmoke object at 0x7f3bb990a0c0>\nauth_user_admin_to_prod = <pages.main_page.MainPage object at 0x7f3bb9531310>\ndriver = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"6a7e48755279ec71023027c78ebeb8d8\")>\n\n    @pytest.mark.xfail\n    @allure.title(f'Проверить доступность меню в редакторе на prod')\n    def test_editor_menu_prod(self, auth_user_admin_to_prod, driver):\n        driver.get(Urls.MAIN_URL_PROD + Urls.EDITOR_URL)\n        page = EditorPage(driver)\n>       assert page.check_groups_editor() == EditorConstants.EDITOR_MENU_PROD, 'Меню редактора изменилось'\nE       AssertionError: Меню редактора изменилось\nE       assert ['Глобальный ...рушений', ...] == ['Глобальный ...рушений', ...]\nE         \nE         At index 11 diff: 'Справочник зон камер' != 'Справочник информационных систем'\nE         Left contains one more item: 'Справочник информационных систем'\nE         \nE         Full diff:\nE           [\nE               'Глобальный рейтинг',\nE               'Квартили',\nE               'Персонал',\nE               'База сотрудников',\nE               'Подразделения',\nE               'Виды нарушений',\nE               'Редактор форм заявок-деклараций',\nE               'Справочник должностей',\nE               'Каталог учебных программ',\nE               'Справочники библиотеки документов',\nE               'Редактор отчетов',\nE         +     'Справочник зон камер',\nE               'Справочник информационных систем',\nE           ]\n\ntests/editor_page_test.py:28: AssertionError",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "clear_allure_results_folder",
+    "time" : {
+      "start" : 1717143725377,
+      "stop" : 1717143725377,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "driver",
+    "time" : {
+      "start" : 1717143737939,
+      "stop" : 1717143738137,
+      "duration" : 198
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "auth_user_admin_to_prod",
+    "time" : {
+      "start" : 1717143738137,
+      "stop" : 1717143742748,
+      "duration" : 4611
+    },
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Проверка видимости кнопки '('xpath', '//span[text()=\"Согласен\"]')' на главной странице",
+      "time" : {
+        "start" : 1717143742669,
+        "stop" : 1717143742701,
+        "duration" : 32
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 1,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  } ],
+  "testStage" : {
+    "status" : "skipped",
+    "statusMessage" : "XFAIL\n\nAssertionError: Меню редактора изменилось\nassert ['Глобальный ...рушений', ...] == ['Глобальный ...рушений', ...]\n  \n  At index 11 diff: 'Справочник зон камер' != 'Справочник информационных систем'\n  Left contains one more item: 'Справочник информационных систем'\n  \n  Full diff:\n    [\n        'Глобальный рейтинг',\n        'Квартили',\n        'Персонал',\n        'База сотрудников',\n        'Подразделения',\n        'Виды нарушений',\n        'Редактор форм заявок-деклараций',\n        'Справочник должностей',\n        'Каталог учебных программ',\n        'Справочники библиотеки документов',\n        'Редактор отчетов',\n  +     'Справочник зон камер',\n        'Справочник информационных систем',\n    ]",
+    "statusTrace" : "self = <tests.editor_page_test.TestEditorPageSmoke object at 0x7f3bb990a0c0>\nauth_user_admin_to_prod = <pages.main_page.MainPage object at 0x7f3bb9531310>\ndriver = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"6a7e48755279ec71023027c78ebeb8d8\")>\n\n    @pytest.mark.xfail\n    @allure.title(f'Проверить доступность меню в редакторе на prod')\n    def test_editor_menu_prod(self, auth_user_admin_to_prod, driver):\n        driver.get(Urls.MAIN_URL_PROD + Urls.EDITOR_URL)\n        page = EditorPage(driver)\n>       assert page.check_groups_editor() == EditorConstants.EDITOR_MENU_PROD, 'Меню редактора изменилось'\nE       AssertionError: Меню редактора изменилось\nE       assert ['Глобальный ...рушений', ...] == ['Глобальный ...рушений', ...]\nE         \nE         At index 11 diff: 'Справочник зон камер' != 'Справочник информационных систем'\nE         Left contains one more item: 'Справочник информационных систем'\nE         \nE         Full diff:\nE           [\nE               'Глобальный рейтинг',\nE               'Квартили',\nE               'Персонал',\nE               'База сотрудников',\nE               'Подразделения',\nE               'Виды нарушений',\nE               'Редактор форм заявок-деклараций',\nE               'Справочник должностей',\nE               'Каталог учебных программ',\nE               'Справочники библиотеки документов',\nE               'Редактор отчетов',\nE         +     'Справочник зон камер',\nE               'Справочник информационных систем',\nE           ]\n\ntests/editor_page_test.py:28: AssertionError",
+    "steps" : [ {
+      "name" : "Проверка видимости групп в Редакторе",
+      "time" : {
+        "start" : 1717143743400,
+        "stop" : 1717143744063,
+        "duration" : 663
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ {
+      "uid" : "5f63503f72d951fa",
+      "name" : "Screenshot",
+      "source" : "5f63503f72d951fa.png",
+      "type" : "image/png",
+      "size" : 62586
+    }, {
+      "uid" : "3eee9752d27dc6f5",
+      "name" : "HTML source",
+      "source" : "3eee9752d27dc6f5.html",
+      "type" : "text/html",
+      "size" : 22505
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 1,
+    "attachmentsCount" : 2,
+    "shouldDisplayMessage" : true,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "driver::0",
+    "time" : {
+      "start" : 1717143744165,
+      "stop" : 1717143744227,
+      "duration" : 62
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "epic",
+    "value" : "Test SRR Page smoke_test"
+  }, {
+    "name" : "tag",
+    "value" : "@pytest.mark.xfail"
+  }, {
+    "name" : "tag",
+    "value" : "smoke_test"
+  }, {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "editor_page_test"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestEditorPageSmoke"
+  }, {
+    "name" : "host",
+    "value" : "fv-az1110-675"
+  }, {
+    "name" : "thread",
+    "value" : "2227-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.editor_page_test"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 1,
+        "broken" : 0,
+        "skipped" : 3,
+        "passed" : 0,
+        "unknown" : 0,
+        "total" : 4
+      },
+      "items" : [ {
+        "uid" : "cf9d13b422e786c7",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/9//#testresult/cf9d13b422e786c7",
+        "status" : "skipped",
+        "statusDetails" : "XFAIL\n\nAssertionError: Меню редактора изменилось\nassert ['Глобальный ...рушений', ...] == ['Глобальный ...рушений', ...]\n  \n  At index 11 diff: 'Справочник зон камер' != 'Справочник информационных систем'\n  Left contains one more item: 'Справочник информационных систем'\n  \n  Full diff:\n    [\n        'Глобальный рейтинг',\n        'Квартили',\n        'Персонал',\n        'База сотрудников',\n        'Подразделения',\n        'Виды нарушений',\n        'Редактор форм заявок-деклараций',\n        'Справочник должностей',\n        'Каталог учебных программ',\n        'Справочники библиотеки документов',\n        'Редактор отчетов',\n  +     'Справочник зон камер',\n        'Справочник информационных систем',\n    ]",
+        "time" : {
+          "start" : 1717120952378,
+          "stop" : 1717120953566,
+          "duration" : 1188
+        }
+      }, {
+        "uid" : "37fa0e0263c173df",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/5//#testresult/37fa0e0263c173df",
+        "status" : "skipped",
+        "statusDetails" : "XFAIL\n\nAssertionError: Меню редактора изменилось\nassert ['Глобальный ...рушений', ...] == ['Глобальный ...рушений', ...]\n  \n  At index 11 diff: 'Справочник зон камер' != 'Справочник информационных систем'\n  Left contains one more item: 'Справочник информационных систем'\n  \n  Full diff:\n    [\n        'Глобальный рейтинг',\n        'Квартили',\n        'Персонал',\n        'База сотрудников',\n        'Подразделения',\n        'Виды нарушений',\n        'Редактор форм заявок-деклараций',\n        'Справочник должностей',\n        'Каталог учебных программ',\n        'Справочники библиотеки документов',\n        'Редактор отчетов',\n  +     'Справочник зон камер',\n        'Справочник информационных систем',\n    ]",
+        "time" : {
+          "start" : 1717080472141,
+          "stop" : 1717080473358,
+          "duration" : 1217
+        }
+      }, {
+        "uid" : "5c0ef2dc9e59c2de",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/4//#testresult/5c0ef2dc9e59c2de",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Меню редактора изменилось\nassert ['Глобальный ...рушений', ...] == ['Глобальный ...рушений', ...]\n  \n  At index 11 diff: 'Справочник зон камер' != 'Справочник информационных систем'\n  Left contains one more item: 'Справочник информационных систем'\n  \n  Full diff:\n    [\n        'Глобальный рейтинг',\n        'Квартили',\n        'Персонал',\n        'База сотрудников',\n        'Подразделения',\n        'Виды нарушений',\n        'Редактор форм заявок-деклараций',\n        'Справочник должностей',\n        'Каталог учебных программ',\n        'Справочники библиотеки документов',\n        'Редактор отчетов',\n  +     'Справочник зон камер',\n        'Справочник информационных систем',\n    ]",
+        "time" : {
+          "start" : 1717059089057,
+          "stop" : 1717059090270,
+          "duration" : 1213
+        }
+      } ]
+    },
+    "tags" : [ "@pytest.mark.xfail", "smoke_test" ]
+  },
+  "source" : "1b155ac945711f5.json",
+  "parameterValues" : [ ]
+}

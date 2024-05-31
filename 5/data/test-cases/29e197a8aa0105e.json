@@ -1,0 +1,222 @@
+{
+  "uid" : "29e197a8aa0105e",
+  "name" : "Проверить доступность меню в редакторе на seo",
+  "fullName" : "tests.editor_page_test.TestEditorPageSmoke#test_editor_menu_seo",
+  "historyId" : "ff3b15c1fead3fac270a65e8516839a3",
+  "time" : {
+    "start" : 1717143731170,
+    "stop" : 1717143732545,
+    "duration" : 1375
+  },
+  "status" : "failed",
+  "statusMessage" : "AssertionError: Меню редактора изменилось\nassert ['Глобальный ...рушений', ...] == ['Глобальный ...рушений', ...]\n  \n  Right contains one more item: 'Справочник разделов фотогалереи'\n  \n  Full diff:\n    [\n        'Глобальный рейтинг',\n        'Квартили',\n        'Персонал',\n        'База сотрудников',\n        'Подразделения',\n        'Виды нарушений',\n        'Редактор форм заявок-деклараций',\n        'Справочник должностей',\n        'Каталог учебных программ',\n        'Справочники библиотеки документов',\n        'Редактор отчетов',\n        'Справочник зон камер',\n        'Справочник информационных систем',\n  -     'Справочник разделов фотогалереи',\n    ]",
+  "statusTrace" : "self = <tests.editor_page_test.TestEditorPageSmoke object at 0x7f3bb98c3680>\nauth_user_admin_to_seo = <pages.main_page.MainPage object at 0x7f3bb98c3a40>\ndriver = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"fd156024908c3a453478ab88c701296f\")>\n\n    @allure.title(f'Проверить доступность меню в редакторе на seo')\n    def test_editor_menu_seo(self, auth_user_admin_to_seo, driver):\n        driver.get(Urls.MAIN_URL_SEO + Urls.EDITOR_URL)\n        page = EditorPage(driver)\n>       assert page.check_groups_editor() == EditorConstants.EDITOR_MENU_SEO, 'Меню редактора изменилось'\nE       AssertionError: Меню редактора изменилось\nE       assert ['Глобальный ...рушений', ...] == ['Глобальный ...рушений', ...]\nE         \nE         Right contains one more item: 'Справочник разделов фотогалереи'\nE         \nE         Full diff:\nE           [\nE               'Глобальный рейтинг',\nE               'Квартили',\nE               'Персонал',\nE               'База сотрудников',\nE               'Подразделения',\nE               'Виды нарушений',\nE               'Редактор форм заявок-деклараций',\nE               'Справочник должностей',\nE               'Каталог учебных программ',\nE               'Справочники библиотеки документов',\nE               'Редактор отчетов',\nE               'Справочник зон камер',\nE               'Справочник информационных систем',\nE         -     'Справочник разделов фотогалереи',\nE           ]\n\ntests/editor_page_test.py:15: AssertionError",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "clear_allure_results_folder",
+    "time" : {
+      "start" : 1717143725377,
+      "stop" : 1717143725377,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "driver",
+    "time" : {
+      "start" : 1717143725377,
+      "stop" : 1717143727086,
+      "duration" : 1709
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "auth_user_admin_to_seo",
+    "time" : {
+      "start" : 1717143727086,
+      "stop" : 1717143731170,
+      "duration" : 4084
+    },
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Проверка видимости кнопки '('xpath', '//span[text()=\"Согласен\"]')' на главной странице",
+      "time" : {
+        "start" : 1717143731085,
+        "stop" : 1717143731119,
+        "duration" : 34
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 1,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  } ],
+  "testStage" : {
+    "status" : "failed",
+    "statusMessage" : "AssertionError: Меню редактора изменилось\nassert ['Глобальный ...рушений', ...] == ['Глобальный ...рушений', ...]\n  \n  Right contains one more item: 'Справочник разделов фотогалереи'\n  \n  Full diff:\n    [\n        'Глобальный рейтинг',\n        'Квартили',\n        'Персонал',\n        'База сотрудников',\n        'Подразделения',\n        'Виды нарушений',\n        'Редактор форм заявок-деклараций',\n        'Справочник должностей',\n        'Каталог учебных программ',\n        'Справочники библиотеки документов',\n        'Редактор отчетов',\n        'Справочник зон камер',\n        'Справочник информационных систем',\n  -     'Справочник разделов фотогалереи',\n    ]",
+    "statusTrace" : "self = <tests.editor_page_test.TestEditorPageSmoke object at 0x7f3bb98c3680>\nauth_user_admin_to_seo = <pages.main_page.MainPage object at 0x7f3bb98c3a40>\ndriver = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"fd156024908c3a453478ab88c701296f\")>\n\n    @allure.title(f'Проверить доступность меню в редакторе на seo')\n    def test_editor_menu_seo(self, auth_user_admin_to_seo, driver):\n        driver.get(Urls.MAIN_URL_SEO + Urls.EDITOR_URL)\n        page = EditorPage(driver)\n>       assert page.check_groups_editor() == EditorConstants.EDITOR_MENU_SEO, 'Меню редактора изменилось'\nE       AssertionError: Меню редактора изменилось\nE       assert ['Глобальный ...рушений', ...] == ['Глобальный ...рушений', ...]\nE         \nE         Right contains one more item: 'Справочник разделов фотогалереи'\nE         \nE         Full diff:\nE           [\nE               'Глобальный рейтинг',\nE               'Квартили',\nE               'Персонал',\nE               'База сотрудников',\nE               'Подразделения',\nE               'Виды нарушений',\nE               'Редактор форм заявок-деклараций',\nE               'Справочник должностей',\nE               'Каталог учебных программ',\nE               'Справочники библиотеки документов',\nE               'Редактор отчетов',\nE               'Справочник зон камер',\nE               'Справочник информационных систем',\nE         -     'Справочник разделов фотогалереи',\nE           ]\n\ntests/editor_page_test.py:15: AssertionError",
+    "steps" : [ {
+      "name" : "Проверка видимости групп в Редакторе",
+      "time" : {
+        "start" : 1717143731871,
+        "stop" : 1717143732545,
+        "duration" : 674
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ {
+      "uid" : "68d38e5062f4bd5b",
+      "name" : "Screenshot",
+      "source" : "68d38e5062f4bd5b.png",
+      "type" : "image/png",
+      "size" : 53309
+    }, {
+      "uid" : "18f3a5b131e689b6",
+      "name" : "HTML source",
+      "source" : "18f3a5b131e689b6.html",
+      "type" : "text/html",
+      "size" : 22061
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 1,
+    "attachmentsCount" : 2,
+    "shouldDisplayMessage" : true,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "driver::0",
+    "time" : {
+      "start" : 1717143732678,
+      "stop" : 1717143732739,
+      "duration" : 61
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "epic",
+    "value" : "Test SRR Page smoke_test"
+  }, {
+    "name" : "tag",
+    "value" : "smoke_test"
+  }, {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "editor_page_test"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestEditorPageSmoke"
+  }, {
+    "name" : "host",
+    "value" : "fv-az1110-675"
+  }, {
+    "name" : "thread",
+    "value" : "2227-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.editor_page_test"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 3,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 1,
+        "unknown" : 0,
+        "total" : 4
+      },
+      "items" : [ {
+        "uid" : "779850c2aeecff0d",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/9//#testresult/779850c2aeecff0d",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Меню редактора изменилось\nassert ['Глобальный ...рушений', ...] == ['Глобальный ...рушений', ...]\n  \n  Right contains one more item: 'Справочник разделов фотогалереи'\n  \n  Full diff:\n    [\n        'Глобальный рейтинг',\n        'Квартили',\n        'Персонал',\n        'База сотрудников',\n        'Подразделения',\n        'Виды нарушений',\n        'Редактор форм заявок-деклараций',\n        'Справочник должностей',\n        'Каталог учебных программ',\n        'Справочники библиотеки документов',\n        'Редактор отчетов',\n        'Справочник зон камер',\n        'Справочник информационных систем',\n  -     'Справочник разделов фотогалереи',\n    ]",
+        "time" : {
+          "start" : 1717120942534,
+          "stop" : 1717120943852,
+          "duration" : 1318
+        }
+      }, {
+        "uid" : "6425bb0a9d5ba4c",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/5//#testresult/6425bb0a9d5ba4c",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Меню редактора изменилось\nassert ['Глобальный ...рушений', ...] == ['Глобальный ...рушений', ...]\n  \n  Right contains one more item: 'Справочник разделов фотогалереи'\n  \n  Full diff:\n    [\n        'Глобальный рейтинг',\n        'Квартили',\n        'Персонал',\n        'База сотрудников',\n        'Подразделения',\n        'Виды нарушений',\n        'Редактор форм заявок-деклараций',\n        'Справочник должностей',\n        'Каталог учебных программ',\n        'Справочники библиотеки документов',\n        'Редактор отчетов',\n        'Справочник зон камер',\n        'Справочник информационных систем',\n  -     'Справочник разделов фотогалереи',\n    ]",
+        "time" : {
+          "start" : 1717080462450,
+          "stop" : 1717080463723,
+          "duration" : 1273
+        }
+      }, {
+        "uid" : "7708059576b23dbf",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/4//#testresult/7708059576b23dbf",
+        "status" : "passed",
+        "time" : {
+          "start" : 1717059079486,
+          "stop" : 1717059080765,
+          "duration" : 1279
+        }
+      } ]
+    },
+    "tags" : [ "smoke_test" ]
+  },
+  "source" : "29e197a8aa0105e.json",
+  "parameterValues" : [ ]
+}
