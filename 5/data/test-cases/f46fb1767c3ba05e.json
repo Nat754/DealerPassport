@@ -1,0 +1,212 @@
+{
+  "uid" : "f46fb1767c3ba05e",
+  "name" : "Проверить отсутствие ошибок при открытии https://dealer-passport-test.xsfera.ru:3001/editor/ на сервере СЕО prod",
+  "fullName" : "tests.main_page_test.TestMainPageSmoke#test_open_seo_prod",
+  "historyId" : "3d8039c91e2eb6879feffc1e516155f1",
+  "time" : {
+    "start" : 1717150342931,
+    "stop" : 1717150353732,
+    "duration" : 10801
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "driver",
+    "time" : {
+      "start" : 1717150340296,
+      "stop" : 1717150340493,
+      "duration" : 197
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "clear_allure_results_folder",
+    "time" : {
+      "start" : 1717150080987,
+      "stop" : 1717150080988,
+      "duration" : 1
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "auth_user_admin_to_seo_prod",
+    "time" : {
+      "start" : 1717150340493,
+      "stop" : 1717150342930,
+      "duration" : 2437
+    },
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Проверка видимости кнопки '('xpath', '//span[text()=\"Согласен\"]')' на главной странице",
+      "time" : {
+        "start" : 1717150342848,
+        "stop" : 1717150342880,
+        "duration" : 32
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 1,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  } ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Проверить отсутствие ошибок",
+      "time" : {
+        "start" : 1717150343480,
+        "stop" : 1717150353732,
+        "duration" : 10252
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 1,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "driver::0",
+    "time" : {
+      "start" : 1717150353734,
+      "stop" : 1717150353796,
+      "duration" : 62
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "epic",
+    "value" : "Test Main Page smoke_test"
+  }, {
+    "name" : "tag",
+    "value" : "smoke_test"
+  }, {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "main_page_test"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestMainPageSmoke"
+  }, {
+    "name" : "host",
+    "value" : "fv-az1393-456"
+  }, {
+    "name" : "thread",
+    "value" : "2278-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.main_page_test"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "url",
+    "value" : "'https://dealer-passport-test.xsfera.ru:3001/editor/'"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 5,
+        "unknown" : 0,
+        "total" : 5
+      },
+      "items" : [ {
+        "uid" : "d8f94d1c8b590641",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/5//#testresult/d8f94d1c8b590641",
+        "status" : "passed",
+        "time" : {
+          "start" : 1717144024551,
+          "stop" : 1717144035512,
+          "duration" : 10961
+        }
+      }, {
+        "uid" : "651e0eabbdcb9015",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/9//#testresult/651e0eabbdcb9015",
+        "status" : "passed",
+        "time" : {
+          "start" : 1717121209279,
+          "stop" : 1717121220162,
+          "duration" : 10883
+        }
+      }, {
+        "uid" : "65108347d0e16446",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/5//#testresult/65108347d0e16446",
+        "status" : "passed",
+        "time" : {
+          "start" : 1717080733216,
+          "stop" : 1717080744080,
+          "duration" : 10864
+        }
+      }, {
+        "uid" : "9701130fdad532a3",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/4//#testresult/9701130fdad532a3",
+        "status" : "passed",
+        "time" : {
+          "start" : 1717059346064,
+          "stop" : 1717059356854,
+          "duration" : 10790
+        }
+      } ]
+    },
+    "tags" : [ "smoke_test" ]
+  },
+  "source" : "f46fb1767c3ba05e.json",
+  "parameterValues" : [ "'https://dealer-passport-test.xsfera.ru:3001/editor/'" ]
+}

@@ -6,19 +6,70 @@
       "name" : "AssertionError: Меню редактора изменилось\nassert ['Глобальный ...рушений', ...] == ['Глобальный ...рушений', ...]\n  \n  Right contains one more item: 'Справочник разделов фотогалереи'\n  \n  Full diff:\n    [\n        'Глобальный рейтинг',\n        'Квартили',\n        'Персонал',\n        'База сотрудников',\n        'Подразделения',\n        'Виды нарушений',\n        'Редактор форм заявок-деклараций',\n        'Справочник должностей',\n        'Каталог учебных программ',\n        'Справочники библиотеки документов',\n        'Редактор отчетов',\n        'Справочник зон камер',\n        'Справочник информационных систем',\n  -     'Справочник разделов фотогалереи',\n    ]",
       "children" : [ {
         "name" : "Проверить доступность меню в редакторе на seo",
-        "uid" : "29e197a8aa0105e",
+        "uid" : "24c73683eb480ede",
         "parentUid" : "5c4a36faa01f7d0730a4412acb8638b1",
         "status" : "failed",
         "time" : {
-          "start" : 1717143731170,
-          "stop" : 1717143732545,
-          "duration" : 1375
+          "start" : 1717150111605,
+          "stop" : 1717150112941,
+          "duration" : 1336
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
       "uid" : "5c4a36faa01f7d0730a4412acb8638b1"
+    }, {
+      "name" : "AssertionError: Ошибка: ['[Network error]: ServerError: Response not successful: Received status code 400\\nПроизошла ошибка: errors.GRAPHQL_VALIDATION_FAILED\\nПроизошла ошибка: errors.GRAPHQL_VALIDATION_FAILED\\nПроизошла ошибка: errors.GRAPHQL_VALIDATION_FAILED\\nПроизошла ошибка: errors.GRAPHQL_VALIDATION_FAILED\\nПроизошла ошибка: errors.GRAPHQL_VALIDATION_FAILED\\nПроизошла ошибка: errors.GRAPHQL_VALIDATION_FAILED']\nassert None\n +  where None = <bound method MainPage.check_not_errors of <pages.main_page.MainPage object at 0x7fa8884a2a20>>()\n +    where <bound method MainPage.check_not_errors of <pages.main_page.MainPage object at 0x7fa8884a2a20>> = <pages.main_page.MainPage object at 0x7fa8884a2a20>.check_not_errors",
+      "children" : [ {
+        "name" : "Проверить отсутствие ошибок при открытии https://dealer-passport-test.xsfera.ru/staff/ на сервере СЕО",
+        "uid" : "e285f4d969abdf19",
+        "parentUid" : "503888df89f3ad61947b060c32f101c1",
+        "status" : "failed",
+        "time" : {
+          "start" : 1717150288974,
+          "stop" : 1717150291156,
+          "duration" : 2182
+        },
+        "flaky" : false,
+        "newFailed" : true,
+        "parameters" : [ "'https://dealer-passport-test.xsfera.ru/staff/'" ]
+      } ],
+      "uid" : "503888df89f3ad61947b060c32f101c1"
+    }, {
+      "name" : "AssertionError: Ошибка: ['Произошла ошибка: errors.GRAPHQL_VALIDATION_FAILED\\nПроизошла ошибка: errors.GRAPHQL_VALIDATION_FAILED\\nПроизошла ошибка: errors.GRAPHQL_VALIDATION_FAILED']\nassert None\n +  where None = <bound method MainPage.check_not_errors of <pages.main_page.MainPage object at 0x7fa8887f9d30>>()\n +    where <bound method MainPage.check_not_errors of <pages.main_page.MainPage object at 0x7fa8887f9d30>> = <pages.main_page.MainPage object at 0x7fa8887f9d30>.check_not_errors",
+      "children" : [ {
+        "name" : "Проверить отсутствие ошибок при открытии https://dealer-passport-test.xsfera.ru/dealers/ на сервере СЕО",
+        "uid" : "6e64d4d9fa9c4d4a",
+        "parentUid" : "3e8dce23cfcac04c100a1e776a48b3f9",
+        "status" : "failed",
+        "time" : {
+          "start" : 1717150294130,
+          "stop" : 1717150295279,
+          "duration" : 1149
+        },
+        "flaky" : false,
+        "newFailed" : true,
+        "parameters" : [ "'https://dealer-passport-test.xsfera.ru/dealers/'" ]
+      } ],
+      "uid" : "3e8dce23cfcac04c100a1e776a48b3f9"
+    }, {
+      "name" : "AssertionError: Ошибка: ['[Network error]: ServerError: Response not successful: Received status code 400\\nПроизошла ошибка: errors.GRAPHQL_VALIDATION_FAILED\\nПроизошла ошибка: errors.GRAPHQL_VALIDATION_FAILED\\nПроизошла ошибка: errors.GRAPHQL_VALIDATION_FAILED\\nПроизошла ошибка: errors.GRAPHQL_VALIDATION_FAILED\\nПроизошла ошибка: errors.GRAPHQL_VALIDATION_FAILED\\nПроизошла ошибка: errors.GRAPHQL_VALIDATION_FAILED\\nПроизошла ошибка: errors.GRAPHQL_VALIDATION_FAILED\\nПроизошла ошибка: errors.GRAPHQL_VALIDATION_FAILED']\nassert None\n +  where None = <bound method MainPage.check_not_errors of <pages.main_page.MainPage object at 0x7fa8884b96d0>>()\n +    where <bound method MainPage.check_not_errors of <pages.main_page.MainPage object at 0x7fa8884b96d0>> = <pages.main_page.MainPage object at 0x7fa8884b96d0>.check_not_errors",
+      "children" : [ {
+        "name" : "Проверить отсутствие ошибок при открытии https://dealer-passport-test.xsfera.ru/users/ на сервере СЕО",
+        "uid" : "c3dda86867bd7d8c",
+        "parentUid" : "a738968831d4dac273aaae361ced3d8a",
+        "status" : "failed",
+        "time" : {
+          "start" : 1717150298175,
+          "stop" : 1717150299777,
+          "duration" : 1602
+        },
+        "flaky" : false,
+        "newFailed" : true,
+        "parameters" : [ "'https://dealer-passport-test.xsfera.ru/users/'" ]
+      } ],
+      "uid" : "a738968831d4dac273aaae361ced3d8a"
     } ],
     "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
   } ],

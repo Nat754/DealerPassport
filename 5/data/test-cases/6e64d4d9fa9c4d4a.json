@@ -1,0 +1,247 @@
+{
+  "uid" : "6e64d4d9fa9c4d4a",
+  "name" : "Проверить отсутствие ошибок при открытии https://dealer-passport-test.xsfera.ru/dealers/ на сервере СЕО",
+  "fullName" : "tests.main_page_test.TestMainPageSmoke#test_open_seo",
+  "historyId" : "4b9832eca4d22a522e019e9cf18dcb53",
+  "time" : {
+    "start" : 1717150294130,
+    "stop" : 1717150295279,
+    "duration" : 1149
+  },
+  "status" : "failed",
+  "statusMessage" : "AssertionError: Ошибка: ['Произошла ошибка: errors.GRAPHQL_VALIDATION_FAILED\\nПроизошла ошибка: errors.GRAPHQL_VALIDATION_FAILED\\nПроизошла ошибка: errors.GRAPHQL_VALIDATION_FAILED']\nassert None\n +  where None = <bound method MainPage.check_not_errors of <pages.main_page.MainPage object at 0x7fa8887f9d30>>()\n +    where <bound method MainPage.check_not_errors of <pages.main_page.MainPage object at 0x7fa8887f9d30>> = <pages.main_page.MainPage object at 0x7fa8887f9d30>.check_not_errors",
+  "statusTrace" : "self = <tests.main_page_test.TestMainPageSmoke object at 0x7fa8886dc8c0>\nauth_user_admin_to_seo = <pages.main_page.MainPage object at 0x7fa8887f9d30>\ndriver = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"cec3a2e6cc85f086c1716dacb24ccfdb\")>\nurl = 'https://dealer-passport-test.xsfera.ru/dealers/'\n\n    @pytest.mark.parametrize('url', Urls.LIST_URLS_SEO)\n    def test_open_seo(self, auth_user_admin_to_seo, driver, url):\n        allure.dynamic.title(f'Проверить отсутствие ошибок при открытии {url} на сервере СЕО')\n        driver.get(url)\n>       assert auth_user_admin_to_seo.check_not_errors(), \\\n            f'Ошибка: {[item.text for item in auth_user_admin_to_seo.check_error_notifications()]}'\nE       AssertionError: Ошибка: ['Произошла ошибка: errors.GRAPHQL_VALIDATION_FAILED\\nПроизошла ошибка: errors.GRAPHQL_VALIDATION_FAILED\\nПроизошла ошибка: errors.GRAPHQL_VALIDATION_FAILED']\nE       assert None\nE        +  where None = <bound method MainPage.check_not_errors of <pages.main_page.MainPage object at 0x7fa8887f9d30>>()\nE        +    where <bound method MainPage.check_not_errors of <pages.main_page.MainPage object at 0x7fa8887f9d30>> = <pages.main_page.MainPage object at 0x7fa8887f9d30>.check_not_errors\n\ntests/main_page_test.py:30: AssertionError",
+  "flaky" : false,
+  "newFailed" : true,
+  "beforeStages" : [ {
+    "name" : "driver",
+    "time" : {
+      "start" : 1717150291361,
+      "stop" : 1717150291558,
+      "duration" : 197
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "clear_allure_results_folder",
+    "time" : {
+      "start" : 1717150080987,
+      "stop" : 1717150080988,
+      "duration" : 1
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "auth_user_admin_to_seo",
+    "time" : {
+      "start" : 1717150291558,
+      "stop" : 1717150294129,
+      "duration" : 2571
+    },
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Проверка видимости кнопки '('xpath', '//span[text()=\"Согласен\"]')' на главной странице",
+      "time" : {
+        "start" : 1717150294046,
+        "stop" : 1717150294080,
+        "duration" : 34
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 1,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  } ],
+  "testStage" : {
+    "status" : "failed",
+    "statusMessage" : "AssertionError: Ошибка: ['Произошла ошибка: errors.GRAPHQL_VALIDATION_FAILED\\nПроизошла ошибка: errors.GRAPHQL_VALIDATION_FAILED\\nПроизошла ошибка: errors.GRAPHQL_VALIDATION_FAILED']\nassert None\n +  where None = <bound method MainPage.check_not_errors of <pages.main_page.MainPage object at 0x7fa8887f9d30>>()\n +    where <bound method MainPage.check_not_errors of <pages.main_page.MainPage object at 0x7fa8887f9d30>> = <pages.main_page.MainPage object at 0x7fa8887f9d30>.check_not_errors",
+    "statusTrace" : "self = <tests.main_page_test.TestMainPageSmoke object at 0x7fa8886dc8c0>\nauth_user_admin_to_seo = <pages.main_page.MainPage object at 0x7fa8887f9d30>\ndriver = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"cec3a2e6cc85f086c1716dacb24ccfdb\")>\nurl = 'https://dealer-passport-test.xsfera.ru/dealers/'\n\n    @pytest.mark.parametrize('url', Urls.LIST_URLS_SEO)\n    def test_open_seo(self, auth_user_admin_to_seo, driver, url):\n        allure.dynamic.title(f'Проверить отсутствие ошибок при открытии {url} на сервере СЕО')\n        driver.get(url)\n>       assert auth_user_admin_to_seo.check_not_errors(), \\\n            f'Ошибка: {[item.text for item in auth_user_admin_to_seo.check_error_notifications()]}'\nE       AssertionError: Ошибка: ['Произошла ошибка: errors.GRAPHQL_VALIDATION_FAILED\\nПроизошла ошибка: errors.GRAPHQL_VALIDATION_FAILED\\nПроизошла ошибка: errors.GRAPHQL_VALIDATION_FAILED']\nE       assert None\nE        +  where None = <bound method MainPage.check_not_errors of <pages.main_page.MainPage object at 0x7fa8887f9d30>>()\nE        +    where <bound method MainPage.check_not_errors of <pages.main_page.MainPage object at 0x7fa8887f9d30>> = <pages.main_page.MainPage object at 0x7fa8887f9d30>.check_not_errors\n\ntests/main_page_test.py:30: AssertionError",
+    "steps" : [ {
+      "name" : "Проверить отсутствие ошибок",
+      "time" : {
+        "start" : 1717150294675,
+        "stop" : 1717150295212,
+        "duration" : 537
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Проверить видимость ошибок",
+      "time" : {
+        "start" : 1717150295212,
+        "stop" : 1717150295223,
+        "duration" : 11
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ {
+      "uid" : "d58fd11db7900149",
+      "name" : "Screenshot",
+      "source" : "d58fd11db7900149.png",
+      "type" : "image/png",
+      "size" : 97582
+    }, {
+      "uid" : "f79cb3a2cde2608d",
+      "name" : "HTML source",
+      "source" : "f79cb3a2cde2608d.html",
+      "type" : "text/html",
+      "size" : 44044
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 2,
+    "attachmentsCount" : 2,
+    "shouldDisplayMessage" : true,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "driver::0",
+    "time" : {
+      "start" : 1717150295430,
+      "stop" : 1717150295492,
+      "duration" : 62
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "epic",
+    "value" : "Test Main Page smoke_test"
+  }, {
+    "name" : "tag",
+    "value" : "smoke_test"
+  }, {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "main_page_test"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestMainPageSmoke"
+  }, {
+    "name" : "host",
+    "value" : "fv-az1393-456"
+  }, {
+    "name" : "thread",
+    "value" : "2278-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.main_page_test"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "url",
+    "value" : "'https://dealer-passport-test.xsfera.ru/dealers/'"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 1,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 4,
+        "unknown" : 0,
+        "total" : 5
+      },
+      "items" : [ {
+        "uid" : "f809d4d8907424ca",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/5//#testresult/f809d4d8907424ca",
+        "status" : "passed",
+        "time" : {
+          "start" : 1717143950941,
+          "stop" : 1717143961871,
+          "duration" : 10930
+        }
+      }, {
+        "uid" : "95546dbb8737e600",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/9//#testresult/95546dbb8737e600",
+        "status" : "passed",
+        "time" : {
+          "start" : 1717121136679,
+          "stop" : 1717121147664,
+          "duration" : 10985
+        }
+      }, {
+        "uid" : "fec36ba75e923b56",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/5//#testresult/fec36ba75e923b56",
+        "status" : "passed",
+        "time" : {
+          "start" : 1717080661924,
+          "stop" : 1717080672791,
+          "duration" : 10867
+        }
+      }, {
+        "uid" : "671c3e002ed80168",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/4//#testresult/671c3e002ed80168",
+        "status" : "passed",
+        "time" : {
+          "start" : 1717059276944,
+          "stop" : 1717059287793,
+          "duration" : 10849
+        }
+      } ]
+    },
+    "tags" : [ "smoke_test" ]
+  },
+  "source" : "6e64d4d9fa9c4d4a.json",
+  "parameterValues" : [ "'https://dealer-passport-test.xsfera.ru/dealers/'" ]
+}
