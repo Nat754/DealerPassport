@@ -1,0 +1,287 @@
+{
+  "uid" : "cd06ae7251a52161",
+  "name" : "Проверить отсутствие ошибок при открытии https://dealer-passport-test.xsfera.ru/staff/ на сервере СЕО",
+  "fullName" : "tests.main_page_test.TestMainPageSmoke#test_open_seo",
+  "historyId" : "ee626949710a0968bf928ac7701a5ea6",
+  "time" : {
+    "start" : 1717426161734,
+    "stop" : 1717426163973,
+    "duration" : 2239
+  },
+  "status" : "failed",
+  "statusMessage" : "AssertionError: Ошибка: ['[Network error]: ServerError: Response not successful: Received status code 400\\nПроизошла ошибка: errors.GRAPHQL_VALIDATION_FAILED\\nПроизошла ошибка: errors.GRAPHQL_VALIDATION_FAILED\\nПроизошла ошибка: errors.GRAPHQL_VALIDATION_FAILED\\nПроизошла ошибка: errors.GRAPHQL_VALIDATION_FAILED\\nПроизошла ошибка: errors.GRAPHQL_VALIDATION_FAILED\\nПроизошла ошибка: errors.GRAPHQL_VALIDATION_FAILED\\nПроизошла ошибка: errors.GRAPHQL_VALIDATION_FAILED']\nassert None\n +  where None = <bound method MainPage.check_not_errors of <pages.main_page.MainPage object at 0x7faf6eab14c0>>()\n +    where <bound method MainPage.check_not_errors of <pages.main_page.MainPage object at 0x7faf6eab14c0>> = <pages.main_page.MainPage object at 0x7faf6eab14c0>.check_not_errors",
+  "statusTrace" : "self = <tests.main_page_test.TestMainPageSmoke object at 0x7faf6ecdc980>\nauth_user_admin_to_seo = <pages.main_page.MainPage object at 0x7faf6eab14c0>\ndriver = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"a696293139d33b709c615719aaa8ec29\")>\nurl = 'https://dealer-passport-test.xsfera.ru/staff/'\n\n    @pytest.mark.parametrize('url', Urls.LIST_URLS_SEO)\n    def test_open_seo(self, auth_user_admin_to_seo, driver, url):\n        allure.dynamic.title(f'Проверить отсутствие ошибок при открытии {url} на сервере СЕО')\n        driver.get(url)\n>       assert auth_user_admin_to_seo.check_not_errors(), \\\n            f'Ошибка: {[item.text for item in auth_user_admin_to_seo.check_error_notifications()]}'\nE       AssertionError: Ошибка: ['[Network error]: ServerError: Response not successful: Received status code 400\\nПроизошла ошибка: errors.GRAPHQL_VALIDATION_FAILED\\nПроизошла ошибка: errors.GRAPHQL_VALIDATION_FAILED\\nПроизошла ошибка: errors.GRAPHQL_VALIDATION_FAILED\\nПроизошла ошибка: errors.GRAPHQL_VALIDATION_FAILED\\nПроизошла ошибка: errors.GRAPHQL_VALIDATION_FAILED\\nПроизошла ошибка: errors.GRAPHQL_VALIDATION_FAILED\\nПроизошла ошибка: errors.GRAPHQL_VALIDATION_FAILED']\nE       assert None\nE        +  where None = <bound method MainPage.check_not_errors of <pages.main_page.MainPage object at 0x7faf6eab14c0>>()\nE        +    where <bound method MainPage.check_not_errors of <pages.main_page.MainPage object at 0x7faf6eab14c0>> = <pages.main_page.MainPage object at 0x7faf6eab14c0>.check_not_errors\n\ntests/main_page_test.py:30: AssertionError",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "clear_allure_results_folder",
+    "time" : {
+      "start" : 1717425962338,
+      "stop" : 1717425962338,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "attachmentsCount" : 0
+  }, {
+    "name" : "auth_user_admin_to_seo",
+    "time" : {
+      "start" : 1717426159130,
+      "stop" : 1717426161733,
+      "duration" : 2603
+    },
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Проверка видимости кнопки '('xpath', '//span[text()=\"Согласен\"]')' на главной странице",
+      "time" : {
+        "start" : 1717426161649,
+        "stop" : 1717426161681,
+        "duration" : 32
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "hasContent" : false,
+      "stepsCount" : 0,
+      "attachmentsCount" : 0
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "hasContent" : true,
+    "stepsCount" : 1,
+    "attachmentsCount" : 0
+  }, {
+    "name" : "driver",
+    "time" : {
+      "start" : 1717426158926,
+      "stop" : 1717426159130,
+      "duration" : 204
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "attachmentsCount" : 0
+  } ],
+  "testStage" : {
+    "status" : "failed",
+    "statusMessage" : "AssertionError: Ошибка: ['[Network error]: ServerError: Response not successful: Received status code 400\\nПроизошла ошибка: errors.GRAPHQL_VALIDATION_FAILED\\nПроизошла ошибка: errors.GRAPHQL_VALIDATION_FAILED\\nПроизошла ошибка: errors.GRAPHQL_VALIDATION_FAILED\\nПроизошла ошибка: errors.GRAPHQL_VALIDATION_FAILED\\nПроизошла ошибка: errors.GRAPHQL_VALIDATION_FAILED\\nПроизошла ошибка: errors.GRAPHQL_VALIDATION_FAILED\\nПроизошла ошибка: errors.GRAPHQL_VALIDATION_FAILED']\nassert None\n +  where None = <bound method MainPage.check_not_errors of <pages.main_page.MainPage object at 0x7faf6eab14c0>>()\n +    where <bound method MainPage.check_not_errors of <pages.main_page.MainPage object at 0x7faf6eab14c0>> = <pages.main_page.MainPage object at 0x7faf6eab14c0>.check_not_errors",
+    "statusTrace" : "self = <tests.main_page_test.TestMainPageSmoke object at 0x7faf6ecdc980>\nauth_user_admin_to_seo = <pages.main_page.MainPage object at 0x7faf6eab14c0>\ndriver = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"a696293139d33b709c615719aaa8ec29\")>\nurl = 'https://dealer-passport-test.xsfera.ru/staff/'\n\n    @pytest.mark.parametrize('url', Urls.LIST_URLS_SEO)\n    def test_open_seo(self, auth_user_admin_to_seo, driver, url):\n        allure.dynamic.title(f'Проверить отсутствие ошибок при открытии {url} на сервере СЕО')\n        driver.get(url)\n>       assert auth_user_admin_to_seo.check_not_errors(), \\\n            f'Ошибка: {[item.text for item in auth_user_admin_to_seo.check_error_notifications()]}'\nE       AssertionError: Ошибка: ['[Network error]: ServerError: Response not successful: Received status code 400\\nПроизошла ошибка: errors.GRAPHQL_VALIDATION_FAILED\\nПроизошла ошибка: errors.GRAPHQL_VALIDATION_FAILED\\nПроизошла ошибка: errors.GRAPHQL_VALIDATION_FAILED\\nПроизошла ошибка: errors.GRAPHQL_VALIDATION_FAILED\\nПроизошла ошибка: errors.GRAPHQL_VALIDATION_FAILED\\nПроизошла ошибка: errors.GRAPHQL_VALIDATION_FAILED\\nПроизошла ошибка: errors.GRAPHQL_VALIDATION_FAILED']\nE       assert None\nE        +  where None = <bound method MainPage.check_not_errors of <pages.main_page.MainPage object at 0x7faf6eab14c0>>()\nE        +    where <bound method MainPage.check_not_errors of <pages.main_page.MainPage object at 0x7faf6eab14c0>> = <pages.main_page.MainPage object at 0x7faf6eab14c0>.check_not_errors\n\ntests/main_page_test.py:30: AssertionError",
+    "steps" : [ {
+      "name" : "Проверить отсутствие ошибок",
+      "time" : {
+        "start" : 1717426162362,
+        "stop" : 1717426163935,
+        "duration" : 1573
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "hasContent" : false,
+      "stepsCount" : 0,
+      "attachmentsCount" : 0
+    }, {
+      "name" : "Проверить видимость ошибок",
+      "time" : {
+        "start" : 1717426163935,
+        "stop" : 1717426163948,
+        "duration" : 13
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "hasContent" : false,
+      "stepsCount" : 0,
+      "attachmentsCount" : 0
+    } ],
+    "attachments" : [ {
+      "uid" : "daee1420c2102158",
+      "name" : "Screenshot",
+      "source" : "daee1420c2102158.png",
+      "type" : "image/png",
+      "size" : 117949
+    }, {
+      "uid" : "3482cca14685c439",
+      "name" : "HTML source",
+      "source" : "3482cca14685c439.html",
+      "type" : "text/html",
+      "size" : 39311
+    } ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : true,
+    "hasContent" : true,
+    "stepsCount" : 2,
+    "attachmentsCount" : 2
+  },
+  "afterStages" : [ {
+    "name" : "driver::0",
+    "time" : {
+      "start" : 1717426164115,
+      "stop" : 1717426164177,
+      "duration" : 62
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "attachmentsCount" : 0
+  } ],
+  "labels" : [ {
+    "name" : "epic",
+    "value" : "Test Main Page smoke_test"
+  }, {
+    "name" : "tag",
+    "value" : "smoke_test"
+  }, {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "main_page_test"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestMainPageSmoke"
+  }, {
+    "name" : "host",
+    "value" : "fv-az1153-519"
+  }, {
+    "name" : "thread",
+    "value" : "2225-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.main_page_test"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "url",
+    "value" : "'https://dealer-passport-test.xsfera.ru/staff/'"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 3,
+        "broken" : 2,
+        "skipped" : 0,
+        "passed" : 4,
+        "unknown" : 0,
+        "total" : 9
+      },
+      "items" : [ {
+        "uid" : "36aa7ed306129b26",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/12//#testresult/36aa7ed306129b26",
+        "status" : "broken",
+        "statusDetails" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x55b30f6a8e8a <unknown>\n#1 0x55b30f39245c <unknown>\n#2 0x55b30f3de5b5 <unknown>\n#3 0x55b30f3de671 <unknown>\n#4 0x55b30f422f14 <unknown>\n#5 0x55b30f4014dd <unknown>\n#6 0x55b30f4202cc <unknown>\n#7 0x55b30f401253 <unknown>\n#8 0x55b30f3d11c7 <unknown>\n#9 0x55b30f3d1b3e <unknown>\n#10 0x55b30f66f2cb <unknown>\n#11 0x55b30f673377 <unknown>\n#12 0x55b30f65bdfe <unknown>\n#13 0x55b30f673e42 <unknown>\n#14 0x55b30f64079f <unknown>\n#15 0x55b30f698178 <unknown>\n#16 0x55b30f69834b <unknown>\n#17 0x55b30f6a7fbc <unknown>\n#18 0x7fcaf8294ac3 <unknown>",
+        "time" : {
+          "start" : 1717380292897,
+          "stop" : 1717380292897,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "72aea6da52f197ed",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/11//#testresult/72aea6da52f197ed",
+        "status" : "broken",
+        "statusDetails" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x564736366e8a <unknown>\n#1 0x56473605045c <unknown>\n#2 0x56473609c5b5 <unknown>\n#3 0x56473609c671 <unknown>\n#4 0x5647360e0f14 <unknown>\n#5 0x5647360bf4dd <unknown>\n#6 0x5647360de2cc <unknown>\n#7 0x5647360bf253 <unknown>\n#8 0x56473608f1c7 <unknown>\n#9 0x56473608fb3e <unknown>\n#10 0x56473632d2cb <unknown>\n#11 0x564736331377 <unknown>\n#12 0x564736319dfe <unknown>\n#13 0x564736331e42 <unknown>\n#14 0x5647362fe79f <unknown>\n#15 0x564736356178 <unknown>\n#16 0x56473635634b <unknown>\n#17 0x564736365fbc <unknown>\n#18 0x7fe644c94ac3 <unknown>",
+        "time" : {
+          "start" : 1717294000516,
+          "stop" : 1717294000516,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "30d8e0cb36e77e0a",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/10//#testresult/30d8e0cb36e77e0a",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Ошибка: ['[Network error]: ServerError: Response not successful: Received status code 400\\nПроизошла ошибка: errors.GRAPHQL_VALIDATION_FAILED\\nПроизошла ошибка: errors.GRAPHQL_VALIDATION_FAILED\\nПроизошла ошибка: errors.GRAPHQL_VALIDATION_FAILED\\nПроизошла ошибка: errors.GRAPHQL_VALIDATION_FAILED\\nПроизошла ошибка: errors.GRAPHQL_VALIDATION_FAILED\\nПроизошла ошибка: errors.GRAPHQL_VALIDATION_FAILED\\nПроизошла ошибка: errors.GRAPHQL_VALIDATION_FAILED']\nassert None\n +  where None = <bound method MainPage.check_not_errors of <pages.main_page.MainPage object at 0x7f92590acbc0>>()\n +    where <bound method MainPage.check_not_errors of <pages.main_page.MainPage object at 0x7f92590acbc0>> = <pages.main_page.MainPage object at 0x7f92590acbc0>.check_not_errors",
+        "time" : {
+          "start" : 1717207580769,
+          "stop" : 1717207583607,
+          "duration" : 2838
+        }
+      }, {
+        "uid" : "e285f4d969abdf19",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/5//#testresult/e285f4d969abdf19",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Ошибка: ['[Network error]: ServerError: Response not successful: Received status code 400\\nПроизошла ошибка: errors.GRAPHQL_VALIDATION_FAILED\\nПроизошла ошибка: errors.GRAPHQL_VALIDATION_FAILED\\nПроизошла ошибка: errors.GRAPHQL_VALIDATION_FAILED\\nПроизошла ошибка: errors.GRAPHQL_VALIDATION_FAILED\\nПроизошла ошибка: errors.GRAPHQL_VALIDATION_FAILED\\nПроизошла ошибка: errors.GRAPHQL_VALIDATION_FAILED']\nassert None\n +  where None = <bound method MainPage.check_not_errors of <pages.main_page.MainPage object at 0x7fa8884a2a20>>()\n +    where <bound method MainPage.check_not_errors of <pages.main_page.MainPage object at 0x7fa8884a2a20>> = <pages.main_page.MainPage object at 0x7fa8884a2a20>.check_not_errors",
+        "time" : {
+          "start" : 1717150288974,
+          "stop" : 1717150291156,
+          "duration" : 2182
+        }
+      }, {
+        "uid" : "b8557faef0599181",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/5//#testresult/b8557faef0599181",
+        "status" : "passed",
+        "time" : {
+          "start" : 1717143936054,
+          "stop" : 1717143947085,
+          "duration" : 11031
+        }
+      }, {
+        "uid" : "c9e9b929a9493485",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/9//#testresult/c9e9b929a9493485",
+        "status" : "passed",
+        "time" : {
+          "start" : 1717121122481,
+          "stop" : 1717121133575,
+          "duration" : 11094
+        }
+      }, {
+        "uid" : "3065ecbe8c3f6de6",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/5//#testresult/3065ecbe8c3f6de6",
+        "status" : "passed",
+        "time" : {
+          "start" : 1717080647680,
+          "stop" : 1717080658840,
+          "duration" : 11160
+        }
+      }, {
+        "uid" : "332163189f0777f5",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/4//#testresult/332163189f0777f5",
+        "status" : "passed",
+        "time" : {
+          "start" : 1717059263082,
+          "stop" : 1717059273930,
+          "duration" : 10848
+        }
+      } ]
+    },
+    "tags" : [ "smoke_test" ]
+  },
+  "source" : "cd06ae7251a52161.json",
+  "parameterValues" : [ "'https://dealer-passport-test.xsfera.ru/staff/'" ]
+}
