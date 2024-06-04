@@ -1,0 +1,94 @@
+{
+  "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "children" : [ {
+    "name" : "Product defects",
+    "children" : [ {
+      "name" : "AssertionError: Меню редактора изменилось\nassert ['Глобальный ...рушений', ...] == ['Глобальный ...рушений', ...]\n  \n  Right contains one more item: 'Справочник разделов фотогалереи'\n  \n  Full diff:\n    [\n        'Глобальный рейтинг',\n        'Квартили',\n        'Персонал',\n        'База сотрудников',\n        'Подразделения',\n        'Виды нарушений',\n        'Редактор форм заявок-деклараций',\n        'Справочник должностей',\n        'Каталог учебных программ',\n        'Справочники библиотеки документов',\n        'Редактор отчетов',\n        'Справочник зон камер',\n        'Справочник информационных систем',\n  -     'Справочник разделов фотогалереи',\n    ]",
+      "children" : [ {
+        "name" : "Проверить доступность меню в редакторе на seo",
+        "uid" : "f0b926bebb8c9ae0",
+        "parentUid" : "5c4a36faa01f7d0730a4412acb8638b1",
+        "status" : "failed",
+        "time" : {
+          "start" : 1717466444127,
+          "stop" : 1717466445419,
+          "duration" : 1292
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "5c4a36faa01f7d0730a4412acb8638b1"
+    }, {
+      "name" : "AssertionError: Меню редактора изменилось\nassert ['Глобальный ...рушений', ...] == ['Глобальный ...рушений', ...]\n  \n  At index 11 diff: 'Справочник информационных систем' != 'Справочник зон камер'\n  Right contains one more item: 'Справочник информационных систем'\n  \n  Full diff:\n    [\n        'Глобальный рейтинг',\n        'Квартили',\n        'Персонал',\n        'База сотрудников',\n        'Подразделения',\n        'Виды нарушений',\n        'Редактор форм заявок-деклараций',\n        'Справочник должностей',\n        'Каталог учебных программ',\n        'Справочники библиотеки документов',\n        'Редактор отчетов',\n  -     'Справочник зон камер',\n        'Справочник информационных систем',\n    ]",
+      "children" : [ {
+        "name" : "Проверить доступность меню в редакторе на seo prod",
+        "uid" : "6f2ee263c4a78131",
+        "parentUid" : "da6c93397143d0c4991646af9a1e3e8f",
+        "status" : "failed",
+        "time" : {
+          "start" : 1717466448861,
+          "stop" : 1717466450153,
+          "duration" : 1292
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "da6c93397143d0c4991646af9a1e3e8f"
+    }, {
+      "name" : "AssertionError: Ошибка: ['[Network error]: ServerError: Response not successful: Received status code 400\\nПроизошла ошибка: errors.GRAPHQL_VALIDATION_FAILED\\nПроизошла ошибка: errors.GRAPHQL_VALIDATION_FAILED\\nПроизошла ошибка: errors.GRAPHQL_VALIDATION_FAILED\\nПроизошла ошибка: errors.GRAPHQL_VALIDATION_FAILED\\nПроизошла ошибка: errors.GRAPHQL_VALIDATION_FAILED\\nПроизошла ошибка: errors.GRAPHQL_VALIDATION_FAILED\\nПроизошла ошибка: errors.GRAPHQL_VALIDATION_FAILED']\nassert None\n +  where None = <bound method MainPage.check_not_errors of <pages.main_page.MainPage object at 0x7f73062ba480>>()\n +    where <bound method MainPage.check_not_errors of <pages.main_page.MainPage object at 0x7f73062ba480>> = <pages.main_page.MainPage object at 0x7f73062ba480>.check_not_errors",
+      "children" : [ {
+        "name" : "Проверить отсутствие ошибок при открытии https://dealer-passport-test.xsfera.ru/staff/ на сервере СЕО",
+        "uid" : "c8684afcd93fa89d",
+        "parentUid" : "20991128b25c276a1d3d497247c6f83b",
+        "status" : "failed",
+        "time" : {
+          "start" : 1717466628637,
+          "stop" : 1717466630819,
+          "duration" : 2182
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'https://dealer-passport-test.xsfera.ru/staff/'" ]
+      } ],
+      "uid" : "20991128b25c276a1d3d497247c6f83b"
+    }, {
+      "name" : "AssertionError: Ошибка: ['Произошла ошибка: errors.GRAPHQL_VALIDATION_FAILED']\nassert None\n +  where None = <bound method MainPage.check_not_errors of <pages.main_page.MainPage object at 0x7f730643bb00>>()\n +    where <bound method MainPage.check_not_errors of <pages.main_page.MainPage object at 0x7f730643bb00>> = <pages.main_page.MainPage object at 0x7f730643bb00>.check_not_errors",
+      "children" : [ {
+        "name" : "Проверить отсутствие ошибок при открытии https://dealer-passport-test.xsfera.ru/dealers/ на сервере СЕО",
+        "uid" : "a6eecb8fb1add1e9",
+        "parentUid" : "7ce5d51a4076cc15c7fc7ccacaaa48a4",
+        "status" : "failed",
+        "time" : {
+          "start" : 1717466634132,
+          "stop" : 1717466635318,
+          "duration" : 1186
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'https://dealer-passport-test.xsfera.ru/dealers/'" ]
+      } ],
+      "uid" : "7ce5d51a4076cc15c7fc7ccacaaa48a4"
+    }, {
+      "name" : "AssertionError: Ошибка: ['[Network error]: ServerError: Response not successful: Received status code 400\\nПроизошла ошибка: errors.GRAPHQL_VALIDATION_FAILED\\nПроизошла ошибка: errors.GRAPHQL_VALIDATION_FAILED\\nПроизошла ошибка: errors.GRAPHQL_VALIDATION_FAILED\\nПроизошла ошибка: errors.GRAPHQL_VALIDATION_FAILED\\nПроизошла ошибка: errors.GRAPHQL_VALIDATION_FAILED\\nПроизошла ошибка: errors.GRAPHQL_VALIDATION_FAILED']\nassert None\n +  where None = <bound method MainPage.check_not_errors of <pages.main_page.MainPage object at 0x7f730629b3b0>>()\n +    where <bound method MainPage.check_not_errors of <pages.main_page.MainPage object at 0x7f730629b3b0>> = <pages.main_page.MainPage object at 0x7f730629b3b0>.check_not_errors",
+      "children" : [ {
+        "name" : "Проверить отсутствие ошибок при открытии https://dealer-passport-test.xsfera.ru/users/ на сервере СЕО",
+        "uid" : "13f18e87cd3bb5a2",
+        "parentUid" : "8dedf9b7bb9e6b46fbdc489c7a1454de",
+        "status" : "failed",
+        "time" : {
+          "start" : 1717466638479,
+          "stop" : 1717466640119,
+          "duration" : 1640
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'https://dealer-passport-test.xsfera.ru/users/'" ]
+      } ],
+      "uid" : "8dedf9b7bb9e6b46fbdc489c7a1454de"
+    } ],
+    "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
+  } ],
+  "name" : "categories"
+}
