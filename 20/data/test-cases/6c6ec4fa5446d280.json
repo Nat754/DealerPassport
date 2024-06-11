@@ -1,0 +1,338 @@
+{
+  "uid" : "6c6ec4fa5446d280",
+  "name" : "Проверить доступность меню в редакторе на prod",
+  "fullName" : "tests.editor_page_test.TestEditorPageSmoke#test_editor_menu_prod",
+  "historyId" : "82c3a674d6e3706fadbaed7321fc3e09",
+  "time" : {
+    "start" : 1718071344070,
+    "stop" : 1718071345287,
+    "duration" : 1217
+  },
+  "status" : "passed",
+  "statusMessage" : "XPASS",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "driver",
+    "time" : {
+      "start" : 1718071340451,
+      "stop" : 1718071340649,
+      "duration" : 198
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "clear_allure_results_folder",
+    "time" : {
+      "start" : 1718071329378,
+      "stop" : 1718071329378,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "auth_user_admin_to_prod",
+    "time" : {
+      "start" : 1718071340649,
+      "stop" : 1718071344069,
+      "duration" : 3420
+    },
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Проверка видимости кнопки '('xpath', '//span[text()=\"Согласен\"]')' на главной странице",
+      "time" : {
+        "start" : 1718071343987,
+        "stop" : 1718071344021,
+        "duration" : 34
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 1,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  } ],
+  "testStage" : {
+    "status" : "passed",
+    "statusMessage" : "XPASS",
+    "steps" : [ {
+      "name" : "Проверка видимости групп в Редакторе",
+      "time" : {
+        "start" : 1718071344631,
+        "stop" : 1718071345287,
+        "duration" : 656
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 1,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : true,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "driver::0",
+    "time" : {
+      "start" : 1718071345288,
+      "stop" : 1718071345350,
+      "duration" : 62
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "epic",
+    "value" : "Test SRR Page smoke_test"
+  }, {
+    "name" : "tag",
+    "value" : "@pytest.mark.xfail"
+  }, {
+    "name" : "tag",
+    "value" : "smoke_test"
+  }, {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "editor_page_test"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestEditorPageSmoke"
+  }, {
+    "name" : "host",
+    "value" : "fv-az1383-897"
+  }, {
+    "name" : "thread",
+    "value" : "2229-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.editor_page_test"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 1,
+        "broken" : 0,
+        "skipped" : 10,
+        "passed" : 6,
+        "unknown" : 0,
+        "total" : 17
+      },
+      "items" : [ {
+        "uid" : "2943d01c881f3157",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/19//#testresult/2943d01c881f3157",
+        "status" : "passed",
+        "statusDetails" : "XPASS",
+        "time" : {
+          "start" : 1717985064672,
+          "stop" : 1717985065965,
+          "duration" : 1293
+        }
+      }, {
+        "uid" : "94bef232ce060f55",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/18//#testresult/94bef232ce060f55",
+        "status" : "passed",
+        "statusDetails" : "XPASS",
+        "time" : {
+          "start" : 1717898795405,
+          "stop" : 1717898796661,
+          "duration" : 1256
+        }
+      }, {
+        "uid" : "d5123f8a62a415f4",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/17//#testresult/d5123f8a62a415f4",
+        "status" : "passed",
+        "statusDetails" : "XPASS",
+        "time" : {
+          "start" : 1717812024702,
+          "stop" : 1717812025918,
+          "duration" : 1216
+        }
+      }, {
+        "uid" : "39a17ab45728c2fa",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/16//#testresult/39a17ab45728c2fa",
+        "status" : "passed",
+        "statusDetails" : "XPASS",
+        "time" : {
+          "start" : 1717725757945,
+          "stop" : 1717725759135,
+          "duration" : 1190
+        }
+      }, {
+        "uid" : "acfa17446de2585e",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/15//#testresult/acfa17446de2585e",
+        "status" : "passed",
+        "statusDetails" : "XPASS",
+        "time" : {
+          "start" : 1717639226425,
+          "stop" : 1717639227727,
+          "duration" : 1302
+        }
+      }, {
+        "uid" : "982bacf6f06351da",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/14//#testresult/982bacf6f06351da",
+        "status" : "skipped",
+        "statusDetails" : "XFAIL\n\nAssertionError: Меню редактора изменилось\nassert ['Глобальный ...рушений', ...] == ['Глобальный ...рушений', ...]\n  \n  At index 11 diff: 'Справочник зон камер' != 'Справочник информационных систем'\n  Left contains one more item: 'Справочник информационных систем'\n  \n  Full diff:\n    [\n        'Глобальный рейтинг',\n        'Квартили',\n        'Персонал',\n        'База сотрудников',\n        'Подразделения',\n        'Виды нарушений',\n        'Редактор форм заявок-деклараций',\n        'Справочник должностей',\n        'Каталог учебных программ',\n        'Справочники библиотеки документов',\n        'Редактор отчетов',\n  +     'Справочник зон камер',\n        'Справочник информационных систем',\n    ]",
+        "time" : {
+          "start" : 1717552850540,
+          "stop" : 1717552851868,
+          "duration" : 1328
+        }
+      }, {
+        "uid" : "47f9a387b1bddbb2",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/13//#testresult/47f9a387b1bddbb2",
+        "status" : "skipped",
+        "statusDetails" : "XFAIL\n\nAssertionError: Меню редактора изменилось\nassert ['Глобальный ...рушений', ...] == ['Глобальный ...рушений', ...]\n  \n  At index 11 diff: 'Справочник зон камер' != 'Справочник информационных систем'\n  Left contains one more item: 'Справочник информационных систем'\n  \n  Full diff:\n    [\n        'Глобальный рейтинг',\n        'Квартили',\n        'Персонал',\n        'База сотрудников',\n        'Подразделения',\n        'Виды нарушений',\n        'Редактор форм заявок-деклараций',\n        'Справочник должностей',\n        'Каталог учебных программ',\n        'Справочники библиотеки документов',\n        'Редактор отчетов',\n  +     'Справочник зон камер',\n        'Справочник информационных систем',\n    ]",
+        "time" : {
+          "start" : 1717466454423,
+          "stop" : 1717466455652,
+          "duration" : 1229
+        }
+      }, {
+        "uid" : "fd368f7f3c009cb0",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/5//#testresult/fd368f7f3c009cb0",
+        "status" : "skipped",
+        "statusDetails" : "XFAIL\n\nAssertionError: Меню редактора изменилось\nassert ['Глобальный ...рушений', ...] == ['Глобальный ...рушений', ...]\n  \n  At index 11 diff: 'Справочник зон камер' != 'Справочник информационных систем'\n  Left contains one more item: 'Справочник информационных систем'\n  \n  Full diff:\n    [\n        'Глобальный рейтинг',\n        'Квартили',\n        'Персонал',\n        'База сотрудников',\n        'Подразделения',\n        'Виды нарушений',\n        'Редактор форм заявок-деклараций',\n        'Справочник должностей',\n        'Каталог учебных программ',\n        'Справочники библиотеки документов',\n        'Редактор отчетов',\n  +     'Справочник зон камер',\n        'Справочник информационных систем',\n    ]",
+        "time" : {
+          "start" : 1717425991509,
+          "stop" : 1717425992707,
+          "duration" : 1198
+        }
+      }, {
+        "uid" : "5d6d9c06bd661880",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/12//#testresult/5d6d9c06bd661880",
+        "status" : "skipped",
+        "statusDetails" : "XFAIL\n\nAssertionError: Меню редактора изменилось\nassert ['Глобальный ...рушений', ...] == ['Глобальный ...рушений', ...]\n  \n  At index 11 diff: 'Справочник зон камер' != 'Справочник информационных систем'\n  Left contains one more item: 'Справочник информационных систем'\n  \n  Full diff:\n    [\n        'Глобальный рейтинг',\n        'Квартили',\n        'Персонал',\n        'База сотрудников',\n        'Подразделения',\n        'Виды нарушений',\n        'Редактор форм заявок-деклараций',\n        'Справочник должностей',\n        'Каталог учебных программ',\n        'Справочники библиотеки документов',\n        'Редактор отчетов',\n  +     'Справочник зон камер',\n        'Справочник информационных систем',\n    ]",
+        "time" : {
+          "start" : 1717380130602,
+          "stop" : 1717380131848,
+          "duration" : 1246
+        }
+      }, {
+        "uid" : "e965c6e236266179",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/11//#testresult/e965c6e236266179",
+        "status" : "skipped",
+        "statusDetails" : "XFAIL\n\nAssertionError: Меню редактора изменилось\nassert ['Глобальный ...рушений', ...] == ['Глобальный ...рушений', ...]\n  \n  At index 11 diff: 'Справочник зон камер' != 'Справочник информационных систем'\n  Left contains one more item: 'Справочник информационных систем'\n  \n  Full diff:\n    [\n        'Глобальный рейтинг',\n        'Квартили',\n        'Персонал',\n        'База сотрудников',\n        'Подразделения',\n        'Виды нарушений',\n        'Редактор форм заявок-деклараций',\n        'Справочник должностей',\n        'Каталог учебных программ',\n        'Справочники библиотеки документов',\n        'Редактор отчетов',\n  +     'Справочник зон камер',\n        'Справочник информационных систем',\n    ]",
+        "time" : {
+          "start" : 1717293835547,
+          "stop" : 1717293836773,
+          "duration" : 1226
+        }
+      }, {
+        "uid" : "77e728b488b9bd87",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/10//#testresult/77e728b488b9bd87",
+        "status" : "skipped",
+        "statusDetails" : "XFAIL\n\nAssertionError: Меню редактора изменилось\nassert ['Глобальный ...рушений', ...] == ['Глобальный ...рушений', ...]\n  \n  At index 11 diff: 'Справочник зон камер' != 'Справочник информационных систем'\n  Left contains one more item: 'Справочник информационных систем'\n  \n  Full diff:\n    [\n        'Глобальный рейтинг',\n        'Квартили',\n        'Персонал',\n        'База сотрудников',\n        'Подразделения',\n        'Виды нарушений',\n        'Редактор форм заявок-деклараций',\n        'Справочник должностей',\n        'Каталог учебных программ',\n        'Справочники библиотеки документов',\n        'Редактор отчетов',\n  +     'Справочник зон камер',\n        'Справочник информационных систем',\n    ]",
+        "time" : {
+          "start" : 1717207387007,
+          "stop" : 1717207388316,
+          "duration" : 1309
+        }
+      }, {
+        "uid" : "cd4204a395a1a6cb",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/5//#testresult/cd4204a395a1a6cb",
+        "status" : "skipped",
+        "statusDetails" : "XFAIL\n\nAssertionError: Меню редактора изменилось\nassert ['Глобальный ...рушений', ...] == ['Глобальный ...рушений', ...]\n  \n  At index 11 diff: 'Справочник зон камер' != 'Справочник информационных систем'\n  Left contains one more item: 'Справочник информационных систем'\n  \n  Full diff:\n    [\n        'Глобальный рейтинг',\n        'Квартили',\n        'Персонал',\n        'База сотрудников',\n        'Подразделения',\n        'Виды нарушений',\n        'Редактор форм заявок-деклараций',\n        'Справочник должностей',\n        'Каталог учебных программ',\n        'Справочники библиотеки документов',\n        'Редактор отчетов',\n  +     'Справочник зон камер',\n        'Справочник информационных систем',\n    ]",
+        "time" : {
+          "start" : 1717150120579,
+          "stop" : 1717150121794,
+          "duration" : 1215
+        }
+      }, {
+        "uid" : "1b155ac945711f5",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/5//#testresult/1b155ac945711f5",
+        "status" : "skipped",
+        "statusDetails" : "XFAIL\n\nAssertionError: Меню редактора изменилось\nassert ['Глобальный ...рушений', ...] == ['Глобальный ...рушений', ...]\n  \n  At index 11 diff: 'Справочник зон камер' != 'Справочник информационных систем'\n  Left contains one more item: 'Справочник информационных систем'\n  \n  Full diff:\n    [\n        'Глобальный рейтинг',\n        'Квартили',\n        'Персонал',\n        'База сотрудников',\n        'Подразделения',\n        'Виды нарушений',\n        'Редактор форм заявок-деклараций',\n        'Справочник должностей',\n        'Каталог учебных программ',\n        'Справочники библиотеки документов',\n        'Редактор отчетов',\n  +     'Справочник зон камер',\n        'Справочник информационных систем',\n    ]",
+        "time" : {
+          "start" : 1717143742749,
+          "stop" : 1717143744063,
+          "duration" : 1314
+        }
+      }, {
+        "uid" : "cf9d13b422e786c7",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/9//#testresult/cf9d13b422e786c7",
+        "status" : "skipped",
+        "statusDetails" : "XFAIL\n\nAssertionError: Меню редактора изменилось\nassert ['Глобальный ...рушений', ...] == ['Глобальный ...рушений', ...]\n  \n  At index 11 diff: 'Справочник зон камер' != 'Справочник информационных систем'\n  Left contains one more item: 'Справочник информационных систем'\n  \n  Full diff:\n    [\n        'Глобальный рейтинг',\n        'Квартили',\n        'Персонал',\n        'База сотрудников',\n        'Подразделения',\n        'Виды нарушений',\n        'Редактор форм заявок-деклараций',\n        'Справочник должностей',\n        'Каталог учебных программ',\n        'Справочники библиотеки документов',\n        'Редактор отчетов',\n  +     'Справочник зон камер',\n        'Справочник информационных систем',\n    ]",
+        "time" : {
+          "start" : 1717120952378,
+          "stop" : 1717120953566,
+          "duration" : 1188
+        }
+      }, {
+        "uid" : "37fa0e0263c173df",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/5//#testresult/37fa0e0263c173df",
+        "status" : "skipped",
+        "statusDetails" : "XFAIL\n\nAssertionError: Меню редактора изменилось\nassert ['Глобальный ...рушений', ...] == ['Глобальный ...рушений', ...]\n  \n  At index 11 diff: 'Справочник зон камер' != 'Справочник информационных систем'\n  Left contains one more item: 'Справочник информационных систем'\n  \n  Full diff:\n    [\n        'Глобальный рейтинг',\n        'Квартили',\n        'Персонал',\n        'База сотрудников',\n        'Подразделения',\n        'Виды нарушений',\n        'Редактор форм заявок-деклараций',\n        'Справочник должностей',\n        'Каталог учебных программ',\n        'Справочники библиотеки документов',\n        'Редактор отчетов',\n  +     'Справочник зон камер',\n        'Справочник информационных систем',\n    ]",
+        "time" : {
+          "start" : 1717080472141,
+          "stop" : 1717080473358,
+          "duration" : 1217
+        }
+      }, {
+        "uid" : "5c0ef2dc9e59c2de",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/4//#testresult/5c0ef2dc9e59c2de",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Меню редактора изменилось\nassert ['Глобальный ...рушений', ...] == ['Глобальный ...рушений', ...]\n  \n  At index 11 diff: 'Справочник зон камер' != 'Справочник информационных систем'\n  Left contains one more item: 'Справочник информационных систем'\n  \n  Full diff:\n    [\n        'Глобальный рейтинг',\n        'Квартили',\n        'Персонал',\n        'База сотрудников',\n        'Подразделения',\n        'Виды нарушений',\n        'Редактор форм заявок-деклараций',\n        'Справочник должностей',\n        'Каталог учебных программ',\n        'Справочники библиотеки документов',\n        'Редактор отчетов',\n  +     'Справочник зон камер',\n        'Справочник информационных систем',\n    ]",
+        "time" : {
+          "start" : 1717059089057,
+          "stop" : 1717059090270,
+          "duration" : 1213
+        }
+      } ]
+    },
+    "tags" : [ "@pytest.mark.xfail", "smoke_test" ]
+  },
+  "source" : "6c6ec4fa5446d280.json",
+  "parameterValues" : [ ]
+}
