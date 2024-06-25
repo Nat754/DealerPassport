@@ -1,4 +1,3 @@
-# from pprint import pprint
 import allure
 from pages.ms_page import MSPortal
 from tests.constants import Urls, MSConstants, Tokens
@@ -21,7 +20,6 @@ class TestQuality:
     @allure.title('Получение данных тест MSPortal')
     def test_get_indicators_test(self):
         response_test = self.page.get_quality(self.ms.url_test, Tokens.MS_TEST).json()
-
         # print('List of dealers on test:', [item['dealer_id'] for item in response_test], sep='\n')
         print(f'\nСписок индикаторов для дилера {self.ms.DEALER_ID} на тесте ({self.ms.QUARTER}Q{self.ms.YEAR % 2000}):',
               [item['mark'] for item in response_test if item['dealer_id'] == self.ms.DEALER_ID], sep='\n')

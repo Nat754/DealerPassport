@@ -128,12 +128,13 @@ class EditorConstants:
     EDITOR_MENU_SEO_PROD = ['Глобальный рейтинг', 'Квартили', 'Персонал', 'База сотрудников', 'Подразделения',
                             'Виды нарушений', 'Редактор форм заявок-деклараций', 'Справочник должностей',
                             'Каталог учебных программ', 'Справочники библиотеки документов', 'Редактор отчетов',
-                            'Справочник зон камер', 'Справочник информационных систем']
+                            'Справочник зон камер', 'Справочник информационных систем',
+                            'Справочник разделов фотогалереи']
 
 
 class MSConstants:
     YEAR = datetime.now().year
-    QUARTER = datetime.now().month // 3
+    QUARTER = (datetime.now().month - 1) // 3
     DEALER_ID = '1197057857'
     url_test = f'{Urls.MS_URL_TEST}?year={YEAR}&quarter={QUARTER}'
     url_prod = f'{Urls.MS_URL_PROD}?year={YEAR}&quarter={QUARTER}'
