@@ -1,0 +1,26 @@
+{
+  "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "children" : [ {
+    "name" : "Product defects",
+    "children" : [ {
+      "name" : "AssertionError: Ошибка: ['[Network error]: ServerError: Response not successful: Received status code 400']\nassert None\n +  where None = <bound method MainPage.check_not_errors of <pages.main_page.MainPage object at 0x7faa91a6d7c0>>()\n +    where <bound method MainPage.check_not_errors of <pages.main_page.MainPage object at 0x7faa91a6d7c0>> = <pages.main_page.MainPage object at 0x7faa91a6d7c0>.check_not_errors",
+      "children" : [ {
+        "name" : "Проверить отсутствие ошибок при открытии https://dealer-passport-test.xsfera.ru:3001/q/ на сервере СЕО prod",
+        "uid" : "83eb7b351514eb65",
+        "parentUid" : "638de1f1b3072414bd801891f3f1b820",
+        "status" : "failed",
+        "time" : {
+          "start" : 1719972532089,
+          "stop" : 1719972533832,
+          "duration" : 1743
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'https://dealer-passport-test.xsfera.ru:3001/q/'" ]
+      } ],
+      "uid" : "638de1f1b3072414bd801891f3f1b820"
+    } ],
+    "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
+  } ],
+  "name" : "categories"
+}
