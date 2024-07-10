@@ -1,0 +1,357 @@
+{
+  "uid" : "23478e39b914b880",
+  "name" : "Проверить отсутствие ошибок при открытии https://dealer-passport-test.xsfera.ru/documents/ на сервере СЕО",
+  "fullName" : "tests.main_page_test.TestMainPageSmoke#test_open_seo",
+  "historyId" : "6c421a3d52888b339806be9bc10b9a5c",
+  "time" : {
+    "start" : 1720577178108,
+    "stop" : 1720577189137,
+    "duration" : 11029
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "auth_user_admin_to_seo",
+    "time" : {
+      "start" : 1720577175266,
+      "stop" : 1720577178108,
+      "duration" : 2842
+    },
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Проверка видимости кнопки '('xpath', '//span[text()=\"Согласен\"]')' на главной странице",
+      "time" : {
+        "start" : 1720577178022,
+        "stop" : 1720577178056,
+        "duration" : 34
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false,
+      "stepsCount" : 0
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true,
+    "stepsCount" : 1
+  }, {
+    "name" : "driver",
+    "time" : {
+      "start" : 1720577175067,
+      "stop" : 1720577175266,
+      "duration" : 199
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false,
+    "stepsCount" : 0
+  }, {
+    "name" : "clear_allure_results_folder",
+    "time" : {
+      "start" : 1720577043706,
+      "stop" : 1720577043706,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false,
+    "stepsCount" : 0
+  } ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Проверить отсутствие ошибок",
+      "time" : {
+        "start" : 1720577178883,
+        "stop" : 1720577189137,
+        "duration" : 10254
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false,
+      "stepsCount" : 0
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true,
+    "stepsCount" : 1
+  },
+  "afterStages" : [ {
+    "name" : "driver::0",
+    "time" : {
+      "start" : 1720577189138,
+      "stop" : 1720577189200,
+      "duration" : 62
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false,
+    "stepsCount" : 0
+  } ],
+  "labels" : [ {
+    "name" : "epic",
+    "value" : "Test Main Page smoke_test"
+  }, {
+    "name" : "tag",
+    "value" : "smoke_test"
+  }, {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "main_page_test"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestMainPageSmoke"
+  }, {
+    "name" : "host",
+    "value" : "fv-az1490-105"
+  }, {
+    "name" : "thread",
+    "value" : "2327-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.main_page_test"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "url",
+    "value" : "'https://dealer-passport-test.xsfera.ru/documents/'"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 8,
+        "skipped" : 0,
+        "passed" : 39,
+        "unknown" : 0,
+        "total" : 47
+      },
+      "items" : [ {
+        "uid" : "7dc695eca30feed8",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/48//#testresult/7dc695eca30feed8",
+        "status" : "broken",
+        "statusDetails" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x5648fa278c7a <unknown>\n#1 0x5648f9f5be2c <unknown>\n#2 0x5648f9fa8661 <unknown>\n#3 0x5648f9fa8751 <unknown>\n#4 0x5648f9fecf64 <unknown>\n#5 0x5648f9fcb5ed <unknown>\n#6 0x5648f9fea303 <unknown>\n#7 0x5648f9fcb363 <unknown>\n#8 0x5648f9f9b247 <unknown>\n#9 0x5648f9f9bb9e <unknown>\n#10 0x5648fa23f24b <unknown>\n#11 0x5648fa2432f1 <unknown>\n#12 0x5648fa22aafe <unknown>\n#13 0x5648fa243e52 <unknown>\n#14 0x5648fa20f79f <unknown>\n#15 0x5648fa268638 <unknown>\n#16 0x5648fa268810 <unknown>\n#17 0x5648fa277dac <unknown>\n#18 0x7fedcd894ac3 <unknown>",
+        "time" : {
+          "start" : 1720490798367,
+          "stop" : 1720490798367,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "cb9203169aad5660",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/47//#testresult/cb9203169aad5660",
+        "status" : "passed",
+        "time" : {
+          "start" : 1720404454839,
+          "stop" : 1720404465708,
+          "duration" : 10869
+        }
+      }, {
+        "uid" : "88dcce0b7d041a61",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/46//#testresult/88dcce0b7d041a61",
+        "status" : "passed",
+        "time" : {
+          "start" : 1720318245064,
+          "stop" : 1720318255899,
+          "duration" : 10835
+        }
+      }, {
+        "uid" : "19c10cac8ab24d84",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/45//#testresult/19c10cac8ab24d84",
+        "status" : "passed",
+        "time" : {
+          "start" : 1720231315822,
+          "stop" : 1720231326652,
+          "duration" : 10830
+        }
+      }, {
+        "uid" : "d0fb1cb72e131083",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/44//#testresult/d0fb1cb72e131083",
+        "status" : "passed",
+        "time" : {
+          "start" : 1720145044164,
+          "stop" : 1720145054973,
+          "duration" : 10809
+        }
+      }, {
+        "uid" : "f507f64c9d9acf46",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/43//#testresult/f507f64c9d9acf46",
+        "status" : "passed",
+        "time" : {
+          "start" : 1720058714077,
+          "stop" : 1720058724894,
+          "duration" : 10817
+        }
+      }, {
+        "uid" : "3444ff11123cdedd",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/42//#testresult/3444ff11123cdedd",
+        "status" : "passed",
+        "time" : {
+          "start" : 1719972270329,
+          "stop" : 1719972281211,
+          "duration" : 10882
+        }
+      }, {
+        "uid" : "9db29d91bb05c594",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/41//#testresult/9db29d91bb05c594",
+        "status" : "passed",
+        "time" : {
+          "start" : 1719885947522,
+          "stop" : 1719885958450,
+          "duration" : 10928
+        }
+      }, {
+        "uid" : "cb91641376b110cd",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/40//#testresult/cb91641376b110cd",
+        "status" : "passed",
+        "time" : {
+          "start" : 1719799993752,
+          "stop" : 1719800004579,
+          "duration" : 10827
+        }
+      }, {
+        "uid" : "864999cfe280d61e",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/39//#testresult/864999cfe280d61e",
+        "status" : "passed",
+        "time" : {
+          "start" : 1719713391567,
+          "stop" : 1719713402369,
+          "duration" : 10802
+        }
+      }, {
+        "uid" : "e286c216fb9ab85c",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/38//#testresult/e286c216fb9ab85c",
+        "status" : "passed",
+        "time" : {
+          "start" : 1719626586384,
+          "stop" : 1719626597314,
+          "duration" : 10930
+        }
+      }, {
+        "uid" : "c10f5ae87aa7730e",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/37//#testresult/c10f5ae87aa7730e",
+        "status" : "passed",
+        "time" : {
+          "start" : 1719540285812,
+          "stop" : 1719540296615,
+          "duration" : 10803
+        }
+      }, {
+        "uid" : "3d1ab64d7632f227",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/36//#testresult/3d1ab64d7632f227",
+        "status" : "passed",
+        "time" : {
+          "start" : 1719453856855,
+          "stop" : 1719453867781,
+          "duration" : 10926
+        }
+      }, {
+        "uid" : "9c39dcadff9cdeda",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/35//#testresult/9c39dcadff9cdeda",
+        "status" : "passed",
+        "time" : {
+          "start" : 1719367422325,
+          "stop" : 1719367433083,
+          "duration" : 10758
+        }
+      }, {
+        "uid" : "589f128932e03dc9",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/6//#testresult/589f128932e03dc9",
+        "status" : "passed",
+        "time" : {
+          "start" : 1719307207147,
+          "stop" : 1719307218039,
+          "duration" : 10892
+        }
+      }, {
+        "uid" : "c05bfa96960d547",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/34//#testresult/c05bfa96960d547",
+        "status" : "passed",
+        "time" : {
+          "start" : 1719281060796,
+          "stop" : 1719281071627,
+          "duration" : 10831
+        }
+      }, {
+        "uid" : "759563e227e42982",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/33//#testresult/759563e227e42982",
+        "status" : "passed",
+        "time" : {
+          "start" : 1719194750433,
+          "stop" : 1719194761257,
+          "duration" : 10824
+        }
+      }, {
+        "uid" : "a637c1eaed651c15",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/32//#testresult/a637c1eaed651c15",
+        "status" : "passed",
+        "time" : {
+          "start" : 1719108480092,
+          "stop" : 1719108491142,
+          "duration" : 11050
+        }
+      }, {
+        "uid" : "96492fab1045eb2e",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/31//#testresult/96492fab1045eb2e",
+        "status" : "passed",
+        "time" : {
+          "start" : 1719021680635,
+          "stop" : 1719021691459,
+          "duration" : 10824
+        }
+      }, {
+        "uid" : "422ef5a4383b74f5",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/30//#testresult/422ef5a4383b74f5",
+        "status" : "passed",
+        "time" : {
+          "start" : 1718935363130,
+          "stop" : 1718935373925,
+          "duration" : 10795
+        }
+      } ]
+    },
+    "tags" : [ "smoke_test" ]
+  },
+  "source" : "23478e39b914b880.json",
+  "parameterValues" : [ "'https://dealer-passport-test.xsfera.ru/documents/'" ]
+}

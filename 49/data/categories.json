@@ -1,0 +1,60 @@
+{
+  "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "children" : [ {
+    "name" : "Product defects",
+    "children" : [ {
+      "name" : "AssertionError: Ошибка: ['[Network error]: ServerError: Response not successful: Received status code 400\\nПроизошла ошибка: errors.GRAPHQL_VALIDATION_FAILED\\nПроизошла ошибка: errors.GRAPHQL_VALIDATION_FAILED']\nassert None\n +  where None = <bound method MainPage.check_not_errors of <pages.main_page.MainPage object at 0x7fcf35f9a7b0>>()\n +    where <bound method MainPage.check_not_errors of <pages.main_page.MainPage object at 0x7fcf35f9a7b0>> = <pages.main_page.MainPage object at 0x7fcf35f9a7b0>.check_not_errors",
+      "children" : [ {
+        "name" : "Проверить отсутствие ошибок при открытии https://dealer-passport-test.xsfera.ru:3001/staff/ на сервере СЕО prod",
+        "uid" : "9812dd8769c0b357",
+        "parentUid" : "315cc3f646432f99ab165c74887ff9ff",
+        "status" : "failed",
+        "time" : {
+          "start" : 1720577444481,
+          "stop" : 1720577446123,
+          "duration" : 1642
+        },
+        "flaky" : false,
+        "newFailed" : true,
+        "parameters" : [ "'https://dealer-passport-test.xsfera.ru:3001/staff/'" ]
+      } ],
+      "uid" : "315cc3f646432f99ab165c74887ff9ff"
+    }, {
+      "name" : "AssertionError: Ошибка: ['[Network error]: ServerError: Response not successful: Received status code 400\\nПроизошла ошибка: errors.GRAPHQL_VALIDATION_FAILED']\nassert None\n +  where None = <bound method MainPage.check_not_errors of <pages.main_page.MainPage object at 0x7fcf35f30440>>()\n +    where <bound method MainPage.check_not_errors of <pages.main_page.MainPage object at 0x7fcf35f30440>> = <pages.main_page.MainPage object at 0x7fcf35f30440>.check_not_errors",
+      "children" : [ {
+        "name" : "Проверить отсутствие ошибок при открытии https://dealer-passport-test.xsfera.ru:3001/dealers/ на сервере СЕО prod",
+        "uid" : "4cd362fe83762be8",
+        "parentUid" : "e01e178072e132a9155c97299bc45d9f",
+        "status" : "failed",
+        "time" : {
+          "start" : 1720577449392,
+          "stop" : 1720577450524,
+          "duration" : 1132
+        },
+        "flaky" : false,
+        "newFailed" : true,
+        "parameters" : [ "'https://dealer-passport-test.xsfera.ru:3001/dealers/'" ]
+      } ],
+      "uid" : "e01e178072e132a9155c97299bc45d9f"
+    }, {
+      "name" : "AssertionError: Ошибка: ['Произошла ошибка: errors.GRAPHQL_VALIDATION_FAILED\\nПроизошла ошибка: errors.GRAPHQL_VALIDATION_FAILED']\nassert None\n +  where None = <bound method MainPage.check_not_errors of <pages.main_page.MainPage object at 0x7fcf35f76ff0>>()\n +    where <bound method MainPage.check_not_errors of <pages.main_page.MainPage object at 0x7fcf35f76ff0>> = <pages.main_page.MainPage object at 0x7fcf35f76ff0>.check_not_errors",
+      "children" : [ {
+        "name" : "Проверить отсутствие ошибок при открытии https://dealer-passport-test.xsfera.ru:3001/users/ на сервере СЕО prod",
+        "uid" : "b1244dee3a6a96a9",
+        "parentUid" : "1137b49305e17f6b106f4a1a4eda4cf6",
+        "status" : "failed",
+        "time" : {
+          "start" : 1720577453684,
+          "stop" : 1720577454878,
+          "duration" : 1194
+        },
+        "flaky" : false,
+        "newFailed" : true,
+        "parameters" : [ "'https://dealer-passport-test.xsfera.ru:3001/users/'" ]
+      } ],
+      "uid" : "1137b49305e17f6b106f4a1a4eda4cf6"
+    } ],
+    "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
+  } ],
+  "name" : "categories"
+}
