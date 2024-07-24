@@ -1,0 +1,43 @@
+{
+  "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "children" : [ {
+    "name" : "Product defects",
+    "children" : [ {
+      "name" : "AssertionError: Меню редактора изменилось\nassert ['Глобальный ...рушений', ...] == ['Глобальный ...рушений', ...]\n  \n  Left contains one more item: 'Шаблоны договоров'\n  \n  Full diff:\n    [\n        'Глобальный рейтинг',\n        'Квартили',\n        'Персонал',\n        'База сотрудников',\n        'Подразделения',\n        'Виды нарушений',\n        'Редактор форм заявок-деклараций',\n        'Справочник должностей',\n        'Каталог учебных программ',\n        'Справочники библиотеки документов',\n        'Редактор отчетов',\n        'Справочник зон камер',\n        'Справочник информационных систем',\n        'Справочник разделов фотогалереи',\n  +     'Шаблоны договоров',\n    ]",
+      "children" : [ {
+        "name" : "Проверить доступность меню в редакторе на 3001",
+        "uid" : "679bd6176e15d1db",
+        "parentUid" : "1c65c5ea6de4ce36b3b1035e43540e73",
+        "status" : "failed",
+        "time" : {
+          "start" : 1721786708968,
+          "stop" : 1721786710230,
+          "duration" : 1262
+        },
+        "flaky" : true,
+        "newFailed" : true,
+        "parameters" : [ ]
+      } ],
+      "uid" : "1c65c5ea6de4ce36b3b1035e43540e73"
+    }, {
+      "name" : "AssertionError: Ошибка: ['[Network error]: ServerError: Response not successful: Received status code 400\\nПроизошла ошибка: errors.GRAPHQL_VALIDATION_FAILED']\nassert None\n +  where None = <bound method MainPage.check_not_errors of <pages.main_page.MainPage object at 0x7f69e7259730>>()\n +    where <bound method MainPage.check_not_errors of <pages.main_page.MainPage object at 0x7f69e7259730>> = <pages.main_page.MainPage object at 0x7f69e7259730>.check_not_errors",
+      "children" : [ {
+        "name" : "Проверить отсутствие ошибок при открытии https://dealer-passport-test.xsfera.ru/q/ на сервере СЕО",
+        "uid" : "d06133a63535ed1d",
+        "parentUid" : "974df18501ae0682860326c86342e82e",
+        "status" : "failed",
+        "time" : {
+          "start" : 1721786873248,
+          "stop" : 1721786874421,
+          "duration" : 1173
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'https://dealer-passport-test.xsfera.ru/q/'" ]
+      } ],
+      "uid" : "974df18501ae0682860326c86342e82e"
+    } ],
+    "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
+  } ],
+  "name" : "categories"
+}
