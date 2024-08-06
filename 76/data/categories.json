@@ -1,0 +1,60 @@
+{
+  "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "children" : [ {
+    "name" : "Product defects",
+    "children" : [ {
+      "name" : "AssertionError: Ошибка: ['Произошла ошибка: Неизвестная ошибка сервера\\nПроизошла ошибка: Неизвестная ошибка сервера\\nПроизошла ошибка: Неизвестная ошибка сервера']\nassert None\n +  where None = <bound method MainPage.check_not_errors of <pages.main_page.MainPage object at 0x7f4f5c474500>>()\n +    where <bound method MainPage.check_not_errors of <pages.main_page.MainPage object at 0x7f4f5c474500>> = <pages.main_page.MainPage object at 0x7f4f5c474500>.check_not_errors",
+      "children" : [ {
+        "name" : "Проверить отсутствие ошибок при открытии https://dealer-passport-test.xsfera.ru/logs/ на сервере СЕО",
+        "uid" : "125f63ccfe945a05",
+        "parentUid" : "e136a073fdb868f7dc9fe254f2121c2d",
+        "status" : "failed",
+        "time" : {
+          "start" : 1722910027708,
+          "stop" : 1722910037592,
+          "duration" : 9884
+        },
+        "flaky" : true,
+        "newFailed" : true,
+        "parameters" : [ "'https://dealer-passport-test.xsfera.ru/logs/'" ]
+      } ],
+      "uid" : "e136a073fdb868f7dc9fe254f2121c2d"
+    }, {
+      "name" : "AssertionError: Ошибка: ['Произошла ошибка: Неизвестная ошибка сервера\\nПроизошла ошибка: Неизвестная ошибка сервера\\nПроизошла ошибка: Неизвестная ошибка сервера\\nПроизошла ошибка: Неизвестная ошибка сервера']\nassert None\n +  where None = <bound method MainPage.check_not_errors of <pages.main_page.MainPage object at 0x7f4f5c4c2360>>()\n +    where <bound method MainPage.check_not_errors of <pages.main_page.MainPage object at 0x7f4f5c4c2360>> = <pages.main_page.MainPage object at 0x7f4f5c4c2360>.check_not_errors",
+      "children" : [ {
+        "name" : "Проверить отсутствие ошибок при открытии https://dealer-passport-test.xsfera.ru:3001/logs/ на сервере СЕО prod",
+        "uid" : "b66942bd2e930ec",
+        "parentUid" : "321c893ec627e32833df3ea96b5c54fc",
+        "status" : "failed",
+        "time" : {
+          "start" : 1722910235859,
+          "stop" : 1722910246168,
+          "duration" : 10309
+        },
+        "flaky" : false,
+        "newFailed" : true,
+        "parameters" : [ "'https://dealer-passport-test.xsfera.ru:3001/logs/'" ]
+      } ],
+      "uid" : "321c893ec627e32833df3ea96b5c54fc"
+    }, {
+      "name" : "AssertionError: Ошибка: ['Произошла ошибка: Неизвестная ошибка сервера\\nПроизошла ошибка: Неизвестная ошибка сервера\\nПроизошла ошибка: Неизвестная ошибка сервера']\nassert None\n +  where None = <bound method MainPage.check_not_errors of <pages.main_page.MainPage object at 0x7f4f5c4abec0>>()\n +    where <bound method MainPage.check_not_errors of <pages.main_page.MainPage object at 0x7f4f5c4abec0>> = <pages.main_page.MainPage object at 0x7f4f5c4abec0>.check_not_errors",
+      "children" : [ {
+        "name" : "Проверить отсутствие ошибок при открытии https://dealer-passport.vaz.ru/logs/ на сервере prod",
+        "uid" : "39a082b6c835ba19",
+        "parentUid" : "0b4604eda16b4d76d4e53ac1c5c7dbc3",
+        "status" : "failed",
+        "time" : {
+          "start" : 1722910446541,
+          "stop" : 1722910452779,
+          "duration" : 6238
+        },
+        "flaky" : true,
+        "newFailed" : true,
+        "parameters" : [ "'https://dealer-passport.vaz.ru/logs/'" ]
+      } ],
+      "uid" : "0b4604eda16b4d76d4e53ac1c5c7dbc3"
+    } ],
+    "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
+  } ],
+  "name" : "categories"
+}
