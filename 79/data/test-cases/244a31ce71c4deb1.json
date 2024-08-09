@@ -1,0 +1,394 @@
+{
+  "uid" : "244a31ce71c4deb1",
+  "name" : "Проверить отсутствие ошибок при открытии https://dealer-passport-test.xsfera.ru/logs/ на сервере СЕО",
+  "fullName" : "tests.main_page_test.TestMainPageSmoke#test_open_seo",
+  "historyId" : "12f486fa9f4b36e9e84d73f1b7d49a13",
+  "time" : {
+    "start" : 1723169371110,
+    "stop" : 1723169381430,
+    "duration" : 10320
+  },
+  "status" : "failed",
+  "statusMessage" : "AssertionError: Ошибка: ['Произошла ошибка: Неизвестная ошибка сервера\\nПроизошла ошибка: Неизвестная ошибка сервера']\nassert None\n +  where None = <bound method MainPage.check_not_errors of <pages.main_page.MainPage object at 0x7f95c72345c0>>()\n +    where <bound method MainPage.check_not_errors of <pages.main_page.MainPage object at 0x7f95c72345c0>> = <pages.main_page.MainPage object at 0x7f95c72345c0>.check_not_errors",
+  "statusTrace" : "self = <tests.main_page_test.TestMainPageSmoke object at 0x7f95c73dd370>\nauth_user_admin_to_seo = <pages.main_page.MainPage object at 0x7f95c72345c0>\ndriver = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"4cc28f19da7aa919d73483cebca171ad\")>\nurl = 'https://dealer-passport-test.xsfera.ru/logs/'\n\n    @pytest.mark.parametrize('url', Urls.LIST_URLS_SEO)\n    def test_open_seo(self, auth_user_admin_to_seo, driver, url):\n        allure.dynamic.title(f'Проверить отсутствие ошибок при открытии {url} на сервере СЕО')\n        driver.get(url)\n>       assert auth_user_admin_to_seo.check_not_errors(), \\\n            f'Ошибка: {[item.text for item in auth_user_admin_to_seo.check_error_notifications()]}'\nE       AssertionError: Ошибка: ['Произошла ошибка: Неизвестная ошибка сервера\\nПроизошла ошибка: Неизвестная ошибка сервера']\nE       assert None\nE        +  where None = <bound method MainPage.check_not_errors of <pages.main_page.MainPage object at 0x7f95c72345c0>>()\nE        +    where <bound method MainPage.check_not_errors of <pages.main_page.MainPage object at 0x7f95c72345c0>> = <pages.main_page.MainPage object at 0x7f95c72345c0>.check_not_errors\n\ntests/main_page_test.py:30: AssertionError",
+  "flaky" : true,
+  "newFailed" : true,
+  "beforeStages" : [ {
+    "name" : "auth_user_admin_to_seo",
+    "time" : {
+      "start" : 1723169368557,
+      "stop" : 1723169371110,
+      "duration" : 2553
+    },
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Проверка видимости кнопки '('xpath', '//span[text()=\"Согласен\"]')' на главной странице",
+      "time" : {
+        "start" : 1723169371031,
+        "stop" : 1723169371061,
+        "duration" : 30
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 1,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  }, {
+    "name" : "driver",
+    "time" : {
+      "start" : 1723169368356,
+      "stop" : 1723169368557,
+      "duration" : 201
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "clear_allure_results_folder",
+    "time" : {
+      "start" : 1723169276046,
+      "stop" : 1723169276046,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "status" : "failed",
+    "statusMessage" : "AssertionError: Ошибка: ['Произошла ошибка: Неизвестная ошибка сервера\\nПроизошла ошибка: Неизвестная ошибка сервера']\nassert None\n +  where None = <bound method MainPage.check_not_errors of <pages.main_page.MainPage object at 0x7f95c72345c0>>()\n +    where <bound method MainPage.check_not_errors of <pages.main_page.MainPage object at 0x7f95c72345c0>> = <pages.main_page.MainPage object at 0x7f95c72345c0>.check_not_errors",
+    "statusTrace" : "self = <tests.main_page_test.TestMainPageSmoke object at 0x7f95c73dd370>\nauth_user_admin_to_seo = <pages.main_page.MainPage object at 0x7f95c72345c0>\ndriver = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"4cc28f19da7aa919d73483cebca171ad\")>\nurl = 'https://dealer-passport-test.xsfera.ru/logs/'\n\n    @pytest.mark.parametrize('url', Urls.LIST_URLS_SEO)\n    def test_open_seo(self, auth_user_admin_to_seo, driver, url):\n        allure.dynamic.title(f'Проверить отсутствие ошибок при открытии {url} на сервере СЕО')\n        driver.get(url)\n>       assert auth_user_admin_to_seo.check_not_errors(), \\\n            f'Ошибка: {[item.text for item in auth_user_admin_to_seo.check_error_notifications()]}'\nE       AssertionError: Ошибка: ['Произошла ошибка: Неизвестная ошибка сервера\\nПроизошла ошибка: Неизвестная ошибка сервера']\nE       assert None\nE        +  where None = <bound method MainPage.check_not_errors of <pages.main_page.MainPage object at 0x7f95c72345c0>>()\nE        +    where <bound method MainPage.check_not_errors of <pages.main_page.MainPage object at 0x7f95c72345c0>> = <pages.main_page.MainPage object at 0x7f95c72345c0>.check_not_errors\n\ntests/main_page_test.py:30: AssertionError",
+    "steps" : [ {
+      "name" : "Проверить отсутствие ошибок",
+      "time" : {
+        "start" : 1723169371647,
+        "stop" : 1723169381404,
+        "duration" : 9757
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Проверить видимость ошибок",
+      "time" : {
+        "start" : 1723169381404,
+        "stop" : 1723169381415,
+        "duration" : 11
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ {
+      "uid" : "3e2e49f3f6d9af7d",
+      "name" : "Screenshot",
+      "source" : "3e2e49f3f6d9af7d.png",
+      "type" : "image/png",
+      "size" : 55719
+    }, {
+      "uid" : "9562c1baad3bdfb4",
+      "name" : "HTML source",
+      "source" : "9562c1baad3bdfb4.html",
+      "type" : "text/html",
+      "size" : 21855
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 2,
+    "attachmentsCount" : 2,
+    "shouldDisplayMessage" : true,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "driver::0",
+    "time" : {
+      "start" : 1723169381654,
+      "stop" : 1723169381716,
+      "duration" : 62
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "epic",
+    "value" : "Test Main Page smoke_test"
+  }, {
+    "name" : "tag",
+    "value" : "smoke_test"
+  }, {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "main_page_test"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestMainPageSmoke"
+  }, {
+    "name" : "host",
+    "value" : "fv-az1538-363"
+  }, {
+    "name" : "thread",
+    "value" : "2289-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.main_page_test"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "url",
+    "value" : "'https://dealer-passport-test.xsfera.ru/logs/'"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 3,
+        "broken" : 9,
+        "skipped" : 0,
+        "passed" : 65,
+        "unknown" : 0,
+        "total" : 77
+      },
+      "items" : [ {
+        "uid" : "4fe62d33c838a15d",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/78//#testresult/4fe62d33c838a15d",
+        "status" : "passed",
+        "time" : {
+          "start" : 1723082909505,
+          "stop" : 1723082920466,
+          "duration" : 10961
+        }
+      }, {
+        "uid" : "6d6d2b6526256eda",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/77//#testresult/6d6d2b6526256eda",
+        "status" : "passed",
+        "time" : {
+          "start" : 1722996555929,
+          "stop" : 1722996566718,
+          "duration" : 10789
+        }
+      }, {
+        "uid" : "125f63ccfe945a05",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/76//#testresult/125f63ccfe945a05",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Ошибка: ['Произошла ошибка: Неизвестная ошибка сервера\\nПроизошла ошибка: Неизвестная ошибка сервера\\nПроизошла ошибка: Неизвестная ошибка сервера']\nassert None\n +  where None = <bound method MainPage.check_not_errors of <pages.main_page.MainPage object at 0x7f4f5c474500>>()\n +    where <bound method MainPage.check_not_errors of <pages.main_page.MainPage object at 0x7f4f5c474500>> = <pages.main_page.MainPage object at 0x7f4f5c474500>.check_not_errors",
+        "time" : {
+          "start" : 1722910027708,
+          "stop" : 1722910037592,
+          "duration" : 9884
+        }
+      }, {
+        "uid" : "722a0e19f2401802",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/75//#testresult/722a0e19f2401802",
+        "status" : "passed",
+        "time" : {
+          "start" : 1722823751488,
+          "stop" : 1722823762362,
+          "duration" : 10874
+        }
+      }, {
+        "uid" : "d5fbb6777da2d8c8",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/74//#testresult/d5fbb6777da2d8c8",
+        "status" : "passed",
+        "time" : {
+          "start" : 1722737495550,
+          "stop" : 1722737506360,
+          "duration" : 10810
+        }
+      }, {
+        "uid" : "39071047a86aa998",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/73//#testresult/39071047a86aa998",
+        "status" : "passed",
+        "time" : {
+          "start" : 1722650693746,
+          "stop" : 1722650704514,
+          "duration" : 10768
+        }
+      }, {
+        "uid" : "cc201b9094a7e178",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/72//#testresult/cc201b9094a7e178",
+        "status" : "broken",
+        "statusDetails" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x557cdacb5c5a <unknown>\n#1 0x557cda998e2c <unknown>\n#2 0x557cda9e5661 <unknown>\n#3 0x557cda9e5751 <unknown>\n#4 0x557cdaa29f64 <unknown>\n#5 0x557cdaa085ed <unknown>\n#6 0x557cdaa27303 <unknown>\n#7 0x557cdaa08363 <unknown>\n#8 0x557cda9d8247 <unknown>\n#9 0x557cda9d8b9e <unknown>\n#10 0x557cdac7c22b <unknown>\n#11 0x557cdac802d1 <unknown>\n#12 0x557cdac67ade <unknown>\n#13 0x557cdac80e32 <unknown>\n#14 0x557cdac4c77f <unknown>\n#15 0x557cdaca5618 <unknown>\n#16 0x557cdaca57f0 <unknown>\n#17 0x557cdacb4d8c <unknown>\n#18 0x7ff49aa94ac3 <unknown>",
+        "time" : {
+          "start" : 1722564630751,
+          "stop" : 1722564630751,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "921c77d01daec407",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/71//#testresult/921c77d01daec407",
+        "status" : "passed",
+        "time" : {
+          "start" : 1722478431751,
+          "stop" : 1722478442689,
+          "duration" : 10938
+        }
+      }, {
+        "uid" : "1d08694e8d342381",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/70//#testresult/1d08694e8d342381",
+        "status" : "passed",
+        "time" : {
+          "start" : 1722390399727,
+          "stop" : 1722390410639,
+          "duration" : 10912
+        }
+      }, {
+        "uid" : "3aea2e01b5a67a60",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/69//#testresult/3aea2e01b5a67a60",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Ошибка: ['Произошла ошибка: Неизвестная ошибка сервера']\nassert None\n +  where None = <bound method MainPage.check_not_errors of <pages.main_page.MainPage object at 0x7f4931c61e50>>()\n +    where <bound method MainPage.check_not_errors of <pages.main_page.MainPage object at 0x7f4931c61e50>> = <pages.main_page.MainPage object at 0x7f4931c61e50>.check_not_errors",
+        "time" : {
+          "start" : 1722305206564,
+          "stop" : 1722305216469,
+          "duration" : 9905
+        }
+      }, {
+        "uid" : "61ab938aa17f6a50",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/68//#testresult/61ab938aa17f6a50",
+        "status" : "passed",
+        "time" : {
+          "start" : 1722218958671,
+          "stop" : 1722218969520,
+          "duration" : 10849
+        }
+      }, {
+        "uid" : "d15ac1178177f217",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/67//#testresult/d15ac1178177f217",
+        "status" : "passed",
+        "time" : {
+          "start" : 1722132678240,
+          "stop" : 1722132689120,
+          "duration" : 10880
+        }
+      }, {
+        "uid" : "527a1b8ae5fa486a",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/66//#testresult/527a1b8ae5fa486a",
+        "status" : "passed",
+        "time" : {
+          "start" : 1722045862679,
+          "stop" : 1722045873501,
+          "duration" : 10822
+        }
+      }, {
+        "uid" : "d2310d420486ea55",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/65//#testresult/d2310d420486ea55",
+        "status" : "passed",
+        "time" : {
+          "start" : 1721959545729,
+          "stop" : 1721959556524,
+          "duration" : 10795
+        }
+      }, {
+        "uid" : "1548aa37a5bd2894",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/64//#testresult/1548aa37a5bd2894",
+        "status" : "passed",
+        "time" : {
+          "start" : 1721873202518,
+          "stop" : 1721873213472,
+          "duration" : 10954
+        }
+      }, {
+        "uid" : "d06ea161feb3f921",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/63//#testresult/d06ea161feb3f921",
+        "status" : "passed",
+        "time" : {
+          "start" : 1721786789335,
+          "stop" : 1721786800191,
+          "duration" : 10856
+        }
+      }, {
+        "uid" : "332b6b82feb23630",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/62//#testresult/332b6b82feb23630",
+        "status" : "passed",
+        "time" : {
+          "start" : 1721700429827,
+          "stop" : 1721700440762,
+          "duration" : 10935
+        }
+      }, {
+        "uid" : "c7208a9d7b7c4b65",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/61//#testresult/c7208a9d7b7c4b65",
+        "status" : "passed",
+        "time" : {
+          "start" : 1721614223147,
+          "stop" : 1721614234001,
+          "duration" : 10854
+        }
+      }, {
+        "uid" : "5fd1a80a21859613",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/60//#testresult/5fd1a80a21859613",
+        "status" : "passed",
+        "time" : {
+          "start" : 1721527807791,
+          "stop" : 1721527818635,
+          "duration" : 10844
+        }
+      }, {
+        "uid" : "94a659b798f13d3c",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/59//#testresult/94a659b798f13d3c",
+        "status" : "passed",
+        "time" : {
+          "start" : 1721440986556,
+          "stop" : 1721440997438,
+          "duration" : 10882
+        }
+      } ]
+    },
+    "tags" : [ "smoke_test" ]
+  },
+  "source" : "244a31ce71c4deb1.json",
+  "parameterValues" : [ "'https://dealer-passport-test.xsfera.ru/logs/'" ]
+}
