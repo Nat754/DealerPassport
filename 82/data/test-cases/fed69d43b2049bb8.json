@@ -1,0 +1,325 @@
+{
+  "uid" : "fed69d43b2049bb8",
+  "name" : "test_open_seo[https://dealer-passport-test.xsfera.ru/staff/]",
+  "fullName" : "tests.main_page_test.TestMainPageSmoke#test_open_seo",
+  "historyId" : "ee626949710a0968bf928ac7701a5ea6",
+  "time" : {
+    "start" : 1723428632900,
+    "stop" : 1723428632900,
+    "duration" : 0
+  },
+  "status" : "broken",
+  "statusMessage" : "selenium.common.exceptions.InvalidCookieDomainException: Message: invalid cookie domain\n  (Session info: chrome-headless-shell=127.0.6533.88)\nStacktrace:\n#0 0x55f6eaffb71a <unknown>\n#1 0x55f6eaccc481 <unknown>\n#2 0x55f6ead6ee51 <unknown>\n#3 0x55f6ead3e8e2 <unknown>\n#4 0x55f6ead5d08a <unknown>\n#5 0x55f6ead3e683 <unknown>\n#6 0x55f6ead0ed71 <unknown>\n#7 0x55f6ead0f7de <unknown>\n#8 0x55f6eafc32ab <unknown>\n#9 0x55f6eafc7242 <unknown>\n#10 0x55f6eafb0665 <unknown>\n#11 0x55f6eafc7dd2 <unknown>\n#12 0x55f6eaf952af <unknown>\n#13 0x55f6eafeaeb8 <unknown>\n#14 0x55f6eafeb090 <unknown>\n#15 0x55f6eaffa4ec <unknown>\n#16 0x7f8cf2494ac3 <unknown>",
+  "statusTrace" : "driver = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"caa979bd5e55b710502853daf74aee79\")>\n\n    @pytest.fixture\n    def auth_user_admin_to_seo(driver):\n        main_page = MainPage(driver)\n        url = Urls.MAIN_URL_SEO + Urls.AUTH\n        cookies = {'name': 'token', 'value': os.environ[\"SEO_ADMIN\"]}\n        driver.get(url)\n>       driver.add_cookie(cookies)\n\ntests/conftest.py:16: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n/opt/hostedtoolcache/Python/3.12.4/x64/lib/python3.12/site-packages/selenium/webdriver/remote/webdriver.py:636: in add_cookie\n    self.execute(Command.ADD_COOKIE, {\"cookie\": cookie_dict})\n/opt/hostedtoolcache/Python/3.12.4/x64/lib/python3.12/site-packages/selenium/webdriver/remote/webdriver.py:347: in execute\n    self.error_handler.check_response(response)\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <selenium.webdriver.remote.errorhandler.ErrorHandler object at 0x7f04e1c353d0>\nresponse = {'status': 400, 'value': '{\"value\":{\"error\":\"invalid cookie domain\",\"message\":\"invalid cookie domain\\\\n  (Session info...\\\\n#14 0x55f6eafeb090 \\\\u003Cunknown>\\\\n#15 0x55f6eaffa4ec \\\\u003Cunknown>\\\\n#16 0x7f8cf2494ac3 \\\\u003Cunknown>\\\\n\"}}'}\n\n    def check_response(self, response: Dict[str, Any]) -> None:\n        \"\"\"Checks that a JSON response from the WebDriver does not have an\n        error.\n    \n        :Args:\n         - response - The JSON response from the WebDriver server as a dictionary\n           object.\n    \n        :Raises: If the response contains an error message.\n        \"\"\"\n        status = response.get(\"status\", None)\n        if not status or status == ErrorCode.SUCCESS:\n            return\n        value = None\n        message = response.get(\"message\", \"\")\n        screen: str = response.get(\"screen\", \"\")\n        stacktrace = None\n        if isinstance(status, int):\n            value_json = response.get(\"value\", None)\n            if value_json and isinstance(value_json, str):\n                import json\n    \n                try:\n                    value = json.loads(value_json)\n                    if len(value) == 1:\n                        value = value[\"value\"]\n                    status = value.get(\"error\", None)\n                    if not status:\n                        status = value.get(\"status\", ErrorCode.UNKNOWN_ERROR)\n                        message = value.get(\"value\") or value.get(\"message\")\n                        if not isinstance(message, str):\n                            value = message\n                            message = message.get(\"message\")\n                    else:\n                        message = value.get(\"message\", None)\n                except ValueError:\n                    pass\n    \n        exception_class: Type[WebDriverException]\n        e = ErrorCode()\n        error_codes = [item for item in dir(e) if not item.startswith(\"__\")]\n        for error_code in error_codes:\n            error_info = getattr(ErrorCode, error_code)\n            if isinstance(error_info, list) and status in error_info:\n                exception_class = getattr(ExceptionMapping, error_code, WebDriverException)\n                break\n        else:\n            exception_class = WebDriverException\n    \n        if not value:\n            value = response[\"value\"]\n        if isinstance(value, str):\n            raise exception_class(value)\n        if message == \"\" and \"message\" in value:\n            message = value[\"message\"]\n    \n        screen = None  # type: ignore[assignment]\n        if \"screen\" in value:\n            screen = value[\"screen\"]\n    \n        stacktrace = None\n        st_value = value.get(\"stackTrace\") or value.get(\"stacktrace\")\n        if st_value:\n            if isinstance(st_value, str):\n                stacktrace = st_value.split(\"\\n\")\n            else:\n                stacktrace = []\n                try:\n                    for frame in st_value:\n                        line = frame.get(\"lineNumber\", \"\")\n                        file = frame.get(\"fileName\", \"<anonymous>\")\n                        if line:\n                            file = f\"{file}:{line}\"\n                        meth = frame.get(\"methodName\", \"<anonymous>\")\n                        if \"className\" in frame:\n                            meth = f\"{frame['className']}.{meth}\"\n                        msg = \"    at %s (%s)\"\n                        msg = msg % (meth, file)\n                        stacktrace.append(msg)\n                except TypeError:\n                    pass\n        if exception_class == UnexpectedAlertPresentException:\n            alert_text = None\n            if \"data\" in value:\n                alert_text = value[\"data\"].get(\"text\")\n            elif \"alert\" in value:\n                alert_text = value[\"alert\"].get(\"text\")\n            raise exception_class(message, screen, stacktrace, alert_text)  # type: ignore[call-arg]  # mypy is not smart enough here\n>       raise exception_class(message, screen, stacktrace)\nE       selenium.common.exceptions.InvalidCookieDomainException: Message: invalid cookie domain\nE         (Session info: chrome-headless-shell=127.0.6533.88)\nE       Stacktrace:\nE       #0 0x55f6eaffb71a <unknown>\nE       #1 0x55f6eaccc481 <unknown>\nE       #2 0x55f6ead6ee51 <unknown>\nE       #3 0x55f6ead3e8e2 <unknown>\nE       #4 0x55f6ead5d08a <unknown>\nE       #5 0x55f6ead3e683 <unknown>\nE       #6 0x55f6ead0ed71 <unknown>\nE       #7 0x55f6ead0f7de <unknown>\nE       #8 0x55f6eafc32ab <unknown>\nE       #9 0x55f6eafc7242 <unknown>\nE       #10 0x55f6eafb0665 <unknown>\nE       #11 0x55f6eafc7dd2 <unknown>\nE       #12 0x55f6eaf952af <unknown>\nE       #13 0x55f6eafeaeb8 <unknown>\nE       #14 0x55f6eafeb090 <unknown>\nE       #15 0x55f6eaffa4ec <unknown>\nE       #16 0x7f8cf2494ac3 <unknown>\n\n/opt/hostedtoolcache/Python/3.12.4/x64/lib/python3.12/site-packages/selenium/webdriver/remote/errorhandler.py:229: InvalidCookieDomainException",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "auth_user_admin_to_seo",
+    "time" : {
+      "start" : 1723428633101,
+      "stop" : 1723428633429,
+      "duration" : 328
+    },
+    "status" : "broken",
+    "statusMessage" : "selenium.common.exceptions.InvalidCookieDomainException: Message: invalid cookie domain\n  (Session info: chrome-headless-shell=127.0.6533.88)\nStacktrace:\n#0 0x55f6eaffb71a <unknown>\n#1 0x55f6eaccc481 <unknown>\n#2 0x55f6ead6ee51 <unknown>\n#3 0x55f6ead3e8e2 <unknown>\n#4 0x55f6ead5d08a <unknown>\n#5 0x55f6ead3e683 <unknown>\n#6 0x55f6ead0ed71 <unknown>\n#7 0x55f6ead0f7de <unknown>\n#8 0x55f6eafc32ab <unknown>\n#9 0x55f6eafc7242 <unknown>\n#10 0x55f6eafb0665 <unknown>\n#11 0x55f6eafc7dd2 <unknown>\n#12 0x55f6eaf952af <unknown>\n#13 0x55f6eafeaeb8 <unknown>\n#14 0x55f6eafeb090 <unknown>\n#15 0x55f6eaffa4ec <unknown>\n#16 0x7f8cf2494ac3 <unknown>\n\n",
+    "statusTrace" : "  File \"/opt/hostedtoolcache/Python/3.12.4/x64/lib/python3.12/site-packages/pluggy/_callers.py\", line 167, in _multicall\n    teardown.throw(outcome._exception)\n  File \"/opt/hostedtoolcache/Python/3.12.4/x64/lib/python3.12/site-packages/_pytest/setuponly.py\", line 36, in pytest_fixture_setup\n    return (yield)\n            ^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.4/x64/lib/python3.12/site-packages/pluggy/_callers.py\", line 103, in _multicall\n    res = hook_impl.function(*args)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.4/x64/lib/python3.12/site-packages/_pytest/fixtures.py\", line 1140, in pytest_fixture_setup\n    result = call_fixture_func(fixturefunc, request, kwargs)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.4/x64/lib/python3.12/site-packages/_pytest/fixtures.py\", line 917, in call_fixture_func\n    fixture_result = fixturefunc(**kwargs)\n                     ^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/DealerPassport/DealerPassport/tests/conftest.py\", line 16, in auth_user_admin_to_seo\n    driver.add_cookie(cookies)\n  File \"/opt/hostedtoolcache/Python/3.12.4/x64/lib/python3.12/site-packages/selenium/webdriver/remote/webdriver.py\", line 636, in add_cookie\n    self.execute(Command.ADD_COOKIE, {\"cookie\": cookie_dict})\n  File \"/opt/hostedtoolcache/Python/3.12.4/x64/lib/python3.12/site-packages/selenium/webdriver/remote/webdriver.py\", line 347, in execute\n    self.error_handler.check_response(response)\n  File \"/opt/hostedtoolcache/Python/3.12.4/x64/lib/python3.12/site-packages/selenium/webdriver/remote/errorhandler.py\", line 229, in check_response\n    raise exception_class(message, screen, stacktrace)\n",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : true,
+    "hasContent" : true
+  }, {
+    "name" : "clear_allure_results_folder",
+    "time" : {
+      "start" : 1723428577028,
+      "stop" : 1723428577028,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "driver",
+    "time" : {
+      "start" : 1723428632901,
+      "stop" : 1723428633101,
+      "duration" : 200
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "afterStages" : [ {
+    "name" : "driver::0",
+    "time" : {
+      "start" : 1723428633479,
+      "stop" : 1723428633540,
+      "duration" : 61
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "epic",
+    "value" : "Test Main Page smoke_test"
+  }, {
+    "name" : "tag",
+    "value" : "smoke_test"
+  }, {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "main_page_test"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestMainPageSmoke"
+  }, {
+    "name" : "host",
+    "value" : "fv-az1501-607"
+  }, {
+    "name" : "thread",
+    "value" : "2340-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.main_page_test"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "url",
+    "value" : "'https://dealer-passport-test.xsfera.ru/staff/'"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Test defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 5,
+        "broken" : 10,
+        "skipped" : 0,
+        "passed" : 65,
+        "unknown" : 0,
+        "total" : 80
+      },
+      "items" : [ {
+        "uid" : "ec754e0677cbddb3",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/81//#testresult/ec754e0677cbddb3",
+        "status" : "passed",
+        "time" : {
+          "start" : 1723342535172,
+          "stop" : 1723342546138,
+          "duration" : 10966
+        }
+      }, {
+        "uid" : "df931f82c465dc6f",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/80//#testresult/df931f82c465dc6f",
+        "status" : "passed",
+        "time" : {
+          "start" : 1723255808377,
+          "stop" : 1723255819366,
+          "duration" : 10989
+        }
+      }, {
+        "uid" : "7eadaeb7121476b2",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/79//#testresult/7eadaeb7121476b2",
+        "status" : "passed",
+        "time" : {
+          "start" : 1723169466348,
+          "stop" : 1723169477174,
+          "duration" : 10826
+        }
+      }, {
+        "uid" : "b06c660585283367",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/78//#testresult/b06c660585283367",
+        "status" : "passed",
+        "time" : {
+          "start" : 1723083013386,
+          "stop" : 1723083024328,
+          "duration" : 10942
+        }
+      }, {
+        "uid" : "6d15a43e82a7672a",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/77//#testresult/6d15a43e82a7672a",
+        "status" : "passed",
+        "time" : {
+          "start" : 1722996651044,
+          "stop" : 1722996661845,
+          "duration" : 10801
+        }
+      }, {
+        "uid" : "62921319e168756d",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/76//#testresult/62921319e168756d",
+        "status" : "passed",
+        "time" : {
+          "start" : 1722910124354,
+          "stop" : 1722910135198,
+          "duration" : 10844
+        }
+      }, {
+        "uid" : "36090a163b2f7bf7",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/75//#testresult/36090a163b2f7bf7",
+        "status" : "passed",
+        "time" : {
+          "start" : 1722823853635,
+          "stop" : 1722823864487,
+          "duration" : 10852
+        }
+      }, {
+        "uid" : "6b8f5b039785da4",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/74//#testresult/6b8f5b039785da4",
+        "status" : "passed",
+        "time" : {
+          "start" : 1722737593318,
+          "stop" : 1722737604148,
+          "duration" : 10830
+        }
+      }, {
+        "uid" : "2d7396801c197888",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/73//#testresult/2d7396801c197888",
+        "status" : "passed",
+        "time" : {
+          "start" : 1722650790040,
+          "stop" : 1722650800835,
+          "duration" : 10795
+        }
+      }, {
+        "uid" : "153ad5904a3a9fc2",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/72//#testresult/153ad5904a3a9fc2",
+        "status" : "broken",
+        "statusDetails" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x560063e5ac5a <unknown>\n#1 0x560063b3de2c <unknown>\n#2 0x560063b8a661 <unknown>\n#3 0x560063b8a751 <unknown>\n#4 0x560063bcef64 <unknown>\n#5 0x560063bad5ed <unknown>\n#6 0x560063bcc303 <unknown>\n#7 0x560063bad363 <unknown>\n#8 0x560063b7d247 <unknown>\n#9 0x560063b7db9e <unknown>\n#10 0x560063e2122b <unknown>\n#11 0x560063e252d1 <unknown>\n#12 0x560063e0cade <unknown>\n#13 0x560063e25e32 <unknown>\n#14 0x560063df177f <unknown>\n#15 0x560063e4a618 <unknown>\n#16 0x560063e4a7f0 <unknown>\n#17 0x560063e59d8c <unknown>\n#18 0x7f9a7da94ac3 <unknown>",
+        "time" : {
+          "start" : 1722564721008,
+          "stop" : 1722564721008,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "835a43d3356a2568",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/71//#testresult/835a43d3356a2568",
+        "status" : "passed",
+        "time" : {
+          "start" : 1722478535683,
+          "stop" : 1722478546647,
+          "duration" : 10964
+        }
+      }, {
+        "uid" : "157692bc530f8b22",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/70//#testresult/157692bc530f8b22",
+        "status" : "passed",
+        "time" : {
+          "start" : 1722390501180,
+          "stop" : 1722390512099,
+          "duration" : 10919
+        }
+      }, {
+        "uid" : "11d7f890889e2f75",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/69//#testresult/11d7f890889e2f75",
+        "status" : "passed",
+        "time" : {
+          "start" : 1722305306844,
+          "stop" : 1722305317746,
+          "duration" : 10902
+        }
+      }, {
+        "uid" : "a01158116461a44e",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/68//#testresult/a01158116461a44e",
+        "status" : "passed",
+        "time" : {
+          "start" : 1722219053567,
+          "stop" : 1722219064359,
+          "duration" : 10792
+        }
+      }, {
+        "uid" : "144b6eef23dea6fa",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/67//#testresult/144b6eef23dea6fa",
+        "status" : "passed",
+        "time" : {
+          "start" : 1722132775761,
+          "stop" : 1722132786633,
+          "duration" : 10872
+        }
+      }, {
+        "uid" : "ee963ca180d3b554",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/66//#testresult/ee963ca180d3b554",
+        "status" : "passed",
+        "time" : {
+          "start" : 1722045958512,
+          "stop" : 1722045969305,
+          "duration" : 10793
+        }
+      }, {
+        "uid" : "a749810adea24f74",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/65//#testresult/a749810adea24f74",
+        "status" : "passed",
+        "time" : {
+          "start" : 1721959640118,
+          "stop" : 1721959650928,
+          "duration" : 10810
+        }
+      }, {
+        "uid" : "b24b4843fd8627f2",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/64//#testresult/b24b4843fd8627f2",
+        "status" : "passed",
+        "time" : {
+          "start" : 1721873306434,
+          "stop" : 1721873317422,
+          "duration" : 10988
+        }
+      }, {
+        "uid" : "a9853d4fef6db2b0",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/63//#testresult/a9853d4fef6db2b0",
+        "status" : "passed",
+        "time" : {
+          "start" : 1721786877543,
+          "stop" : 1721786888367,
+          "duration" : 10824
+        }
+      }, {
+        "uid" : "8d61f8648094e046",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/62//#testresult/8d61f8648094e046",
+        "status" : "passed",
+        "time" : {
+          "start" : 1721700522948,
+          "stop" : 1721700533860,
+          "duration" : 10912
+        }
+      } ]
+    },
+    "tags" : [ "smoke_test" ]
+  },
+  "source" : "fed69d43b2049bb8.json",
+  "parameterValues" : [ "'https://dealer-passport-test.xsfera.ru/staff/'" ]
+}
