@@ -1,0 +1,285 @@
+{
+  "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "children" : [ {
+    "name" : "Product defects",
+    "children" : [ {
+      "name" : "AssertionError: Меню редактора изменилось\nassert ['Глобальный ...рушений', ...] == ['Глобальный ...рушений', ...]\n  \n  Left contains one more item: 'Шаблоны договоров'\n  \n  Full diff:\n    [\n        'Глобальный рейтинг',\n        'Квартили',\n        'Персонал',\n        'База сотрудников',\n        'Подразделения',\n        'Виды нарушений',\n        'Редактор форм заявок-деклараций',\n        'Справочник должностей',\n        'Каталог учебных программ',\n        'Справочники библиотеки документов',\n        'Редактор отчетов',\n        'Справочник зон камер',\n        'Справочник информационных систем',\n        'Справочник разделов фотогалереи',\n  +     'Шаблоны договоров',\n    ]",
+      "children" : [ {
+        "name" : "Проверить доступность меню в редакторе на 3001",
+        "uid" : "df4a908cc7182a31",
+        "parentUid" : "1c65c5ea6de4ce36b3b1035e43540e73",
+        "status" : "failed",
+        "time" : {
+          "start" : 1723947015641,
+          "stop" : 1723947017426,
+          "duration" : 1785
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "1c65c5ea6de4ce36b3b1035e43540e73"
+    } ],
+    "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
+  }, {
+    "name" : "Test defects",
+    "children" : [ {
+      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x562e8618d6aa <unknown>\n#1 0x562e85e5e600 <unknown>\n#2 0x562e85eadbcb <unknown>\n#3 0x562e85eadeb1 <unknown>\n#4 0x562e85ef1b24 <unknown>\n#5 0x562e85ed08cd <unknown>\n#6 0x562e85eef04a <unknown>\n#7 0x562e85ed0643 <unknown>\n#8 0x562e85ea0d31 <unknown>\n#9 0x562e85ea179e <unknown>\n#10 0x562e8615523b <unknown>\n#11 0x562e861591d2 <unknown>\n#12 0x562e861425f5 <unknown>\n#13 0x562e86159d62 <unknown>\n#14 0x562e8612723f <unknown>\n#15 0x562e8617ce48 <unknown>\n#16 0x562e8617d020 <unknown>\n#17 0x562e8618c47c <unknown>\n#18 0x7fe2f5294ac3 <unknown>",
+      "children" : [ {
+        "name" : "test_open_seo[https://dealer-passport-test.xsfera.ru]",
+        "uid" : "5b3447af76659fec",
+        "parentUid" : "9e8882a6463e567f97e54ce3a8292f09",
+        "status" : "broken",
+        "time" : {
+          "start" : 1723947053787,
+          "stop" : 1723947053787,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'https://dealer-passport-test.xsfera.ru'" ]
+      } ],
+      "uid" : "9e8882a6463e567f97e54ce3a8292f09"
+    }, {
+      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x5565bf8146aa <unknown>\n#1 0x5565bf4e5600 <unknown>\n#2 0x5565bf534bcb <unknown>\n#3 0x5565bf534eb1 <unknown>\n#4 0x5565bf578b24 <unknown>\n#5 0x5565bf5578cd <unknown>\n#6 0x5565bf57604a <unknown>\n#7 0x5565bf557643 <unknown>\n#8 0x5565bf527d31 <unknown>\n#9 0x5565bf52879e <unknown>\n#10 0x5565bf7dc23b <unknown>\n#11 0x5565bf7e01d2 <unknown>\n#12 0x5565bf7c95f5 <unknown>\n#13 0x5565bf7e0d62 <unknown>\n#14 0x5565bf7ae23f <unknown>\n#15 0x5565bf803e48 <unknown>\n#16 0x5565bf804020 <unknown>\n#17 0x5565bf81347c <unknown>\n#18 0x7f9b7f894ac3 <unknown>",
+      "children" : [ {
+        "name" : "test_open_seo[https://dealer-passport-test.xsfera.ru/editor/]",
+        "uid" : "17862480a3c428a5",
+        "parentUid" : "03eff40535c34be43cbd3b073836d895",
+        "status" : "broken",
+        "time" : {
+          "start" : 1723947066731,
+          "stop" : 1723947066731,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'https://dealer-passport-test.xsfera.ru/editor/'" ]
+      } ],
+      "uid" : "03eff40535c34be43cbd3b073836d895"
+    }, {
+      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x55a4971316aa <unknown>\n#1 0x55a496e02600 <unknown>\n#2 0x55a496e51bcb <unknown>\n#3 0x55a496e51eb1 <unknown>\n#4 0x55a496e95b24 <unknown>\n#5 0x55a496e748cd <unknown>\n#6 0x55a496e9304a <unknown>\n#7 0x55a496e74643 <unknown>\n#8 0x55a496e44d31 <unknown>\n#9 0x55a496e4579e <unknown>\n#10 0x55a4970f923b <unknown>\n#11 0x55a4970fd1d2 <unknown>\n#12 0x55a4970e65f5 <unknown>\n#13 0x55a4970fdd62 <unknown>\n#14 0x55a4970cb23f <unknown>\n#15 0x55a497120e48 <unknown>\n#16 0x55a497121020 <unknown>\n#17 0x55a49713047c <unknown>\n#18 0x7f4733294ac3 <unknown>",
+      "children" : [ {
+        "name" : "test_open_seo[https://dealer-passport-test.xsfera.ru/reports/]",
+        "uid" : "3ccc1598edeffccc",
+        "parentUid" : "67991fbced661beae8fc57793207f407",
+        "status" : "broken",
+        "time" : {
+          "start" : 1723947079665,
+          "stop" : 1723947079665,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'https://dealer-passport-test.xsfera.ru/reports/'" ]
+      } ],
+      "uid" : "67991fbced661beae8fc57793207f407"
+    }, {
+      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x558afa56c6aa <unknown>\n#1 0x558afa23d600 <unknown>\n#2 0x558afa28cbcb <unknown>\n#3 0x558afa28ceb1 <unknown>\n#4 0x558afa2d0b24 <unknown>\n#5 0x558afa2af8cd <unknown>\n#6 0x558afa2ce04a <unknown>\n#7 0x558afa2af643 <unknown>\n#8 0x558afa27fd31 <unknown>\n#9 0x558afa28079e <unknown>\n#10 0x558afa53423b <unknown>\n#11 0x558afa5381d2 <unknown>\n#12 0x558afa5215f5 <unknown>\n#13 0x558afa538d62 <unknown>\n#14 0x558afa50623f <unknown>\n#15 0x558afa55be48 <unknown>\n#16 0x558afa55c020 <unknown>\n#17 0x558afa56b47c <unknown>\n#18 0x7efe86c94ac3 <unknown>",
+      "children" : [ {
+        "name" : "test_open_seo[https://dealer-passport-test.xsfera.ru/logs/]",
+        "uid" : "a541dda32331ccab",
+        "parentUid" : "404d46cafe2fa5a2343f6e68473216fc",
+        "status" : "broken",
+        "time" : {
+          "start" : 1723947092606,
+          "stop" : 1723947092606,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'https://dealer-passport-test.xsfera.ru/logs/'" ]
+      } ],
+      "uid" : "404d46cafe2fa5a2343f6e68473216fc"
+    }, {
+      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x5557029b26aa <unknown>\n#1 0x555702683600 <unknown>\n#2 0x5557026d2bcb <unknown>\n#3 0x5557026d2eb1 <unknown>\n#4 0x555702716b24 <unknown>\n#5 0x5557026f58cd <unknown>\n#6 0x55570271404a <unknown>\n#7 0x5557026f5643 <unknown>\n#8 0x5557026c5d31 <unknown>\n#9 0x5557026c679e <unknown>\n#10 0x55570297a23b <unknown>\n#11 0x55570297e1d2 <unknown>\n#12 0x5557029675f5 <unknown>\n#13 0x55570297ed62 <unknown>\n#14 0x55570294c23f <unknown>\n#15 0x5557029a1e48 <unknown>\n#16 0x5557029a2020 <unknown>\n#17 0x5557029b147c <unknown>\n#18 0x7f08c7894ac3 <unknown>",
+      "children" : [ {
+        "name" : "test_open_seo[https://dealer-passport-test.xsfera.ru/srr/]",
+        "uid" : "80fa131d42d60aa9",
+        "parentUid" : "e0be1a93a8c612bc6e9074e33704686d",
+        "status" : "broken",
+        "time" : {
+          "start" : 1723947105536,
+          "stop" : 1723947105536,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'https://dealer-passport-test.xsfera.ru/srr/'" ]
+      } ],
+      "uid" : "e0be1a93a8c612bc6e9074e33704686d"
+    }, {
+      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x559b3abd36aa <unknown>\n#1 0x559b3a8a4600 <unknown>\n#2 0x559b3a8f3bcb <unknown>\n#3 0x559b3a8f3eb1 <unknown>\n#4 0x559b3a937b24 <unknown>\n#5 0x559b3a9168cd <unknown>\n#6 0x559b3a93504a <unknown>\n#7 0x559b3a916643 <unknown>\n#8 0x559b3a8e6d31 <unknown>\n#9 0x559b3a8e779e <unknown>\n#10 0x559b3ab9b23b <unknown>\n#11 0x559b3ab9f1d2 <unknown>\n#12 0x559b3ab885f5 <unknown>\n#13 0x559b3ab9fd62 <unknown>\n#14 0x559b3ab6d23f <unknown>\n#15 0x559b3abc2e48 <unknown>\n#16 0x559b3abc3020 <unknown>\n#17 0x559b3abd247c <unknown>\n#18 0x7f4a6e294ac3 <unknown>",
+      "children" : [ {
+        "name" : "test_open_seo[https://dealer-passport-test.xsfera.ru/accounting/]",
+        "uid" : "2900d0e4110bd33c",
+        "parentUid" : "badcfd0dcb5ac285982f15e85dae983e",
+        "status" : "broken",
+        "time" : {
+          "start" : 1723947118444,
+          "stop" : 1723947118444,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'https://dealer-passport-test.xsfera.ru/accounting/'" ]
+      } ],
+      "uid" : "badcfd0dcb5ac285982f15e85dae983e"
+    }, {
+      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x55a1ad14a6aa <unknown>\n#1 0x55a1ace1b600 <unknown>\n#2 0x55a1ace6abcb <unknown>\n#3 0x55a1ace6aeb1 <unknown>\n#4 0x55a1aceaeb24 <unknown>\n#5 0x55a1ace8d8cd <unknown>\n#6 0x55a1aceac04a <unknown>\n#7 0x55a1ace8d643 <unknown>\n#8 0x55a1ace5dd31 <unknown>\n#9 0x55a1ace5e79e <unknown>\n#10 0x55a1ad11223b <unknown>\n#11 0x55a1ad1161d2 <unknown>\n#12 0x55a1ad0ff5f5 <unknown>\n#13 0x55a1ad116d62 <unknown>\n#14 0x55a1ad0e423f <unknown>\n#15 0x55a1ad139e48 <unknown>\n#16 0x55a1ad13a020 <unknown>\n#17 0x55a1ad14947c <unknown>\n#18 0x7f9fb7c94ac3 <unknown>",
+      "children" : [ {
+        "name" : "test_open_seo[https://dealer-passport-test.xsfera.ru/documents/]",
+        "uid" : "f5f3ccc8377836ab",
+        "parentUid" : "596a3b3a622ea0e3785a736b6275756f",
+        "status" : "broken",
+        "time" : {
+          "start" : 1723947131418,
+          "stop" : 1723947131418,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'https://dealer-passport-test.xsfera.ru/documents/'" ]
+      } ],
+      "uid" : "596a3b3a622ea0e3785a736b6275756f"
+    }, {
+      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x55a9263c36aa <unknown>\n#1 0x55a926094600 <unknown>\n#2 0x55a9260e3bcb <unknown>\n#3 0x55a9260e3eb1 <unknown>\n#4 0x55a926127b24 <unknown>\n#5 0x55a9261068cd <unknown>\n#6 0x55a92612504a <unknown>\n#7 0x55a926106643 <unknown>\n#8 0x55a9260d6d31 <unknown>\n#9 0x55a9260d779e <unknown>\n#10 0x55a92638b23b <unknown>\n#11 0x55a92638f1d2 <unknown>\n#12 0x55a9263785f5 <unknown>\n#13 0x55a92638fd62 <unknown>\n#14 0x55a92635d23f <unknown>\n#15 0x55a9263b2e48 <unknown>\n#16 0x55a9263b3020 <unknown>\n#17 0x55a9263c247c <unknown>\n#18 0x7f2c8b694ac3 <unknown>",
+      "children" : [ {
+        "name" : "test_open_seo[https://dealer-passport-test.xsfera.ru/zd/]",
+        "uid" : "ed60b82a7b28bb78",
+        "parentUid" : "87264b357938c58a0e21d7f8a9d4c2b6",
+        "status" : "broken",
+        "time" : {
+          "start" : 1723947144311,
+          "stop" : 1723947144311,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'https://dealer-passport-test.xsfera.ru/zd/'" ]
+      } ],
+      "uid" : "87264b357938c58a0e21d7f8a9d4c2b6"
+    }, {
+      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x564d209b36aa <unknown>\n#1 0x564d20684600 <unknown>\n#2 0x564d206d3bcb <unknown>\n#3 0x564d206d3eb1 <unknown>\n#4 0x564d20717b24 <unknown>\n#5 0x564d206f68cd <unknown>\n#6 0x564d2071504a <unknown>\n#7 0x564d206f6643 <unknown>\n#8 0x564d206c6d31 <unknown>\n#9 0x564d206c779e <unknown>\n#10 0x564d2097b23b <unknown>\n#11 0x564d2097f1d2 <unknown>\n#12 0x564d209685f5 <unknown>\n#13 0x564d2097fd62 <unknown>\n#14 0x564d2094d23f <unknown>\n#15 0x564d209a2e48 <unknown>\n#16 0x564d209a3020 <unknown>\n#17 0x564d209b247c <unknown>\n#18 0x7fbbf8694ac3 <unknown>",
+      "children" : [ {
+        "name" : "test_open_seo[https://dealer-passport-test.xsfera.ru/gr/]",
+        "uid" : "9b2e7715052ef13b",
+        "parentUid" : "53954be16b27f46929eede75fa7dcf0f",
+        "status" : "broken",
+        "time" : {
+          "start" : 1723947157216,
+          "stop" : 1723947157216,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'https://dealer-passport-test.xsfera.ru/gr/'" ]
+      } ],
+      "uid" : "53954be16b27f46929eede75fa7dcf0f"
+    }, {
+      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x5563a0b5e6aa <unknown>\n#1 0x5563a082f600 <unknown>\n#2 0x5563a087ebcb <unknown>\n#3 0x5563a087eeb1 <unknown>\n#4 0x5563a08c2b24 <unknown>\n#5 0x5563a08a18cd <unknown>\n#6 0x5563a08c004a <unknown>\n#7 0x5563a08a1643 <unknown>\n#8 0x5563a0871d31 <unknown>\n#9 0x5563a087279e <unknown>\n#10 0x5563a0b2623b <unknown>\n#11 0x5563a0b2a1d2 <unknown>\n#12 0x5563a0b135f5 <unknown>\n#13 0x5563a0b2ad62 <unknown>\n#14 0x5563a0af823f <unknown>\n#15 0x5563a0b4de48 <unknown>\n#16 0x5563a0b4e020 <unknown>\n#17 0x5563a0b5d47c <unknown>\n#18 0x7fe2d9a94ac3 <unknown>",
+      "children" : [ {
+        "name" : "test_open_seo[https://dealer-passport-test.xsfera.ru/q/]",
+        "uid" : "6f5491a0cdfdb9d4",
+        "parentUid" : "3244de930a4539e5dfc001e91434b534",
+        "status" : "broken",
+        "time" : {
+          "start" : 1723947170160,
+          "stop" : 1723947170160,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'https://dealer-passport-test.xsfera.ru/q/'" ]
+      } ],
+      "uid" : "3244de930a4539e5dfc001e91434b534"
+    }, {
+      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x561294df36aa <unknown>\n#1 0x561294ac4600 <unknown>\n#2 0x561294b13bcb <unknown>\n#3 0x561294b13eb1 <unknown>\n#4 0x561294b57b24 <unknown>\n#5 0x561294b368cd <unknown>\n#6 0x561294b5504a <unknown>\n#7 0x561294b36643 <unknown>\n#8 0x561294b06d31 <unknown>\n#9 0x561294b0779e <unknown>\n#10 0x561294dbb23b <unknown>\n#11 0x561294dbf1d2 <unknown>\n#12 0x561294da85f5 <unknown>\n#13 0x561294dbfd62 <unknown>\n#14 0x561294d8d23f <unknown>\n#15 0x561294de2e48 <unknown>\n#16 0x561294de3020 <unknown>\n#17 0x561294df247c <unknown>\n#18 0x7f96d5294ac3 <unknown>",
+      "children" : [ {
+        "name" : "test_open_seo[https://dealer-passport-test.xsfera.ru/staff/]",
+        "uid" : "3c7ef6f053e802bf",
+        "parentUid" : "14a1f91c018a52805e2c8027e1ff32e6",
+        "status" : "broken",
+        "time" : {
+          "start" : 1723947183068,
+          "stop" : 1723947183068,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'https://dealer-passport-test.xsfera.ru/staff/'" ]
+      } ],
+      "uid" : "14a1f91c018a52805e2c8027e1ff32e6"
+    }, {
+      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x556d9e1116aa <unknown>\n#1 0x556d9dde2600 <unknown>\n#2 0x556d9de31bcb <unknown>\n#3 0x556d9de31eb1 <unknown>\n#4 0x556d9de75b24 <unknown>\n#5 0x556d9de548cd <unknown>\n#6 0x556d9de7304a <unknown>\n#7 0x556d9de54643 <unknown>\n#8 0x556d9de24d31 <unknown>\n#9 0x556d9de2579e <unknown>\n#10 0x556d9e0d923b <unknown>\n#11 0x556d9e0dd1d2 <unknown>\n#12 0x556d9e0c65f5 <unknown>\n#13 0x556d9e0ddd62 <unknown>\n#14 0x556d9e0ab23f <unknown>\n#15 0x556d9e100e48 <unknown>\n#16 0x556d9e101020 <unknown>\n#17 0x556d9e11047c <unknown>\n#18 0x7f5b80494ac3 <unknown>",
+      "children" : [ {
+        "name" : "test_open_seo[https://dealer-passport-test.xsfera.ru/dealers/]",
+        "uid" : "34db2f5443ffb582",
+        "parentUid" : "5a2345478fbe6495eb36c0708dbc8b78",
+        "status" : "broken",
+        "time" : {
+          "start" : 1723947195995,
+          "stop" : 1723947195995,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'https://dealer-passport-test.xsfera.ru/dealers/'" ]
+      } ],
+      "uid" : "5a2345478fbe6495eb36c0708dbc8b78"
+    }, {
+      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x55928d6c76aa <unknown>\n#1 0x55928d398600 <unknown>\n#2 0x55928d3e7bcb <unknown>\n#3 0x55928d3e7eb1 <unknown>\n#4 0x55928d42bb24 <unknown>\n#5 0x55928d40a8cd <unknown>\n#6 0x55928d42904a <unknown>\n#7 0x55928d40a643 <unknown>\n#8 0x55928d3dad31 <unknown>\n#9 0x55928d3db79e <unknown>\n#10 0x55928d68f23b <unknown>\n#11 0x55928d6931d2 <unknown>\n#12 0x55928d67c5f5 <unknown>\n#13 0x55928d693d62 <unknown>\n#14 0x55928d66123f <unknown>\n#15 0x55928d6b6e48 <unknown>\n#16 0x55928d6b7020 <unknown>\n#17 0x55928d6c647c <unknown>\n#18 0x7fa89d094ac3 <unknown>",
+      "children" : [ {
+        "name" : "test_open_seo[https://dealer-passport-test.xsfera.ru/users/]",
+        "uid" : "70bd25bf8ca03440",
+        "parentUid" : "63b461e4681b51b5029d5e9e62d5785d",
+        "status" : "broken",
+        "time" : {
+          "start" : 1723947208969,
+          "stop" : 1723947208969,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'https://dealer-passport-test.xsfera.ru/users/'" ]
+      } ],
+      "uid" : "63b461e4681b51b5029d5e9e62d5785d"
+    }, {
+      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x55cd3bf4a6aa <unknown>\n#1 0x55cd3bc1b600 <unknown>\n#2 0x55cd3bc6abcb <unknown>\n#3 0x55cd3bc6aeb1 <unknown>\n#4 0x55cd3bcaeb24 <unknown>\n#5 0x55cd3bc8d8cd <unknown>\n#6 0x55cd3bcac04a <unknown>\n#7 0x55cd3bc8d643 <unknown>\n#8 0x55cd3bc5dd31 <unknown>\n#9 0x55cd3bc5e79e <unknown>\n#10 0x55cd3bf1223b <unknown>\n#11 0x55cd3bf161d2 <unknown>\n#12 0x55cd3beff5f5 <unknown>\n#13 0x55cd3bf16d62 <unknown>\n#14 0x55cd3bee423f <unknown>\n#15 0x55cd3bf39e48 <unknown>\n#16 0x55cd3bf3a020 <unknown>\n#17 0x55cd3bf4947c <unknown>\n#18 0x7f2ff7294ac3 <unknown>",
+      "children" : [ {
+        "name" : "test_open_seo[https://dealer-passport-test.xsfera.ru/indicators/]",
+        "uid" : "55f2821bc822d652",
+        "parentUid" : "d09bf24a9f57b969a5f943e00414338f",
+        "status" : "broken",
+        "time" : {
+          "start" : 1723947221944,
+          "stop" : 1723947221944,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'https://dealer-passport-test.xsfera.ru/indicators/'" ]
+      } ],
+      "uid" : "d09bf24a9f57b969a5f943e00414338f"
+    }, {
+      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x556e4ce3e6aa <unknown>\n#1 0x556e4cb0f600 <unknown>\n#2 0x556e4cb5ebcb <unknown>\n#3 0x556e4cb5eeb1 <unknown>\n#4 0x556e4cba2b24 <unknown>\n#5 0x556e4cb818cd <unknown>\n#6 0x556e4cba004a <unknown>\n#7 0x556e4cb81643 <unknown>\n#8 0x556e4cb51d31 <unknown>\n#9 0x556e4cb5279e <unknown>\n#10 0x556e4ce0623b <unknown>\n#11 0x556e4ce0a1d2 <unknown>\n#12 0x556e4cdf35f5 <unknown>\n#13 0x556e4ce0ad62 <unknown>\n#14 0x556e4cdd823f <unknown>\n#15 0x556e4ce2de48 <unknown>\n#16 0x556e4ce2e020 <unknown>\n#17 0x556e4ce3d47c <unknown>\n#18 0x7f93b4094ac3 <unknown>",
+      "children" : [ {
+        "name" : "test_open_seo[https://dealer-passport-test.xsfera.ru/uploads/]",
+        "uid" : "415cee5d515cf477",
+        "parentUid" : "e51e749122792cfa91e687f7977794ac",
+        "status" : "broken",
+        "time" : {
+          "start" : 1723947234858,
+          "stop" : 1723947234858,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'https://dealer-passport-test.xsfera.ru/uploads/'" ]
+      } ],
+      "uid" : "e51e749122792cfa91e687f7977794ac"
+    } ],
+    "uid" : "bdbf199525818fae7a8651db9eafe741"
+  } ],
+  "name" : "categories"
+}
