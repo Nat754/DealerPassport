@@ -29,3 +29,11 @@ class SRRPage(BasePage):
     @allure.step(f"Проверка видимости заголовка '{srr_const.TEXT_TITLE_MODAL}'")
     def get_title_modal(self):
         return self.element_is_visible(self.locator.TITLE_MODAL)
+
+    @allure.step("Выбрать подгруппу отчетов")
+    def check_subgroup_record_select(self):
+        return self.element_is_visible(self.locator.GROUP_REPORT_SELECT2).click()
+
+    @allure.step(f"Выбрать подотчет")
+    def get_sub_menu(self, n):
+        return self.element_is_visible(("id", f'react-select-3-option-{n}')).text

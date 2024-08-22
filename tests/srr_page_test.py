@@ -50,3 +50,13 @@ class TestSRRPageSmoke:
         title = page.get_title_modal().text
         assert title == SRRConstant.TEXT_TITLE_MODAL, \
             f'ОР: {SRRConstant.TEXT_TITLE_MODAL}, ФР: {title}'
+
+    @allure.title(f'Проверить доступность подотчета SRR на seo prod')
+    def test_open_srr_sub_reports(self, auth_user_admin_to_seo_prod, driver):
+        page = SRRPage(driver)
+        driver.get(Urls.MAIN_URL_SEO_PROD + Urls.SRR_URL)
+        page.check_subgroup_record_select()
+        for n in range(4):
+            report_name = page.get_sub_menu(n)
+            print(report_name)
+            assert report_name == SRRConstant.SRR[n], 'Список групп отчетов SRR изменился'

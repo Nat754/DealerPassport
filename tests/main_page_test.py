@@ -53,7 +53,8 @@ class TestMainPageRegression:
     def test_clickable_and_redirect_button_editor(self, auth_user_admin_to_seo_prod, driver):
         time.sleep(2)
         auth_user_admin_to_seo_prod.check_button_editor().click()
-        assert driver.current_url == Urls.MAIN_URL_SEO_PROD + Urls.EDITOR_URL, 'Не произошел переход на страницу Редактор'
+        assert driver.current_url == Urls.MAIN_URL_SEO_PROD + Urls.EDITOR_URL, ('Не произошел переход на страницу '
+                                                                                'Редактор')
 
     @allure.title('Проверка корректности перехода по ссылке Отчеты СЕО')
     def test_clickable_and_redirect_button_reports(self, auth_user_admin_to_seo_prod, driver):
