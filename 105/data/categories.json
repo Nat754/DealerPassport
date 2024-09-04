@@ -1,0 +1,64 @@
+{
+  "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "children" : [ {
+    "name" : "Product defects",
+    "children" : [ {
+      "name" : "AssertionError: Ошибка: ['Произошла ошибка: Неизвестная ошибка сервера\\nПроизошла ошибка: Неизвестная ошибка сервера']\nassert None\n +  where None = <bound method MainPage.check_not_errors of <pages.main_page.MainPage object at 0x7f87d5f85520>>()\n +    where <bound method MainPage.check_not_errors of <pages.main_page.MainPage object at 0x7f87d5f85520>> = <pages.main_page.MainPage object at 0x7f87d5f85520>.check_not_errors",
+      "children" : [ {
+        "name" : "Проверить отсутствие ошибок при открытии https://dealer-passport-test.xsfera.ru/logs/ на сервере СЕО",
+        "uid" : "51186484cbc7f3d1",
+        "parentUid" : "8a8bdef38315cd0e2a344d145eef2b85",
+        "status" : "failed",
+        "time" : {
+          "start" : 1725416045661,
+          "stop" : 1725416055057,
+          "duration" : 9396
+        },
+        "flaky" : false,
+        "newFailed" : true,
+        "parameters" : [ "'https://dealer-passport-test.xsfera.ru/logs/'" ]
+      } ],
+      "uid" : "8a8bdef38315cd0e2a344d145eef2b85"
+    }, {
+      "name" : "AssertionError: Ошибка: ['Произошла ошибка: Неизвестная ошибка сервера\\nПроизошла ошибка: Неизвестная ошибка сервера\\nПроизошла ошибка: Неизвестная ошибка сервера']\nassert None\n +  where None = <bound method MainPage.check_not_errors of <pages.main_page.MainPage object at 0x7f87d5f9b770>>()\n +    where <bound method MainPage.check_not_errors of <pages.main_page.MainPage object at 0x7f87d5f9b770>> = <pages.main_page.MainPage object at 0x7f87d5f9b770>.check_not_errors",
+      "children" : [ {
+        "name" : "Проверить отсутствие ошибок при открытии https://dealer-passport-test.xsfera.ru:3001/logs/ на сервере СЕО prod",
+        "uid" : "eb72a5ce334cdbc5",
+        "parentUid" : "052f50c72c65978b297b8fd21a4c8ac9",
+        "status" : "failed",
+        "time" : {
+          "start" : 1725416266335,
+          "stop" : 1725416274700,
+          "duration" : 8365
+        },
+        "flaky" : false,
+        "newFailed" : true,
+        "parameters" : [ "'https://dealer-passport-test.xsfera.ru:3001/logs/'" ]
+      } ],
+      "uid" : "052f50c72c65978b297b8fd21a4c8ac9"
+    } ],
+    "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
+  }, {
+    "name" : "Test defects",
+    "children" : [ {
+      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x55b6acbef8da <unknown>\n#1 0x55b6ac8bde50 <unknown>\n#2 0x55b6ac90d644 <unknown>\n#3 0x55b6ac90d931 <unknown>\n#4 0x55b6ac953534 <unknown>\n#5 0x55b6ac9324bd <unknown>\n#6 0x55b6ac9509c6 <unknown>\n#7 0x55b6ac932233 <unknown>\n#8 0x55b6ac900093 <unknown>\n#9 0x55b6ac90109e <unknown>\n#10 0x55b6acbb6b3b <unknown>\n#11 0x55b6acbbaaf1 <unknown>\n#12 0x55b6acba2705 <unknown>\n#13 0x55b6acbbb662 <unknown>\n#14 0x55b6acb878df <unknown>\n#15 0x55b6acbde6d8 <unknown>\n#16 0x55b6acbde8a2 <unknown>\n#17 0x55b6acbee6cc <unknown>\n#18 0x7f6905294ac3 <unknown>",
+      "children" : [ {
+        "name" : "Проверить доступность подотчета SRR на seo prod",
+        "uid" : "4684c60ecd597e1c",
+        "parentUid" : "92b5361d3a244e89f745b8c93b7fde4d",
+        "status" : "broken",
+        "time" : {
+          "start" : 1725416756404,
+          "stop" : 1725416767373,
+          "duration" : 10969
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "92b5361d3a244e89f745b8c93b7fde4d"
+    } ],
+    "uid" : "bdbf199525818fae7a8651db9eafe741"
+  } ],
+  "name" : "categories"
+}
