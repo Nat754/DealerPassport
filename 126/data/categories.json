@@ -1,0 +1,60 @@
+{
+  "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "children" : [ {
+    "name" : "Product defects",
+    "children" : [ {
+      "name" : "AssertionError: Ошибка: ['[Network error]: ServerError: Response not successful: Received status code 400\\nПроизошла ошибка: errors.GRAPHQL_VALIDATION_FAILED']\nassert None\n +  where None = <bound method MainPage.check_not_errors of <pages.main_page.MainPage object at 0x7ff0a47a5160>>()\n +    where <bound method MainPage.check_not_errors of <pages.main_page.MainPage object at 0x7ff0a47a5160>> = <pages.main_page.MainPage object at 0x7ff0a47a5160>.check_not_errors",
+      "children" : [ {
+        "name" : "Проверить отсутствие ошибок при открытии https://dealer-passport-test.xsfera.ru на сервере СЕО",
+        "uid" : "78b074dbf456466e",
+        "parentUid" : "b43b77f408c71610052776502684dc76",
+        "status" : "failed",
+        "time" : {
+          "start" : 1727230906292,
+          "stop" : 1727230908120,
+          "duration" : 1828
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'https://dealer-passport-test.xsfera.ru'" ]
+      } ],
+      "uid" : "b43b77f408c71610052776502684dc76"
+    }, {
+      "name" : "AssertionError: Ошибка: ['Произошла ошибка: Неизвестная ошибка сервера\\nПроизошла ошибка: Неизвестная ошибка сервера']\nassert None\n +  where None = <bound method MainPage.check_not_errors of <pages.main_page.MainPage object at 0x7ff0a47c2b10>>()\n +    where <bound method MainPage.check_not_errors of <pages.main_page.MainPage object at 0x7ff0a47c2b10>> = <pages.main_page.MainPage object at 0x7ff0a47c2b10>.check_not_errors",
+      "children" : [ {
+        "name" : "Проверить отсутствие ошибок при открытии https://dealer-passport-test.xsfera.ru/logs/ на сервере СЕО",
+        "uid" : "7c74c34134616f2c",
+        "parentUid" : "5d0b8b743d4434aa7e6fdacd2e918bbe",
+        "status" : "failed",
+        "time" : {
+          "start" : 1727230941806,
+          "stop" : 1727230950065,
+          "duration" : 8259
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'https://dealer-passport-test.xsfera.ru/logs/'" ]
+      } ],
+      "uid" : "5d0b8b743d4434aa7e6fdacd2e918bbe"
+    }, {
+      "name" : "AssertionError: Ошибка: ['Произошла ошибка: Неизвестная ошибка сервера\\nПроизошла ошибка: Неизвестная ошибка сервера']\nassert None\n +  where None = <bound method MainPage.check_not_errors of <pages.main_page.MainPage object at 0x7ff0a47a4bf0>>()\n +    where <bound method MainPage.check_not_errors of <pages.main_page.MainPage object at 0x7ff0a47a4bf0>> = <pages.main_page.MainPage object at 0x7ff0a47a4bf0>.check_not_errors",
+      "children" : [ {
+        "name" : "Проверить отсутствие ошибок при открытии https://dealer-passport-test.xsfera.ru:3001/logs/ на сервере СЕО prod",
+        "uid" : "342f4b093ea94781",
+        "parentUid" : "99a9732af482cde935215d07895e4b6c",
+        "status" : "failed",
+        "time" : {
+          "start" : 1727231161454,
+          "stop" : 1727231169838,
+          "duration" : 8384
+        },
+        "flaky" : false,
+        "newFailed" : true,
+        "parameters" : [ "'https://dealer-passport-test.xsfera.ru:3001/logs/'" ]
+      } ],
+      "uid" : "99a9732af482cde935215d07895e4b6c"
+    } ],
+    "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
+  } ],
+  "name" : "categories"
+}
