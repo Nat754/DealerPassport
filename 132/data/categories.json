@@ -1,0 +1,26 @@
+{
+  "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "children" : [ {
+    "name" : "Product defects",
+    "children" : [ {
+      "name" : "AssertionError: Ошибка: ['[Network error]: ServerError: Response not successful: Received status code 400\\nПроизошла ошибка: errors.GRAPHQL_VALIDATION_FAILED']\nassert None\n +  where None = <bound method MainPage.check_not_errors of <pages.main_page.MainPage object at 0x7fd49d466a20>>()\n +    where <bound method MainPage.check_not_errors of <pages.main_page.MainPage object at 0x7fd49d466a20>> = <pages.main_page.MainPage object at 0x7fd49d466a20>.check_not_errors",
+      "children" : [ {
+        "name" : "Проверить отсутствие ошибок при открытии https://dealer-passport-test.xsfera.ru:3001 на сервере СЕО prod",
+        "uid" : "7f0e468c0dd58017",
+        "parentUid" : "e49b6de5c9625889744c356d95c93969",
+        "status" : "failed",
+        "time" : {
+          "start" : 1727749892387,
+          "stop" : 1727749893712,
+          "duration" : 1325
+        },
+        "flaky" : false,
+        "newFailed" : true,
+        "parameters" : [ "'https://dealer-passport-test.xsfera.ru:3001'" ]
+      } ],
+      "uid" : "e49b6de5c9625889744c356d95c93969"
+    } ],
+    "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
+  } ],
+  "name" : "categories"
+}
