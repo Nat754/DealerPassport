@@ -1,0 +1,43 @@
+{
+  "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "children" : [ {
+    "name" : "Product defects",
+    "children" : [ {
+      "name" : "AssertionError: Ошибка: ['Произошла ошибка: Неизвестная ошибка сервера']\nassert None\n +  where None = <bound method MainPage.check_not_errors of <pages.main_page.MainPage object at 0x7f96e61dfa40>>()\n +    where <bound method MainPage.check_not_errors of <pages.main_page.MainPage object at 0x7f96e61dfa40>> = <pages.main_page.MainPage object at 0x7f96e61dfa40>.check_not_errors",
+      "children" : [ {
+        "name" : "Проверить отсутствие ошибок при открытии https://dealer-passport-test.xsfera.ru/logs/ на сервере СЕО",
+        "uid" : "e23b65153564cced",
+        "parentUid" : "1dcb180f8049da20b1d32991740cb525",
+        "status" : "failed",
+        "time" : {
+          "start" : 1728094716788,
+          "stop" : 1728094726506,
+          "duration" : 9718
+        },
+        "flaky" : true,
+        "newFailed" : true,
+        "parameters" : [ "'https://dealer-passport-test.xsfera.ru/logs/'" ]
+      } ],
+      "uid" : "1dcb180f8049da20b1d32991740cb525"
+    }, {
+      "name" : "AssertionError: Ошибка: ['Произошла ошибка: Неизвестная ошибка сервера']\nassert None\n +  where None = <bound method MainPage.check_not_errors of <pages.main_page.MainPage object at 0x7f96e61df7d0>>()\n +    where <bound method MainPage.check_not_errors of <pages.main_page.MainPage object at 0x7f96e61df7d0>> = <pages.main_page.MainPage object at 0x7f96e61df7d0>.check_not_errors",
+      "children" : [ {
+        "name" : "Проверить отсутствие ошибок при открытии https://dealer-passport-test.xsfera.ru:3001/logs/ на сервере СЕО prod",
+        "uid" : "a42d45699950c89e",
+        "parentUid" : "e92c1e46ca7d6c08bb283285f72ef8ce",
+        "status" : "failed",
+        "time" : {
+          "start" : 1728094924742,
+          "stop" : 1728094931366,
+          "duration" : 6624
+        },
+        "flaky" : true,
+        "newFailed" : true,
+        "parameters" : [ "'https://dealer-passport-test.xsfera.ru:3001/logs/'" ]
+      } ],
+      "uid" : "e92c1e46ca7d6c08bb283285f72ef8ce"
+    } ],
+    "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
+  } ],
+  "name" : "categories"
+}
