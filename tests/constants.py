@@ -8,7 +8,7 @@ load_dotenv()
 
 class Tokens:
 
-    TOKEN_SEO = {'Authorization': f'{os.environ["SEO_ADMIN"]}'}
+    TOKEN_SEO = {'token': f'{os.environ["SEO_ADMIN"]}'}
     TOKEN_TEST = {'Authorization': f'{os.environ["TEST_ADMIN"]}'}
     TOKEN_PROD = {'Authorization': f'{os.environ["PROD_ADMIN"]}'}
     MS_PROD = {'Authorization': f'{os.environ["MS_PROD"]}'}

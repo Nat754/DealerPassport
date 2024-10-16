@@ -8,14 +8,14 @@ from selenium.webdriver.chrome.options import Options as Options
 
 @pytest.fixture(scope='function')
 def driver():
-    print(f'\nstart browser...')
+    print('\nstart browser...')
     options = Options()
     options.add_argument('--headless')
     # options.add_argument('--start-maximized')
     driver = webdriver.Chrome(options=options)
     driver.set_window_size(1920, 1080)
     yield driver
-    print(f'\nquit browser...')
+    print('\nquit browser...')
     driver.quit()
 
 
@@ -47,4 +47,3 @@ def clear_allure_results_folder():
                     shutil.rmtree(file_path)
             except Exception as e:
                 print(f"Failed to delete {file_path}. Reason: {e}")
-

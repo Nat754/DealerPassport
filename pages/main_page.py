@@ -14,11 +14,11 @@ class MainPage(BasePage):
     def check_button_agree(self):
         return self.element_is_visible(self.locator.AGREE_BUTTON)
 
-    @allure.step(f"Проверить видимость ошибок")
+    @allure.step("Проверить видимость ошибок")
     def check_error_notifications(self):
         return self.elements_are_visible(self.locator.NOTIFICATIONS)
 
-    @allure.step(f"Проверить отсутствие ошибок")
+    @allure.step("Проверить отсутствие ошибок")
     def check_not_errors(self):
         return self.elements_are_not_visible(self.locator.NOTIFICATIONS)
 

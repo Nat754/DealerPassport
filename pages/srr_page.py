@@ -8,7 +8,7 @@ class SRRPage(BasePage):
     locator = SRRPageLocators()
     srr_const = SRRConstant()
 
-    @allure.step(f"Проверка видимости выбора группы отчетов SRR")
+    @allure.step("Проверка видимости выбора группы отчетов SRR")
     def check_group_record_select(self):
         self.element_is_visible(self.locator.GROUP_REPORT_SELECT).click()
         list_groups_of_reports = [item.text for item in self.elements_are_present(self.locator.LIST_REPORT_SELECT)]
@@ -34,6 +34,6 @@ class SRRPage(BasePage):
     def check_subgroup_record_select(self):
         return self.element_is_visible(self.locator.GROUP_REPORT_SELECT2).click()
 
-    @allure.step(f"Выбрать подотчет")
+    @allure.step("Выбрать подотчет")
     def get_sub_menu(self, n):
         return self.element_is_visible(("id", f'react-select-3-option-{n}')).text
