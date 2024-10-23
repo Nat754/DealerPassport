@@ -1,43 +1,26 @@
 {
   "uid" : "4b4757e66a1912dae1a509f688f20b0f",
   "children" : [ {
-    "name" : "Test defects",
+    "name" : "Product defects",
     "children" : [ {
-      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x5583ec2ee0aa <unknown>\n#1 0x5583ebe051a0 <unknown>\n#2 0x5583ebe51d06 <unknown>\n#3 0x5583ebe51fa1 <unknown>\n#4 0x5583ebe97344 <unknown>\n#5 0x5583ebe75dad <unknown>\n#6 0x5583ebe94866 <unknown>\n#7 0x5583ebe75b23 <unknown>\n#8 0x5583ebe44990 <unknown>\n#9 0x5583ebe4596e <unknown>\n#10 0x5583ec2ba16b <unknown>\n#11 0x5583ec2bdf68 <unknown>\n#12 0x5583ec2a764c <unknown>\n#13 0x5583ec2beae7 <unknown>\n#14 0x5583ec28c4af <unknown>\n#15 0x5583ec2dc4f8 <unknown>\n#16 0x5583ec2dc6c0 <unknown>\n#17 0x5583ec2ecf26 <unknown>\n#18 0x7faa52894ac3 <unknown>",
+      "name" : "AssertionError: Меню редактора изменилось\nassert ['Глобальный ...рушений', ...] == ['Глобальный ...рушений', ...]\n  \n  Left contains one more item: 'Справочник для выбора адреса'\n  \n  Full diff:\n    [\n        'Глобальный рейтинг',\n        'Квартили',\n        'Персонал',\n        'База сотрудников',\n        'Подразделения',\n        'Виды нарушений',\n        'Редактор форм заявок-деклараций',\n        'Справочник должностей',\n        'Каталог учебных программ',\n        'Справочники библиотеки документов',\n        'Редактор отчетов',\n        'Справочник информационных систем',\n  +     'Справочник для выбора адреса',\n    ]",
       "children" : [ {
         "name" : "Проверить доступность меню в редакторе на prod",
-        "uid" : "655080f90f03fe40",
-        "parentUid" : "bb3b258b71d1285f8355f5f82ffebb6f",
-        "status" : "broken",
+        "uid" : "65e9d0ea8428c023",
+        "parentUid" : "60e5af542f4c03e6ee31412e1e2535f9",
+        "status" : "failed",
         "time" : {
-          "start" : 1729649937835,
-          "stop" : 1729649937835,
-          "duration" : 0
+          "start" : 1729694637176,
+          "stop" : 1729694638449,
+          "duration" : 1273
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "bb3b258b71d1285f8355f5f82ffebb6f"
-    }, {
-      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x55a344b1c0aa <unknown>\n#1 0x55a3446331a0 <unknown>\n#2 0x55a34467fd06 <unknown>\n#3 0x55a34467ffa1 <unknown>\n#4 0x55a3446c5344 <unknown>\n#5 0x55a3446a3dad <unknown>\n#6 0x55a3446c2866 <unknown>\n#7 0x55a3446a3b23 <unknown>\n#8 0x55a344672990 <unknown>\n#9 0x55a34467396e <unknown>\n#10 0x55a344ae816b <unknown>\n#11 0x55a344aebf68 <unknown>\n#12 0x55a344ad564c <unknown>\n#13 0x55a344aecae7 <unknown>\n#14 0x55a344aba4af <unknown>\n#15 0x55a344b0a4f8 <unknown>\n#16 0x55a344b0a6c0 <unknown>\n#17 0x55a344b1af26 <unknown>\n#18 0x7f385a094ac3 <unknown>",
-      "children" : [ {
-        "name" : "Проверить формирование отчета SRR на экране на prod",
-        "uid" : "a37fcae64f6e2f89",
-        "parentUid" : "925670dc2544e0b8485e21ebe1076bcf",
-        "status" : "broken",
-        "time" : {
-          "start" : 1729650449901,
-          "stop" : 1729650449901,
-          "duration" : 0
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      } ],
-      "uid" : "925670dc2544e0b8485e21ebe1076bcf"
+      "uid" : "60e5af542f4c03e6ee31412e1e2535f9"
     } ],
-    "uid" : "bdbf199525818fae7a8651db9eafe741"
+    "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
   } ],
   "name" : "categories"
 }
