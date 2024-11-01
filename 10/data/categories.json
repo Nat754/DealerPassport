@@ -3,62 +3,24 @@
   "children" : [ {
     "name" : "Product defects",
     "children" : [ {
-      "name" : "AssertionError: ПИТЕР не найден в ['АВ АВТО', '68 АВТО', 'ААА АВТОРУСЬ ПОДОЛЬСК', 'ААА АВТОРУСЬ ПОДОЛЬСК (МЫТИЩИ)', 'АБАКАН АВТОГАЗ', 'АБРЕРА МОТОР', 'АВАЛОН', 'АВАЛОН(СТ.ОСКОЛ)', 'АВАН-МОТОРС', 'АВАНГАРД', 'АВАНТА-КВ', 'АВАНТАЙМ', 'АВД ГРУП', 'АВЕНСИС', 'АВЕНСИС', 'АВЕНСИС (ПР-ЗД БАЗОВЫЙ)', 'АВЕНСИС (УЛ.ИЮЛЬСКИХ ДНЕЙ)', 'АВЕС-К', 'АВИААГРЕГАТ', 'АВК-САМАРА', 'АВК-САМАРА (УЛ.МИРНАЯ)', 'АВТ-ФИНАНС (БОГАТЫРСКИЙ)', 'АВТ-ФИНАНС (ТОЛЬЯТТИ)', 'АВТ-ФИНАНС (ЦВЕТОЧНАЯ)', 'АВТО']\nassert {False} == {True}\n  \n  Extra items in the left set:\n  False\n  Extra items in the right set:\n  True\n  \n  Full diff:\n    {\n  -     True,\n  +     False,\n    }",
+      "name" : "AssertionError: ПИТЕР не найден в ['ЗАГРУЗКА...']\nassert {False} == {True}\n  \n  Extra items in the left set:\n  False\n  Extra items in the right set:\n  True\n  \n  Full diff:\n    {\n  -     True,\n  +     False,\n    }",
       "children" : [ {
         "name" : "Проверить поиск по кнопке ВЫБРАТЬ ДИЛЕРА",
-        "uid" : "27bf86d944cb5cfd",
-        "parentUid" : "714293d3c5fb944963bb09f2d4a1c1eb",
+        "uid" : "9e056e6550c4c688",
+        "parentUid" : "ad8d5cb6207d94d91d73b5d4b59d703b",
         "status" : "failed",
         "time" : {
-          "start" : 1730472153760,
-          "stop" : 1730472154334,
-          "duration" : 574
+          "start" : 1730473765684,
+          "stop" : 1730473766128,
+          "duration" : 444
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "714293d3c5fb944963bb09f2d4a1c1eb"
+      "uid" : "ad8d5cb6207d94d91d73b5d4b59d703b"
     } ],
     "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
-  }, {
-    "name" : "Test defects",
-    "children" : [ {
-      "name" : "requests.exceptions.ConnectTimeout: HTTPSConnectionPool(host='ms-n-back.vaz.ru', port=443): Max retries exceeded with url: /api/v1/form/resultByQuarter?year=2024&quarter=3 (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f2346c30dd0>, 'Connection to ms-n-back.vaz.ru timed out. (connect timeout=None)'))",
-      "children" : [ {
-        "name" : "Проверка доступности MSPortal",
-        "uid" : "c5ccdccca0c08468",
-        "parentUid" : "072d66307bd97119540e739c8d71a05a",
-        "status" : "broken",
-        "time" : {
-          "start" : 1730472154602,
-          "stop" : 1730472290912,
-          "duration" : 136310
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      } ],
-      "uid" : "072d66307bd97119540e739c8d71a05a"
-    }, {
-      "name" : "requests.exceptions.ConnectTimeout: HTTPSConnectionPool(host='ms-test2-back.vaz.ru', port=443): Max retries exceeded with url: /api/v1/form/resultByQuarter?year=2024&quarter=3 (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f2346bf3fe0>, 'Connection to ms-test2-back.vaz.ru timed out. (connect timeout=None)'))",
-      "children" : [ {
-        "name" : "Получение данных тест MSPortal",
-        "uid" : "ebf5fa500fd5d16d",
-        "parentUid" : "e20d4b68f67d19bdbb04d8871a2e6f76",
-        "status" : "broken",
-        "time" : {
-          "start" : 1730472291009,
-          "stop" : 1730472426080,
-          "duration" : 135071
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      } ],
-      "uid" : "e20d4b68f67d19bdbb04d8871a2e6f76"
-    } ],
-    "uid" : "bdbf199525818fae7a8651db9eafe741"
   } ],
   "name" : "categories"
 }
