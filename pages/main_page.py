@@ -1,10 +1,12 @@
 from pages.base_page import BasePage
 import allure
 from locators.main_page_locators import MainPageLocators
+from tests.constants import HeaderConstant
 
 
 class MainPage(BasePage):
     locator = MainPageLocators
+    hconstant = HeaderConstant
 
     @allure.step(f"Проверка видимости кнопки '{locator.ENTER_BUTTON}' на главной странице")
     def check_button_enter(self):
@@ -26,9 +28,9 @@ class MainPage(BasePage):
     def check_button_editor(self):
         return self.element_is_clickable(self.locator.EDITOR_BUTTON)
 
-    @allure.step(f"Проверка кликабельности кнопки '{locator.CHOOSE_DEALER_BUTTON}' на главной странице")
-    def check_button_choose_dealer(self):
-        return self.element_is_clickable(self.locator.CHOOSE_DEALER_BUTTON)
+    @allure.step(f"Проверка кликабельности кнопки '{locator.SELECT_DEALER_BUTTON}' на главной странице")
+    def check_button_select_dealer(self):
+        return self.element_is_clickable(self.locator.SELECT_DEALER_BUTTON)
 
     @allure.step(f"Проверка кликабельности кнопки '{locator.PKD_BUTTON}' на главной странице")
     def check_button_pkd(self):
@@ -57,3 +59,15 @@ class MainPage(BasePage):
     @allure.step(f"Проверка кликабельности кнопки '{locator.REPORTS_BUTTON}' на главной странице")
     def check_button_reports(self):
         return self.element_is_clickable(self.locator.REPORTS_BUTTON)
+
+    @allure.step("Ввести имя дилера в поисковой строке")
+    def check_select_find_dealer(self, name):
+        self.element_is_visible(self.locator.FIND_DEALER).click()
+        return self.element_is_visible(self.locator.FIND_DEALER).send_keys(name)
+
+    @allure.step("Получить список дилеров")
+    def check_select_dealers(self):
+        while self.elements_are_present(self.locator.SELECT_DEALERS)[0].text == [self.hconstant.LOADER_MSG]:
+            pass
+        dealers = self.elements_are_present(self.locator.SELECT_DEALERS)[0].text.split('\n')
+        return dealers

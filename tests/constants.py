@@ -142,3 +142,17 @@ class MSConstants:
     DEALER_ID = '1197057857'
     url_test = f'{Urls.MS_URL_TEST}?year={YEAR}&quarter={QUARTER}'
     url_prod = f'{Urls.MS_URL_PROD}?year={YEAR}&quarter={QUARTER}'
+
+
+class HeaderConstant:
+    EDITOR_BUTTON_TEXT = ''
+    SELECT_DEALER_TEXT = 'ВЫБРАТЬ ДИЛЕРА'
+    PKD_TEXT = ''
+    INTERRUPTION_TEXT = ''
+    NOTICES_TEXT = ''
+    DOCUMENTS_TEXT = ''
+    ACCOUNTING_TEXT = ''
+    SRR_TEXT = ''
+    REPORTS_TEXT = ''
+    DEALER_NAME = ('ПИТЕР')
+    LOADER_MSG = 'ЗАГРУЗКА...'
