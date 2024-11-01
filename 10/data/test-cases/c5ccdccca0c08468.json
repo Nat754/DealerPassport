@@ -1,0 +1,271 @@
+{
+  "uid" : "c5ccdccca0c08468",
+  "name" : "Проверка доступности MSPortal",
+  "fullName" : "tests.msportal_test.TestQuality#test_get_status_code",
+  "historyId" : "5b3382420a9a0679b754e25e51f86458",
+  "time" : {
+    "start" : 1730472154602,
+    "stop" : 1730472290912,
+    "duration" : 136310
+  },
+  "status" : "broken",
+  "statusMessage" : "requests.exceptions.ConnectTimeout: HTTPSConnectionPool(host='ms-n-back.vaz.ru', port=443): Max retries exceeded with url: /api/v1/form/resultByQuarter?year=2024&quarter=3 (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f2346c30dd0>, 'Connection to ms-n-back.vaz.ru timed out. (connect timeout=None)'))",
+  "statusTrace" : "self = <urllib3.connection.HTTPSConnection object at 0x7f2346c30dd0>\n\n    def _new_conn(self) -> socket.socket:\n        \"\"\"Establish a socket connection and set nodelay settings on it.\n    \n        :return: New socket connection.\n        \"\"\"\n        try:\n>           sock = connection.create_connection(\n                (self._dns_host, self.port),\n                self.timeout,\n                source_address=self.source_address,\n                socket_options=self.socket_options,\n            )\n\n/opt/hostedtoolcache/Python/3.12.7/x64/lib/python3.12/site-packages/urllib3/connection.py:199: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n/opt/hostedtoolcache/Python/3.12.7/x64/lib/python3.12/site-packages/urllib3/util/connection.py:85: in create_connection\n    raise err\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\naddress = ('ms-n-back.vaz.ru', 443), timeout = None, source_address = None\nsocket_options = [(6, 1, 1)]\n\n    def create_connection(\n        address: tuple[str, int],\n        timeout: _TYPE_TIMEOUT = _DEFAULT_TIMEOUT,\n        source_address: tuple[str, int] | None = None,\n        socket_options: _TYPE_SOCKET_OPTIONS | None = None,\n    ) -> socket.socket:\n        \"\"\"Connect to *address* and return the socket object.\n    \n        Convenience function.  Connect to *address* (a 2-tuple ``(host,\n        port)``) and return the socket object.  Passing the optional\n        *timeout* parameter will set the timeout on the socket instance\n        before attempting to connect.  If no *timeout* is supplied, the\n        global default timeout setting returned by :func:`socket.getdefaulttimeout`\n        is used.  If *source_address* is set it must be a tuple of (host, port)\n        for the socket to bind as a source address before making the connection.\n        An host of '' or port 0 tells the OS to use the default.\n        \"\"\"\n    \n        host, port = address\n        if host.startswith(\"[\"):\n            host = host.strip(\"[]\")\n        err = None\n    \n        # Using the value from allowed_gai_family() in the context of getaddrinfo lets\n        # us select whether to work with IPv4 DNS records, IPv6 records, or both.\n        # The original create_connection function always returns all records.\n        family = allowed_gai_family()\n    \n        try:\n            host.encode(\"idna\")\n        except UnicodeError:\n            raise LocationParseError(f\"'{host}', label empty or too long\") from None\n    \n        for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):\n            af, socktype, proto, canonname, sa = res\n            sock = None\n            try:\n                sock = socket.socket(af, socktype, proto)\n    \n                # If provided, set socket level options before connecting.\n                _set_socket_options(sock, socket_options)\n    \n                if timeout is not _DEFAULT_TIMEOUT:\n                    sock.settimeout(timeout)\n                if source_address:\n                    sock.bind(source_address)\n>               sock.connect(sa)\nE               TimeoutError: [Errno 110] Connection timed out\n\n/opt/hostedtoolcache/Python/3.12.7/x64/lib/python3.12/site-packages/urllib3/util/connection.py:73: TimeoutError\n\nThe above exception was the direct cause of the following exception:\n\nself = <urllib3.connectionpool.HTTPSConnectionPool object at 0x7f2346c53ce0>\nmethod = 'GET', url = '/api/v1/form/resultByQuarter?year=2024&quarter=3'\nbody = None\nheaders = {'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-aliv...xU3h5eDNRQVhkeE81bk05OTJReEI4T0Y4OGpGQnRRSGdpaUY1ZDZuZnRiRnJ6ZVg2MGc9In19._QWPBIWAwQOQ6ppPfRT7Pv9SLqILpK1bTeGXYiH0Sk4'}\nretries = Retry(total=0, connect=None, read=False, redirect=None, status=None)\nredirect = False, assert_same_host = False\ntimeout = Timeout(connect=None, read=None, total=None), pool_timeout = None\nrelease_conn = False, chunked = False, body_pos = None, preload_content = False\ndecode_content = False, response_kw = {}\nparsed_url = Url(scheme=None, auth=None, host=None, port=None, path='/api/v1/form/resultByQuarter', query='year=2024&quarter=3', fragment=None)\ndestination_scheme = None, conn = None, release_this_conn = True\nhttp_tunnel_required = False, err = None, clean_exit = False\n\n    def urlopen(  # type: ignore[override]\n        self,\n        method: str,\n        url: str,\n        body: _TYPE_BODY | None = None,\n        headers: typing.Mapping[str, str] | None = None,\n        retries: Retry | bool | int | None = None,\n        redirect: bool = True,\n        assert_same_host: bool = True,\n        timeout: _TYPE_TIMEOUT = _DEFAULT_TIMEOUT,\n        pool_timeout: int | None = None,\n        release_conn: bool | None = None,\n        chunked: bool = False,\n        body_pos: _TYPE_BODY_POSITION | None = None,\n        preload_content: bool = True,\n        decode_content: bool = True,\n        **response_kw: typing.Any,\n    ) -> BaseHTTPResponse:\n        \"\"\"\n        Get a connection from the pool and perform an HTTP request. This is the\n        lowest level call for making a request, so you'll need to specify all\n        the raw details.\n    \n        .. note::\n    \n           More commonly, it's appropriate to use a convenience method\n           such as :meth:`request`.\n    \n        .. note::\n    \n           `release_conn` will only behave as expected if\n           `preload_content=False` because we want to make\n           `preload_content=False` the default behaviour someday soon without\n           breaking backwards compatibility.\n    \n        :param method:\n            HTTP request method (such as GET, POST, PUT, etc.)\n    \n        :param url:\n            The URL to perform the request on.\n    \n        :param body:\n            Data to send in the request body, either :class:`str`, :class:`bytes`,\n            an iterable of :class:`str`/:class:`bytes`, or a file-like object.\n    \n        :param headers:\n            Dictionary of custom headers to send, such as User-Agent,\n            If-None-Match, etc. If None, pool headers are used. If provided,\n            these headers completely replace any pool-specific headers.\n    \n        :param retries:\n            Configure the number of retries to allow before raising a\n            :class:`~urllib3.exceptions.MaxRetryError` exception.\n    \n            If ``None`` (default) will retry 3 times, see ``Retry.DEFAULT``. Pass a\n            :class:`~urllib3.util.retry.Retry` object for fine-grained control\n            over different types of retries.\n            Pass an integer number to retry connection errors that many times,\n            but no other types of errors. Pass zero to never retry.\n    \n            If ``False``, then retries are disabled and any exception is raised\n            immediately. Also, instead of raising a MaxRetryError on redirects,\n            the redirect response will be returned.\n    \n        :type retries: :class:`~urllib3.util.retry.Retry`, False, or an int.\n    \n        :param redirect:\n            If True, automatically handle redirects (status codes 301, 302,\n            303, 307, 308). Each redirect counts as a retry. Disabling retries\n            will disable redirect, too.\n    \n        :param assert_same_host:\n            If ``True``, will make sure that the host of the pool requests is\n            consistent else will raise HostChangedError. When ``False``, you can\n            use the pool on an HTTP proxy and request foreign hosts.\n    \n        :param timeout:\n            If specified, overrides the default timeout for this one\n            request. It may be a float (in seconds) or an instance of\n            :class:`urllib3.util.Timeout`.\n    \n        :param pool_timeout:\n            If set and the pool is set to block=True, then this method will\n            block for ``pool_timeout`` seconds and raise EmptyPoolError if no\n            connection is available within the time period.\n    \n        :param bool preload_content:\n            If True, the response's body will be preloaded into memory.\n    \n        :param bool decode_content:\n            If True, will attempt to decode the body based on the\n            'content-encoding' header.\n    \n        :param release_conn:\n            If False, then the urlopen call will not release the connection\n            back into the pool once a response is received (but will release if\n            you read the entire contents of the response such as when\n            `preload_content=True`). This is useful if you're not preloading\n            the response's content immediately. You will need to call\n            ``r.release_conn()`` on the response ``r`` to return the connection\n            back into the pool. If None, it takes the value of ``preload_content``\n            which defaults to ``True``.\n    \n        :param bool chunked:\n            If True, urllib3 will send the body using chunked transfer\n            encoding. Otherwise, urllib3 will send the body using the standard\n            content-length form. Defaults to False.\n    \n        :param int body_pos:\n            Position to seek to in file-like body in the event of a retry or\n            redirect. Typically this won't need to be set because urllib3 will\n            auto-populate the value when needed.\n        \"\"\"\n        parsed_url = parse_url(url)\n        destination_scheme = parsed_url.scheme\n    \n        if headers is None:\n            headers = self.headers\n    \n        if not isinstance(retries, Retry):\n            retries = Retry.from_int(retries, redirect=redirect, default=self.retries)\n    \n        if release_conn is None:\n            release_conn = preload_content\n    \n        # Check host\n        if assert_same_host and not self.is_same_host(url):\n            raise HostChangedError(self, url, retries)\n    \n        # Ensure that the URL we're connecting to is properly encoded\n        if url.startswith(\"/\"):\n            url = to_str(_encode_target(url))\n        else:\n            url = to_str(parsed_url.url)\n    \n        conn = None\n    \n        # Track whether `conn` needs to be released before\n        # returning/raising/recursing. Update this variable if necessary, and\n        # leave `release_conn` constant throughout the function. That way, if\n        # the function recurses, the original value of `release_conn` will be\n        # passed down into the recursive call, and its value will be respected.\n        #\n        # See issue #651 [1] for details.\n        #\n        # [1] <https://github.com/urllib3/urllib3/issues/651>\n        release_this_conn = release_conn\n    \n        http_tunnel_required = connection_requires_http_tunnel(\n            self.proxy, self.proxy_config, destination_scheme\n        )\n    \n        # Merge the proxy headers. Only done when not using HTTP CONNECT. We\n        # have to copy the headers dict so we can safely change it without those\n        # changes being reflected in anyone else's copy.\n        if not http_tunnel_required:\n            headers = headers.copy()  # type: ignore[attr-defined]\n            headers.update(self.proxy_headers)  # type: ignore[union-attr]\n    \n        # Must keep the exception bound to a separate variable or else Python 3\n        # complains about UnboundLocalError.\n        err = None\n    \n        # Keep track of whether we cleanly exited the except block. This\n        # ensures we do proper cleanup in finally.\n        clean_exit = False\n    \n        # Rewind body position, if needed. Record current position\n        # for future rewinds in the event of a redirect/retry.\n        body_pos = set_file_position(body, body_pos)\n    \n        try:\n            # Request a connection from the queue.\n            timeout_obj = self._get_timeout(timeout)\n            conn = self._get_conn(timeout=pool_timeout)\n    \n            conn.timeout = timeout_obj.connect_timeout  # type: ignore[assignment]\n    \n            # Is this a closed/new connection that requires CONNECT tunnelling?\n            if self.proxy is not None and http_tunnel_required and conn.is_closed:\n                try:\n                    self._prepare_proxy(conn)\n                except (BaseSSLError, OSError, SocketTimeout) as e:\n                    self._raise_timeout(\n                        err=e, url=self.proxy.url, timeout_value=conn.timeout\n                    )\n                    raise\n    \n            # If we're going to release the connection in ``finally:``, then\n            # the response doesn't need to know about the connection. Otherwise\n            # it will also try to release it and we'll have a double-release\n            # mess.\n            response_conn = conn if not release_conn else None\n    \n            # Make the request on the HTTPConnection object\n>           response = self._make_request(\n                conn,\n                method,\n                url,\n                timeout=timeout_obj,\n                body=body,\n                headers=headers,\n                chunked=chunked,\n                retries=retries,\n                response_conn=response_conn,\n                preload_content=preload_content,\n                decode_content=decode_content,\n                **response_kw,\n            )\n\n/opt/hostedtoolcache/Python/3.12.7/x64/lib/python3.12/site-packages/urllib3/connectionpool.py:789: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n/opt/hostedtoolcache/Python/3.12.7/x64/lib/python3.12/site-packages/urllib3/connectionpool.py:490: in _make_request\n    raise new_e\n/opt/hostedtoolcache/Python/3.12.7/x64/lib/python3.12/site-packages/urllib3/connectionpool.py:466: in _make_request\n    self._validate_conn(conn)\n/opt/hostedtoolcache/Python/3.12.7/x64/lib/python3.12/site-packages/urllib3/connectionpool.py:1095: in _validate_conn\n    conn.connect()\n/opt/hostedtoolcache/Python/3.12.7/x64/lib/python3.12/site-packages/urllib3/connection.py:693: in connect\n    self.sock = sock = self._new_conn()\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <urllib3.connection.HTTPSConnection object at 0x7f2346c30dd0>\n\n    def _new_conn(self) -> socket.socket:\n        \"\"\"Establish a socket connection and set nodelay settings on it.\n    \n        :return: New socket connection.\n        \"\"\"\n        try:\n            sock = connection.create_connection(\n                (self._dns_host, self.port),\n                self.timeout,\n                source_address=self.source_address,\n                socket_options=self.socket_options,\n            )\n        except socket.gaierror as e:\n            raise NameResolutionError(self.host, self, e) from e\n        except SocketTimeout as e:\n>           raise ConnectTimeoutError(\n                self,\n                f\"Connection to {self.host} timed out. (connect timeout={self.timeout})\",\n            ) from e\nE           urllib3.exceptions.ConnectTimeoutError: (<urllib3.connection.HTTPSConnection object at 0x7f2346c30dd0>, 'Connection to ms-n-back.vaz.ru timed out. (connect timeout=None)')\n\n/opt/hostedtoolcache/Python/3.12.7/x64/lib/python3.12/site-packages/urllib3/connection.py:208: ConnectTimeoutError\n\nThe above exception was the direct cause of the following exception:\n\nself = <requests.adapters.HTTPAdapter object at 0x7f2346c533e0>\nrequest = <PreparedRequest [GET]>, stream = False\ntimeout = Timeout(connect=None, read=None, total=None), verify = True\ncert = None, proxies = OrderedDict()\n\n    def send(\n        self, request, stream=False, timeout=None, verify=True, cert=None, proxies=None\n    ):\n        \"\"\"Sends PreparedRequest object. Returns Response object.\n    \n        :param request: The :class:`PreparedRequest <PreparedRequest>` being sent.\n        :param stream: (optional) Whether to stream the request content.\n        :param timeout: (optional) How long to wait for the server to send\n            data before giving up, as a float, or a :ref:`(connect timeout,\n            read timeout) <timeouts>` tuple.\n        :type timeout: float or tuple or urllib3 Timeout object\n        :param verify: (optional) Either a boolean, in which case it controls whether\n            we verify the server's TLS certificate, or a string, in which case it\n            must be a path to a CA bundle to use\n        :param cert: (optional) Any user-provided SSL certificate to be trusted.\n        :param proxies: (optional) The proxies dictionary to apply to the request.\n        :rtype: requests.Response\n        \"\"\"\n    \n        try:\n            conn = self.get_connection(request.url, proxies)\n        except LocationValueError as e:\n            raise InvalidURL(e, request=request)\n    \n        self.cert_verify(conn, request.url, verify, cert)\n        url = self.request_url(request, proxies)\n        self.add_headers(\n            request,\n            stream=stream,\n            timeout=timeout,\n            verify=verify,\n            cert=cert,\n            proxies=proxies,\n        )\n    \n        chunked = not (request.body is None or \"Content-Length\" in request.headers)\n    \n        if isinstance(timeout, tuple):\n            try:\n                connect, read = timeout\n                timeout = TimeoutSauce(connect=connect, read=read)\n            except ValueError:\n                raise ValueError(\n                    f\"Invalid timeout {timeout}. Pass a (connect, read) timeout tuple, \"\n                    f\"or a single float to set both timeouts to the same value.\"\n                )\n        elif isinstance(timeout, TimeoutSauce):\n            pass\n        else:\n            timeout = TimeoutSauce(connect=timeout, read=timeout)\n    \n        try:\n>           resp = conn.urlopen(\n                method=request.method,\n                url=url,\n                body=request.body,\n                headers=request.headers,\n                redirect=False,\n                assert_same_host=False,\n                preload_content=False,\n                decode_content=False,\n                retries=self.max_retries,\n                timeout=timeout,\n                chunked=chunked,\n            )\n\n/opt/hostedtoolcache/Python/3.12.7/x64/lib/python3.12/site-packages/requests/adapters.py:486: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n/opt/hostedtoolcache/Python/3.12.7/x64/lib/python3.12/site-packages/urllib3/connectionpool.py:843: in urlopen\n    retries = retries.increment(\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = Retry(total=0, connect=None, read=False, redirect=None, status=None)\nmethod = 'GET', url = '/api/v1/form/resultByQuarter?year=2024&quarter=3'\nresponse = None\nerror = ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f2346c30dd0>, 'Connection to ms-n-back.vaz.ru timed out. (connect timeout=None)')\n_pool = <urllib3.connectionpool.HTTPSConnectionPool object at 0x7f2346c53ce0>\n_stacktrace = <traceback object at 0x7f2346c0a800>\n\n    def increment(\n        self,\n        method: str | None = None,\n        url: str | None = None,\n        response: BaseHTTPResponse | None = None,\n        error: Exception | None = None,\n        _pool: ConnectionPool | None = None,\n        _stacktrace: TracebackType | None = None,\n    ) -> Self:\n        \"\"\"Return a new Retry object with incremented retry counters.\n    \n        :param response: A response object, or None, if the server did not\n            return a response.\n        :type response: :class:`~urllib3.response.BaseHTTPResponse`\n        :param Exception error: An error encountered during the request, or\n            None if the response was received successfully.\n    \n        :return: A new ``Retry`` object.\n        \"\"\"\n        if self.total is False and error:\n            # Disabled, indicate to re-raise the error.\n            raise reraise(type(error), error, _stacktrace)\n    \n        total = self.total\n        if total is not None:\n            total -= 1\n    \n        connect = self.connect\n        read = self.read\n        redirect = self.redirect\n        status_count = self.status\n        other = self.other\n        cause = \"unknown\"\n        status = None\n        redirect_location = None\n    \n        if error and self._is_connection_error(error):\n            # Connect retry?\n            if connect is False:\n                raise reraise(type(error), error, _stacktrace)\n            elif connect is not None:\n                connect -= 1\n    \n        elif error and self._is_read_error(error):\n            # Read retry?\n            if read is False or method is None or not self._is_method_retryable(method):\n                raise reraise(type(error), error, _stacktrace)\n            elif read is not None:\n                read -= 1\n    \n        elif error:\n            # Other retry?\n            if other is not None:\n                other -= 1\n    \n        elif response and response.get_redirect_location():\n            # Redirect retry?\n            if redirect is not None:\n                redirect -= 1\n            cause = \"too many redirects\"\n            response_redirect_location = response.get_redirect_location()\n            if response_redirect_location:\n                redirect_location = response_redirect_location\n            status = response.status\n    \n        else:\n            # Incrementing because of a server error like a 500 in\n            # status_forcelist and the given method is in the allowed_methods\n            cause = ResponseError.GENERIC_ERROR\n            if response and response.status:\n                if status_count is not None:\n                    status_count -= 1\n                cause = ResponseError.SPECIFIC_ERROR.format(status_code=response.status)\n                status = response.status\n    \n        history = self.history + (\n            RequestHistory(method, url, error, status, redirect_location),\n        )\n    \n        new_retry = self.new(\n            total=total,\n            connect=connect,\n            read=read,\n            redirect=redirect,\n            status=status_count,\n            other=other,\n            history=history,\n        )\n    \n        if new_retry.is_exhausted():\n            reason = error or ResponseError(cause)\n>           raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]\nE           urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='ms-n-back.vaz.ru', port=443): Max retries exceeded with url: /api/v1/form/resultByQuarter?year=2024&quarter=3 (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f2346c30dd0>, 'Connection to ms-n-back.vaz.ru timed out. (connect timeout=None)'))\n\n/opt/hostedtoolcache/Python/3.12.7/x64/lib/python3.12/site-packages/urllib3/util/retry.py:519: MaxRetryError\n\nDuring handling of the above exception, another exception occurred:\n\nself = <tests.msportal_test.TestQuality object at 0x7f2346bf1a90>\n\n    @allure.title('Проверка доступности MSPortal')\n    def test_get_status_code(self):\n        response_test = self.page.get_quality(self.ms.url_test, Tokens.MS_TEST)\n>       response_prod = self.page.get_quality(self.ms.url_prod, Tokens.MS_PROD)\n\ntests/msportal_test.py:16: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \npages/ms_page.py:11: in get_quality\n    return requests.request(\"GET\", url, headers=headers)\n/opt/hostedtoolcache/Python/3.12.7/x64/lib/python3.12/site-packages/requests/api.py:59: in request\n    return session.request(method=method, url=url, **kwargs)\n/opt/hostedtoolcache/Python/3.12.7/x64/lib/python3.12/site-packages/requests/sessions.py:589: in request\n    resp = self.send(prep, **send_kwargs)\n/opt/hostedtoolcache/Python/3.12.7/x64/lib/python3.12/site-packages/requests/sessions.py:703: in send\n    r = adapter.send(request, **kwargs)\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <requests.adapters.HTTPAdapter object at 0x7f2346c533e0>\nrequest = <PreparedRequest [GET]>, stream = False\ntimeout = Timeout(connect=None, read=None, total=None), verify = True\ncert = None, proxies = OrderedDict()\n\n    def send(\n        self, request, stream=False, timeout=None, verify=True, cert=None, proxies=None\n    ):\n        \"\"\"Sends PreparedRequest object. Returns Response object.\n    \n        :param request: The :class:`PreparedRequest <PreparedRequest>` being sent.\n        :param stream: (optional) Whether to stream the request content.\n        :param timeout: (optional) How long to wait for the server to send\n            data before giving up, as a float, or a :ref:`(connect timeout,\n            read timeout) <timeouts>` tuple.\n        :type timeout: float or tuple or urllib3 Timeout object\n        :param verify: (optional) Either a boolean, in which case it controls whether\n            we verify the server's TLS certificate, or a string, in which case it\n            must be a path to a CA bundle to use\n        :param cert: (optional) Any user-provided SSL certificate to be trusted.\n        :param proxies: (optional) The proxies dictionary to apply to the request.\n        :rtype: requests.Response\n        \"\"\"\n    \n        try:\n            conn = self.get_connection(request.url, proxies)\n        except LocationValueError as e:\n            raise InvalidURL(e, request=request)\n    \n        self.cert_verify(conn, request.url, verify, cert)\n        url = self.request_url(request, proxies)\n        self.add_headers(\n            request,\n            stream=stream,\n            timeout=timeout,\n            verify=verify,\n            cert=cert,\n            proxies=proxies,\n        )\n    \n        chunked = not (request.body is None or \"Content-Length\" in request.headers)\n    \n        if isinstance(timeout, tuple):\n            try:\n                connect, read = timeout\n                timeout = TimeoutSauce(connect=connect, read=read)\n            except ValueError:\n                raise ValueError(\n                    f\"Invalid timeout {timeout}. Pass a (connect, read) timeout tuple, \"\n                    f\"or a single float to set both timeouts to the same value.\"\n                )\n        elif isinstance(timeout, TimeoutSauce):\n            pass\n        else:\n            timeout = TimeoutSauce(connect=timeout, read=timeout)\n    \n        try:\n            resp = conn.urlopen(\n                method=request.method,\n                url=url,\n                body=request.body,\n                headers=request.headers,\n                redirect=False,\n                assert_same_host=False,\n                preload_content=False,\n                decode_content=False,\n                retries=self.max_retries,\n                timeout=timeout,\n                chunked=chunked,\n            )\n    \n        except (ProtocolError, OSError) as err:\n            raise ConnectionError(err, request=request)\n    \n        except MaxRetryError as e:\n            if isinstance(e.reason, ConnectTimeoutError):\n                # TODO: Remove this in 3.0.0: see #2811\n                if not isinstance(e.reason, NewConnectionError):\n>                   raise ConnectTimeout(e, request=request)\nE                   requests.exceptions.ConnectTimeout: HTTPSConnectionPool(host='ms-n-back.vaz.ru', port=443): Max retries exceeded with url: /api/v1/form/resultByQuarter?year=2024&quarter=3 (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f2346c30dd0>, 'Connection to ms-n-back.vaz.ru timed out. (connect timeout=None)'))\n\n/opt/hostedtoolcache/Python/3.12.7/x64/lib/python3.12/site-packages/requests/adapters.py:507: ConnectTimeout",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "clear_allure_results_folder",
+    "time" : {
+      "start" : 1730471867229,
+      "stop" : 1730471867229,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "attachmentsCount" : 0
+  } ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "epic",
+    "value" : "Test integration with MSPortal"
+  }, {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "msportal_test"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestQuality"
+  }, {
+    "name" : "host",
+    "value" : "fv-az1426-986"
+  }, {
+    "name" : "thread",
+    "value" : "2208-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.msportal_test"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Test defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 1,
+        "skipped" : 0,
+        "passed" : 172,
+        "unknown" : 0,
+        "total" : 173
+      },
+      "items" : [ {
+        "uid" : "eb0dc969a98e420",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/163//#testresult/eb0dc969a98e420",
+        "status" : "passed",
+        "time" : {
+          "start" : 1730428264425,
+          "stop" : 1730428268615,
+          "duration" : 4190
+        }
+      }, {
+        "uid" : "29575d421d5241f7",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/162//#testresult/29575d421d5241f7",
+        "status" : "passed",
+        "time" : {
+          "start" : 1730341604106,
+          "stop" : 1730341608821,
+          "duration" : 4715
+        }
+      }, {
+        "uid" : "b6d06a95e7630d7b",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/161//#testresult/b6d06a95e7630d7b",
+        "status" : "passed",
+        "time" : {
+          "start" : 1730255191657,
+          "stop" : 1730255196285,
+          "duration" : 4628
+        }
+      }, {
+        "uid" : "d0f19b424e77259",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/160//#testresult/d0f19b424e77259",
+        "status" : "passed",
+        "time" : {
+          "start" : 1730168704621,
+          "stop" : 1730168709622,
+          "duration" : 5001
+        }
+      }, {
+        "uid" : "a8cd17074678942e",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/159//#testresult/a8cd17074678942e",
+        "status" : "passed",
+        "time" : {
+          "start" : 1730082461785,
+          "stop" : 1730082466002,
+          "duration" : 4217
+        }
+      }, {
+        "uid" : "7d385cc2dd2b1a74",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/158//#testresult/7d385cc2dd2b1a74",
+        "status" : "passed",
+        "time" : {
+          "start" : 1729996103210,
+          "stop" : 1729996107570,
+          "duration" : 4360
+        }
+      }, {
+        "uid" : "6b64b90c715d8b83",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/157//#testresult/6b64b90c715d8b83",
+        "status" : "passed",
+        "time" : {
+          "start" : 1729909198376,
+          "stop" : 1729909202772,
+          "duration" : 4396
+        }
+      }, {
+        "uid" : "f693e42120f18381",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/156//#testresult/f693e42120f18381",
+        "status" : "passed",
+        "time" : {
+          "start" : 1729823234864,
+          "stop" : 1729823238781,
+          "duration" : 3917
+        }
+      }, {
+        "uid" : "4b1d299ff9c3e43e",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/155//#testresult/4b1d299ff9c3e43e",
+        "status" : "passed",
+        "time" : {
+          "start" : 1729736765717,
+          "stop" : 1729736769956,
+          "duration" : 4239
+        }
+      }, {
+        "uid" : "1a92c7274719c10",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/9//#testresult/1a92c7274719c10",
+        "status" : "passed",
+        "time" : {
+          "start" : 1729697946768,
+          "stop" : 1729697955133,
+          "duration" : 8365
+        }
+      }, {
+        "uid" : "5f35440637c37226",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/154//#testresult/5f35440637c37226",
+        "status" : "passed",
+        "time" : {
+          "start" : 1729694873321,
+          "stop" : 1729694879243,
+          "duration" : 5922
+        }
+      }, {
+        "uid" : "5755ad2441b04216",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/154//#testresult/5755ad2441b04216",
+        "status" : "passed",
+        "time" : {
+          "start" : 1729650382127,
+          "stop" : 1729650386644,
+          "duration" : 4517
+        }
+      }, {
+        "uid" : "69a68b3820e06eb8",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/153//#testresult/69a68b3820e06eb8",
+        "status" : "passed",
+        "time" : {
+          "start" : 1729564043168,
+          "stop" : 1729564048677,
+          "duration" : 5509
+        }
+      }, {
+        "uid" : "a144da75cee37f57",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/152//#testresult/a144da75cee37f57",
+        "status" : "passed",
+        "time" : {
+          "start" : 1729477538160,
+          "stop" : 1729477542241,
+          "duration" : 4081
+        }
+      }, {
+        "uid" : "e0fa7887c9c605ce",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/151//#testresult/e0fa7887c9c605ce",
+        "status" : "passed",
+        "time" : {
+          "start" : 1729391508323,
+          "stop" : 1729391512687,
+          "duration" : 4364
+        }
+      }, {
+        "uid" : "a659a5bed7eb6a17",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/150//#testresult/a659a5bed7eb6a17",
+        "status" : "passed",
+        "time" : {
+          "start" : 1729304667389,
+          "stop" : 1729304671772,
+          "duration" : 4383
+        }
+      }, {
+        "uid" : "17cbd1733c4ef967",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/149//#testresult/17cbd1733c4ef967",
+        "status" : "passed",
+        "time" : {
+          "start" : 1729218233030,
+          "stop" : 1729218238289,
+          "duration" : 5259
+        }
+      }, {
+        "uid" : "901f83978801e74d",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/148//#testresult/901f83978801e74d",
+        "status" : "passed",
+        "time" : {
+          "start" : 1729131950347,
+          "stop" : 1729131954544,
+          "duration" : 4197
+        }
+      }, {
+        "uid" : "817d4b5cff22743c",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/8//#testresult/817d4b5cff22743c",
+        "status" : "passed",
+        "time" : {
+          "start" : 1729096892330,
+          "stop" : 1729096896263,
+          "duration" : 3933
+        }
+      }, {
+        "uid" : "732f8bb2025fe9a4",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/147//#testresult/732f8bb2025fe9a4",
+        "status" : "passed",
+        "time" : {
+          "start" : 1729046044807,
+          "stop" : 1729046049406,
+          "duration" : 4599
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "c5ccdccca0c08468.json",
+  "parameterValues" : [ ]
+}
