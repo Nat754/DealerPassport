@@ -23,7 +23,7 @@ class TestMainPageSmoke:
             f'Ошибка: {[item.text for item in auth_user_admin_to_prod.check_error_notifications()]}'
 
     @allure.title(f'Проверить поиск по кнопке {HeaderConstant.SELECT_DEALER_TEXT}')
-    def test_select_dealer(self, auth_user_admin_to_prod):
+    def test_find_dealer(self, auth_user_admin_to_prod):
         text = auth_user_admin_to_prod.check_button_select_dealer().text
         assert text == HeaderConstant.SELECT_DEALER_TEXT, f'ОР: {HeaderConstant.SELECT_DEALER_TEXT}, ФР: {text}'
         auth_user_admin_to_prod.check_button_select_dealer().click()

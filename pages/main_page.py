@@ -28,7 +28,7 @@ class MainPage(BasePage):
     def check_button_editor(self):
         return self.element_is_clickable(self.locator.EDITOR_BUTTON)
 
-    @allure.step(f"Проверка кликабельности кнопки '{locator.SELECT_DEALER_BUTTON}' на главной странице")
+    @allure.step(f"Проверка кликабельности кнопки '{hconstant.SELECT_DEALER_TEXT}' на главной странице")
     def check_button_select_dealer(self):
         return self.element_is_clickable(self.locator.SELECT_DEALER_BUTTON)
 
@@ -67,7 +67,8 @@ class MainPage(BasePage):
 
     @allure.step("Получить список дилеров")
     def check_select_dealers(self):
-        while self.elements_are_present(self.locator.SELECT_DEALERS)[0].text == [self.hconstant.LOADER_MSG]:
-            pass
-        dealers = self.elements_are_present(self.locator.SELECT_DEALERS)[0].text.split('\n')
+        loader = self.elements_are_visible(self.locator.SELECT_DEALERS)[0].text
+        while loader == [self.hconstant.LOADER_MSG]:
+            loader = self.elements_are_visible(self.locator.SELECT_DEALERS)[0].text
+        dealers = self.elements_are_visible(self.locator.SELECT_DEALERS)[0].text.split('\n')
         return dealers
