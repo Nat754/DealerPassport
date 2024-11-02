@@ -1,3 +1,5 @@
+import time
+
 from pages.base_page import BasePage
 import allure
 from locators.main_page_locators import MainPageLocators
@@ -70,5 +72,6 @@ class MainPage(BasePage):
         loader = self.elements_are_visible(self.locator.SELECT_DEALERS)[0].text
         while loader == [self.hconstant.LOADER_MSG]:
             loader = self.elements_are_visible(self.locator.SELECT_DEALERS)[0].text
+        time.sleep(2)
         dealers = self.elements_are_visible(self.locator.SELECT_DEALERS)[0].text.split('\n')
         return dealers
