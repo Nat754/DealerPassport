@@ -1,0 +1,164 @@
+{
+  "uid" : "e9ada5b69bcec1ea",
+  "name" : "test_open_url[/users/]",
+  "fullName" : "tests.main_page_test.TestMainPageSmoke#test_open_url",
+  "historyId" : "a499fa2c74393a36c769d1db3ab46146",
+  "time" : {
+    "start" : 1731412152042,
+    "stop" : 1731412152042,
+    "duration" : 0
+  },
+  "status" : "broken",
+  "statusMessage" : "selenium.common.exceptions.InvalidArgumentException: Message: invalid argument\n  (Session info: chrome=130.0.6723.91)\nStacktrace:\n#0 0x556ba3c5813a <unknown>\n#1 0x556ba37732bd <unknown>\n#2 0x556ba375b16f <unknown>\n#3 0x556ba37597c8 <unknown>\n#4 0x556ba3759eba <unknown>\n#5 0x556ba3775d59 <unknown>\n#6 0x556ba3803645 <unknown>\n#7 0x556ba37e4012 <unknown>\n#8 0x556ba3802af6 <unknown>\n#9 0x556ba37e3db3 <unknown>\n#10 0x556ba37b2c10 <unknown>\n#11 0x556ba37b3bee <unknown>\n#12 0x556ba3c243cb <unknown>\n#13 0x556ba3c28368 <unknown>\n#14 0x556ba3c11eec <unknown>\n#15 0x556ba3c28ee7 <unknown>\n#16 0x556ba3bf713f <unknown>\n#17 0x556ba3c46858 <unknown>\n#18 0x556ba3c46a20 <unknown>\n#19 0x556ba3c56fb6 <unknown>\n#20 0x7f5072494ac3 <unknown>",
+  "statusTrace" : "driver = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"d67213ae9d6a90a2c8b573bc7a3e9ae1\")>\n\n    @pytest.fixture\n    def auth_user_admin(driver):\n        main_page = MainPage(driver)\n        url = Urls.MAIN_URL + Urls.AUTH\n        cookies = {'name': 'token', 'value': os.environ[\"PROD_ADMIN\"]}\n>       driver.get(url)\n\ntests/conftest.py:42: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n/opt/hostedtoolcache/Python/3.12.7/x64/lib/python3.12/site-packages/selenium/webdriver/remote/webdriver.py:356: in get\n    self.execute(Command.GET, {\"url\": url})\n/opt/hostedtoolcache/Python/3.12.7/x64/lib/python3.12/site-packages/selenium/webdriver/remote/webdriver.py:347: in execute\n    self.error_handler.check_response(response)\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <selenium.webdriver.remote.errorhandler.ErrorHandler object at 0x7f72e86d6ea0>\nresponse = {'status': 400, 'value': '{\"value\":{\"error\":\"invalid argument\",\"message\":\"invalid argument\\\\n  (Session info: chrome=1...\\\\n#18 0x556ba3c46a20 \\\\u003Cunknown>\\\\n#19 0x556ba3c56fb6 \\\\u003Cunknown>\\\\n#20 0x7f5072494ac3 \\\\u003Cunknown>\\\\n\"}}'}\n\n    def check_response(self, response: Dict[str, Any]) -> None:\n        \"\"\"Checks that a JSON response from the WebDriver does not have an\n        error.\n    \n        :Args:\n         - response - The JSON response from the WebDriver server as a dictionary\n           object.\n    \n        :Raises: If the response contains an error message.\n        \"\"\"\n        status = response.get(\"status\", None)\n        if not status or status == ErrorCode.SUCCESS:\n            return\n        value = None\n        message = response.get(\"message\", \"\")\n        screen: str = response.get(\"screen\", \"\")\n        stacktrace = None\n        if isinstance(status, int):\n            value_json = response.get(\"value\", None)\n            if value_json and isinstance(value_json, str):\n                import json\n    \n                try:\n                    value = json.loads(value_json)\n                    if len(value) == 1:\n                        value = value[\"value\"]\n                    status = value.get(\"error\", None)\n                    if not status:\n                        status = value.get(\"status\", ErrorCode.UNKNOWN_ERROR)\n                        message = value.get(\"value\") or value.get(\"message\")\n                        if not isinstance(message, str):\n                            value = message\n                            message = message.get(\"message\")\n                    else:\n                        message = value.get(\"message\", None)\n                except ValueError:\n                    pass\n    \n        exception_class: Type[WebDriverException]\n        e = ErrorCode()\n        error_codes = [item for item in dir(e) if not item.startswith(\"__\")]\n        for error_code in error_codes:\n            error_info = getattr(ErrorCode, error_code)\n            if isinstance(error_info, list) and status in error_info:\n                exception_class = getattr(ExceptionMapping, error_code, WebDriverException)\n                break\n        else:\n            exception_class = WebDriverException\n    \n        if not value:\n            value = response[\"value\"]\n        if isinstance(value, str):\n            raise exception_class(value)\n        if message == \"\" and \"message\" in value:\n            message = value[\"message\"]\n    \n        screen = None  # type: ignore[assignment]\n        if \"screen\" in value:\n            screen = value[\"screen\"]\n    \n        stacktrace = None\n        st_value = value.get(\"stackTrace\") or value.get(\"stacktrace\")\n        if st_value:\n            if isinstance(st_value, str):\n                stacktrace = st_value.split(\"\\n\")\n            else:\n                stacktrace = []\n                try:\n                    for frame in st_value:\n                        line = frame.get(\"lineNumber\", \"\")\n                        file = frame.get(\"fileName\", \"<anonymous>\")\n                        if line:\n                            file = f\"{file}:{line}\"\n                        meth = frame.get(\"methodName\", \"<anonymous>\")\n                        if \"className\" in frame:\n                            meth = f\"{frame['className']}.{meth}\"\n                        msg = \"    at %s (%s)\"\n                        msg = msg % (meth, file)\n                        stacktrace.append(msg)\n                except TypeError:\n                    pass\n        if exception_class == UnexpectedAlertPresentException:\n            alert_text = None\n            if \"data\" in value:\n                alert_text = value[\"data\"].get(\"text\")\n            elif \"alert\" in value:\n                alert_text = value[\"alert\"].get(\"text\")\n            raise exception_class(message, screen, stacktrace, alert_text)  # type: ignore[call-arg]  # mypy is not smart enough here\n>       raise exception_class(message, screen, stacktrace)\nE       selenium.common.exceptions.InvalidArgumentException: Message: invalid argument\nE         (Session info: chrome=130.0.6723.91)\nE       Stacktrace:\nE       #0 0x556ba3c5813a <unknown>\nE       #1 0x556ba37732bd <unknown>\nE       #2 0x556ba375b16f <unknown>\nE       #3 0x556ba37597c8 <unknown>\nE       #4 0x556ba3759eba <unknown>\nE       #5 0x556ba3775d59 <unknown>\nE       #6 0x556ba3803645 <unknown>\nE       #7 0x556ba37e4012 <unknown>\nE       #8 0x556ba3802af6 <unknown>\nE       #9 0x556ba37e3db3 <unknown>\nE       #10 0x556ba37b2c10 <unknown>\nE       #11 0x556ba37b3bee <unknown>\nE       #12 0x556ba3c243cb <unknown>\nE       #13 0x556ba3c28368 <unknown>\nE       #14 0x556ba3c11eec <unknown>\nE       #15 0x556ba3c28ee7 <unknown>\nE       #16 0x556ba3bf713f <unknown>\nE       #17 0x556ba3c46858 <unknown>\nE       #18 0x556ba3c46a20 <unknown>\nE       #19 0x556ba3c56fb6 <unknown>\nE       #20 0x7f5072494ac3 <unknown>\n\n/opt/hostedtoolcache/Python/3.12.7/x64/lib/python3.12/site-packages/selenium/webdriver/remote/errorhandler.py:229: InvalidArgumentException",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "driver",
+    "time" : {
+      "start" : 1731412152043,
+      "stop" : 1731412152322,
+      "duration" : 279
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "clear_allure_results_folder",
+    "time" : {
+      "start" : 1731412128199,
+      "stop" : 1731412128199,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "auth_user_admin",
+    "time" : {
+      "start" : 1731412152323,
+      "stop" : 1731412152331,
+      "duration" : 8
+    },
+    "status" : "broken",
+    "statusMessage" : "selenium.common.exceptions.InvalidArgumentException: Message: invalid argument\n  (Session info: chrome=130.0.6723.91)\nStacktrace:\n#0 0x556ba3c5813a <unknown>\n#1 0x556ba37732bd <unknown>\n#2 0x556ba375b16f <unknown>\n#3 0x556ba37597c8 <unknown>\n#4 0x556ba3759eba <unknown>\n#5 0x556ba3775d59 <unknown>\n#6 0x556ba3803645 <unknown>\n#7 0x556ba37e4012 <unknown>\n#8 0x556ba3802af6 <unknown>\n#9 0x556ba37e3db3 <unknown>\n#10 0x556ba37b2c10 <unknown>\n#11 0x556ba37b3bee <unknown>\n#12 0x556ba3c243cb <unknown>\n#13 0x556ba3c28368 <unknown>\n#14 0x556ba3c11eec <unknown>\n#15 0x556ba3c28ee7 <unknown>\n#16 0x556ba3bf713f <unknown>\n#17 0x556ba3c46858 <unknown>\n#18 0x556ba3c46a20 <unknown>\n#19 0x556ba3c56fb6 <unknown>\n#20 0x7f5072494ac3 <unknown>\n\n",
+    "statusTrace" : "  File \"/opt/hostedtoolcache/Python/3.12.7/x64/lib/python3.12/site-packages/pluggy/_callers.py\", line 167, in _multicall\n    teardown.throw(outcome._exception)\n  File \"/opt/hostedtoolcache/Python/3.12.7/x64/lib/python3.12/site-packages/_pytest/setuponly.py\", line 36, in pytest_fixture_setup\n    return (yield)\n            ^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.7/x64/lib/python3.12/site-packages/pluggy/_callers.py\", line 103, in _multicall\n    res = hook_impl.function(*args)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.7/x64/lib/python3.12/site-packages/_pytest/fixtures.py\", line 1140, in pytest_fixture_setup\n    result = call_fixture_func(fixturefunc, request, kwargs)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.7/x64/lib/python3.12/site-packages/_pytest/fixtures.py\", line 917, in call_fixture_func\n    fixture_result = fixturefunc(**kwargs)\n                     ^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/DealerPassport/DealerPassport/tests/conftest.py\", line 42, in auth_user_admin\n    driver.get(url)\n  File \"/opt/hostedtoolcache/Python/3.12.7/x64/lib/python3.12/site-packages/selenium/webdriver/remote/webdriver.py\", line 356, in get\n    self.execute(Command.GET, {\"url\": url})\n  File \"/opt/hostedtoolcache/Python/3.12.7/x64/lib/python3.12/site-packages/selenium/webdriver/remote/webdriver.py\", line 347, in execute\n    self.error_handler.check_response(response)\n  File \"/opt/hostedtoolcache/Python/3.12.7/x64/lib/python3.12/site-packages/selenium/webdriver/remote/errorhandler.py\", line 229, in check_response\n    raise exception_class(message, screen, stacktrace)\n",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : true,
+    "hasContent" : true
+  } ],
+  "afterStages" : [ {
+    "name" : "driver::0",
+    "time" : {
+      "start" : 1731412152363,
+      "stop" : 1731412152424,
+      "duration" : 61
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "epic",
+    "value" : "Тестирование главной страницы"
+  }, {
+    "name" : "tag",
+    "value" : "smoke_test"
+  }, {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "main_page_test"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestMainPageSmoke"
+  }, {
+    "name" : "host",
+    "value" : "fv-az915-386"
+  }, {
+    "name" : "thread",
+    "value" : "2286-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.main_page_test"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "url",
+    "value" : "'/users/'"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Test defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 3,
+        "skipped" : 0,
+        "passed" : 0,
+        "unknown" : 0,
+        "total" : 3
+      },
+      "items" : [ {
+        "uid" : "ba84bfefff99a3f5",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/13//#testresult/ba84bfefff99a3f5",
+        "status" : "broken",
+        "statusDetails" : "selenium.common.exceptions.InvalidArgumentException: Message: invalid argument\n  (Session info: chrome=130.0.6723.91)\nStacktrace:\n#0 0x5615f126a13a <unknown>\n#1 0x5615f0d852bd <unknown>\n#2 0x5615f0d6d16f <unknown>\n#3 0x5615f0d6b7c8 <unknown>\n#4 0x5615f0d6beba <unknown>\n#5 0x5615f0d87d59 <unknown>\n#6 0x5615f0e15645 <unknown>\n#7 0x5615f0df6012 <unknown>\n#8 0x5615f0e14af6 <unknown>\n#9 0x5615f0df5db3 <unknown>\n#10 0x5615f0dc4c10 <unknown>\n#11 0x5615f0dc5bee <unknown>\n#12 0x5615f12363cb <unknown>\n#13 0x5615f123a368 <unknown>\n#14 0x5615f1223eec <unknown>\n#15 0x5615f123aee7 <unknown>\n#16 0x5615f120913f <unknown>\n#17 0x5615f1258858 <unknown>\n#18 0x5615f1258a20 <unknown>\n#19 0x5615f1268fb6 <unknown>\n#20 0x7f5142694ac3 <unknown>",
+        "time" : {
+          "start" : 1731411758534,
+          "stop" : 1731411758534,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "f7b0a9ff9806718c",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/13//#testresult/f7b0a9ff9806718c",
+        "status" : "broken",
+        "statusDetails" : "selenium.common.exceptions.InvalidArgumentException: Message: invalid argument\n  (Session info: chrome=130.0.6723.91)\nStacktrace:\n#0 0x55b7e765513a <unknown>\n#1 0x55b7e71702bd <unknown>\n#2 0x55b7e715816f <unknown>\n#3 0x55b7e71567c8 <unknown>\n#4 0x55b7e7156eba <unknown>\n#5 0x55b7e7172d59 <unknown>\n#6 0x55b7e7200645 <unknown>\n#7 0x55b7e71e1012 <unknown>\n#8 0x55b7e71ffaf6 <unknown>\n#9 0x55b7e71e0db3 <unknown>\n#10 0x55b7e71afc10 <unknown>\n#11 0x55b7e71b0bee <unknown>\n#12 0x55b7e76213cb <unknown>\n#13 0x55b7e7625368 <unknown>\n#14 0x55b7e760eeec <unknown>\n#15 0x55b7e7625ee7 <unknown>\n#16 0x55b7e75f413f <unknown>\n#17 0x55b7e7643858 <unknown>\n#18 0x55b7e7643a20 <unknown>\n#19 0x55b7e7653fb6 <unknown>\n#20 0x7f29c1694ac3 <unknown>",
+        "time" : {
+          "start" : 1731410916006,
+          "stop" : 1731410916006,
+          "duration" : 0
+        }
+      } ]
+    },
+    "tags" : [ "smoke_test" ]
+  },
+  "source" : "e9ada5b69bcec1ea.json",
+  "parameterValues" : [ "'/users/'" ]
+}
