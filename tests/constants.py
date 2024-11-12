@@ -20,6 +20,7 @@ class Urls:
     EDITOR_URL = "/editor/"
     REPORTS_URL = "/reports/"
     LOGS_URL = "/logs/"
+    EMAIL_LOGS_URL = "/logs/email"
     SRR_URL = "/srr/"
     ACCOUNTING_URL = "/accounting/"
     DOCUMENTS_URL = "/documents/"
@@ -31,84 +32,43 @@ class Urls:
     USERS_URL = "/users/"
     INDICATORS_URL = "/indicators/"
     UPLOADS_URL = "/uploads/"
-    MAIN_URL_SEO = os.environ["MAIN_URL_SEO"]
-    MAIN_URL_SEO_PROD = MAIN_URL_SEO + ":3001"
-    MAIN_URL_TEST = os.environ["MAIN_URL_TEST"]
-    MAIN_URL_PROD = os.environ["MAIN_URL_PROD"]
+    MAIN_URL = os.environ["MAIN_URL_PROD"]
+    # MAIN_URL = os.environ["MAIN_URL_SEO"]
+    # MAIN_URL = os.environ["MAIN_URL_SEO"] + ":3001"
+    # MAIN_URL = os.environ["MAIN_URL_TEST"]
     MS_URL_TEST = os.environ["MS_URL_TEST"]
     MS_URL_PROD = os.environ["MS_URL_PROD"]
-
-    LIST_URLS_SEO = [MAIN_URL_SEO,
-                     MAIN_URL_SEO + EDITOR_URL,
-                     MAIN_URL_SEO + REPORTS_URL,
-                     MAIN_URL_SEO + LOGS_URL,
-                     MAIN_URL_SEO + SRR_URL,
-                     MAIN_URL_SEO + ACCOUNTING_URL,
-                     MAIN_URL_SEO + DOCUMENTS_URL,
-                     MAIN_URL_SEO + ZD_URL,
-                     MAIN_URL_SEO + GR_URL,
-                     MAIN_URL_SEO + Q_URL,
-                     MAIN_URL_SEO + STAFF_URL,
-                     MAIN_URL_SEO + DEALERS_URL,
-                     MAIN_URL_SEO + USERS_URL,
-                     MAIN_URL_SEO + INDICATORS_URL,
-                     MAIN_URL_SEO + UPLOADS_URL]
-
-    LIST_URLS_SEO_PROD = [MAIN_URL_SEO_PROD,
-                          MAIN_URL_SEO_PROD + EDITOR_URL,
-                          MAIN_URL_SEO_PROD + REPORTS_URL,
-                          MAIN_URL_SEO_PROD + LOGS_URL,
-                          MAIN_URL_SEO_PROD + SRR_URL,
-                          MAIN_URL_SEO_PROD + ACCOUNTING_URL,
-                          MAIN_URL_SEO_PROD + DOCUMENTS_URL,
-                          MAIN_URL_SEO_PROD + ZD_URL,
-                          MAIN_URL_SEO_PROD + GR_URL,
-                          MAIN_URL_SEO_PROD + Q_URL,
-                          MAIN_URL_SEO_PROD + STAFF_URL,
-                          MAIN_URL_SEO_PROD + DEALERS_URL,
-                          MAIN_URL_SEO_PROD + USERS_URL,
-                          MAIN_URL_SEO_PROD + INDICATORS_URL,
-                          MAIN_URL_SEO_PROD + UPLOADS_URL]
-
-    LIST_URLS_PROD = [MAIN_URL_PROD,
-                      MAIN_URL_PROD + EDITOR_URL,
-                      MAIN_URL_PROD + REPORTS_URL,
-                      MAIN_URL_PROD + LOGS_URL,
-                      MAIN_URL_PROD + SRR_URL,
-                      MAIN_URL_PROD + ACCOUNTING_URL,
-                      MAIN_URL_PROD + DOCUMENTS_URL,
-                      MAIN_URL_PROD + ZD_URL,
-                      MAIN_URL_PROD + GR_URL,
-                      MAIN_URL_PROD + Q_URL,
-                      MAIN_URL_PROD + STAFF_URL,
-                      MAIN_URL_PROD + DEALERS_URL,
-                      MAIN_URL_PROD + USERS_URL,
-                      MAIN_URL_PROD + INDICATORS_URL,
-                      MAIN_URL_PROD + UPLOADS_URL]
-
-    LIST_URLS_TEST = [MAIN_URL_TEST,
-                      MAIN_URL_TEST + EDITOR_URL,
-                      MAIN_URL_TEST + REPORTS_URL,
-                      MAIN_URL_TEST + LOGS_URL,
-                      MAIN_URL_TEST + SRR_URL,
-                      MAIN_URL_TEST + ACCOUNTING_URL,
-                      MAIN_URL_TEST + DOCUMENTS_URL,
-                      MAIN_URL_TEST + ZD_URL,
-                      MAIN_URL_TEST + GR_URL,
-                      MAIN_URL_TEST + Q_URL,
-                      MAIN_URL_TEST + STAFF_URL,
-                      MAIN_URL_TEST + DEALERS_URL,
-                      MAIN_URL_TEST + USERS_URL,
-                      MAIN_URL_TEST + INDICATORS_URL,
-                      MAIN_URL_TEST + UPLOADS_URL]
+    LIST_URLS = [MAIN_URL,
+                 MAIN_URL + EDITOR_URL,
+                 MAIN_URL + REPORTS_URL,
+                 MAIN_URL + LOGS_URL,
+                 MAIN_URL + EMAIL_LOGS_URL,
+                 MAIN_URL + SRR_URL,
+                 MAIN_URL + ACCOUNTING_URL,
+                 MAIN_URL + DOCUMENTS_URL,
+                 MAIN_URL + ZD_URL,
+                 MAIN_URL + GR_URL,
+                 MAIN_URL + Q_URL,
+                 MAIN_URL + STAFF_URL,
+                 MAIN_URL + DEALERS_URL,
+                 MAIN_URL + USERS_URL,
+                 MAIN_URL + INDICATORS_URL,
+                 MAIN_URL + UPLOADS_URL]
 
 
 class SRRConstant:
+    # for prod
     LIST_GROUPS = ['Возвращение автомобилей на ТО по месяцу контроля\nВозвращение автомобилей на ТО по периоду '
                    'продаж\nВозвращение автомобилей на гарантийный ремонт по месяцу контроля\nВозвращение автомобилей '
                    'на гарантийный ремонт (свой-чужой) по месяцу контроля\nМашинозаезды в динамике\nМашинозаезды по '
                    'дилеру\nСреднесуточный пробег (семейство автомобиля-регион)\nКлиенты не обращавшиеся на гарантийный'
                    ' ремонт\nSRR3\nSRR5\nПриглашение клиентов на ТО\nРегистрация ГИБДД\n1С УПП']
+    # for dev
+    # LIST_GROUPS = ['Возвращение автомобилей на ТО по месяцу контроля\nВозвращение автомобилей на ТО по периоду '
+    #                'продаж\nВозвращение автомобилей на гарантийный ремонт по месяцу контроля\nВозвращение автомобилей '
+    #                'на гарантийный ремонт (свой-чужой) по месяцу контроля\nМашинозаезды в динамике\nМашинозаезды по '
+    #                'дилеру\nСреднесуточный пробег (семейство автомобиля-регион)\nКлиенты не обращавшиеся на гарантийный'
+    #                ' ремонт\nSRR3\nSRR5\nПриглашение клиентов на ТО\nРегистрация ГИБДД\nUVIN\nNS\n1С УПП']
     TEXT_PARAM_BUTTON = 'Параметры'
     TEXT_REPORT_CREATE = 'Сформировать'
     TEXT_REPORT_EXCELL = 'Сохр. в excel'
@@ -120,20 +80,18 @@ class SRRConstant:
 
 
 class EditorConstants:
-    EDITOR_MENU_PROD = ['Глобальный рейтинг', 'Квартили', 'Персонал', 'База сотрудников', 'Подразделения',
-                        'Виды нарушений', 'Редактор форм заявок-деклараций', 'Справочник должностей',
-                        'Каталог учебных программ', 'Справочники библиотеки документов', 'Редактор отчетов',
-                        'Справочник информационных систем', 'Справочник для выбора адреса']
-    EDITOR_MENU_SEO = ['Глобальный рейтинг', 'Квартили', 'Персонал', 'База сотрудников', 'Подразделения',
-                       'Виды нарушений', 'Редактор форм заявок-деклараций', 'Справочник должностей',
-                       'Каталог учебных программ', 'Справочники библиотеки документов', 'Редактор отчетов',
-                       'Справочник зон камер', 'Справочник информационных систем',
-                       'Справочник разделов фотогалереи', 'Шаблоны договоров']
-    EDITOR_MENU_SEO_PROD = ['Глобальный рейтинг', 'Квартили', 'Персонал', 'База сотрудников', 'Подразделения',
-                            'Виды нарушений', 'Редактор форм заявок-деклараций', 'Справочник должностей',
-                            'Каталог учебных программ', 'Справочники библиотеки документов', 'Редактор отчетов',
-                            'Справочник зон камер', 'Справочник информационных систем',
-                            'Справочник разделов фотогалереи', 'Шаблоны договоров']
+    # for prod
+    EDITOR_MENU = ['Глобальный рейтинг', 'Квартили', 'Персонал', 'База сотрудников', 'Подразделения',
+                   'Виды нарушений', 'Редактор форм заявок-деклараций', 'Справочник должностей',
+                   'Каталог учебных программ', 'Справочники библиотеки документов', 'Редактор отчетов',
+                   'Справочник информационных систем', 'Справочник для выбора адреса'] # prod
+    # for dev
+    # EDITOR_MENU = ['Глобальный рейтинг', 'Квартили', 'Персонал', 'База сотрудников', 'Подразделения',
+    #                'Виды нарушений', 'Редактор форм заявок-деклараций', 'Справочник должностей',
+    #                'Каталог учебных программ', 'Справочники библиотеки документов', 'Редактор отчетов',
+    #                'Справочник зон камер', 'Справочник информационных систем',
+    #                'Справочник разделов фотогалереи', 'Шаблоны договоров', 'Справочник для выбора адреса',
+    #                'Справочник доверенных лиц']
 
 
 class MSConstants:
