@@ -1,0 +1,275 @@
+{
+  "uid" : "b2a6eb0ab4460bfe",
+  "name" : "Получение данных тест MSPortal",
+  "fullName" : "tests.msportal_test.TestQuality#test_get_indicators_test",
+  "historyId" : "814f574bdc7e1ba23bd8737f670e68f0",
+  "time" : {
+    "start" : 1731983363347,
+    "stop" : 1731983364381,
+    "duration" : 1034
+  },
+  "status" : "broken",
+  "statusMessage" : "TypeError: string indices must be integers, not 'str'",
+  "statusTrace" : "self = <tests.msportal_test.TestQuality object at 0x7f26780e22d0>\n\n    @allure.title('Получение данных тест MSPortal')\n    def test_get_indicators_test(self):\n        response_test = self.page.get_quality(self.ms.url_test, Tokens.MS_TEST).json()\n        # print('List of dealers on test:', [item['dealer_id'] for item in response_test], sep='\\n')\n        print(f'\\nСписок индикаторов для дилера {self.ms.DEALER_ID} на тесте ({self.ms.QUARTER}Q{self.ms.YEAR % 2000}):',\n>             [item['mark'] for item in response_test if item['dealer_id'] == self.ms.DEALER_ID], sep='\\n')\nE       TypeError: string indices must be integers, not 'str'\n\ntests/msportal_test.py:25: TypeError",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "clear_allure_results_folder",
+    "time" : {
+      "start" : 1731983065613,
+      "stop" : 1731983065613,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "epic",
+    "value" : "Test integration with MSPortal"
+  }, {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "msportal_test"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestQuality"
+  }, {
+    "name" : "host",
+    "value" : "fv-az1493-90"
+  }, {
+    "name" : "thread",
+    "value" : "2232-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.msportal_test"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Test defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 6,
+        "skipped" : 0,
+        "passed" : 193,
+        "unknown" : 0,
+        "total" : 199
+      },
+      "items" : [ {
+        "uid" : "7e2253c686160563",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/180//#testresult/7e2253c686160563",
+        "status" : "broken",
+        "statusDetails" : "TypeError: string indices must be integers, not 'str'",
+        "time" : {
+          "start" : 1731897073172,
+          "stop" : 1731897073919,
+          "duration" : 747
+        }
+      }, {
+        "uid" : "e1f667d8dbc4b52b",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/179//#testresult/e1f667d8dbc4b52b",
+        "status" : "broken",
+        "statusDetails" : "TypeError: string indices must be integers, not 'str'",
+        "time" : {
+          "start" : 1731811109755,
+          "stop" : 1731811110765,
+          "duration" : 1010
+        }
+      }, {
+        "uid" : "38f51189e08b9cae",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/178//#testresult/38f51189e08b9cae",
+        "status" : "broken",
+        "statusDetails" : "TypeError: string indices must be integers, not 'str'",
+        "time" : {
+          "start" : 1731724030171,
+          "stop" : 1731724031159,
+          "duration" : 988
+        }
+      }, {
+        "uid" : "d8c37f32621c6aa0",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/177//#testresult/d8c37f32621c6aa0",
+        "status" : "passed",
+        "time" : {
+          "start" : 1731637738732,
+          "stop" : 1731637739464,
+          "duration" : 732
+        }
+      }, {
+        "uid" : "bdaac0adea881fea",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/176//#testresult/bdaac0adea881fea",
+        "status" : "passed",
+        "time" : {
+          "start" : 1731550947849,
+          "stop" : 1731550948635,
+          "duration" : 786
+        }
+      }, {
+        "uid" : "79f44579f299ac80",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/175//#testresult/79f44579f299ac80",
+        "status" : "broken",
+        "statusDetails" : "requests.exceptions.ConnectTimeout: HTTPSConnectionPool(host='ms-test2-back.vaz.ru', port=443): Max retries exceeded with url: /api/v1/form/resultByQuarter?year=2024&quarter=3 (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f59ba2be510>, 'Connection to ms-test2-back.vaz.ru timed out. (connect timeout=None)'))",
+        "time" : {
+          "start" : 1731464698575,
+          "stop" : 1731464833645,
+          "duration" : 135070
+        }
+      }, {
+        "uid" : "f82898d4cb5b3acf",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/13//#testresult/f82898d4cb5b3acf",
+        "status" : "passed",
+        "time" : {
+          "start" : 1731413715802,
+          "stop" : 1731413716869,
+          "duration" : 1067
+        }
+      }, {
+        "uid" : "50ed55771150cbf5",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/13//#testresult/50ed55771150cbf5",
+        "status" : "passed",
+        "time" : {
+          "start" : 1731412902526,
+          "stop" : 1731412903514,
+          "duration" : 988
+        }
+      }, {
+        "uid" : "84911508753e1f3b",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/13//#testresult/84911508753e1f3b",
+        "status" : "passed",
+        "time" : {
+          "start" : 1731412158829,
+          "stop" : 1731412159762,
+          "duration" : 933
+        }
+      }, {
+        "uid" : "790ea4ed6a11d4a2",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/13//#testresult/790ea4ed6a11d4a2",
+        "status" : "passed",
+        "time" : {
+          "start" : 1731411766817,
+          "stop" : 1731411767889,
+          "duration" : 1072
+        }
+      }, {
+        "uid" : "eebc3a9828934e6c",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/13//#testresult/eebc3a9828934e6c",
+        "status" : "passed",
+        "time" : {
+          "start" : 1731410922261,
+          "stop" : 1731410923352,
+          "duration" : 1091
+        }
+      }, {
+        "uid" : "1f933aa018eb904",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/174//#testresult/1f933aa018eb904",
+        "status" : "passed",
+        "time" : {
+          "start" : 1731377992809,
+          "stop" : 1731377994061,
+          "duration" : 1252
+        }
+      }, {
+        "uid" : "7442cfe78a1f1303",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/173//#testresult/7442cfe78a1f1303",
+        "status" : "passed",
+        "time" : {
+          "start" : 1731291758784,
+          "stop" : 1731291759693,
+          "duration" : 909
+        }
+      }, {
+        "uid" : "90522fc53fad67e1",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/172//#testresult/90522fc53fad67e1",
+        "status" : "passed",
+        "time" : {
+          "start" : 1731205511202,
+          "stop" : 1731205512349,
+          "duration" : 1147
+        }
+      }, {
+        "uid" : "4aa193034a59e246",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/171//#testresult/4aa193034a59e246",
+        "status" : "passed",
+        "time" : {
+          "start" : 1731118616808,
+          "stop" : 1731118617826,
+          "duration" : 1018
+        }
+      }, {
+        "uid" : "3f1419ed3fa0b37c",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/170//#testresult/3f1419ed3fa0b37c",
+        "status" : "passed",
+        "time" : {
+          "start" : 1731032508742,
+          "stop" : 1731032510005,
+          "duration" : 1263
+        }
+      }, {
+        "uid" : "da0b4f24c98f141",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/169//#testresult/da0b4f24c98f141",
+        "status" : "passed",
+        "time" : {
+          "start" : 1730946081128,
+          "stop" : 1730946082021,
+          "duration" : 893
+        }
+      }, {
+        "uid" : "97974acab0f1086e",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/168//#testresult/97974acab0f1086e",
+        "status" : "passed",
+        "time" : {
+          "start" : 1730859665854,
+          "stop" : 1730859667147,
+          "duration" : 1293
+        }
+      }, {
+        "uid" : "c24037d47b61a82e",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/167//#testresult/c24037d47b61a82e",
+        "status" : "passed",
+        "time" : {
+          "start" : 1730773273080,
+          "stop" : 1730773274087,
+          "duration" : 1007
+        }
+      }, {
+        "uid" : "dcddfcdb27cb2aa5",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/166//#testresult/dcddfcdb27cb2aa5",
+        "status" : "passed",
+        "time" : {
+          "start" : 1730687181047,
+          "stop" : 1730687182193,
+          "duration" : 1146
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "b2a6eb0ab4460bfe.json",
+  "parameterValues" : [ ]
+}
