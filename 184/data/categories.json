@@ -1,0 +1,47 @@
+{
+  "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "children" : [ {
+    "name" : "Product defects",
+    "children" : [ {
+      "name" : "AssertionError: Неверный ответ сервера\nassert 403 == 200\n +  where 403 = <Response [403]>.status_code",
+      "children" : [ {
+        "name" : "Проверка доступности MSPortal",
+        "uid" : "3b5d05485b73d38a",
+        "parentUid" : "3dcc5689d85c2fc8a52da148397eca77",
+        "status" : "failed",
+        "time" : {
+          "start" : 1732242548487,
+          "stop" : 1732242552468,
+          "duration" : 3981
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "3dcc5689d85c2fc8a52da148397eca77"
+    } ],
+    "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
+  }, {
+    "name" : "Test defects",
+    "children" : [ {
+      "name" : "TypeError: string indices must be integers, not 'str'",
+      "children" : [ {
+        "name" : "Получение данных тест MSPortal",
+        "uid" : "1ef53ce7bb1f33",
+        "parentUid" : "a30fad583b6722ac2edaee6ed80bed14",
+        "status" : "broken",
+        "time" : {
+          "start" : 1732242552501,
+          "stop" : 1732242553386,
+          "duration" : 885
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "a30fad583b6722ac2edaee6ed80bed14"
+    } ],
+    "uid" : "bdbf199525818fae7a8651db9eafe741"
+  } ],
+  "name" : "categories"
+}

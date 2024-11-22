@@ -1,0 +1,412 @@
+{
+  "uid" : "6b1b79e284088253",
+  "name" : "Проверить поиск по кнопке ВЫБРАТЬ ДИЛЕРА",
+  "fullName" : "tests.main_page_test.TestMainPageSmoke#test_find_dealer",
+  "historyId" : "b18f8132f31807d94ad3cf4a64b17eac",
+  "time" : {
+    "start" : 1732242545827,
+    "stop" : 1732242548417,
+    "duration" : 2590
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "auth_user_admin",
+    "time" : {
+      "start" : 1732242542679,
+      "stop" : 1732242545826,
+      "duration" : 3147
+    },
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Проверка видимости кнопки '('xpath', '//span[text()=\"Согласен\"]')' на главной странице",
+      "time" : {
+        "start" : 1732242545205,
+        "stop" : 1732242545760,
+        "duration" : 555
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 1,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  }, {
+    "name" : "driver",
+    "time" : {
+      "start" : 1732242542387,
+      "stop" : 1732242542679,
+      "duration" : 292
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "clear_allure_results_folder",
+    "time" : {
+      "start" : 1732242270660,
+      "stop" : 1732242270660,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Проверка кликабельности кнопки 'ВЫБРАТЬ ДИЛЕРА' на главной странице",
+      "time" : {
+        "start" : 1732242545827,
+        "stop" : 1732242545856,
+        "duration" : 29
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Проверка кликабельности кнопки 'ВЫБРАТЬ ДИЛЕРА' на главной странице",
+      "time" : {
+        "start" : 1732242545868,
+        "stop" : 1732242545884,
+        "duration" : 16
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Ввести имя дилера в поисковой строке",
+      "time" : {
+        "start" : 1732242545951,
+        "stop" : 1732242546373,
+        "duration" : 422
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "name",
+        "value" : "'ПИТЕР'"
+      } ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "Получить список дилеров",
+      "time" : {
+        "start" : 1732242546373,
+        "stop" : 1732242548417,
+        "duration" : 2044
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 4,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "driver::0",
+    "time" : {
+      "start" : 1732242548418,
+      "stop" : 1732242548484,
+      "duration" : 66
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "epic",
+    "value" : "Тестирование главной страницы"
+  }, {
+    "name" : "tag",
+    "value" : "smoke_test"
+  }, {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "main_page_test"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestMainPageSmoke"
+  }, {
+    "name" : "host",
+    "value" : "fv-az1543-933"
+  }, {
+    "name" : "thread",
+    "value" : "2241-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.main_page_test"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 9,
+        "broken" : 3,
+        "skipped" : 0,
+        "passed" : 15,
+        "unknown" : 0,
+        "total" : 27
+      },
+      "items" : [ {
+        "uid" : "a511df411f4f7ee",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/183//#testresult/a511df411f4f7ee",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: ПИТЕР не найден в ['АВ АВТО', '68 АВТО', 'ААА АВТОРУСЬ ПОДОЛЬСК', 'ААА АВТОРУСЬ ПОДОЛЬСК (МЫТИЩИ)', 'АБАКАН АВТОГАЗ', 'АБРЕРА МОТОР', 'АВАЛОН', 'АВАЛОН(СТ.ОСКОЛ)', 'АВАН-МОТОРС', 'АВАНГАРД', 'АВАНТА-КВ', 'АВАНТАЙМ', 'АВД ГРУП', 'АВЕНСИС', 'АВЕНСИС', 'АВЕНСИС (ПР-ЗД БАЗОВЫЙ)', 'АВЕНСИС (УЛ.ИЮЛЬСКИХ ДНЕЙ)', 'АВЕС-К', 'АВИААГРЕГАТ', 'АВК-САМАРА', 'АВК-САМАРА (УЛ.МИРНАЯ)', 'АВТ-ФИНАНС (БОГАТЫРСКИЙ)', 'АВТ-ФИНАНС (ТОЛЬЯТТИ)', 'АВТ-ФИНАНС (ЦВЕТОЧНАЯ)', 'АВТО']\nassert {False} == {True}\n  \n  Extra items in the left set:\n  False\n  Extra items in the right set:\n  True\n  \n  Full diff:\n    {\n  -     True,\n  +     False,\n    }",
+        "time" : {
+          "start" : 1732156055032,
+          "stop" : 1732156057470,
+          "duration" : 2438
+        }
+      }, {
+        "uid" : "ff52e2435b4c4d64",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/182//#testresult/ff52e2435b4c4d64",
+        "status" : "passed",
+        "time" : {
+          "start" : 1732069745302,
+          "stop" : 1732069747924,
+          "duration" : 2622
+        }
+      }, {
+        "uid" : "58d093a7bf9e077b",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/181//#testresult/58d093a7bf9e077b",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: ПИТЕР не найден в ['АВ АВТО', '68 АВТО', 'ААА АВТОРУСЬ ПОДОЛЬСК', 'ААА АВТОРУСЬ ПОДОЛЬСК (МЫТИЩИ)', 'АБАКАН АВТОГАЗ', 'АБРЕРА МОТОР', 'АВАЛОН', 'АВАЛОН(СТ.ОСКОЛ)', 'АВАН-МОТОРС', 'АВАНГАРД', 'АВАНТА-КВ', 'АВАНТАЙМ', 'АВД ГРУП', 'АВЕНСИС', 'АВЕНСИС', 'АВЕНСИС (ПР-ЗД БАЗОВЫЙ)', 'АВЕНСИС (УЛ.ИЮЛЬСКИХ ДНЕЙ)', 'АВЕС-К', 'АВИААГРЕГАТ', 'АВК-САМАРА', 'АВК-САМАРА (УЛ.МИРНАЯ)', 'АВТ-ФИНАНС (БОГАТЫРСКИЙ)', 'АВТ-ФИНАНС (ТОЛЬЯТТИ)', 'АВТ-ФИНАНС (ЦВЕТОЧНАЯ)', 'АВТО']\nassert {False} == {True}\n  \n  Extra items in the left set:\n  False\n  Extra items in the right set:\n  True\n  \n  Full diff:\n    {\n  -     True,\n  +     False,\n    }",
+        "time" : {
+          "start" : 1731983355827,
+          "stop" : 1731983358374,
+          "duration" : 2547
+        }
+      }, {
+        "uid" : "cd0ae6c87992bc8",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/180//#testresult/cd0ae6c87992bc8",
+        "status" : "passed",
+        "time" : {
+          "start" : 1731897066639,
+          "stop" : 1731897069192,
+          "duration" : 2553
+        }
+      }, {
+        "uid" : "f25f8439f648ffdb",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/179//#testresult/f25f8439f648ffdb",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: ПИТЕР не найден в ['АВ АВТО', '68 АВТО', 'ААА АВТОРУСЬ ПОДОЛЬСК', 'ААА АВТОРУСЬ ПОДОЛЬСК (МЫТИЩИ)', 'АБАКАН АВТОГАЗ', 'АБРЕРА МОТОР', 'АВАЛОН', 'АВАЛОН(СТ.ОСКОЛ)', 'АВАН-МОТОРС', 'АВАНГАРД', 'АВАНТА-КВ', 'АВАНТАЙМ', 'АВД ГРУП', 'АВЕНСИС', 'АВЕНСИС', 'АВЕНСИС (ПР-ЗД БАЗОВЫЙ)', 'АВЕНСИС (УЛ.ИЮЛЬСКИХ ДНЕЙ)', 'АВЕС-К', 'АВИААГРЕГАТ', 'АВК-САМАРА', 'АВК-САМАРА (УЛ.МИРНАЯ)', 'АВТ-ФИНАНС (БОГАТЫРСКИЙ)', 'АВТ-ФИНАНС (ТОЛЬЯТТИ)', 'АВТ-ФИНАНС (ЦВЕТОЧНАЯ)', 'АВТО']\nassert {False} == {True}\n  \n  Extra items in the left set:\n  False\n  Extra items in the right set:\n  True\n  \n  Full diff:\n    {\n  -     True,\n  +     False,\n    }",
+        "time" : {
+          "start" : 1731811103219,
+          "stop" : 1731811105658,
+          "duration" : 2439
+        }
+      }, {
+        "uid" : "d9a29c6b8bc62e41",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/178//#testresult/d9a29c6b8bc62e41",
+        "status" : "passed",
+        "time" : {
+          "start" : 1731724023213,
+          "stop" : 1731724025810,
+          "duration" : 2597
+        }
+      }, {
+        "uid" : "d732ce182124d401",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/177//#testresult/d732ce182124d401",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: ПИТЕР не найден в ['АВ АВТО', '68 АВТО', 'ААА АВТОРУСЬ ПОДОЛЬСК', 'ААА АВТОРУСЬ ПОДОЛЬСК (МЫТИЩИ)', 'АБАКАН АВТОГАЗ', 'АБРЕРА МОТОР', 'АВАЛОН', 'АВАЛОН(СТ.ОСКОЛ)', 'АВАН-МОТОРС', 'АВАНГАРД', 'АВАНТА-КВ', 'АВАНТАЙМ', 'АВД ГРУП', 'АВЕНСИС', 'АВЕНСИС', 'АВЕНСИС (ПР-ЗД БАЗОВЫЙ)', 'АВЕНСИС (УЛ.ИЮЛЬСКИХ ДНЕЙ)', 'АВЕС-К', 'АВИААГРЕГАТ', 'АВК-САМАРА', 'АВК-САМАРА (УЛ.МИРНАЯ)', 'АВТ-ФИНАНС (БОГАТЫРСКИЙ)', 'АВТ-ФИНАНС (ТОЛЬЯТТИ)', 'АВТ-ФИНАНС (ЦВЕТОЧНАЯ)', 'АВТО']\nassert {False} == {True}\n  \n  Extra items in the left set:\n  False\n  Extra items in the right set:\n  True\n  \n  Full diff:\n    {\n  -     True,\n  +     False,\n    }",
+        "time" : {
+          "start" : 1731637732263,
+          "stop" : 1731637734731,
+          "duration" : 2468
+        }
+      }, {
+        "uid" : "190faf389ad7e4f0",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/176//#testresult/190faf389ad7e4f0",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: ПИТЕР не найден в ['АВ АВТО', '68 АВТО', 'ААА АВТОРУСЬ ПОДОЛЬСК', 'ААА АВТОРУСЬ ПОДОЛЬСК (МЫТИЩИ)', 'АБАКАН АВТОГАЗ', 'АБРЕРА МОТОР', 'АВАЛОН', 'АВАЛОН(СТ.ОСКОЛ)', 'АВАН-МОТОРС', 'АВАНГАРД', 'АВАНТА-КВ', 'АВАНТАЙМ', 'АВД ГРУП', 'АВЕНСИС', 'АВЕНСИС', 'АВЕНСИС (ПР-ЗД БАЗОВЫЙ)', 'АВЕНСИС (УЛ.ИЮЛЬСКИХ ДНЕЙ)', 'АВЕС-К', 'АВИААГРЕГАТ', 'АВК-САМАРА', 'АВК-САМАРА (УЛ.МИРНАЯ)', 'АВТ-ФИНАНС (БОГАТЫРСКИЙ)', 'АВТ-ФИНАНС (ТОЛЬЯТТИ)', 'АВТ-ФИНАНС (ЦВЕТОЧНАЯ)', 'АВТО']\nassert {False} == {True}\n  \n  Extra items in the left set:\n  False\n  Extra items in the right set:\n  True\n  \n  Full diff:\n    {\n  -     True,\n  +     False,\n    }",
+        "time" : {
+          "start" : 1731550940595,
+          "stop" : 1731550943052,
+          "duration" : 2457
+        }
+      }, {
+        "uid" : "226c059e75e58c17",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/175//#testresult/226c059e75e58c17",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: ПИТЕР не найден в ['АВ АВТО', '68 АВТО', 'ААА АВТОРУСЬ ПОДОЛЬСК', 'ААА АВТОРУСЬ ПОДОЛЬСК (МЫТИЩИ)', 'АБАКАН АВТОГАЗ', 'АБРЕРА МОТОР', 'АВАЛОН', 'АВАЛОН(СТ.ОСКОЛ)', 'АВАН-МОТОРС', 'АВАНГАРД', 'АВАНТА-КВ', 'АВАНТАЙМ', 'АВД ГРУП', 'АВЕНСИС', 'АВЕНСИС', 'АВЕНСИС (ПР-ЗД БАЗОВЫЙ)', 'АВЕНСИС (УЛ.ИЮЛЬСКИХ ДНЕЙ)', 'АВЕС-К', 'АВИААГРЕГАТ', 'АВК-САМАРА', 'АВК-САМАРА (УЛ.МИРНАЯ)', 'АВТ-ФИНАНС (БОГАТЫРСКИЙ)', 'АВТ-ФИНАНС (ТОЛЬЯТТИ)', 'АВТ-ФИНАНС (ЦВЕТОЧНАЯ)', 'АВТО']\nassert {False} == {True}\n  \n  Extra items in the left set:\n  False\n  Extra items in the right set:\n  True\n  \n  Full diff:\n    {\n  -     True,\n  +     False,\n    }",
+        "time" : {
+          "start" : 1731464559255,
+          "stop" : 1731464561710,
+          "duration" : 2455
+        }
+      }, {
+        "uid" : "88f96dc99e23a0fc",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/13//#testresult/88f96dc99e23a0fc",
+        "status" : "passed",
+        "time" : {
+          "start" : 1731413708342,
+          "stop" : 1731413710680,
+          "duration" : 2338
+        }
+      }, {
+        "uid" : "cc119907992cb1e2",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/13//#testresult/cc119907992cb1e2",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: ПИТЕР не найден в ['АВ АВТО', '68 АВТО', 'ААА АВТОРУСЬ ПОДОЛЬСК', 'ААА АВТОРУСЬ ПОДОЛЬСК (МЫТИЩИ)', 'АБАКАН АВТОГАЗ', 'АБРЕРА МОТОР', 'АВАЛОН', 'АВАЛОН(СТ.ОСКОЛ)', 'АВАН-МОТОРС', 'АВАНГАРД', 'АВАНТА-КВ', 'АВАНТАЙМ', 'АВД ГРУП', 'АВЕНСИС', 'АВЕНСИС', 'АВЕНСИС (ПР-ЗД БАЗОВЫЙ)', 'АВЕНСИС (УЛ.ИЮЛЬСКИХ ДНЕЙ)', 'АВЕС-К', 'АВИААГРЕГАТ', 'АВК-САМАРА', 'АВК-САМАРА (УЛ.МИРНАЯ)', 'АВТ-ФИНАНС (БОГАТЫРСКИЙ)', 'АВТ-ФИНАНС (ТОЛЬЯТТИ)', 'АВТ-ФИНАНС (ЦВЕТОЧНАЯ)', 'АВТО']\nassert {False} == {True}\n  \n  Extra items in the left set:\n  False\n  Extra items in the right set:\n  True\n  \n  Full diff:\n    {\n  -     True,\n  +     False,\n    }",
+        "time" : {
+          "start" : 1731412895843,
+          "stop" : 1731412898173,
+          "duration" : 2330
+        }
+      }, {
+        "uid" : "c3b05c634cf30d6c",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/13//#testresult/c3b05c634cf30d6c",
+        "status" : "broken",
+        "statusDetails" : "selenium.common.exceptions.InvalidArgumentException: Message: invalid argument\n  (Session info: chrome=130.0.6723.91)\nStacktrace:\n#0 0x55993745513a <unknown>\n#1 0x559936f702bd <unknown>\n#2 0x559936f5816f <unknown>\n#3 0x559936f567c8 <unknown>\n#4 0x559936f56eba <unknown>\n#5 0x559936f72d59 <unknown>\n#6 0x559937000645 <unknown>\n#7 0x559936fe1012 <unknown>\n#8 0x559936fffaf6 <unknown>\n#9 0x559936fe0db3 <unknown>\n#10 0x559936fafc10 <unknown>\n#11 0x559936fb0bee <unknown>\n#12 0x5599374213cb <unknown>\n#13 0x559937425368 <unknown>\n#14 0x55993740eeec <unknown>\n#15 0x559937425ee7 <unknown>\n#16 0x5599373f413f <unknown>\n#17 0x559937443858 <unknown>\n#18 0x559937443a20 <unknown>\n#19 0x559937453fb6 <unknown>\n#20 0x7f4f37294ac3 <unknown>",
+        "time" : {
+          "start" : 1731412153204,
+          "stop" : 1731412153204,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "dd758e0d8a7f223e",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/13//#testresult/dd758e0d8a7f223e",
+        "status" : "broken",
+        "statusDetails" : "selenium.common.exceptions.InvalidArgumentException: Message: invalid argument\n  (Session info: chrome=130.0.6723.91)\nStacktrace:\n#0 0x556eb8bd413a <unknown>\n#1 0x556eb86ef2bd <unknown>\n#2 0x556eb86d716f <unknown>\n#3 0x556eb86d57c8 <unknown>\n#4 0x556eb86d5eba <unknown>\n#5 0x556eb86f1d59 <unknown>\n#6 0x556eb877f645 <unknown>\n#7 0x556eb8760012 <unknown>\n#8 0x556eb877eaf6 <unknown>\n#9 0x556eb875fdb3 <unknown>\n#10 0x556eb872ec10 <unknown>\n#11 0x556eb872fbee <unknown>\n#12 0x556eb8ba03cb <unknown>\n#13 0x556eb8ba4368 <unknown>\n#14 0x556eb8b8deec <unknown>\n#15 0x556eb8ba4ee7 <unknown>\n#16 0x556eb8b7313f <unknown>\n#17 0x556eb8bc2858 <unknown>\n#18 0x556eb8bc2a20 <unknown>\n#19 0x556eb8bd2fb6 <unknown>\n#20 0x7f9855c94ac3 <unknown>",
+        "time" : {
+          "start" : 1731411759747,
+          "stop" : 1731411759747,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "b4f12af0340eff6",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/13//#testresult/b4f12af0340eff6",
+        "status" : "broken",
+        "statusDetails" : "selenium.common.exceptions.InvalidArgumentException: Message: invalid argument\n  (Session info: chrome=130.0.6723.91)\nStacktrace:\n#0 0x55f9603e213a <unknown>\n#1 0x55f95fefd2bd <unknown>\n#2 0x55f95fee516f <unknown>\n#3 0x55f95fee37c8 <unknown>\n#4 0x55f95fee3eba <unknown>\n#5 0x55f95feffd59 <unknown>\n#6 0x55f95ff8d645 <unknown>\n#7 0x55f95ff6e012 <unknown>\n#8 0x55f95ff8caf6 <unknown>\n#9 0x55f95ff6ddb3 <unknown>\n#10 0x55f95ff3cc10 <unknown>\n#11 0x55f95ff3dbee <unknown>\n#12 0x55f9603ae3cb <unknown>\n#13 0x55f9603b2368 <unknown>\n#14 0x55f96039beec <unknown>\n#15 0x55f9603b2ee7 <unknown>\n#16 0x55f96038113f <unknown>\n#17 0x55f9603d0858 <unknown>\n#18 0x55f9603d0a20 <unknown>\n#19 0x55f9603e0fb6 <unknown>\n#20 0x7fab0d094ac3 <unknown>",
+        "time" : {
+          "start" : 1731410917196,
+          "stop" : 1731410917196,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "f9758a25dd2ed484",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/174//#testresult/f9758a25dd2ed484",
+        "status" : "passed",
+        "time" : {
+          "start" : 1731377985239,
+          "stop" : 1731377987562,
+          "duration" : 2323
+        }
+      }, {
+        "uid" : "abcd4732ab784a95",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/173//#testresult/abcd4732ab784a95",
+        "status" : "passed",
+        "time" : {
+          "start" : 1731291751913,
+          "stop" : 1731291754345,
+          "duration" : 2432
+        }
+      }, {
+        "uid" : "507c9cd348c05219",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/172//#testresult/507c9cd348c05219",
+        "status" : "passed",
+        "time" : {
+          "start" : 1731205504010,
+          "stop" : 1731205506555,
+          "duration" : 2545
+        }
+      }, {
+        "uid" : "a8a8fbda1c1b467f",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/171//#testresult/a8a8fbda1c1b467f",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: ПИТЕР не найден в ['ААА АВТОРУСЬ ПОДОЛЬСК', 'ААА АВТОРУСЬ ПОДОЛЬСК (МЫТИЩИ)', 'АБРЕРА МОТОР', 'АВАН-МОТОРС', 'АВАНГАРД', 'АВД ГРУП', 'АВЕНСИС (ПР-ЗД БАЗОВЫЙ)', 'АВИААГРЕГАТ', 'АВК-САМАРА', 'АВК-САМАРА (УЛ.МИРНАЯ)', 'АВТ-ФИНАНС (БОГАТЫРСКИЙ)', 'АВТО БИЗНЕС ГРУП', 'АВТО БИЗНЕС ГРУП(УЛ. ШЕВЧЕНКО)', 'АВТО ГРАД КЕМЕРОВО', 'АВТО ГРАД НОВОКУЗНЕЦК', 'АВТО ГРАНД', 'АВТО КЕЙ-ТРЕЙД (Ш ЭНТУЗИАСТОВ)', 'АВТО КЕЙ-ТРЕЙД (КОТЛЯКОВСКИЙ ПЕР) ФИЛИАЛ', 'АВТО МИР', 'АВТО МИР (САЛАВАТ)', 'АВТО МИР (ЭЛИСТА)', 'АВТО МОТОРС КОМПАНИ', 'АВТО СЕЙЛ(РАССВЕТ)', 'АВТО ЦЕНТР (БУДЕННОВСК)', 'АВТО-1 (НАБЕРЕЖНЫЕ ЧЕЛНЫ)']\nassert {False} == {True}\n  \n  Extra items in the left set:\n  False\n  Extra items in the right set:\n  True\n  \n  Full diff:\n    {\n  -     True,\n  +     False,\n    }",
+        "time" : {
+          "start" : 1731118609907,
+          "stop" : 1731118612334,
+          "duration" : 2427
+        }
+      }, {
+        "uid" : "a8979068f518388a",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/170//#testresult/a8979068f518388a",
+        "status" : "passed",
+        "time" : {
+          "start" : 1731032500757,
+          "stop" : 1731032503081,
+          "duration" : 2324
+        }
+      }, {
+        "uid" : "e83cede0a78230b1",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/169//#testresult/e83cede0a78230b1",
+        "status" : "passed",
+        "time" : {
+          "start" : 1730946074480,
+          "stop" : 1730946077090,
+          "duration" : 2610
+        }
+      } ]
+    },
+    "tags" : [ "smoke_test" ]
+  },
+  "source" : "6b1b79e284088253.json",
+  "parameterValues" : [ ]
+}
