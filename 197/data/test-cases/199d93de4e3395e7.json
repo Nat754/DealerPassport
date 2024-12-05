@@ -1,0 +1,366 @@
+{
+  "uid" : "199d93de4e3395e7",
+  "name" : "Проверить отсутствие ошибок при открытии https://dealer-passport.vaz.ru/logs/email",
+  "fullName" : "tests.main_page_test.TestMainPageSmoke#test_open_url",
+  "historyId" : "571a1c2947b2ec08d2b4fc98b02098fc",
+  "time" : {
+    "start" : 1733366278375,
+    "stop" : 1733366343828,
+    "duration" : 65453
+  },
+  "status" : "broken",
+  "statusMessage" : "selenium.common.exceptions.WebDriverException: Message: unknown error: session deleted because of page crash\nfrom unknown error: cannot determine loading status\nfrom tab crashed\n  (Session info: chrome=131.0.6778.85)\nStacktrace:\n#0 0x55f16f5d731a <unknown>\n#1 0x55f16f0ed53d <unknown>\n#2 0x55f16f0d6e44 <unknown>\n#3 0x55f16f0d602e <unknown>\n#4 0x55f16f0d57af <unknown>\n#5 0x55f16f0d56a2 <unknown>\n#6 0x55f16f0d36c6 <unknown>\n#7 0x55f16f0d3eaf <unknown>\n#8 0x55f16f0e3747 <unknown>\n#9 0x55f16f0fa564 <unknown>\n#10 0x55f16f1003eb <unknown>\n#11 0x55f16f0d45b7 <unknown>\n#12 0x55f16f0fa0c1 <unknown>\n#13 0x55f16f17eda7 <unknown>\n#14 0x55f16f160203 <unknown>\n#15 0x55f16f12ecc0 <unknown>\n#16 0x55f16f12fc9e <unknown>\n#17 0x55f16f5a4d0b <unknown>\n#18 0x55f16f5a8c92 <unknown>\n#19 0x55f16f591b3c <unknown>\n#20 0x55f16f5a9807 <unknown>\n#21 0x55f16f5770df <unknown>\n#22 0x55f16f5c6578 <unknown>\n#23 0x55f16f5c6740 <unknown>\n#24 0x55f16f5d6196 <unknown>\n#25 0x7f0340294ac3 <unknown>",
+  "statusTrace" : "self = <tests.main_page_test.TestMainPageSmoke object at 0x7fd168999130>\nauth_user_admin = <pages.main_page.MainPage object at 0x7fd1689be210>\ndriver = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"b18c34906f8fbd6b575ba14d3093fe2d\")>\nurl = 'https://dealer-passport.vaz.ru/logs/email'\n\n    @pytest.mark.parametrize('url', Urls.LIST_URLS)\n    def test_open_url(self, auth_user_admin, driver, url):\n        allure.dynamic.title(f'Проверить отсутствие ошибок при открытии {url}')\n        driver.get(url)\n>       assert auth_user_admin.check_not_errors(), \\\n            f'Ошибка: {[item.text for item in auth_user_admin.check_error_notifications()]}'\n\ntests/main_page_test.py:22: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \npages/main_page.py:27: in check_not_errors\n    return self.elements_are_not_visible(self.locator.NOTIFICATIONS)\npages/base_page.py:61: in elements_are_not_visible\n    self.elements_are_visible(locator)\npages/base_page.py:27: in elements_are_visible\n    return Wait(self.driver, self.timeout).until(ec.visibility_of_all_elements_located(locator))\n/opt/hostedtoolcache/Python/3.12.7/x64/lib/python3.12/site-packages/selenium/webdriver/support/wait.py:96: in until\n    value = method(self._driver)\n/opt/hostedtoolcache/Python/3.12.7/x64/lib/python3.12/site-packages/selenium/webdriver/support/expected_conditions.py:223: in _predicate\n    elements = driver.find_elements(*locator)\n/opt/hostedtoolcache/Python/3.12.7/x64/lib/python3.12/site-packages/selenium/webdriver/remote/webdriver.py:771: in find_elements\n    return self.execute(Command.FIND_ELEMENTS, {\"using\": by, \"value\": value})[\"value\"] or []\n/opt/hostedtoolcache/Python/3.12.7/x64/lib/python3.12/site-packages/selenium/webdriver/remote/webdriver.py:347: in execute\n    self.error_handler.check_response(response)\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <selenium.webdriver.remote.errorhandler.ErrorHandler object at 0x7fd1689bc710>\nresponse = {'status': 500, 'value': '{\"value\":{\"error\":\"unknown error\",\"message\":\"unknown error: session deleted because of page ...\\\\n#23 0x55f16f5c6740 \\\\u003Cunknown>\\\\n#24 0x55f16f5d6196 \\\\u003Cunknown>\\\\n#25 0x7f0340294ac3 \\\\u003Cunknown>\\\\n\"}}'}\n\n    def check_response(self, response: Dict[str, Any]) -> None:\n        \"\"\"Checks that a JSON response from the WebDriver does not have an\n        error.\n    \n        :Args:\n         - response - The JSON response from the WebDriver server as a dictionary\n           object.\n    \n        :Raises: If the response contains an error message.\n        \"\"\"\n        status = response.get(\"status\", None)\n        if not status or status == ErrorCode.SUCCESS:\n            return\n        value = None\n        message = response.get(\"message\", \"\")\n        screen: str = response.get(\"screen\", \"\")\n        stacktrace = None\n        if isinstance(status, int):\n            value_json = response.get(\"value\", None)\n            if value_json and isinstance(value_json, str):\n                import json\n    \n                try:\n                    value = json.loads(value_json)\n                    if len(value) == 1:\n                        value = value[\"value\"]\n                    status = value.get(\"error\", None)\n                    if not status:\n                        status = value.get(\"status\", ErrorCode.UNKNOWN_ERROR)\n                        message = value.get(\"value\") or value.get(\"message\")\n                        if not isinstance(message, str):\n                            value = message\n                            message = message.get(\"message\")\n                    else:\n                        message = value.get(\"message\", None)\n                except ValueError:\n                    pass\n    \n        exception_class: Type[WebDriverException]\n        e = ErrorCode()\n        error_codes = [item for item in dir(e) if not item.startswith(\"__\")]\n        for error_code in error_codes:\n            error_info = getattr(ErrorCode, error_code)\n            if isinstance(error_info, list) and status in error_info:\n                exception_class = getattr(ExceptionMapping, error_code, WebDriverException)\n                break\n        else:\n            exception_class = WebDriverException\n    \n        if not value:\n            value = response[\"value\"]\n        if isinstance(value, str):\n            raise exception_class(value)\n        if message == \"\" and \"message\" in value:\n            message = value[\"message\"]\n    \n        screen = None  # type: ignore[assignment]\n        if \"screen\" in value:\n            screen = value[\"screen\"]\n    \n        stacktrace = None\n        st_value = value.get(\"stackTrace\") or value.get(\"stacktrace\")\n        if st_value:\n            if isinstance(st_value, str):\n                stacktrace = st_value.split(\"\\n\")\n            else:\n                stacktrace = []\n                try:\n                    for frame in st_value:\n                        line = frame.get(\"lineNumber\", \"\")\n                        file = frame.get(\"fileName\", \"<anonymous>\")\n                        if line:\n                            file = f\"{file}:{line}\"\n                        meth = frame.get(\"methodName\", \"<anonymous>\")\n                        if \"className\" in frame:\n                            meth = f\"{frame['className']}.{meth}\"\n                        msg = \"    at %s (%s)\"\n                        msg = msg % (meth, file)\n                        stacktrace.append(msg)\n                except TypeError:\n                    pass\n        if exception_class == UnexpectedAlertPresentException:\n            alert_text = None\n            if \"data\" in value:\n                alert_text = value[\"data\"].get(\"text\")\n            elif \"alert\" in value:\n                alert_text = value[\"alert\"].get(\"text\")\n            raise exception_class(message, screen, stacktrace, alert_text)  # type: ignore[call-arg]  # mypy is not smart enough here\n>       raise exception_class(message, screen, stacktrace)\nE       selenium.common.exceptions.WebDriverException: Message: unknown error: session deleted because of page crash\nE       from unknown error: cannot determine loading status\nE       from tab crashed\nE         (Session info: chrome=131.0.6778.85)\nE       Stacktrace:\nE       #0 0x55f16f5d731a <unknown>\nE       #1 0x55f16f0ed53d <unknown>\nE       #2 0x55f16f0d6e44 <unknown>\nE       #3 0x55f16f0d602e <unknown>\nE       #4 0x55f16f0d57af <unknown>\nE       #5 0x55f16f0d56a2 <unknown>\nE       #6 0x55f16f0d36c6 <unknown>\nE       #7 0x55f16f0d3eaf <unknown>\nE       #8 0x55f16f0e3747 <unknown>\nE       #9 0x55f16f0fa564 <unknown>\nE       #10 0x55f16f1003eb <unknown>\nE       #11 0x55f16f0d45b7 <unknown>\nE       #12 0x55f16f0fa0c1 <unknown>\nE       #13 0x55f16f17eda7 <unknown>\nE       #14 0x55f16f160203 <unknown>\nE       #15 0x55f16f12ecc0 <unknown>\nE       #16 0x55f16f12fc9e <unknown>\nE       #17 0x55f16f5a4d0b <unknown>\nE       #18 0x55f16f5a8c92 <unknown>\nE       #19 0x55f16f591b3c <unknown>\nE       #20 0x55f16f5a9807 <unknown>\nE       #21 0x55f16f5770df <unknown>\nE       #22 0x55f16f5c6578 <unknown>\nE       #23 0x55f16f5c6740 <unknown>\nE       #24 0x55f16f5d6196 <unknown>\nE       #25 0x7f0340294ac3 <unknown>\n\n/opt/hostedtoolcache/Python/3.12.7/x64/lib/python3.12/site-packages/selenium/webdriver/remote/errorhandler.py:229: WebDriverException",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "auth_user_admin",
+    "time" : {
+      "start" : 1733366274330,
+      "stop" : 1733366278374,
+      "duration" : 4044
+    },
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Проверка видимости кнопки '('xpath', '//span[text()=\"Согласен\"]')' на главной странице",
+      "time" : {
+        "start" : 1733366277740,
+        "stop" : 1733366278307,
+        "duration" : 567
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 1,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  }, {
+    "name" : "clear_allure_results_folder",
+    "time" : {
+      "start" : 1733366186838,
+      "stop" : 1733366186838,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "driver",
+    "time" : {
+      "start" : 1733366274040,
+      "stop" : 1733366274330,
+      "duration" : 290
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "status" : "broken",
+    "statusMessage" : "selenium.common.exceptions.WebDriverException: Message: unknown error: session deleted because of page crash\nfrom unknown error: cannot determine loading status\nfrom tab crashed\n  (Session info: chrome=131.0.6778.85)\nStacktrace:\n#0 0x55f16f5d731a <unknown>\n#1 0x55f16f0ed53d <unknown>\n#2 0x55f16f0d6e44 <unknown>\n#3 0x55f16f0d602e <unknown>\n#4 0x55f16f0d57af <unknown>\n#5 0x55f16f0d56a2 <unknown>\n#6 0x55f16f0d36c6 <unknown>\n#7 0x55f16f0d3eaf <unknown>\n#8 0x55f16f0e3747 <unknown>\n#9 0x55f16f0fa564 <unknown>\n#10 0x55f16f1003eb <unknown>\n#11 0x55f16f0d45b7 <unknown>\n#12 0x55f16f0fa0c1 <unknown>\n#13 0x55f16f17eda7 <unknown>\n#14 0x55f16f160203 <unknown>\n#15 0x55f16f12ecc0 <unknown>\n#16 0x55f16f12fc9e <unknown>\n#17 0x55f16f5a4d0b <unknown>\n#18 0x55f16f5a8c92 <unknown>\n#19 0x55f16f591b3c <unknown>\n#20 0x55f16f5a9807 <unknown>\n#21 0x55f16f5770df <unknown>\n#22 0x55f16f5c6578 <unknown>\n#23 0x55f16f5c6740 <unknown>\n#24 0x55f16f5d6196 <unknown>\n#25 0x7f0340294ac3 <unknown>",
+    "statusTrace" : "self = <tests.main_page_test.TestMainPageSmoke object at 0x7fd168999130>\nauth_user_admin = <pages.main_page.MainPage object at 0x7fd1689be210>\ndriver = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"b18c34906f8fbd6b575ba14d3093fe2d\")>\nurl = 'https://dealer-passport.vaz.ru/logs/email'\n\n    @pytest.mark.parametrize('url', Urls.LIST_URLS)\n    def test_open_url(self, auth_user_admin, driver, url):\n        allure.dynamic.title(f'Проверить отсутствие ошибок при открытии {url}')\n        driver.get(url)\n>       assert auth_user_admin.check_not_errors(), \\\n            f'Ошибка: {[item.text for item in auth_user_admin.check_error_notifications()]}'\n\ntests/main_page_test.py:22: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \npages/main_page.py:27: in check_not_errors\n    return self.elements_are_not_visible(self.locator.NOTIFICATIONS)\npages/base_page.py:61: in elements_are_not_visible\n    self.elements_are_visible(locator)\npages/base_page.py:27: in elements_are_visible\n    return Wait(self.driver, self.timeout).until(ec.visibility_of_all_elements_located(locator))\n/opt/hostedtoolcache/Python/3.12.7/x64/lib/python3.12/site-packages/selenium/webdriver/support/wait.py:96: in until\n    value = method(self._driver)\n/opt/hostedtoolcache/Python/3.12.7/x64/lib/python3.12/site-packages/selenium/webdriver/support/expected_conditions.py:223: in _predicate\n    elements = driver.find_elements(*locator)\n/opt/hostedtoolcache/Python/3.12.7/x64/lib/python3.12/site-packages/selenium/webdriver/remote/webdriver.py:771: in find_elements\n    return self.execute(Command.FIND_ELEMENTS, {\"using\": by, \"value\": value})[\"value\"] or []\n/opt/hostedtoolcache/Python/3.12.7/x64/lib/python3.12/site-packages/selenium/webdriver/remote/webdriver.py:347: in execute\n    self.error_handler.check_response(response)\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <selenium.webdriver.remote.errorhandler.ErrorHandler object at 0x7fd1689bc710>\nresponse = {'status': 500, 'value': '{\"value\":{\"error\":\"unknown error\",\"message\":\"unknown error: session deleted because of page ...\\\\n#23 0x55f16f5c6740 \\\\u003Cunknown>\\\\n#24 0x55f16f5d6196 \\\\u003Cunknown>\\\\n#25 0x7f0340294ac3 \\\\u003Cunknown>\\\\n\"}}'}\n\n    def check_response(self, response: Dict[str, Any]) -> None:\n        \"\"\"Checks that a JSON response from the WebDriver does not have an\n        error.\n    \n        :Args:\n         - response - The JSON response from the WebDriver server as a dictionary\n           object.\n    \n        :Raises: If the response contains an error message.\n        \"\"\"\n        status = response.get(\"status\", None)\n        if not status or status == ErrorCode.SUCCESS:\n            return\n        value = None\n        message = response.get(\"message\", \"\")\n        screen: str = response.get(\"screen\", \"\")\n        stacktrace = None\n        if isinstance(status, int):\n            value_json = response.get(\"value\", None)\n            if value_json and isinstance(value_json, str):\n                import json\n    \n                try:\n                    value = json.loads(value_json)\n                    if len(value) == 1:\n                        value = value[\"value\"]\n                    status = value.get(\"error\", None)\n                    if not status:\n                        status = value.get(\"status\", ErrorCode.UNKNOWN_ERROR)\n                        message = value.get(\"value\") or value.get(\"message\")\n                        if not isinstance(message, str):\n                            value = message\n                            message = message.get(\"message\")\n                    else:\n                        message = value.get(\"message\", None)\n                except ValueError:\n                    pass\n    \n        exception_class: Type[WebDriverException]\n        e = ErrorCode()\n        error_codes = [item for item in dir(e) if not item.startswith(\"__\")]\n        for error_code in error_codes:\n            error_info = getattr(ErrorCode, error_code)\n            if isinstance(error_info, list) and status in error_info:\n                exception_class = getattr(ExceptionMapping, error_code, WebDriverException)\n                break\n        else:\n            exception_class = WebDriverException\n    \n        if not value:\n            value = response[\"value\"]\n        if isinstance(value, str):\n            raise exception_class(value)\n        if message == \"\" and \"message\" in value:\n            message = value[\"message\"]\n    \n        screen = None  # type: ignore[assignment]\n        if \"screen\" in value:\n            screen = value[\"screen\"]\n    \n        stacktrace = None\n        st_value = value.get(\"stackTrace\") or value.get(\"stacktrace\")\n        if st_value:\n            if isinstance(st_value, str):\n                stacktrace = st_value.split(\"\\n\")\n            else:\n                stacktrace = []\n                try:\n                    for frame in st_value:\n                        line = frame.get(\"lineNumber\", \"\")\n                        file = frame.get(\"fileName\", \"<anonymous>\")\n                        if line:\n                            file = f\"{file}:{line}\"\n                        meth = frame.get(\"methodName\", \"<anonymous>\")\n                        if \"className\" in frame:\n                            meth = f\"{frame['className']}.{meth}\"\n                        msg = \"    at %s (%s)\"\n                        msg = msg % (meth, file)\n                        stacktrace.append(msg)\n                except TypeError:\n                    pass\n        if exception_class == UnexpectedAlertPresentException:\n            alert_text = None\n            if \"data\" in value:\n                alert_text = value[\"data\"].get(\"text\")\n            elif \"alert\" in value:\n                alert_text = value[\"alert\"].get(\"text\")\n            raise exception_class(message, screen, stacktrace, alert_text)  # type: ignore[call-arg]  # mypy is not smart enough here\n>       raise exception_class(message, screen, stacktrace)\nE       selenium.common.exceptions.WebDriverException: Message: unknown error: session deleted because of page crash\nE       from unknown error: cannot determine loading status\nE       from tab crashed\nE         (Session info: chrome=131.0.6778.85)\nE       Stacktrace:\nE       #0 0x55f16f5d731a <unknown>\nE       #1 0x55f16f0ed53d <unknown>\nE       #2 0x55f16f0d6e44 <unknown>\nE       #3 0x55f16f0d602e <unknown>\nE       #4 0x55f16f0d57af <unknown>\nE       #5 0x55f16f0d56a2 <unknown>\nE       #6 0x55f16f0d36c6 <unknown>\nE       #7 0x55f16f0d3eaf <unknown>\nE       #8 0x55f16f0e3747 <unknown>\nE       #9 0x55f16f0fa564 <unknown>\nE       #10 0x55f16f1003eb <unknown>\nE       #11 0x55f16f0d45b7 <unknown>\nE       #12 0x55f16f0fa0c1 <unknown>\nE       #13 0x55f16f17eda7 <unknown>\nE       #14 0x55f16f160203 <unknown>\nE       #15 0x55f16f12ecc0 <unknown>\nE       #16 0x55f16f12fc9e <unknown>\nE       #17 0x55f16f5a4d0b <unknown>\nE       #18 0x55f16f5a8c92 <unknown>\nE       #19 0x55f16f591b3c <unknown>\nE       #20 0x55f16f5a9807 <unknown>\nE       #21 0x55f16f5770df <unknown>\nE       #22 0x55f16f5c6578 <unknown>\nE       #23 0x55f16f5c6740 <unknown>\nE       #24 0x55f16f5d6196 <unknown>\nE       #25 0x7f0340294ac3 <unknown>\n\n/opt/hostedtoolcache/Python/3.12.7/x64/lib/python3.12/site-packages/selenium/webdriver/remote/errorhandler.py:229: WebDriverException",
+    "steps" : [ {
+      "name" : "Проверить отсутствие ошибок",
+      "time" : {
+        "start" : 1733366279047,
+        "stop" : 1733366343826,
+        "duration" : 64779
+      },
+      "status" : "broken",
+      "statusMessage" : "selenium.common.exceptions.WebDriverException: Message: unknown error: session deleted because of page crash\nfrom unknown error: cannot determine loading status\nfrom tab crashed\n  (Session info: chrome=131.0.6778.85)\nStacktrace:\n#0 0x55f16f5d731a <unknown>\n#1 0x55f16f0ed53d <unknown>\n#2 0x55f16f0d6e44 <unknown>\n#3 0x55f16f0d602e <unknown>\n#4 0x55f16f0d57af <unknown>\n#5 0x55f16f0d56a2 <unknown>\n#6 0x55f16f0d36c6 <unknown>\n#7 0x55f16f0d3eaf <unknown>\n#8 0x55f16f0e3747 <unknown>\n#9 0x55f16f0fa564 <unknown>\n#10 0x55f16f1003eb <unknown>\n#11 0x55f16f0d45b7 <unknown>\n#12 0x55f16f0fa0c1 <unknown>\n#13 0x55f16f17eda7 <unknown>\n#14 0x55f16f160203 <unknown>\n#15 0x55f16f12ecc0 <unknown>\n#16 0x55f16f12fc9e <unknown>\n#17 0x55f16f5a4d0b <unknown>\n#18 0x55f16f5a8c92 <unknown>\n#19 0x55f16f591b3c <unknown>\n#20 0x55f16f5a9807 <unknown>\n#21 0x55f16f5770df <unknown>\n#22 0x55f16f5c6578 <unknown>\n#23 0x55f16f5c6740 <unknown>\n#24 0x55f16f5d6196 <unknown>\n#25 0x7f0340294ac3 <unknown>\n\n",
+      "statusTrace" : "  File \"/opt/hostedtoolcache/Python/3.12.7/x64/lib/python3.12/site-packages/allure_commons/_allure.py\", line 192, in impl\n    return func(*a, **kw)\n           ^^^^^^^^^^^^^^\n  File \"/home/runner/work/DealerPassport/DealerPassport/pages/main_page.py\", line 27, in check_not_errors\n    return self.elements_are_not_visible(self.locator.NOTIFICATIONS)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/DealerPassport/DealerPassport/pages/base_page.py\", line 61, in elements_are_not_visible\n    self.elements_are_visible(locator)\n  File \"/home/runner/work/DealerPassport/DealerPassport/pages/base_page.py\", line 27, in elements_are_visible\n    return Wait(self.driver, self.timeout).until(ec.visibility_of_all_elements_located(locator))\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.7/x64/lib/python3.12/site-packages/selenium/webdriver/support/wait.py\", line 96, in until\n    value = method(self._driver)\n            ^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.7/x64/lib/python3.12/site-packages/selenium/webdriver/support/expected_conditions.py\", line 223, in _predicate\n    elements = driver.find_elements(*locator)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.7/x64/lib/python3.12/site-packages/selenium/webdriver/remote/webdriver.py\", line 771, in find_elements\n    return self.execute(Command.FIND_ELEMENTS, {\"using\": by, \"value\": value})[\"value\"] or []\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.7/x64/lib/python3.12/site-packages/selenium/webdriver/remote/webdriver.py\", line 347, in execute\n    self.error_handler.check_response(response)\n  File \"/opt/hostedtoolcache/Python/3.12.7/x64/lib/python3.12/site-packages/selenium/webdriver/remote/errorhandler.py\", line 229, in check_response\n    raise exception_class(message, screen, stacktrace)\n",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : true,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 1,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : true,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "driver::0",
+    "time" : {
+      "start" : 1733366343926,
+      "stop" : 1733366343931,
+      "duration" : 5
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "epic",
+    "value" : "Тестирование главной страницы"
+  }, {
+    "name" : "tag",
+    "value" : "smoke_test"
+  }, {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "main_page_test"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestMainPageSmoke"
+  }, {
+    "name" : "host",
+    "value" : "fv-az658-8"
+  }, {
+    "name" : "thread",
+    "value" : "2233-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.main_page_test"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "url",
+    "value" : "'https://dealer-passport.vaz.ru/logs/email'"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Test defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 1,
+        "skipped" : 0,
+        "passed" : 24,
+        "unknown" : 0,
+        "total" : 25
+      },
+      "items" : [ {
+        "uid" : "80d0e38e5c9e732",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/196//#testresult/80d0e38e5c9e732",
+        "status" : "passed",
+        "time" : {
+          "start" : 1733279853520,
+          "stop" : 1733279864286,
+          "duration" : 10766
+        }
+      }, {
+        "uid" : "649c63eba0aecdd3",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/195//#testresult/649c63eba0aecdd3",
+        "status" : "passed",
+        "time" : {
+          "start" : 1733193436637,
+          "stop" : 1733193447416,
+          "duration" : 10779
+        }
+      }, {
+        "uid" : "30e18f12a87f65ee",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/194//#testresult/30e18f12a87f65ee",
+        "status" : "passed",
+        "time" : {
+          "start" : 1733107182269,
+          "stop" : 1733107193078,
+          "duration" : 10809
+        }
+      }, {
+        "uid" : "b65a90cdb4d3a4b",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/193//#testresult/b65a90cdb4d3a4b",
+        "status" : "passed",
+        "time" : {
+          "start" : 1733021402309,
+          "stop" : 1733021413119,
+          "duration" : 10810
+        }
+      }, {
+        "uid" : "83eb5b0ba90a5a3",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/192//#testresult/83eb5b0ba90a5a3",
+        "status" : "passed",
+        "time" : {
+          "start" : 1732933445109,
+          "stop" : 1732933455899,
+          "duration" : 10790
+        }
+      }, {
+        "uid" : "b6f7d102ce942c80",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/191//#testresult/b6f7d102ce942c80",
+        "status" : "passed",
+        "time" : {
+          "start" : 1732847316014,
+          "stop" : 1732847326764,
+          "duration" : 10750
+        }
+      }, {
+        "uid" : "e1ffb7db4e00d87f",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/190//#testresult/e1ffb7db4e00d87f",
+        "status" : "passed",
+        "time" : {
+          "start" : 1732760911042,
+          "stop" : 1732760921928,
+          "duration" : 10886
+        }
+      }, {
+        "uid" : "d64e602149a8a878",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/189//#testresult/d64e602149a8a878",
+        "status" : "passed",
+        "time" : {
+          "start" : 1732674926187,
+          "stop" : 1732674937144,
+          "duration" : 10957
+        }
+      }, {
+        "uid" : "8a57d378a080c9eb",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/188//#testresult/8a57d378a080c9eb",
+        "status" : "passed",
+        "time" : {
+          "start" : 1732588042077,
+          "stop" : 1732588052860,
+          "duration" : 10783
+        }
+      }, {
+        "uid" : "fdd31770be4cf6e2",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/187//#testresult/fdd31770be4cf6e2",
+        "status" : "passed",
+        "time" : {
+          "start" : 1732501694270,
+          "stop" : 1732501705192,
+          "duration" : 10922
+        }
+      }, {
+        "uid" : "817d3173cbedabe3",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/186//#testresult/817d3173cbedabe3",
+        "status" : "passed",
+        "time" : {
+          "start" : 1732415834003,
+          "stop" : 1732415844784,
+          "duration" : 10781
+        }
+      }, {
+        "uid" : "cb5e7015cfe0d50e",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/185//#testresult/cb5e7015cfe0d50e",
+        "status" : "passed",
+        "time" : {
+          "start" : 1732328516418,
+          "stop" : 1732328527294,
+          "duration" : 10876
+        }
+      }, {
+        "uid" : "f2cf0d17b159b7c9",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/184//#testresult/f2cf0d17b159b7c9",
+        "status" : "passed",
+        "time" : {
+          "start" : 1732242375645,
+          "stop" : 1732242386415,
+          "duration" : 10770
+        }
+      }, {
+        "uid" : "6560e5c882816401",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/183//#testresult/6560e5c882816401",
+        "status" : "passed",
+        "time" : {
+          "start" : 1732155885906,
+          "stop" : 1732155896573,
+          "duration" : 10667
+        }
+      }, {
+        "uid" : "e42eaa3e202db049",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/182//#testresult/e42eaa3e202db049",
+        "status" : "passed",
+        "time" : {
+          "start" : 1732069573733,
+          "stop" : 1732069584585,
+          "duration" : 10852
+        }
+      }, {
+        "uid" : "f6d4b922a8d8d482",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/181//#testresult/f6d4b922a8d8d482",
+        "status" : "passed",
+        "time" : {
+          "start" : 1731983171251,
+          "stop" : 1731983182161,
+          "duration" : 10910
+        }
+      }, {
+        "uid" : "ebb015168cd6f58",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/180//#testresult/ebb015168cd6f58",
+        "status" : "passed",
+        "time" : {
+          "start" : 1731896898046,
+          "stop" : 1731896908825,
+          "duration" : 10779
+        }
+      }, {
+        "uid" : "c0b99e8115630bc6",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/179//#testresult/c0b99e8115630bc6",
+        "status" : "passed",
+        "time" : {
+          "start" : 1731810934201,
+          "stop" : 1731810944851,
+          "duration" : 10650
+        }
+      }, {
+        "uid" : "9cb4108d4d942697",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/178//#testresult/9cb4108d4d942697",
+        "status" : "passed",
+        "time" : {
+          "start" : 1731723839502,
+          "stop" : 1731723850296,
+          "duration" : 10794
+        }
+      }, {
+        "uid" : "a1a8bdf217dc5c75",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/177//#testresult/a1a8bdf217dc5c75",
+        "status" : "passed",
+        "time" : {
+          "start" : 1731637563232,
+          "stop" : 1731637573914,
+          "duration" : 10682
+        }
+      } ]
+    },
+    "tags" : [ "smoke_test" ]
+  },
+  "source" : "199d93de4e3395e7.json",
+  "parameterValues" : [ "'https://dealer-passport.vaz.ru/logs/email'" ]
+}
