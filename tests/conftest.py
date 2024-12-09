@@ -18,8 +18,8 @@ load_dotenv()
 #     driver.get(Urls.MAIN_URL)
 #     main_page.check_button_agree().click()
 #     return main_page
-
-
+#
+#
 # for test
 # @pytest.fixture
 # def auth_user_admin(driver):
