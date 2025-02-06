@@ -20,11 +20,11 @@ class MainPage(BasePage):
 
     @allure.step("Проверить видимость ошибок")
     def check_error_notifications(self):
-        return self.elements_are_visible(self.locator.NOTIFICATIONS)
+        return self.elements_are_visible(self.locator.NOTIFICATIONS_BUTTON)
 
     @allure.step("Проверить отсутствие ошибок")
     def check_not_errors(self):
-        return self.elements_are_not_visible(self.locator.NOTIFICATIONS)
+        return self.elements_are_not_visible(self.locator.NOTIFICATIONS_BUTTON)
 
     @allure.step(f"Проверка кликабельности кнопки '{locator.EDITOR_BUTTON}' на главной странице")
     def check_button_editor(self):
@@ -75,3 +75,7 @@ class MainPage(BasePage):
         time.sleep(2)
         dealers = self.elements_are_visible(self.locator.SELECT_DEALERS)[0].text.split('\n')
         return dealers
+
+    @allure.step(f"Проверка отображения меню в шапке портала")
+    def check_menu(self):
+        return self.elements_are_visible(self.locator.MENU)

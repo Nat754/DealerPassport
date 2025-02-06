@@ -17,14 +17,24 @@ class Tokens:
 
 
 class Urls:
+    MAIN_URL = os.environ["MAIN_URL_PROD"]
+    # MAIN_URL = os.environ["MAIN_URL_SEO"]
+    # MAIN_URL = os.environ["MAIN_URL_SEO"] + ":3001"
+    # MAIN_URL = os.environ["MAIN_URL_TEST"]
+    MS_URL_TEST = os.environ["MS_URL_TEST"]
+    MS_URL_PROD = os.environ["MS_URL_PROD"]
+
     AUTH = "/auth"
-    EDITOR_URL = "/editor/"
-    REPORTS_URL = "/reports/"
-    LOGS_URL = "/logs/"
-    EMAIL_LOGS_URL = "/logs/email"
-    SRR_URL = "/srr/"
-    ACCOUNTING_URL = "/accounting/"
+    PKD_URL = "/pkd/"
+    PKD_INDICATORS_URL = "/pkd/indicators/"
+    PKD_CHECKLISTS_URL = "/pkd/checklists/"
+    INTERRUPTION_URL = "/violations/"
+    NOTICES_URL = "/announcement/"
     DOCUMENTS_URL = "/documents/"
+    ACCOUNTING_URL = "/accounting/"
+    SRR_URL = "/srr/"
+    REPORTS_URL = "/reports/"
+    PASSPORT_BUTTON = MAIN_URL
     ZD_URL = "/zd/"
     GR_URL = "/gr/"
     Q_URL = "/q/"
@@ -33,12 +43,10 @@ class Urls:
     USERS_URL = "/users/"
     INDICATORS_URL = "/indicators/"
     UPLOADS_URL = "/uploads/"
-    MAIN_URL = os.environ["MAIN_URL_PROD"]
-    # MAIN_URL = os.environ["MAIN_URL_SEO"]
-    # MAIN_URL = os.environ["MAIN_URL_SEO"] + ":3001"
-    # MAIN_URL = os.environ["MAIN_URL_TEST"]
-    MS_URL_TEST = os.environ["MS_URL_TEST"]
-    MS_URL_PROD = os.environ["MS_URL_PROD"]
+    EDITOR_URL = "/editor/"
+    LOGS_URL = "/logs/"
+    EMAIL_LOGS_URL = "/logs/email"
+
     LIST_URLS = [MAIN_URL,
                  MAIN_URL + EDITOR_URL,
                  MAIN_URL + REPORTS_URL,
@@ -54,7 +62,12 @@ class Urls:
                  MAIN_URL + DEALERS_URL,
                  MAIN_URL + USERS_URL,
                  MAIN_URL + INDICATORS_URL,
-                 MAIN_URL + UPLOADS_URL]
+                 MAIN_URL + UPLOADS_URL,
+                 MAIN_URL + PKD_URL,
+                 MAIN_URL + PKD_INDICATORS_URL,
+                 MAIN_URL + PKD_INDICATORS_URL,
+                 MAIN_URL + INTERRUPTION_URL,
+                 MAIN_URL + NOTICES_URL]
 
 
 class SRRConstant:
@@ -85,14 +98,14 @@ class EditorConstants:
     EDITOR_MENU = ['Глобальный рейтинг', 'Квартили', 'Персонал', 'База сотрудников', 'Подразделения', 'Виды нарушений',
                    'Редактор форм заявок-деклараций', 'Справочник должностей', 'Каталог учебных программ',
                    'Справочники библиотеки документов', 'Редактор отчетов', 'Справочник информационных систем',
-                   'Справочник разделов фотогалереи', 'Справочник для выбора адреса'] # prod
+                   'Справочник разделов фотогалереи', 'Справочник для выбора адреса', 'Справочник тарифов IVIDEON']
     # for dev
     # EDITOR_MENU = ['Глобальный рейтинг', 'Квартили', 'Персонал', 'База сотрудников', 'Подразделения',
     #                'Виды нарушений', 'Редактор форм заявок-деклараций', 'Справочник должностей',
     #                'Каталог учебных программ', 'Справочники библиотеки документов', 'Редактор отчетов',
     #                'Справочник зон камер', 'Справочник информационных систем',
     #                'Справочник разделов фотогалереи', 'Шаблоны договоров', 'Справочник для выбора адреса',
-    #                'Справочник доверенных лиц']
+    #                'Справочник доверенных лиц', 'Справочник тарифов IVIDEON']
 
 
 class MSConstants:
@@ -104,14 +117,25 @@ class MSConstants:
 
 
 class HeaderConstant:
-    EDITOR_BUTTON_TEXT = ''
+    PASSPORT_TEXT = 'ПАСПОРТ'
+    ZD_TEXT = 'ЗД'
+    GR_TEXT = 'ГР'
+    K_TEXT = 'К'
+    STAFF_TEXT = 'ПЕРСОНАЛ'
+    DEALERS_TEXT = 'ДИЛЕРЫ'
+    USERS_TEXT = 'ПОЛЬЗОВАТЕЛИ'
+    INDICATORS_TEXT = 'ПОКАЗАТЕЛИ'
+    DOWNLOADS_TEXT = 'ЗАГРУЗКИ'
+    EDITOR_TEXT = 'РЕДАКТОР'
+    LOGS_TEXT = 'ЛОГИ'
     SELECT_DEALER_TEXT = 'ВЫБРАТЬ ДИЛЕРА'
-    PKD_TEXT = ''
-    INTERRUPTION_TEXT = ''
-    NOTICES_TEXT = ''
-    DOCUMENTS_TEXT = ''
-    ACCOUNTING_TEXT = ''
-    SRR_TEXT = ''
-    REPORTS_TEXT = ''
+    PKD_TEXT = 'ПКД'
+    INTERRUPTION_TEXT = 'НАРУШЕНИЯ'
+    NOTICES_TEXT = 'ОБЪЯВЛЕНИЯ'
+    DOCUMENTS_TEXT = 'ДОКУМЕНТЫ'
+    ACCOUNTING_TEXT = 'БУХГАЛТЕРИЯ'
+    SRR_TEXT = 'SRR'
+    REPORTS_TEXT = 'ОТЧЕТЫ'
+    MENU_TEXT = ['ПАСПОРТ\nЗД\nГР\nК\nПЕРСОНАЛ\nДИЛЕРЫ\nПОЛЬЗОВАТЕЛИ\nПОКАЗАТЕЛИ\nЗАГРУЗКИ\nРЕДАКТОР\nЛОГИ']
     DEALER_NAME = ('ПИТЕР')
     LOADER_MSG = 'ЗАГРУЗКА...'
