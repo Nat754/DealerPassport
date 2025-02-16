@@ -1,0 +1,166 @@
+{
+  "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "children" : [ {
+    "name" : "Test defects",
+    "children" : [ {
+      "name" : "requests.exceptions.ConnectTimeout: HTTPSConnectionPool(host='dealer-passport.vaz.ru', port=443): Max retries exceeded with url: /dealers/ (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f1236910800>, 'Connection to dealer-passport.vaz.ru timed out. (connect timeout=None)'))",
+      "children" : [ {
+        "name" : "Проверка доступности https://dealer-passport.vaz.ru/dealers/",
+        "uid" : "332af87f981978e7",
+        "parentUid" : "897de26c0407a542d17e352f4168e579",
+        "status" : "broken",
+        "time" : {
+          "start" : 1739672569351,
+          "stop" : 1739672704381,
+          "duration" : 135030
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'https://dealer-passport.vaz.ru/dealers/'" ]
+      } ],
+      "uid" : "897de26c0407a542d17e352f4168e579"
+    }, {
+      "name" : "requests.exceptions.ConnectTimeout: HTTPSConnectionPool(host='dealer-passport.vaz.ru', port=443): Max retries exceeded with url: /users/ (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f12369136b0>, 'Connection to dealer-passport.vaz.ru timed out. (connect timeout=None)'))",
+      "children" : [ {
+        "name" : "Проверка доступности https://dealer-passport.vaz.ru/users/",
+        "uid" : "6fddae929727c67f",
+        "parentUid" : "4f3dc7bd3dbe2ce5c8b156b8c930d743",
+        "status" : "broken",
+        "time" : {
+          "start" : 1739672704490,
+          "stop" : 1739672839549,
+          "duration" : 135059
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'https://dealer-passport.vaz.ru/users/'" ]
+      } ],
+      "uid" : "4f3dc7bd3dbe2ce5c8b156b8c930d743"
+    }, {
+      "name" : "requests.exceptions.ConnectTimeout: HTTPSConnectionPool(host='dealer-passport.vaz.ru', port=443): Max retries exceeded with url: /indicators/ (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f1236911b50>, 'Connection to dealer-passport.vaz.ru timed out. (connect timeout=None)'))",
+      "children" : [ {
+        "name" : "Проверка доступности https://dealer-passport.vaz.ru/indicators/",
+        "uid" : "cde66d5ef39330fa",
+        "parentUid" : "bc9472ae012dc9f645064451d02e4766",
+        "status" : "broken",
+        "time" : {
+          "start" : 1739672839628,
+          "stop" : 1739672974717,
+          "duration" : 135089
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'https://dealer-passport.vaz.ru/indicators/'" ]
+      } ],
+      "uid" : "bc9472ae012dc9f645064451d02e4766"
+    }, {
+      "name" : "requests.exceptions.ConnectTimeout: HTTPSConnectionPool(host='dealer-passport.vaz.ru', port=443): Max retries exceeded with url: /uploads/ (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f12369d4110>, 'Connection to dealer-passport.vaz.ru timed out. (connect timeout=None)'))",
+      "children" : [ {
+        "name" : "Проверка доступности https://dealer-passport.vaz.ru/uploads/",
+        "uid" : "6aa54a260186134c",
+        "parentUid" : "d03d5030f6d6a21e1925bea3a08cbe45",
+        "status" : "broken",
+        "time" : {
+          "start" : 1739672974798,
+          "stop" : 1739673109885,
+          "duration" : 135087
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'https://dealer-passport.vaz.ru/uploads/'" ]
+      } ],
+      "uid" : "d03d5030f6d6a21e1925bea3a08cbe45"
+    }, {
+      "name" : "requests.exceptions.ConnectTimeout: HTTPSConnectionPool(host='dealer-passport.vaz.ru', port=443): Max retries exceeded with url: /pkd/ (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f1236912210>, 'Connection to dealer-passport.vaz.ru timed out. (connect timeout=None)'))",
+      "children" : [ {
+        "name" : "Проверка доступности https://dealer-passport.vaz.ru/pkd/",
+        "uid" : "26618567fdb0cddb",
+        "parentUid" : "a005f60cae021377b08662afd14b5e36",
+        "status" : "broken",
+        "time" : {
+          "start" : 1739673109973,
+          "stop" : 1739673245053,
+          "duration" : 135080
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'https://dealer-passport.vaz.ru/pkd/'" ]
+      } ],
+      "uid" : "a005f60cae021377b08662afd14b5e36"
+    }, {
+      "name" : "requests.exceptions.ConnectTimeout: HTTPSConnectionPool(host='dealer-passport.vaz.ru', port=443): Max retries exceeded with url: /pkd/indicators/ (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f12369d7d40>, 'Connection to dealer-passport.vaz.ru timed out. (connect timeout=None)'))",
+      "children" : [ {
+        "name" : "Проверка доступности https://dealer-passport.vaz.ru/pkd/indicators/",
+        "uid" : "75428cf71cbde890",
+        "parentUid" : "12115c3dda04bc74695200a9d043f651",
+        "status" : "broken",
+        "time" : {
+          "start" : 1739673380300,
+          "stop" : 1739673515389,
+          "duration" : 135089
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'https://dealer-passport.vaz.ru/pkd/indicators/'" ]
+      } ],
+      "uid" : "12115c3dda04bc74695200a9d043f651"
+    }, {
+      "name" : "requests.exceptions.ConnectTimeout: HTTPSConnectionPool(host='dealer-passport.vaz.ru', port=443): Max retries exceeded with url: /violations/ (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f12369e8140>, 'Connection to dealer-passport.vaz.ru timed out. (connect timeout=None)'))",
+      "children" : [ {
+        "name" : "Проверка доступности https://dealer-passport.vaz.ru/violations/",
+        "uid" : "4a4629774de2ae4a",
+        "parentUid" : "cc3128d55f53d29ea0119b1dd5c4764b",
+        "status" : "broken",
+        "time" : {
+          "start" : 1739673515472,
+          "stop" : 1739673650557,
+          "duration" : 135085
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'https://dealer-passport.vaz.ru/violations/'" ]
+      } ],
+      "uid" : "cc3128d55f53d29ea0119b1dd5c4764b"
+    }, {
+      "name" : "requests.exceptions.ConnectTimeout: HTTPSConnectionPool(host='dealer-passport.vaz.ru', port=443): Max retries exceeded with url: /announcement/ (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f12369eb350>, 'Connection to dealer-passport.vaz.ru timed out. (connect timeout=None)'))",
+      "children" : [ {
+        "name" : "Проверка доступности https://dealer-passport.vaz.ru/announcement/",
+        "uid" : "e5f4948f28ffd5c9",
+        "parentUid" : "7f9126f4b97727fb353c1dfcffba1c8e",
+        "status" : "broken",
+        "time" : {
+          "start" : 1739673650636,
+          "stop" : 1739673785725,
+          "duration" : 135089
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'https://dealer-passport.vaz.ru/announcement/'" ]
+      } ],
+      "uid" : "7f9126f4b97727fb353c1dfcffba1c8e"
+    } ],
+    "uid" : "bdbf199525818fae7a8651db9eafe741"
+  }, {
+    "name" : "Product defects",
+    "children" : [ {
+      "name" : "AssertionError: ПИТЕР не найден в ['АВ АВТО', '68 АВТО', 'ААА АВТОРУСЬ ПОДОЛЬСК', 'ААА АВТОРУСЬ ПОДОЛЬСК (МЫТИЩИ)', 'АБАКАН АВТОГАЗ', 'АБРЕРА МОТОР', 'АВАЛОН', 'АВАЛОН(СТ.ОСКОЛ)', 'АВАН-МОТОРС', 'АВАНГАРД', 'АВАНТА-КВ', 'АВАНТАЙМ', 'АВД ГРУП', 'АВЕНСИС', 'АВЕНСИС', 'АВЕНСИС (ПР-ЗД БАЗОВЫЙ)', 'АВЕНСИС (УЛ.ИЮЛЬСКИХ ДНЕЙ)', 'АВЕС-К', 'АВИААГРЕГАТ', 'АВК-САМАРА', 'АВК-САМАРА (УЛ.МИРНАЯ)', 'АВТ-ФИНАНС (БОГАТЫРСКИЙ)', 'АВТ-ФИНАНС (ТОЛЬЯТТИ)', 'АВТ-ФИНАНС (ЦВЕТОЧНАЯ)', 'АВТО']\nassert {False} == {True}\n  \n  Extra items in the left set:\n  False\n  Extra items in the right set:\n  True\n  \n  Full diff:\n    {\n  -     True,\n  +     False,\n    }",
+      "children" : [ {
+        "name" : "Проверить поиск по кнопке ВЫБРАТЬ ДИЛЕРА",
+        "uid" : "128fd9ffdda7e123",
+        "parentUid" : "714293d3c5fb944963bb09f2d4a1c1eb",
+        "status" : "failed",
+        "time" : {
+          "start" : 1739674090310,
+          "stop" : 1739674092634,
+          "duration" : 2324
+        },
+        "flaky" : true,
+        "newFailed" : true,
+        "parameters" : [ ]
+      } ],
+      "uid" : "714293d3c5fb944963bb09f2d4a1c1eb"
+    } ],
+    "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
+  } ],
+  "name" : "categories"
+}
