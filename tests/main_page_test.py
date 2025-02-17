@@ -2,7 +2,7 @@ import pytest
 import allure
 import requests
 from selenium.common import TimeoutException
-from tests.constants import Tokens, Urls, HeaderConstant
+from tests.constants import Tokens, Urls, HeaderConstant, MainConstant
 
 
 @allure.epic("Тестирование главной страницы")
@@ -97,7 +97,16 @@ class TestMainPageSmoke:
             text = ''
         assert text == HeaderConstant.REPORTS_TEXT, f'ОР: {HeaderConstant.REPORTS_TEXT}, ФР: {text}'
 
-    @allure.title(f'Проверить отображение кнопок меню')
+    @allure.title('Проверить отображение кнопок меню')
     def test_button_menu(self, auth_user_admin):
         text = [item.text for item in auth_user_admin.check_menu()]
         assert text == HeaderConstant.MENU_TEXT, f'ОР: {HeaderConstant.MENU_TEXT}, ФР: {text}'
+
+    @allure.title('Проверить отображение блока о ДЦ')
+    def test_block_about(self, auth_user_admin):
+        assert auth_user_admin.check_block_about(), 'Нет блока о ДЦ'
+
+    @allure.title(f'Проверить отображение кнопок блока о ДЦ')
+    def test_block_about_buttons(self, auth_user_admin):
+        text = [item.text for item in auth_user_admin.check_block_about_buttons()]
+        assert text == MainConstant.ABOUT_BUTTONS, f'ОР: {MainConstant.ABOUT_BUTTONS}, ФР: {text}'

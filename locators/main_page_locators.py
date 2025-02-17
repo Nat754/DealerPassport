@@ -19,3 +19,6 @@ class MainPageLocators:
     SRR_BUTTON = (By.XPATH, '//span[text()="SRR"]')
     REPORTS_BUTTON = (By.XPATH, '//span[text()="Отчеты"]')
     MENU = (By.CLASS_NAME, 'menu--1eR')
+
+    BLOCK_ABOUT = (By.CLASS_NAME, 'about--1Vq')
+    BLOCK_ABOUT_BUTTONS = (By.CLASS_NAME, 'linkWrapper--38R')

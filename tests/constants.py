@@ -139,3 +139,7 @@ class HeaderConstant:
     MENU_TEXT = ['ПАСПОРТ\nЗД\nГР\nК\nПЕРСОНАЛ\nДИЛЕРЫ\nПОЛЬЗОВАТЕЛИ\nПОКАЗАТЕЛИ\nЗАГРУЗКИ\nРЕДАКТОР\nЛОГИ']
     DEALER_NAME = ('ПИТЕР')
     LOADER_MSG = 'ЗАГРУЗКА...'
+
+
+class MainConstant:
+    ABOUT_BUTTONS = ['ИЗМЕНИТЬ\nКАМЕРЫ\nФОТО']

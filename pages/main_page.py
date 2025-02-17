@@ -76,6 +76,14 @@ class MainPage(BasePage):
         dealers = self.elements_are_visible(self.locator.SELECT_DEALERS)[0].text.split('\n')
         return dealers
 
-    @allure.step(f"Проверка отображения меню в шапке портала")
+    @allure.step("Проверка отображения меню в шапке портала")
     def check_menu(self):
         return self.elements_are_visible(self.locator.MENU)
+
+    @allure.step("Проверка отображения информации о ДЦ")
+    def check_block_about(self):
+        return self.element_is_visible(self.locator.BLOCK_ABOUT)
+
+    @allure.step(f"Проверка видимости кнопок в блоке информации о ДЦ")
+    def check_block_about_buttons(self):
+        return self.elements_are_visible(self.locator.BLOCK_ABOUT_BUTTONS)
