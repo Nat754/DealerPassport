@@ -1,0 +1,60 @@
+{
+  "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "children" : [ {
+    "name" : "Test defects",
+    "children" : [ {
+      "name" : "requests.exceptions.ConnectTimeout: HTTPSConnectionPool(host='ms-test2-back.vaz.ru', port=443): Max retries exceeded with url: /api/v1/form/resultByQuarter?year=2025&quarter=1 (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7fa9fec87530>, 'Connection to ms-test2-back.vaz.ru timed out. (connect timeout=None)'))",
+      "children" : [ {
+        "name" : "Проверка доступности MSPortal",
+        "uid" : "eae793873c2ff2b6",
+        "parentUid" : "4c18979487dc8e6fc340bc74c3e363eb",
+        "status" : "broken",
+        "time" : {
+          "start" : 1744748782352,
+          "stop" : 1744748918244,
+          "duration" : 135892
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "4c18979487dc8e6fc340bc74c3e363eb"
+    }, {
+      "name" : "requests.exceptions.ConnectTimeout: HTTPSConnectionPool(host='ms-test2-back.vaz.ru', port=443): Max retries exceeded with url: /api/v1/form/resultByQuarter?year=2025&quarter=1 (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7fa9fec45340>, 'Connection to ms-test2-back.vaz.ru timed out. (connect timeout=None)'))",
+      "children" : [ {
+        "name" : "Получение данных тест MSPortal",
+        "uid" : "60d4ca9f5a44932f",
+        "parentUid" : "a834845df689e84bca9448c8fee9765b",
+        "status" : "broken",
+        "time" : {
+          "start" : 1744748918364,
+          "stop" : 1744749053412,
+          "duration" : 135048
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "a834845df689e84bca9448c8fee9765b"
+    }, {
+      "name" : "requests.exceptions.ConnectTimeout: HTTPSConnectionPool(host='ms-n-back.vaz.ru', port=443): Max retries exceeded with url: /api/v1/form/resultByQuarter?year=2025&quarter=1 (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7fa9fec84a70>, 'Connection to ms-n-back.vaz.ru timed out. (connect timeout=None)'))",
+      "children" : [ {
+        "name" : "Получение данных прод MSPortal",
+        "uid" : "45a76f2a69b578a5",
+        "parentUid" : "82af754d9f542db14d574ed07f658041",
+        "status" : "broken",
+        "time" : {
+          "start" : 1744749053488,
+          "stop" : 1744749188580,
+          "duration" : 135092
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "82af754d9f542db14d574ed07f658041"
+    } ],
+    "uid" : "bdbf199525818fae7a8651db9eafe741"
+  } ],
+  "name" : "categories"
+}
