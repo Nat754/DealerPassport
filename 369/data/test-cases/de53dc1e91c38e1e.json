@@ -1,0 +1,422 @@
+{
+  "uid" : "de53dc1e91c38e1e",
+  "name" : "Проверить поиск по кнопке ВЫБРАТЬ ДИЛЕРА",
+  "fullName" : "tests.main_page_test.TestMainPageSmoke#test_find_dealer",
+  "historyId" : "b18f8132f31807d94ad3cf4a64b17eac",
+  "time" : {
+    "start" : 1748204656420,
+    "stop" : 1748204658756,
+    "duration" : 2336
+  },
+  "status" : "failed",
+  "statusMessage" : "AssertionError: ПИТЕР не найден в ['АВАЛОН', 'АВАЛОН(СТ.ОСКОЛ)', 'АВД ГРУП', 'АВЕС-К', 'АВТО БИЗНЕС ГРУП', 'АВТО БИЗНЕС ГРУП(УЛ. ШЕВЧЕНКО)', 'АВТО-1 (НАБЕРЕЖНЫЕ ЧЕЛНЫ)', 'АВТО-1 (НОВОСИБИРСК)', 'АВТО-1 (ПРОКОПЬЕВСК)', 'АВТО-1 +', 'АВТО-МОТОРС', 'АВТО-РЕВЮ', 'АВТОАВАНГАРД', 'АВТОБАЗА №2', 'АВТОВЕК', 'АВТОГЕРМЕС-ЗАПАД (ВАРШАВСКОЕ ШОССЕ)', 'АВТОГЕРМЕС-ЗАПАД (ДМИТРОВСКОЕ ШОССЕ)', 'АВТОГЕРМЕС-ЗАПАД (КАШИРСКОЕ ШОССЕ)', 'АВТОГЕРМЕС-ЗАПАД (СОРМОВСКАЯ)', 'АВТОГЕРМЕС-ЗАПАД (ЭНТУЗИАСТОВ)', 'АВТОГРАД', 'АВТОГРУП КРЫМ', 'АВТОДВОР+', 'АВТОДОМ - ДОНЕЦК', 'АВТОКЛАСС НОРД']\nassert {False} == {True}\n  \n  Extra items in the left set:\n  False\n  Extra items in the right set:\n  True\n  \n  Full diff:\n    {\n  -     True,\n  +     False,\n    }",
+  "statusTrace" : "self = <tests.main_page_test.TestMainPageSmoke object at 0x7fecc1f08050>\nauth_user_admin = <pages.main_page.MainPage object at 0x7fecc1c20890>\n\n    @allure.title(f'Проверить поиск по кнопке {HeaderConstant.SELECT_DEALER_TEXT}')\n    def test_find_dealer(self, auth_user_admin):\n        text = auth_user_admin.check_button_select_dealer().text\n        assert text == HeaderConstant.SELECT_DEALER_TEXT, f'ОР: {HeaderConstant.SELECT_DEALER_TEXT}, ФР: {text}'\n        auth_user_admin.check_button_select_dealer().click()\n        auth_user_admin.check_select_find_dealer(HeaderConstant.DEALER_NAME)\n        dealers = auth_user_admin.check_select_dealers()\n>       assert {HeaderConstant.DEALER_NAME in _ for _ in dealers} == {True}, \\\n            f'{HeaderConstant.DEALER_NAME} не найден в {dealers}'\nE       AssertionError: ПИТЕР не найден в ['АВАЛОН', 'АВАЛОН(СТ.ОСКОЛ)', 'АВД ГРУП', 'АВЕС-К', 'АВТО БИЗНЕС ГРУП', 'АВТО БИЗНЕС ГРУП(УЛ. ШЕВЧЕНКО)', 'АВТО-1 (НАБЕРЕЖНЫЕ ЧЕЛНЫ)', 'АВТО-1 (НОВОСИБИРСК)', 'АВТО-1 (ПРОКОПЬЕВСК)', 'АВТО-1 +', 'АВТО-МОТОРС', 'АВТО-РЕВЮ', 'АВТОАВАНГАРД', 'АВТОБАЗА №2', 'АВТОВЕК', 'АВТОГЕРМЕС-ЗАПАД (ВАРШАВСКОЕ ШОССЕ)', 'АВТОГЕРМЕС-ЗАПАД (ДМИТРОВСКОЕ ШОССЕ)', 'АВТОГЕРМЕС-ЗАПАД (КАШИРСКОЕ ШОССЕ)', 'АВТОГЕРМЕС-ЗАПАД (СОРМОВСКАЯ)', 'АВТОГЕРМЕС-ЗАПАД (ЭНТУЗИАСТОВ)', 'АВТОГРАД', 'АВТОГРУП КРЫМ', 'АВТОДВОР+', 'АВТОДОМ - ДОНЕЦК', 'АВТОКЛАСС НОРД']\nE       assert {False} == {True}\nE         \nE         Extra items in the left set:\nE         False\nE         Extra items in the right set:\nE         True\nE         \nE         Full diff:\nE           {\nE         -     True,\nE         +     False,\nE           }\n\ntests/main_page_test.py:33: AssertionError",
+  "flaky" : true,
+  "newFailed" : true,
+  "beforeStages" : [ {
+    "name" : "driver",
+    "time" : {
+      "start" : 1748204652779,
+      "stop" : 1748204653109,
+      "duration" : 330
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "clear_allure_results_folder",
+    "time" : {
+      "start" : 1748204328261,
+      "stop" : 1748204328261,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "auth_user_admin",
+    "time" : {
+      "start" : 1748204653109,
+      "stop" : 1748204656420,
+      "duration" : 3311
+    },
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Проверка видимости кнопки '('xpath', '//span[text()=\"Согласен\"]')' на главной странице",
+      "time" : {
+        "start" : 1748204655759,
+        "stop" : 1748204656343,
+        "duration" : 584
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 1,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  } ],
+  "testStage" : {
+    "status" : "failed",
+    "statusMessage" : "AssertionError: ПИТЕР не найден в ['АВАЛОН', 'АВАЛОН(СТ.ОСКОЛ)', 'АВД ГРУП', 'АВЕС-К', 'АВТО БИЗНЕС ГРУП', 'АВТО БИЗНЕС ГРУП(УЛ. ШЕВЧЕНКО)', 'АВТО-1 (НАБЕРЕЖНЫЕ ЧЕЛНЫ)', 'АВТО-1 (НОВОСИБИРСК)', 'АВТО-1 (ПРОКОПЬЕВСК)', 'АВТО-1 +', 'АВТО-МОТОРС', 'АВТО-РЕВЮ', 'АВТОАВАНГАРД', 'АВТОБАЗА №2', 'АВТОВЕК', 'АВТОГЕРМЕС-ЗАПАД (ВАРШАВСКОЕ ШОССЕ)', 'АВТОГЕРМЕС-ЗАПАД (ДМИТРОВСКОЕ ШОССЕ)', 'АВТОГЕРМЕС-ЗАПАД (КАШИРСКОЕ ШОССЕ)', 'АВТОГЕРМЕС-ЗАПАД (СОРМОВСКАЯ)', 'АВТОГЕРМЕС-ЗАПАД (ЭНТУЗИАСТОВ)', 'АВТОГРАД', 'АВТОГРУП КРЫМ', 'АВТОДВОР+', 'АВТОДОМ - ДОНЕЦК', 'АВТОКЛАСС НОРД']\nassert {False} == {True}\n  \n  Extra items in the left set:\n  False\n  Extra items in the right set:\n  True\n  \n  Full diff:\n    {\n  -     True,\n  +     False,\n    }",
+    "statusTrace" : "self = <tests.main_page_test.TestMainPageSmoke object at 0x7fecc1f08050>\nauth_user_admin = <pages.main_page.MainPage object at 0x7fecc1c20890>\n\n    @allure.title(f'Проверить поиск по кнопке {HeaderConstant.SELECT_DEALER_TEXT}')\n    def test_find_dealer(self, auth_user_admin):\n        text = auth_user_admin.check_button_select_dealer().text\n        assert text == HeaderConstant.SELECT_DEALER_TEXT, f'ОР: {HeaderConstant.SELECT_DEALER_TEXT}, ФР: {text}'\n        auth_user_admin.check_button_select_dealer().click()\n        auth_user_admin.check_select_find_dealer(HeaderConstant.DEALER_NAME)\n        dealers = auth_user_admin.check_select_dealers()\n>       assert {HeaderConstant.DEALER_NAME in _ for _ in dealers} == {True}, \\\n            f'{HeaderConstant.DEALER_NAME} не найден в {dealers}'\nE       AssertionError: ПИТЕР не найден в ['АВАЛОН', 'АВАЛОН(СТ.ОСКОЛ)', 'АВД ГРУП', 'АВЕС-К', 'АВТО БИЗНЕС ГРУП', 'АВТО БИЗНЕС ГРУП(УЛ. ШЕВЧЕНКО)', 'АВТО-1 (НАБЕРЕЖНЫЕ ЧЕЛНЫ)', 'АВТО-1 (НОВОСИБИРСК)', 'АВТО-1 (ПРОКОПЬЕВСК)', 'АВТО-1 +', 'АВТО-МОТОРС', 'АВТО-РЕВЮ', 'АВТОАВАНГАРД', 'АВТОБАЗА №2', 'АВТОВЕК', 'АВТОГЕРМЕС-ЗАПАД (ВАРШАВСКОЕ ШОССЕ)', 'АВТОГЕРМЕС-ЗАПАД (ДМИТРОВСКОЕ ШОССЕ)', 'АВТОГЕРМЕС-ЗАПАД (КАШИРСКОЕ ШОССЕ)', 'АВТОГЕРМЕС-ЗАПАД (СОРМОВСКАЯ)', 'АВТОГЕРМЕС-ЗАПАД (ЭНТУЗИАСТОВ)', 'АВТОГРАД', 'АВТОГРУП КРЫМ', 'АВТОДВОР+', 'АВТОДОМ - ДОНЕЦК', 'АВТОКЛАСС НОРД']\nE       assert {False} == {True}\nE         \nE         Extra items in the left set:\nE         False\nE         Extra items in the right set:\nE         True\nE         \nE         Full diff:\nE           {\nE         -     True,\nE         +     False,\nE           }\n\ntests/main_page_test.py:33: AssertionError",
+    "steps" : [ {
+      "name" : "Проверка кликабельности кнопки 'ВЫБРАТЬ ДИЛЕРА' на главной странице",
+      "time" : {
+        "start" : 1748204656420,
+        "stop" : 1748204656445,
+        "duration" : 25
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Проверка кликабельности кнопки 'ВЫБРАТЬ ДИЛЕРА' на главной странице",
+      "time" : {
+        "start" : 1748204656457,
+        "stop" : 1748204656473,
+        "duration" : 16
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Ввести имя дилера в поисковой строке",
+      "time" : {
+        "start" : 1748204656541,
+        "stop" : 1748204656708,
+        "duration" : 167
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "name",
+        "value" : "'ПИТЕР'"
+      } ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "Получить список дилеров",
+      "time" : {
+        "start" : 1748204656708,
+        "stop" : 1748204658755,
+        "duration" : 2047
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ {
+      "uid" : "3345439ec910d10d",
+      "name" : "Screenshot",
+      "source" : "3345439ec910d10d.png",
+      "type" : "image/png",
+      "size" : 205704
+    }, {
+      "uid" : "f87f85b066907a3",
+      "name" : "HTML source",
+      "source" : "f87f85b066907a3.html",
+      "type" : "text/html",
+      "size" : 36586
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 4,
+    "attachmentsCount" : 2,
+    "shouldDisplayMessage" : true,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "driver::0",
+    "time" : {
+      "start" : 1748204658904,
+      "stop" : 1748204658965,
+      "duration" : 61
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "epic",
+    "value" : "Тестирование главной страницы"
+  }, {
+    "name" : "tag",
+    "value" : "smoke_test"
+  }, {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "main_page_test"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestMainPageSmoke"
+  }, {
+    "name" : "host",
+    "value" : "fv-az810-457"
+  }, {
+    "name" : "thread",
+    "value" : "2458-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.main_page_test"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 50,
+        "broken" : 3,
+        "skipped" : 0,
+        "passed" : 177,
+        "unknown" : 0,
+        "total" : 230
+      },
+      "items" : [ {
+        "uid" : "7e25b30f03187906",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/368//#testresult/7e25b30f03187906",
+        "status" : "passed",
+        "time" : {
+          "start" : 1748118277074,
+          "stop" : 1748118279646,
+          "duration" : 2572
+        }
+      }, {
+        "uid" : "7bb13ddc9f40d748",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/367//#testresult/7bb13ddc9f40d748",
+        "status" : "passed",
+        "time" : {
+          "start" : 1748031959492,
+          "stop" : 1748031962012,
+          "duration" : 2520
+        }
+      }, {
+        "uid" : "ffc1c07e7a0ca37",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/366//#testresult/ffc1c07e7a0ca37",
+        "status" : "passed",
+        "time" : {
+          "start" : 1747945563259,
+          "stop" : 1747945565804,
+          "duration" : 2545
+        }
+      }, {
+        "uid" : "e64a54193cc0d128",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/365//#testresult/e64a54193cc0d128",
+        "status" : "passed",
+        "time" : {
+          "start" : 1747859210772,
+          "stop" : 1747859213326,
+          "duration" : 2554
+        }
+      }, {
+        "uid" : "714800d79e9b39db",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/364//#testresult/714800d79e9b39db",
+        "status" : "passed",
+        "time" : {
+          "start" : 1747842385964,
+          "stop" : 1747842388467,
+          "duration" : 2503
+        }
+      }, {
+        "uid" : "2e7e30bd77f85fe5",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/364//#testresult/2e7e30bd77f85fe5",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: ПИТЕР не найден в ['АВАЛОН', 'АВАЛОН(СТ.ОСКОЛ)', 'АВД ГРУП', 'АВЕС-К', 'АВТО БИЗНЕС ГРУП', 'АВТО БИЗНЕС ГРУП(УЛ. ШЕВЧЕНКО)', 'АВТО-1 (НАБЕРЕЖНЫЕ ЧЕЛНЫ)', 'АВТО-1 (НОВОСИБИРСК)', 'АВТО-1 (ПРОКОПЬЕВСК)', 'АВТО-1 +', 'АВТО-МОТОРС', 'АВТО-РЕВЮ', 'АВТОАВАНГАРД', 'АВТОБАЗА №2', 'АВТОВЕК', 'АВТОГЕРМЕС-ЗАПАД (ВАРШАВСКОЕ ШОССЕ)', 'АВТОГЕРМЕС-ЗАПАД (ДМИТРОВСКОЕ ШОССЕ)', 'АВТОГЕРМЕС-ЗАПАД (КАШИРСКОЕ ШОССЕ)', 'АВТОГЕРМЕС-ЗАПАД (СОРМОВСКАЯ)', 'АВТОГЕРМЕС-ЗАПАД (ЭНТУЗИАСТОВ)', 'АВТОГРАД', 'АВТОГРУП КРЫМ', 'АВТОДВОР+', 'АВТОДОМ - ДОНЕЦК', 'АВТОКЛАСС НОРД']\nassert {False} == {True}\n  \n  Extra items in the left set:\n  False\n  Extra items in the right set:\n  True\n  \n  Full diff:\n    {\n  -     True,\n  +     False,\n    }",
+        "time" : {
+          "start" : 1747772813232,
+          "stop" : 1747772815763,
+          "duration" : 2531
+        }
+      }, {
+        "uid" : "6f0085ba274213eb",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/363//#testresult/6f0085ba274213eb",
+        "status" : "passed",
+        "time" : {
+          "start" : 1747686403749,
+          "stop" : 1747686406162,
+          "duration" : 2413
+        }
+      }, {
+        "uid" : "b3251c79edb1a1a1",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/362//#testresult/b3251c79edb1a1a1",
+        "status" : "passed",
+        "time" : {
+          "start" : 1747599883433,
+          "stop" : 1747599886008,
+          "duration" : 2575
+        }
+      }, {
+        "uid" : "711e0b97b1c0f703",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/361//#testresult/711e0b97b1c0f703",
+        "status" : "passed",
+        "time" : {
+          "start" : 1747513483094,
+          "stop" : 1747513485642,
+          "duration" : 2548
+        }
+      }, {
+        "uid" : "de8d6cdba6e62edd",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/360//#testresult/de8d6cdba6e62edd",
+        "status" : "passed",
+        "time" : {
+          "start" : 1747427186996,
+          "stop" : 1747427189366,
+          "duration" : 2370
+        }
+      }, {
+        "uid" : "ad5a570071f14159",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/359//#testresult/ad5a570071f14159",
+        "status" : "passed",
+        "time" : {
+          "start" : 1747340827912,
+          "stop" : 1747340830410,
+          "duration" : 2498
+        }
+      }, {
+        "uid" : "20f1fd410843076e",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/358//#testresult/20f1fd410843076e",
+        "status" : "passed",
+        "time" : {
+          "start" : 1747254215268,
+          "stop" : 1747254218059,
+          "duration" : 2791
+        }
+      }, {
+        "uid" : "4b3ab1fdd573f981",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/357//#testresult/4b3ab1fdd573f981",
+        "status" : "passed",
+        "time" : {
+          "start" : 1747167991954,
+          "stop" : 1747167994517,
+          "duration" : 2563
+        }
+      }, {
+        "uid" : "91898eae1d4b4a1a",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/356//#testresult/91898eae1d4b4a1a",
+        "status" : "passed",
+        "time" : {
+          "start" : 1747081599298,
+          "stop" : 1747081601880,
+          "duration" : 2582
+        }
+      }, {
+        "uid" : "2c9d763686ea3f56",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/355//#testresult/2c9d763686ea3f56",
+        "status" : "passed",
+        "time" : {
+          "start" : 1746995071508,
+          "stop" : 1746995074090,
+          "duration" : 2582
+        }
+      }, {
+        "uid" : "338822d6d58ae80d",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/354//#testresult/338822d6d58ae80d",
+        "status" : "passed",
+        "time" : {
+          "start" : 1746908663465,
+          "stop" : 1746908665912,
+          "duration" : 2447
+        }
+      }, {
+        "uid" : "5c6f0e37b6f7baaa",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/353//#testresult/5c6f0e37b6f7baaa",
+        "status" : "passed",
+        "time" : {
+          "start" : 1746822356115,
+          "stop" : 1746822358637,
+          "duration" : 2522
+        }
+      }, {
+        "uid" : "5ce76e685ebae626",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/352//#testresult/5ce76e685ebae626",
+        "status" : "passed",
+        "time" : {
+          "start" : 1746735979228,
+          "stop" : 1746735981721,
+          "duration" : 2493
+        }
+      }, {
+        "uid" : "3abfe53d16e279ab",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/351//#testresult/3abfe53d16e279ab",
+        "status" : "passed",
+        "time" : {
+          "start" : 1746649597423,
+          "stop" : 1746649599937,
+          "duration" : 2514
+        }
+      }, {
+        "uid" : "68b7f26db61a3576",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/350//#testresult/68b7f26db61a3576",
+        "status" : "passed",
+        "time" : {
+          "start" : 1746563167115,
+          "stop" : 1746563169600,
+          "duration" : 2485
+        }
+      } ]
+    },
+    "tags" : [ "smoke_test" ]
+  },
+  "source" : "de53dc1e91c38e1e.json",
+  "parameterValues" : [ ]
+}
