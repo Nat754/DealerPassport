@@ -5,8 +5,8 @@ from pages.editor_page import EditorPage
 
 
 @allure.epic("Тестирование страницы 'Редактор'")
-@pytest.mark.smoke_test
-class TestEditorPageSmoke:
+@pytest.mark.auto_test
+class TestEditorPage:
 
     @allure.title('Проверить доступность меню в редакторе')
     def test_editor_menu(self, auth_user_admin, driver):

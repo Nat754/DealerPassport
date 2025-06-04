@@ -6,7 +6,7 @@ from tests.constants import Tokens, Urls, HeaderConstant, MainConstant
 
 
 @allure.epic("Тестирование главной страницы")
-@pytest.mark.smoke_test
+@pytest.mark.auto_test
 class TestMainPageSmoke:
 
     @pytest.mark.parametrize('url', Urls.LIST_URLS)

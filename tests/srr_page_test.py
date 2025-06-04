@@ -5,7 +5,7 @@ from tests.constants import SRRConstant, Urls
 
 
 @allure.epic("Тестирование страницы отчетов SRR")
-@pytest.mark.smoke_test
+@pytest.mark.auto_test
 class TestSRRPageSmoke:
 
     @allure.title('Проверить доступность списка групп отчетов SRR')

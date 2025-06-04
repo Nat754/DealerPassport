@@ -9,8 +9,8 @@ load_dotenv()
 class Tokens:
 
     TOKEN_SEO = {'token': f'{os.environ["SEO_ADMIN"]}'}
-    TOKEN_TEST = {'Authorization': f'{os.environ["TEST_ADMIN"]}'}
-    TOKEN_PROD = {'Authorization': f'{os.environ["PROD_ADMIN"]}'}
+    TOKEN_TEST = {'token': f'{os.environ["TEST_ADMIN"]}'}
+    TOKEN_PROD = {'token': f'{os.environ["PROD_ADMIN"]}'}
     MS_PROD = {'Authorization': f'{os.environ["MS_PROD"]}'}
     MS_TEST = {'Authorization': f'{os.environ["MS_TEST"]}'}
     PKD = {'Authorization': f'{os.environ["AUTOCRM"]}'}
@@ -19,7 +19,8 @@ class Tokens:
 class Urls:
     MAIN_URL = os.environ["MAIN_URL_PROD"]
     # MAIN_URL = os.environ["MAIN_URL_SEO"]
-    # MAIN_URL = os.environ["MAIN_URL_SEO"] + ":3001"
+    # MAIN_URL = os.environ["MAIN_URL_SEO"] + ':3001'
+    # MAIN_URL = os.environ["MAIN_URL_SEO"] + ':3011'
     # MAIN_URL = os.environ["MAIN_URL_TEST"]
     MS_URL_TEST = os.environ["MS_URL_TEST"]
     MS_URL_PROD = os.environ["MS_URL_PROD"]
@@ -77,7 +78,7 @@ class SRRConstant:
                    'на гарантийный ремонт (свой-чужой) по месяцу контроля\nМашинозаезды в динамике\nМашинозаезды по '
                    'дилеру\nСреднесуточный пробег (семейство автомобиля-регион)\nКлиенты не обращавшиеся на гарантийный'
                    ' ремонт\nSRR3\nSRR5\nПриглашение клиентов на ТО\nРегистрация ГИБДД\n1С УПП']
-    # for dev
+    # # for dev
     # LIST_GROUPS = ['Возвращение автомобилей на ТО по месяцу контроля\nВозвращение автомобилей на ТО по периоду '
     #                'продаж\nВозвращение автомобилей на гарантийный ремонт по месяцу контроля\nВозвращение автомобилей '
     #                'на гарантийный ремонт (свой-чужой) по месяцу контроля\nМашинозаезды в динамике\nМашинозаезды по '
@@ -136,10 +137,14 @@ class HeaderConstant:
     ACCOUNTING_TEXT = 'БУХГАЛТЕРИЯ'
     SRR_TEXT = 'SRR'
     REPORTS_TEXT = 'ОТЧЕТЫ'
-    MENU_TEXT = ['ПАСПОРТ\nЗД\nГР\nК\nПЕРСОНАЛ\nДИЛЕРЫ\nПОЛЬЗОВАТЕЛИ\nПОКАЗАТЕЛИ\nЗАГРУЗКИ\nРЕДАКТОР\nЛОГИ']
-    DEALER_NAME = ('ПИТЕР')
+    MENU_TEXT = ['ПАСПОРТ\nЗД\nГР\nК\nПЕРСОНАЛ\nДНМ\nДИЛЕРЫ\nПОЛЬЗОВАТЕЛИ\nПОКАЗАТЕЛИ\nЗАГРУЗКИ\nРЕДАКТОР\nЛОГИ']
+    DEALER_NAME = ('АВАЛОН')
     LOADER_MSG = 'ЗАГРУЗКА...'
 
 
 class MainConstant:
     ABOUT_BUTTONS = ['ИЗМЕНИТЬ\nКАМЕРЫ\nФОТО']
+
+
+class Headers:
+    HEADERS = {'Content-Type': 'application/json'}
