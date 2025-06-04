@@ -1,0 +1,425 @@
+{
+  "uid" : "ed6f74236957f550",
+  "name" : "Проверить поиск по кнопке ВЫБРАТЬ ДИЛЕРА",
+  "fullName" : "tests.main_page_test.TestMainPageSmoke#test_find_dealer",
+  "historyId" : "b18f8132f31807d94ad3cf4a64b17eac",
+  "time" : {
+    "start" : 1749068668218,
+    "stop" : 1749068670658,
+    "duration" : 2440
+  },
+  "status" : "failed",
+  "statusMessage" : "AssertionError: АВАЛОН не найден в ['АВАЛОН', 'АВАЛОН(СТ.ОСКОЛ)', 'АВД ГРУП', 'АВЕС-К', 'АВТО БИЗНЕС ГРУП', 'АВТО БИЗНЕС ГРУП(УЛ. ШЕВЧЕНКО)', 'АВТО-1 (НАБЕРЕЖНЫЕ ЧЕЛНЫ)', 'АВТО-1 (НОВОСИБИРСК)', 'АВТО-1 (ПРОКОПЬЕВСК)', 'АВТО-1 +', 'АВТО-МОТОРС', 'АВТО-РЕВЮ', 'АВТОАВАНГАРД', 'АВТОБАЗА №2', 'АВТОВЕК', 'АВТОГЕРМЕС-ЗАПАД (ВАРШАВСКОЕ ШОССЕ)', 'АВТОГЕРМЕС-ЗАПАД (ДМИТРОВСКОЕ ШОССЕ)', 'АВТОГЕРМЕС-ЗАПАД (КАШИРСКОЕ ШОССЕ)', 'АВТОГЕРМЕС-ЗАПАД (СОРМОВСКАЯ)', 'АВТОГЕРМЕС-ЗАПАД (ЭНТУЗИАСТОВ)', 'АВТОГРАД', 'АВТОГРУП КРЫМ', 'АВТОДВОР+', 'АВТОДОМ - ДОНЕЦК', 'АВТОКЛАСС НОРД']\nassert {False, True} == {True}\n  \n  Extra items in the left set:\n  False\n  \n  Full diff:\n    {\n  +     False,\n        True,\n    }",
+  "statusTrace" : "self = <tests.main_page_test.TestMainPageSmoke object at 0x7f9b8d5e50d0>\nauth_user_admin = <pages.main_page.MainPage object at 0x7f9b8d2ff290>\n\n    @allure.title(f'Проверить поиск по кнопке {HeaderConstant.SELECT_DEALER_TEXT}')\n    def test_find_dealer(self, auth_user_admin):\n        text = auth_user_admin.check_button_select_dealer().text\n        assert text == HeaderConstant.SELECT_DEALER_TEXT, f'ОР: {HeaderConstant.SELECT_DEALER_TEXT}, ФР: {text}'\n        auth_user_admin.check_button_select_dealer().click()\n        auth_user_admin.check_select_find_dealer(HeaderConstant.DEALER_NAME)\n        dealers = auth_user_admin.check_select_dealers()\n>       assert {HeaderConstant.DEALER_NAME in _ for _ in dealers} == {True}, \\\n            f'{HeaderConstant.DEALER_NAME} не найден в {dealers}'\nE       AssertionError: АВАЛОН не найден в ['АВАЛОН', 'АВАЛОН(СТ.ОСКОЛ)', 'АВД ГРУП', 'АВЕС-К', 'АВТО БИЗНЕС ГРУП', 'АВТО БИЗНЕС ГРУП(УЛ. ШЕВЧЕНКО)', 'АВТО-1 (НАБЕРЕЖНЫЕ ЧЕЛНЫ)', 'АВТО-1 (НОВОСИБИРСК)', 'АВТО-1 (ПРОКОПЬЕВСК)', 'АВТО-1 +', 'АВТО-МОТОРС', 'АВТО-РЕВЮ', 'АВТОАВАНГАРД', 'АВТОБАЗА №2', 'АВТОВЕК', 'АВТОГЕРМЕС-ЗАПАД (ВАРШАВСКОЕ ШОССЕ)', 'АВТОГЕРМЕС-ЗАПАД (ДМИТРОВСКОЕ ШОССЕ)', 'АВТОГЕРМЕС-ЗАПАД (КАШИРСКОЕ ШОССЕ)', 'АВТОГЕРМЕС-ЗАПАД (СОРМОВСКАЯ)', 'АВТОГЕРМЕС-ЗАПАД (ЭНТУЗИАСТОВ)', 'АВТОГРАД', 'АВТОГРУП КРЫМ', 'АВТОДВОР+', 'АВТОДОМ - ДОНЕЦК', 'АВТОКЛАСС НОРД']\nE       assert {False, True} == {True}\nE         \nE         Extra items in the left set:\nE         False\nE         \nE         Full diff:\nE           {\nE         +     False,\nE               True,\nE           }\n\ntests/main_page_test.py:33: AssertionError",
+  "flaky" : true,
+  "newFailed" : true,
+  "beforeStages" : [ {
+    "name" : "auth_user_admin",
+    "time" : {
+      "start" : 1749068664228,
+      "stop" : 1749068668217,
+      "duration" : 3989
+    },
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Проверка видимости кнопки '('xpath', '//span[text()=\"Согласен\"]')' на главной странице",
+      "time" : {
+        "start" : 1749068668115,
+        "stop" : 1749068668144,
+        "duration" : 29
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 1,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  }, {
+    "name" : "clear_allure_results_folder",
+    "time" : {
+      "start" : 1749068222084,
+      "stop" : 1749068222084,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "driver",
+    "time" : {
+      "start" : 1749068663901,
+      "stop" : 1749068664228,
+      "duration" : 327
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "status" : "failed",
+    "statusMessage" : "AssertionError: АВАЛОН не найден в ['АВАЛОН', 'АВАЛОН(СТ.ОСКОЛ)', 'АВД ГРУП', 'АВЕС-К', 'АВТО БИЗНЕС ГРУП', 'АВТО БИЗНЕС ГРУП(УЛ. ШЕВЧЕНКО)', 'АВТО-1 (НАБЕРЕЖНЫЕ ЧЕЛНЫ)', 'АВТО-1 (НОВОСИБИРСК)', 'АВТО-1 (ПРОКОПЬЕВСК)', 'АВТО-1 +', 'АВТО-МОТОРС', 'АВТО-РЕВЮ', 'АВТОАВАНГАРД', 'АВТОБАЗА №2', 'АВТОВЕК', 'АВТОГЕРМЕС-ЗАПАД (ВАРШАВСКОЕ ШОССЕ)', 'АВТОГЕРМЕС-ЗАПАД (ДМИТРОВСКОЕ ШОССЕ)', 'АВТОГЕРМЕС-ЗАПАД (КАШИРСКОЕ ШОССЕ)', 'АВТОГЕРМЕС-ЗАПАД (СОРМОВСКАЯ)', 'АВТОГЕРМЕС-ЗАПАД (ЭНТУЗИАСТОВ)', 'АВТОГРАД', 'АВТОГРУП КРЫМ', 'АВТОДВОР+', 'АВТОДОМ - ДОНЕЦК', 'АВТОКЛАСС НОРД']\nassert {False, True} == {True}\n  \n  Extra items in the left set:\n  False\n  \n  Full diff:\n    {\n  +     False,\n        True,\n    }",
+    "statusTrace" : "self = <tests.main_page_test.TestMainPageSmoke object at 0x7f9b8d5e50d0>\nauth_user_admin = <pages.main_page.MainPage object at 0x7f9b8d2ff290>\n\n    @allure.title(f'Проверить поиск по кнопке {HeaderConstant.SELECT_DEALER_TEXT}')\n    def test_find_dealer(self, auth_user_admin):\n        text = auth_user_admin.check_button_select_dealer().text\n        assert text == HeaderConstant.SELECT_DEALER_TEXT, f'ОР: {HeaderConstant.SELECT_DEALER_TEXT}, ФР: {text}'\n        auth_user_admin.check_button_select_dealer().click()\n        auth_user_admin.check_select_find_dealer(HeaderConstant.DEALER_NAME)\n        dealers = auth_user_admin.check_select_dealers()\n>       assert {HeaderConstant.DEALER_NAME in _ for _ in dealers} == {True}, \\\n            f'{HeaderConstant.DEALER_NAME} не найден в {dealers}'\nE       AssertionError: АВАЛОН не найден в ['АВАЛОН', 'АВАЛОН(СТ.ОСКОЛ)', 'АВД ГРУП', 'АВЕС-К', 'АВТО БИЗНЕС ГРУП', 'АВТО БИЗНЕС ГРУП(УЛ. ШЕВЧЕНКО)', 'АВТО-1 (НАБЕРЕЖНЫЕ ЧЕЛНЫ)', 'АВТО-1 (НОВОСИБИРСК)', 'АВТО-1 (ПРОКОПЬЕВСК)', 'АВТО-1 +', 'АВТО-МОТОРС', 'АВТО-РЕВЮ', 'АВТОАВАНГАРД', 'АВТОБАЗА №2', 'АВТОВЕК', 'АВТОГЕРМЕС-ЗАПАД (ВАРШАВСКОЕ ШОССЕ)', 'АВТОГЕРМЕС-ЗАПАД (ДМИТРОВСКОЕ ШОССЕ)', 'АВТОГЕРМЕС-ЗАПАД (КАШИРСКОЕ ШОССЕ)', 'АВТОГЕРМЕС-ЗАПАД (СОРМОВСКАЯ)', 'АВТОГЕРМЕС-ЗАПАД (ЭНТУЗИАСТОВ)', 'АВТОГРАД', 'АВТОГРУП КРЫМ', 'АВТОДВОР+', 'АВТОДОМ - ДОНЕЦК', 'АВТОКЛАСС НОРД']\nE       assert {False, True} == {True}\nE         \nE         Extra items in the left set:\nE         False\nE         \nE         Full diff:\nE           {\nE         +     False,\nE               True,\nE           }\n\ntests/main_page_test.py:33: AssertionError",
+    "steps" : [ {
+      "name" : "Проверка кликабельности кнопки 'ВЫБРАТЬ ДИЛЕРА' на главной странице",
+      "time" : {
+        "start" : 1749068668218,
+        "stop" : 1749068668245,
+        "duration" : 27
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Проверка кликабельности кнопки 'ВЫБРАТЬ ДИЛЕРА' на главной странице",
+      "time" : {
+        "start" : 1749068668256,
+        "stop" : 1749068668273,
+        "duration" : 17
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Ввести имя дилера в поисковой строке",
+      "time" : {
+        "start" : 1749068668347,
+        "stop" : 1749068668617,
+        "duration" : 270
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "name",
+        "value" : "'АВАЛОН'"
+      } ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "Получить список дилеров",
+      "time" : {
+        "start" : 1749068668617,
+        "stop" : 1749068670657,
+        "duration" : 2040
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ {
+      "uid" : "60cdc8db64568afa",
+      "name" : "Screenshot",
+      "source" : "60cdc8db64568afa.png",
+      "type" : "image/png",
+      "size" : 206271
+    }, {
+      "uid" : "b4707bea31692b58",
+      "name" : "HTML source",
+      "source" : "b4707bea31692b58.html",
+      "type" : "text/html",
+      "size" : 36740
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 4,
+    "attachmentsCount" : 2,
+    "shouldDisplayMessage" : true,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "driver::0",
+    "time" : {
+      "start" : 1749068670806,
+      "stop" : 1749068670867,
+      "duration" : 61
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "epic",
+    "value" : "Тестирование главной страницы"
+  }, {
+    "name" : "tag",
+    "value" : "auto_test"
+  }, {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "main_page_test"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestMainPageSmoke"
+  }, {
+    "name" : "host",
+    "value" : "fv-az1922-584"
+  }, {
+    "name" : "thread",
+    "value" : "2476-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.main_page_test"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 53,
+        "broken" : 3,
+        "skipped" : 0,
+        "passed" : 185,
+        "unknown" : 0,
+        "total" : 241
+      },
+      "items" : [ {
+        "uid" : "cce593e3915bcd0f",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/18//#testresult/cce593e3915bcd0f",
+        "status" : "passed",
+        "time" : {
+          "start" : 1749050655985,
+          "stop" : 1749050658511,
+          "duration" : 2526
+        }
+      }, {
+        "uid" : "fde52869cd00697a",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/378//#testresult/fde52869cd00697a",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: ПИТЕР не найден в ['АВАЛОН', 'АВАЛОН(СТ.ОСКОЛ)', 'АВД ГРУП', 'АВЕС-К', 'АВТО БИЗНЕС ГРУП', 'АВТО БИЗНЕС ГРУП(УЛ. ШЕВЧЕНКО)', 'АВТО-1 (НАБЕРЕЖНЫЕ ЧЕЛНЫ)', 'АВТО-1 (НОВОСИБИРСК)', 'АВТО-1 (ПРОКОПЬЕВСК)', 'АВТО-1 +', 'АВТО-МОТОРС', 'АВТО-РЕВЮ', 'АВТОАВАНГАРД', 'АВТОБАЗА №2', 'АВТОВЕК', 'АВТОГЕРМЕС-ЗАПАД (ВАРШАВСКОЕ ШОССЕ)', 'АВТОГЕРМЕС-ЗАПАД (ДМИТРОВСКОЕ ШОССЕ)', 'АВТОГЕРМЕС-ЗАПАД (КАШИРСКОЕ ШОССЕ)', 'АВТОГЕРМЕС-ЗАПАД (СОРМОВСКАЯ)', 'АВТОГЕРМЕС-ЗАПАД (ЭНТУЗИАСТОВ)', 'АВТОГРАД', 'АВТОГРУП КРЫМ', 'АВТОДВОР+', 'АВТОДОМ - ДОНЕЦК', 'АВТОКЛАСС НОРД']\nassert {False} == {True}\n  \n  Extra items in the left set:\n  False\n  Extra items in the right set:\n  True\n  \n  Full diff:\n    {\n  -     True,\n  +     False,\n    }",
+        "time" : {
+          "start" : 1748982452045,
+          "stop" : 1748982454494,
+          "duration" : 2449
+        }
+      }, {
+        "uid" : "73b356ffa6c23030",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/377//#testresult/73b356ffa6c23030",
+        "status" : "passed",
+        "time" : {
+          "start" : 1748896043187,
+          "stop" : 1748896045912,
+          "duration" : 2725
+        }
+      }, {
+        "uid" : "cbad45cff512dcf4",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/376//#testresult/cbad45cff512dcf4",
+        "status" : "passed",
+        "time" : {
+          "start" : 1748809555166,
+          "stop" : 1748809557549,
+          "duration" : 2383
+        }
+      }, {
+        "uid" : "c3da2c2ff913b4",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/375//#testresult/c3da2c2ff913b4",
+        "status" : "passed",
+        "time" : {
+          "start" : 1748723076528,
+          "stop" : 1748723079267,
+          "duration" : 2739
+        }
+      }, {
+        "uid" : "d993e5978d7769ee",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/374//#testresult/d993e5978d7769ee",
+        "status" : "passed",
+        "time" : {
+          "start" : 1748636761533,
+          "stop" : 1748636764065,
+          "duration" : 2532
+        }
+      }, {
+        "uid" : "64bb763ec276fc9",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/373//#testresult/64bb763ec276fc9",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: ПИТЕР не найден в ['АВАЛОН', 'АВАЛОН(СТ.ОСКОЛ)', 'АВД ГРУП', 'АВЕС-К', 'АВТО БИЗНЕС ГРУП', 'АВТО БИЗНЕС ГРУП(УЛ. ШЕВЧЕНКО)', 'АВТО-1 (НАБЕРЕЖНЫЕ ЧЕЛНЫ)', 'АВТО-1 (НОВОСИБИРСК)', 'АВТО-1 (ПРОКОПЬЕВСК)', 'АВТО-1 +', 'АВТО-МОТОРС', 'АВТО-РЕВЮ', 'АВТОАВАНГАРД', 'АВТОБАЗА №2', 'АВТОВЕК', 'АВТОГЕРМЕС-ЗАПАД (ВАРШАВСКОЕ ШОССЕ)', 'АВТОГЕРМЕС-ЗАПАД (ДМИТРОВСКОЕ ШОССЕ)', 'АВТОГЕРМЕС-ЗАПАД (КАШИРСКОЕ ШОССЕ)', 'АВТОГЕРМЕС-ЗАПАД (СОРМОВСКАЯ)', 'АВТОГЕРМЕС-ЗАПАД (ЭНТУЗИАСТОВ)', 'АВТОГРАД', 'АВТОГРУП КРЫМ', 'АВТОДВОР+', 'АВТОДОМ - ДОНЕЦК', 'АВТОКЛАСС НОРД']\nassert {False} == {True}\n  \n  Extra items in the left set:\n  False\n  Extra items in the right set:\n  True\n  \n  Full diff:\n    {\n  -     True,\n  +     False,\n    }",
+        "time" : {
+          "start" : 1748550442246,
+          "stop" : 1748550444840,
+          "duration" : 2594
+        }
+      }, {
+        "uid" : "f76f67a5047b20c4",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/372//#testresult/f76f67a5047b20c4",
+        "status" : "passed",
+        "time" : {
+          "start" : 1748464026698,
+          "stop" : 1748464029304,
+          "duration" : 2606
+        }
+      }, {
+        "uid" : "2f69e0d2fa7fdb07",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/371//#testresult/2f69e0d2fa7fdb07",
+        "status" : "passed",
+        "time" : {
+          "start" : 1748377566032,
+          "stop" : 1748377568495,
+          "duration" : 2463
+        }
+      }, {
+        "uid" : "d8e43775a0999d15",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/370//#testresult/d8e43775a0999d15",
+        "status" : "passed",
+        "time" : {
+          "start" : 1748291172276,
+          "stop" : 1748291174871,
+          "duration" : 2595
+        }
+      }, {
+        "uid" : "de53dc1e91c38e1e",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/369//#testresult/de53dc1e91c38e1e",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: ПИТЕР не найден в ['АВАЛОН', 'АВАЛОН(СТ.ОСКОЛ)', 'АВД ГРУП', 'АВЕС-К', 'АВТО БИЗНЕС ГРУП', 'АВТО БИЗНЕС ГРУП(УЛ. ШЕВЧЕНКО)', 'АВТО-1 (НАБЕРЕЖНЫЕ ЧЕЛНЫ)', 'АВТО-1 (НОВОСИБИРСК)', 'АВТО-1 (ПРОКОПЬЕВСК)', 'АВТО-1 +', 'АВТО-МОТОРС', 'АВТО-РЕВЮ', 'АВТОАВАНГАРД', 'АВТОБАЗА №2', 'АВТОВЕК', 'АВТОГЕРМЕС-ЗАПАД (ВАРШАВСКОЕ ШОССЕ)', 'АВТОГЕРМЕС-ЗАПАД (ДМИТРОВСКОЕ ШОССЕ)', 'АВТОГЕРМЕС-ЗАПАД (КАШИРСКОЕ ШОССЕ)', 'АВТОГЕРМЕС-ЗАПАД (СОРМОВСКАЯ)', 'АВТОГЕРМЕС-ЗАПАД (ЭНТУЗИАСТОВ)', 'АВТОГРАД', 'АВТОГРУП КРЫМ', 'АВТОДВОР+', 'АВТОДОМ - ДОНЕЦК', 'АВТОКЛАСС НОРД']\nassert {False} == {True}\n  \n  Extra items in the left set:\n  False\n  Extra items in the right set:\n  True\n  \n  Full diff:\n    {\n  -     True,\n  +     False,\n    }",
+        "time" : {
+          "start" : 1748204656420,
+          "stop" : 1748204658756,
+          "duration" : 2336
+        }
+      }, {
+        "uid" : "7e25b30f03187906",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/368//#testresult/7e25b30f03187906",
+        "status" : "passed",
+        "time" : {
+          "start" : 1748118277074,
+          "stop" : 1748118279646,
+          "duration" : 2572
+        }
+      }, {
+        "uid" : "7bb13ddc9f40d748",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/367//#testresult/7bb13ddc9f40d748",
+        "status" : "passed",
+        "time" : {
+          "start" : 1748031959492,
+          "stop" : 1748031962012,
+          "duration" : 2520
+        }
+      }, {
+        "uid" : "ffc1c07e7a0ca37",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/366//#testresult/ffc1c07e7a0ca37",
+        "status" : "passed",
+        "time" : {
+          "start" : 1747945563259,
+          "stop" : 1747945565804,
+          "duration" : 2545
+        }
+      }, {
+        "uid" : "e64a54193cc0d128",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/365//#testresult/e64a54193cc0d128",
+        "status" : "passed",
+        "time" : {
+          "start" : 1747859210772,
+          "stop" : 1747859213326,
+          "duration" : 2554
+        }
+      }, {
+        "uid" : "714800d79e9b39db",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/364//#testresult/714800d79e9b39db",
+        "status" : "passed",
+        "time" : {
+          "start" : 1747842385964,
+          "stop" : 1747842388467,
+          "duration" : 2503
+        }
+      }, {
+        "uid" : "2e7e30bd77f85fe5",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/364//#testresult/2e7e30bd77f85fe5",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: ПИТЕР не найден в ['АВАЛОН', 'АВАЛОН(СТ.ОСКОЛ)', 'АВД ГРУП', 'АВЕС-К', 'АВТО БИЗНЕС ГРУП', 'АВТО БИЗНЕС ГРУП(УЛ. ШЕВЧЕНКО)', 'АВТО-1 (НАБЕРЕЖНЫЕ ЧЕЛНЫ)', 'АВТО-1 (НОВОСИБИРСК)', 'АВТО-1 (ПРОКОПЬЕВСК)', 'АВТО-1 +', 'АВТО-МОТОРС', 'АВТО-РЕВЮ', 'АВТОАВАНГАРД', 'АВТОБАЗА №2', 'АВТОВЕК', 'АВТОГЕРМЕС-ЗАПАД (ВАРШАВСКОЕ ШОССЕ)', 'АВТОГЕРМЕС-ЗАПАД (ДМИТРОВСКОЕ ШОССЕ)', 'АВТОГЕРМЕС-ЗАПАД (КАШИРСКОЕ ШОССЕ)', 'АВТОГЕРМЕС-ЗАПАД (СОРМОВСКАЯ)', 'АВТОГЕРМЕС-ЗАПАД (ЭНТУЗИАСТОВ)', 'АВТОГРАД', 'АВТОГРУП КРЫМ', 'АВТОДВОР+', 'АВТОДОМ - ДОНЕЦК', 'АВТОКЛАСС НОРД']\nassert {False} == {True}\n  \n  Extra items in the left set:\n  False\n  Extra items in the right set:\n  True\n  \n  Full diff:\n    {\n  -     True,\n  +     False,\n    }",
+        "time" : {
+          "start" : 1747772813232,
+          "stop" : 1747772815763,
+          "duration" : 2531
+        }
+      }, {
+        "uid" : "6f0085ba274213eb",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/363//#testresult/6f0085ba274213eb",
+        "status" : "passed",
+        "time" : {
+          "start" : 1747686403749,
+          "stop" : 1747686406162,
+          "duration" : 2413
+        }
+      }, {
+        "uid" : "b3251c79edb1a1a1",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/362//#testresult/b3251c79edb1a1a1",
+        "status" : "passed",
+        "time" : {
+          "start" : 1747599883433,
+          "stop" : 1747599886008,
+          "duration" : 2575
+        }
+      }, {
+        "uid" : "711e0b97b1c0f703",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/361//#testresult/711e0b97b1c0f703",
+        "status" : "passed",
+        "time" : {
+          "start" : 1747513483094,
+          "stop" : 1747513485642,
+          "duration" : 2548
+        }
+      } ]
+    },
+    "tags" : [ "auto_test" ]
+  },
+  "source" : "ed6f74236957f550.json",
+  "parameterValues" : [ ]
+}
