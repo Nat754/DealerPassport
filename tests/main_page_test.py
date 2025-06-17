@@ -2,18 +2,21 @@ import pytest
 import allure
 import requests
 from selenium.common import TimeoutException
+
+from pages.rest_api_page import RESTApi
 from tests.constants import Tokens, Urls, HeaderConstant, MainConstant
 
 
 @allure.epic("Тестирование главной страницы")
 @pytest.mark.auto_test
 class TestMainPageSmoke:
+    token = Tokens
+    page = RESTApi
 
     @pytest.mark.parametrize('url', Urls.LIST_URLS)
     def test_get_urls(self, url):
         allure.dynamic.title(f'Проверка доступности {url}')
-        headers = Tokens.TOKEN_PROD
-        response = requests.request("GET", url, headers=headers)
+        response = self.page.get(url, headers=self.token.TOKEN_ADMIN)
         assert response.status_code == 200, f'{url} недоступен'
 
     @pytest.mark.parametrize('url', Urls.LIST_URLS)

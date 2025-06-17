@@ -5,4 +5,4 @@ services:
       dockerfile: Dockerfile
     volumes:
       - ./:/usr/workspace
-    command: [ "pytest -s -v --alluredir=allure-results" ]
+    command: [ "pytest -s -v -m "auto_test" --alluredir=allure-results" ]

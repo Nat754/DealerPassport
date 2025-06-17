@@ -43,6 +43,7 @@ jobs:
         MS_URL_PROD: ${{ secrets.MS_URL_PROD }}
         AUTOCRM: ${{ secrets.AUTOCRM }}
         AUTOCRM_URL: ${{ secrets.AUTOCRM_URL }}
+        CANDIDATES_URL: ${{ secrets.CANDIDATES_URL }}
       run: |
         pytest -s -v --alluredir=allure-results
 

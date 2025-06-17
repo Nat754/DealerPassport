@@ -10,7 +10,7 @@ class TestIntegrations:
     const = IntegrationsConstants
     url = Urls
     token = Tokens
-    page = RESTApi()
+    page = RESTApi
 
     @allure.title('Проверка доступности MSPortal Test')
     def test_get_ms_portal_test(self):
@@ -24,7 +24,7 @@ class TestIntegrations:
 
     @allure.title('Получение данных тест MSPortal')
     def test_get_indicators_test(self):
-        response_test = self.page.get(self.const.url_test, headers=Tokens.MS_PROD)
+        response_test = self.page.get(self.const.url_test, headers=self.token.MS_PROD)
         # dealers = [item['dealer_id'] for item in response_test.json()]
         # for dealer in dealers:
         #     print(f'\nСписок индикаторов для ДЦ {dealer} на тесте ({self.const.QUARTER}Q{self.const.YEAR % 2000}):',
@@ -33,7 +33,7 @@ class TestIntegrations:
 
     @allure.title('Получение данных прод MSPortal')
     def test_get_indicators_prod(self):
-        response_prod = self.page.get(url=self.const.url_prod, headers=Tokens.MS_PROD)
+        response_prod = self.page.get(url=self.const.url_prod, headers=self.token.MS_PROD)
         # dealers = [item['dealer_id'] for item in response_prod.json()]
         # for dealer in dealers:
         #     print(f'\nСписок индикаторов для ДЦ {dealer} на прод ({self.const.QUARTER}Q{self.const.YEAR % 2000}):',
