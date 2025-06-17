@@ -8,9 +8,9 @@ load_dotenv()
 
 class Tokens:
 
-    TOKEN_SEO = {'token': f'{os.environ["SEO_ADMIN"]}'}
-    TOKEN_TEST = {'token': f'{os.environ["TEST_ADMIN"]}'}
-    TOKEN_PROD = {'token': f'{os.environ["PROD_ADMIN"]}'}
+    # TOKEN_ADMIN = {'token': f'{os.environ["SEO_ADMIN"]}'}
+    # TOKEN_ADMIN = {'token': f'{os.environ["TEST_ADMIN"]}'}
+    TOKEN_ADMIN = {'token': f'{os.environ["PROD_ADMIN"]}'}
     MS_PROD = {'Authorization': f'{os.environ["MS_PROD"]}'}
     MS_TEST = {'Authorization': f'{os.environ["MS_TEST"]}'}
     PKD = {'Authorization': f'{os.environ["AUTOCRM"]}'}
@@ -24,6 +24,7 @@ class Urls:
     # MAIN_URL = os.environ["MAIN_URL_TEST"]
     MS_URL_TEST = os.environ["MS_URL_TEST"]
     MS_URL_PROD = os.environ["MS_URL_PROD"]
+    CANDIDATES_URL = os.environ["CANDIDATES_URL"]
 
     AUTH = "/auth"
     PKD_URL = "/pkd/"
@@ -79,11 +80,12 @@ class SRRConstant:
                    'дилеру\nСреднесуточный пробег (семейство автомобиля-регион)\nКлиенты не обращавшиеся на гарантийный'
                    ' ремонт\nSRR3\nSRR5\nПриглашение клиентов на ТО\nРегистрация ГИБДД\n1С УПП']
     # # for dev
-    # LIST_GROUPS = ['Возвращение автомобилей на ТО по месяцу контроля\nВозвращение автомобилей на ТО по периоду '
-    #                'продаж\nВозвращение автомобилей на гарантийный ремонт по месяцу контроля\nВозвращение автомобилей '
-    #                'на гарантийный ремонт (свой-чужой) по месяцу контроля\nМашинозаезды в динамике\nМашинозаезды по '
-    #                'дилеру\nСреднесуточный пробег (семейство автомобиля-регион)\nКлиенты не обращавшиеся на гарантийный'
-    #                ' ремонт\nSRR3\nSRR5\nПриглашение клиентов на ТО\nРегистрация ГИБДД\nUVIN\nNS\n1С УПП']
+    # LIST_GROUPS = ['Возвращение автомобилей на ТО по месяцу контроля\nВозвращение автомобилей на ТО по'
+    #                ' периоду продаж\nВозвращение автомобилей на гарантийный ремонт по месяцу контроля\nВозвращение'
+    #                ' автомобилей на гарантийный ремонт (свой-чужой) по месяцу контроля\nМашинозаезды в'
+    #                ' динамике\nМашинозаезды по дилеру\nСреднесуточный пробег (семейство автомобиля-регион)\nКлиенты'
+    #                ' не обращавшиеся на гарантийный ремонт\nSRR3\nSRR5\nПриглашение клиентов на ТО\nРегистрация'
+    #                ' ГИБДД\nUVIN\nNS\n1С УПП']
     TEXT_PARAM_BUTTON = 'Параметры'
     TEXT_REPORT_CREATE = 'Сформировать'
     TEXT_REPORT_EXCELL = 'Сохр. в excel'
@@ -109,7 +111,7 @@ class EditorConstants:
     #                'Справочник доверенных лиц', 'Справочник тарифов IVIDEON']
 
 
-class MSConstants:
+class IntegrationsConstants:
     YEAR = datetime.now().year
     QUARTER = (datetime.now().month - 1) // 3
     DEALER_ID = '1197057857'
@@ -138,7 +140,7 @@ class HeaderConstant:
     SRR_TEXT = 'SRR'
     REPORTS_TEXT = 'ОТЧЕТЫ'
     MENU_TEXT = ['ПАСПОРТ\nЗД\nГР\nК\nПЕРСОНАЛ\nДНМ\nДИЛЕРЫ\nПОЛЬЗОВАТЕЛИ\nПОКАЗАТЕЛИ\nЗАГРУЗКИ\nРЕДАКТОР\nЛОГИ']
-    DEALER_NAME = ('АВАЛОН')
+    DEALER_NAME = 'АВАЛОН'
     LOADER_MSG = 'ЗАГРУЗКА...'
 
 
