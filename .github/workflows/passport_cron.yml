@@ -45,6 +45,8 @@ jobs:
         AUTOCRM: ${{ secrets.AUTOCRM }}
         AUTOCRM_URL: ${{ secrets.AUTOCRM_URL }}
         CANDIDATES_URL: ${{ secrets.CANDIDATES_URL }}
+        REGISTRY_URL: ${{ secrets.REGISTRY_URL }}
+        REGISTRY: ${{ secrets.REGISTRY }}
       run: |
         pytest -s -v --alluredir=allure-results
 

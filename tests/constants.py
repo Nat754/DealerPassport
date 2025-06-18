@@ -14,6 +14,7 @@ class Tokens:
     MS_PROD = {'Authorization': f'{os.environ["MS_PROD"]}'}
     MS_TEST = {'Authorization': f'{os.environ["MS_TEST"]}'}
     PKD = {'Authorization': f'{os.environ["AUTOCRM"]}'}
+    REGISTRY = {'Authorization': f'{os.environ["REGISTRY"]}'}
 
 
 class Urls:
@@ -25,6 +26,7 @@ class Urls:
     MS_URL_TEST = os.environ["MS_URL_TEST"]
     MS_URL_PROD = os.environ["MS_URL_PROD"]
     CANDIDATES_URL = os.environ["CANDIDATES_URL"]
+    REGISTRY_URL = os.environ["REGISTRY_URL"]
 
     AUTH = "/auth"
     PKD_URL = "/pkd/"
@@ -150,3 +152,12 @@ class MainConstant:
 
 class Headers:
     HEADERS = {'Content-Type': 'application/json'}
+
+
+class StatusCodes:
+    OK = 200
+    CREATE = 201
+
+
+class Assertions:
+    STATUS = 'Неверный ответ сервера'

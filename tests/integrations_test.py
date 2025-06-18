@@ -1,7 +1,7 @@
 import allure
 import pytest
 from pages.rest_api_page import RESTApi
-from tests.constants import Urls, IntegrationsConstants, Tokens
+from tests.constants import Urls, IntegrationsConstants, Tokens, StatusCodes, Assertions
 
 
 @allure.epic("Test integrations")
@@ -11,37 +11,53 @@ class TestIntegrations:
     url = Urls
     token = Tokens
     page = RESTApi
+    status = StatusCodes
+    assertion = Assertions
 
     @allure.title('Проверка доступности MSPortal Test')
     def test_get_ms_portal_test(self):
         response_test = self.page.get(self.const.url_test, headers=self.token.MS_PROD)
-        assert response_test.status_code == 200, 'Сервер MS Portal Test недоступен'
+        assert response_test.status_code == self.status.OK, f'{self.assertion.STATUS} - {response_test.text}'
 
     @allure.title('Проверка доступности MSPortal Prod')
     def test_get_ms_portal_prod(self):
         response_prod = self.page.get(self.const.url_test, headers=self.token.MS_PROD)
-        assert response_prod.status_code == 200, 'Сервер MS Portal Prod недоступен'
+        assert response_prod.status_code == self.status.OK, f'{self.assertion.STATUS} - {response_prod.text}'
 
-    @allure.title('Получение данных тест MSPortal')
+    @allure.title('Получение данные качества тест MSPortal')
     def test_get_indicators_test(self):
         response_test = self.page.get(self.const.url_test, headers=self.token.MS_PROD)
         # dealers = [item['dealer_id'] for item in response_test.json()]
         # for dealer in dealers:
         #     print(f'\nСписок индикаторов для ДЦ {dealer} на тесте ({self.const.QUARTER}Q{self.const.YEAR % 2000}):',
         #           [item['mark'] for item in response_test if item['dealer_id'] == dealer], sep='\n')
-        assert response_test.status_code == 200, 'Сервер MS Portal Test недоступен'
+        assert response_test.status_code == self.status.OK, f'{self.assertion.STATUS} - {response_test.text}'
 
-    @allure.title('Получение данных прод MSPortal')
+    @allure.title('Получить данные качества прод MSPortal')
     def test_get_indicators_prod(self):
         response_prod = self.page.get(url=self.const.url_prod, headers=self.token.MS_PROD)
         # dealers = [item['dealer_id'] for item in response_prod.json()]
         # for dealer in dealers:
         #     print(f'\nСписок индикаторов для ДЦ {dealer} на прод ({self.const.QUARTER}Q{self.const.YEAR % 2000}):',
         #           [item['mark'] for item in response_prod if item['dealer_id'] == dealer], sep='\n')
-        assert response_prod.status_code == 200, 'Сервер MS Portal Prod недоступен'
+        assert response_prod.status_code == self.status.OK, f'{self.assertion.STATUS} - {response_prod.text}'
 
-    @allure.title('Проверка доступности Candidates')
+    @allure.title('Проверить доступности Candidates')
     def test_get_candidates_health(self):
         url = f'{self.url.CANDIDATES_URL}/health'
         response = self.page.get(url)
-        assert response.status_code == 200, 'Сервер Отбора кандидатов недоступен'
+        assert response.status_code == self.status.OK, f'{self.assertion.STATUS} - {response.text}'
+
+    @allure.title('Получить ДЦ из Реестра')
+    def test_get_registry_dealers(self):
+        url = f'{self.url.REGISTRY_URL}/AVWS_PPD_REESTR_DLR'
+        headers = self.token.REGISTRY
+        response = self.page.get(url, headers=headers)
+        assert response.status_code == self.status.OK, f'{self.assertion.STATUS} - {response.text}'
+
+    @allure.title('Получить пользователей из Реестра')
+    def test_get_registry_users(self):
+        url = f'{self.url.REGISTRY_URL}/AVWS_PPD_USER_REESTR'
+        headers = self.token.REGISTRY
+        response = self.page.get(url, headers=headers)
+        assert response.status_code == self.status.OK, f'{self.assertion.STATUS} - {response.text}'
