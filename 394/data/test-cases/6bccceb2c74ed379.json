@@ -1,0 +1,229 @@
+{
+  "uid" : "6bccceb2c74ed379",
+  "name" : "Проверить отсутствие ошибок при открытии https://dealer-passport.vaz.ru/pkd/indicators/",
+  "fullName" : "tests.main_page_test.TestMainPageSmoke#test_open_url",
+  "historyId" : "cdb7654744ee1dcdde15d7f45f55ade5",
+  "time" : {
+    "start" : 1750364884129,
+    "stop" : 1750364895044,
+    "duration" : 10915
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "auth_user_admin",
+    "time" : {
+      "start" : 1750364879353,
+      "stop" : 1750364884128,
+      "duration" : 4775
+    },
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Проверка видимости кнопки '('xpath', '//span[text()=\"Согласен\"]')' на главной странице",
+      "time" : {
+        "start" : 1750364884020,
+        "stop" : 1750364884050,
+        "duration" : 30
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 1,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  }, {
+    "name" : "driver",
+    "time" : {
+      "start" : 1750364879013,
+      "stop" : 1750364879353,
+      "duration" : 340
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "clear_allure_results_folder",
+    "time" : {
+      "start" : 1750364527163,
+      "stop" : 1750364527163,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Проверить отсутствие ошибок",
+      "time" : {
+        "start" : 1750364884825,
+        "stop" : 1750364895044,
+        "duration" : 10219
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 1,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "driver::0",
+    "time" : {
+      "start" : 1750364895045,
+      "stop" : 1750364895116,
+      "duration" : 71
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "epic",
+    "value" : "Тестирование главной страницы"
+  }, {
+    "name" : "tag",
+    "value" : "auto_test"
+  }, {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "main_page_test"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestMainPageSmoke"
+  }, {
+    "name" : "host",
+    "value" : "fv-az2234-212"
+  }, {
+    "name" : "thread",
+    "value" : "2448-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.main_page_test"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "url",
+    "value" : "'https://dealer-passport.vaz.ru/pkd/indicators/'"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "c3e2cad89d39264",
+      "status" : "passed",
+      "time" : {
+        "start" : 1750364867777,
+        "stop" : 1750364878939,
+        "duration" : 11162
+      }
+    } ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 6,
+        "unknown" : 0,
+        "total" : 6
+      },
+      "items" : [ {
+        "uid" : "71766142952f7362",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/393//#testresult/71766142952f7362",
+        "status" : "passed",
+        "time" : {
+          "start" : 1750306530971,
+          "stop" : 1750306542084,
+          "duration" : 11113
+        }
+      }, {
+        "uid" : "df77ee51d1aa9364",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/393//#testresult/df77ee51d1aa9364",
+        "status" : "passed",
+        "time" : {
+          "start" : 1750279319598,
+          "stop" : 1750279330434,
+          "duration" : 10836
+        }
+      }, {
+        "uid" : "3081a3f8794f23d2",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/393//#testresult/3081a3f8794f23d2",
+        "status" : "passed",
+        "time" : {
+          "start" : 1750278498758,
+          "stop" : 1750278509870,
+          "duration" : 11112
+        }
+      }, {
+        "uid" : "f455f261f4ab8a2b",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/21//#testresult/f455f261f4ab8a2b",
+        "status" : "passed",
+        "time" : {
+          "start" : 1750246052999,
+          "stop" : 1750246064678,
+          "duration" : 11679
+        }
+      }, {
+        "uid" : "18135613711a0f32",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/20//#testresult/18135613711a0f32",
+        "status" : "passed",
+        "time" : {
+          "start" : 1750192246025,
+          "stop" : 1750192256974,
+          "duration" : 10949
+        }
+      } ]
+    },
+    "tags" : [ "auto_test" ]
+  },
+  "source" : "6bccceb2c74ed379.json",
+  "parameterValues" : [ "'https://dealer-passport.vaz.ru/pkd/indicators/'" ]
+}
