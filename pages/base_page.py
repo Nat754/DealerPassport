@@ -7,7 +7,7 @@ from selenium.webdriver.support.ui import WebDriverWait as Wait
 class BasePage:
     def __init__(self, driver):
         self.driver = driver
-        self.timeout = 10
+        self.timeout = 60
 
     def element_is_visible(self, locator):
         """
@@ -67,6 +67,8 @@ class BasePage:
         Проверка того, что элемент виден, отображается на странице, кликабелен.
         Элемент присутствует в DOM-дереве. Локатор - используется для поиска элемента.
         """
+        self.element_is_present(locator)
+        self.element_is_visible(locator)
         return Wait(self.driver, self.timeout).until(ec.element_to_be_clickable(locator))
 
     def go_to_element(self, element):

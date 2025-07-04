@@ -68,11 +68,8 @@ class MainPage(BasePage):
 
     @allure.step("Получить список дилеров")
     def check_select_dealers(self):
-        loader = self.elements_are_visible(self.locator.SELECT_DEALERS)[0].text
-        while loader == [self.hconstant.LOADER_MSG]:
-            loader = self.elements_are_visible(self.locator.SELECT_DEALERS)[0].text
-        time.sleep(2)
-        dealers = self.elements_are_visible(self.locator.SELECT_DEALERS)[0].text.split('\n')
+        self.element_is_not_visible(self.locator.LOADER)
+        dealers = [item.text for item in self.elements_are_visible(self.locator.SELECT_DEALERS)]
         return dealers
 
     @allure.step("Проверка отображения меню в шапке портала")

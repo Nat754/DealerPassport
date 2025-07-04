@@ -1,6 +1,5 @@
 import pytest
 import allure
-import requests
 from selenium.common import TimeoutException
 
 from pages.rest_api_page import RESTApi
@@ -33,7 +32,7 @@ class TestMainPageSmoke:
         auth_user_admin.check_button_select_dealer().click()
         auth_user_admin.check_select_find_dealer(HeaderConstant.DEALER_NAME)
         dealers = auth_user_admin.check_select_dealers()
-        assert {HeaderConstant.DEALER_NAME in _ for _ in dealers} == {True}, \
+        assert HeaderConstant.DEALER_NAME in dealers, \
             f'{HeaderConstant.DEALER_NAME} не найден в {dealers}'
 
     @allure.title(f'Проверить отображение и кликабельность кнопки {HeaderConstant.SELECT_DEALER_TEXT}')

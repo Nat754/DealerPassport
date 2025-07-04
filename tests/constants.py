@@ -8,9 +8,10 @@ load_dotenv()
 
 class Tokens:
 
-    # TOKEN_ADMIN = {'token': f'{os.environ["SEO_ADMIN"]}'}
-    # TOKEN_ADMIN = {'token': f'{os.environ["TEST_ADMIN"]}'}
-    TOKEN_ADMIN = {'token': f'{os.environ["PROD_ADMIN"]}'}
+    TOKEN = os.environ["PROD_ADMIN"]
+    # TOKEN = os.environ["SEO_ADMIN"]
+    # TOKEN = os.environ["TEST_ADMIN"]
+    TOKEN_ADMIN = {'token': TOKEN}
     MS_PROD = {'Authorization': f'{os.environ["MS_PROD"]}'}
     MS_TEST = {'Authorization': f'{os.environ["MS_TEST"]}'}
     PKD = {'Authorization': f'{os.environ["AUTOCRM"]}'}

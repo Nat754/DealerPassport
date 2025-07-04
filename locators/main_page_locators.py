@@ -7,10 +7,11 @@ class MainPageLocators:
     EDITOR_BUTTON = (By.XPATH, '//a[@href="/editor/"]')
     NOTIFICATIONS_BUTTON = (By.XPATH, '//div[contains(@class, "notifications")]')
     ERRORS = (By.XPATH, '//*[contains(text(), "error")]')
-    FIND_DEALER = (By.CSS_SELECTOR, '.desc--2vJ input')
-    SELECT_DEALERS = (By.CLASS_NAME, 'deaelers_container--3yC')
-
+    # FIND_DEALER = (By.CSS_SELECTOR, '.desc--2vJ input')
+    SELECT_DEALERS = (By.CSS_SELECTOR, 'div[data-dealer_id]')
     SELECT_DEALER_BUTTON = (By.XPATH, '//span[text()="Выбрать дилера"]')
+    FIND_DEALER = (By.CSS_SELECTOR, 'input[name]')
+    # SELECT_DEALERS = (By.CLASS_NAME, 'deaelers_container--3yC')
     PKD_BUTTON = (By.XPATH, '//span[text()="ПКД"]')
     INTERRUPTION_BUTTON = (By.XPATH, '//span[text()="Нарушения"]')
     NOTICES_BUTTON = (By.XPATH, '//span[text()="Объявления"]')
@@ -19,6 +20,6 @@ class MainPageLocators:
     SRR_BUTTON = (By.XPATH, '//span[text()="SRR"]')
     REPORTS_BUTTON = (By.XPATH, '//span[text()="Отчеты"]')
     MENU = (By.CLASS_NAME, 'menu--1eR')
-
+    LOADER = (By.XPATH, '//span[text()="ЗАГРУЗКА..."]')
     BLOCK_ABOUT = (By.CLASS_NAME, 'about--1Vq')
     BLOCK_ABOUT_BUTTONS = (By.CLASS_NAME, 'linkWrapper--38R')
