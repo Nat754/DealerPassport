@@ -1,6 +1,6 @@
 import allure
 import pytest
-from pages.rest_api_page import RESTApi
+from pages.rest_api_methods import RESTApi
 from tests.constants import Urls, IntegrationsConstants, Tokens, StatusCodes, Assertions
 
 

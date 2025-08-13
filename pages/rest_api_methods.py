@@ -8,11 +8,11 @@ class RESTApi:
         return requests.get(url=url, headers=headers, data=data, cookies=cookies)
 
     @staticmethod
-    def post(url: str, data: dict = None, headers: dict = None, cookies: dict = None):
+    def post(url: str, data: str = None, headers: dict = None, cookies: dict = None):
         return requests.post(url=url, headers=headers, data=data, cookies=cookies)
 
     @staticmethod
-    def put(url: str, data: dict = None, headers: dict = None, cookies: dict = None):
+    def put(url: str, data: str = None, headers: dict = None, cookies: dict = None):
         return requests.put(url=url, headers=headers, data=data, cookies=cookies)
 
     @staticmethod

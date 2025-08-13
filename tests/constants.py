@@ -116,7 +116,9 @@ class EditorConstants:
 
 class IntegrationsConstants:
     YEAR = datetime.now().year
-    QUARTER = (datetime.now().month - 1) // 3
+    QUARTER = datetime.now().month // 3
+    MONTH = datetime.now().month
+    DATE_NOW = datetime.now().date()
     DEALER_ID = '1197057857'
     url_test = f'{Urls.MS_URL_TEST}?year={YEAR}&quarter={QUARTER}'
     url_prod = f'{Urls.MS_URL_PROD}?year={YEAR}&quarter={QUARTER}'
@@ -143,7 +145,7 @@ class HeaderConstant:
     SRR_TEXT = 'SRR'
     REPORTS_TEXT = 'ОТЧЕТЫ'
     MENU_TEXT = ['ПАСПОРТ\nЗД\nГР\nК\nПЕРСОНАЛ\nДНМ\nДИЛЕРЫ\nПОЛЬЗОВАТЕЛИ\nПОКАЗАТЕЛИ\nЗАГРУЗКИ\nРЕДАКТОР\nЛОГИ']
-    DEALER_NAME = 'АВАЛОН'
+    DEALER_NAME = 'АВА'
     LOADER_MSG = 'ЗАГРУЗКА...'
 
 
@@ -152,7 +154,11 @@ class MainConstant:
 
 
 class Headers:
-    HEADERS = {'Content-Type': 'application/json'}
+    HEADERS = {
+            'accept': '*/*',
+            'Content-Type': 'application/json',
+            'Cookie': f'token={Tokens.TOKEN}'
+        }
 
 
 class StatusCodes:
