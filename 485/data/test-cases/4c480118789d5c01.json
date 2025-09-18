@@ -1,0 +1,270 @@
+{
+  "uid" : "4c480118789d5c01",
+  "name" : "Получить ДЦ из Реестра",
+  "fullName" : "tests.api_tests.integrations_test.TestIntegrations#test_get_registry_dealers",
+  "historyId" : "b8096b35a94dbee77a7afe4a7dd3849d",
+  "time" : {
+    "start" : 1758226808119,
+    "stop" : 1758226822530,
+    "duration" : 14411
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "clear_allure_results_folder",
+    "time" : {
+      "start" : 1758226792805,
+      "stop" : 1758226792805,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "epic",
+    "value" : "Test integrations"
+  }, {
+    "name" : "tag",
+    "value" : "auto_test"
+  }, {
+    "name" : "parentSuite",
+    "value" : "tests.api_tests"
+  }, {
+    "name" : "suite",
+    "value" : "integrations_test"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestIntegrations"
+  }, {
+    "name" : "host",
+    "value" : "runnervmf4ws1"
+  }, {
+    "name" : "thread",
+    "value" : "2539-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.api_tests.integrations_test"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 2,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 37,
+        "unknown" : 0,
+        "total" : 39
+      },
+      "items" : [ {
+        "uid" : "f3fe1a00412b95eb",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/484//#testresult/f3fe1a00412b95eb",
+        "status" : "passed",
+        "time" : {
+          "start" : 1758140359841,
+          "stop" : 1758140372434,
+          "duration" : 12593
+        }
+      }, {
+        "uid" : "2efc712efc6d9f68",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/483//#testresult/2efc712efc6d9f68",
+        "status" : "passed",
+        "time" : {
+          "start" : 1758053988383,
+          "stop" : 1758054001087,
+          "duration" : 12704
+        }
+      }, {
+        "uid" : "3cc9d32fbc0413d9",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/482//#testresult/3cc9d32fbc0413d9",
+        "status" : "passed",
+        "time" : {
+          "start" : 1757967565209,
+          "stop" : 1757967582278,
+          "duration" : 17069
+        }
+      }, {
+        "uid" : "375b4fc9ec58e792",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/481//#testresult/375b4fc9ec58e792",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Неверный ответ сервера - <!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01//EN\">\n  <html><head><title>1C:Enterprise 8 application error</title></head><body><h2>1C:Enterprise 8 application error:</h2>Ошибка установки соединения<br><b>by reason: </b><br>server_addr=tcp://vm-1Capp12-DMS:1541 descr=[::1]:1541:10061(0x0000274D): No connection could be made because the target machine actively refused it. ;\n  172.25.57.249:1541:10061(0x0000274D): No connection could be made because the target machine actively refused it. ;\n   line=1067 file=src\\DataExchangeTcpClientImpl.cpp</body></html>\nassert 502 == 200\n +  where 502 = <Response [502]>.status_code\n +  and   200 = <class 'tests.constants.StatusCodes'>.OK\n +    where <class 'tests.constants.StatusCodes'> = <tests.api_tests.integrations_test.TestIntegrations object at 0x7fb5ea919d90>.status",
+        "time" : {
+          "start" : 1757881069724,
+          "stop" : 1757881077159,
+          "duration" : 7435
+        }
+      }, {
+        "uid" : "2358f4ecc3ee5198",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/480//#testresult/2358f4ecc3ee5198",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Неверный ответ сервера - <!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01//EN\">\n  <html><head><title>1C:Enterprise 8 application error</title></head><body><h2>1C:Enterprise 8 application error:</h2>Ошибка установки соединения<br><b>by reason: </b><br>server_addr=tcp://vm-1Capp12-DMS:1541 descr=[::1]:1541:10061(0x0000274D): No connection could be made because the target machine actively refused it. ;\n  172.25.57.249:1541:10061(0x0000274D): No connection could be made because the target machine actively refused it. ;\n   line=1067 file=src\\DataExchangeTcpClientImpl.cpp</body></html>\nassert 502 == 200\n +  where 502 = <Response [502]>.status_code\n +  and   200 = <class 'tests.constants.StatusCodes'>.OK\n +    where <class 'tests.constants.StatusCodes'> = <tests.api_tests.integrations_test.TestIntegrations object at 0x7f30800199a0>.status",
+        "time" : {
+          "start" : 1757794645763,
+          "stop" : 1757794653363,
+          "duration" : 7600
+        }
+      }, {
+        "uid" : "eea21b006384eab2",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/479//#testresult/eea21b006384eab2",
+        "status" : "passed",
+        "time" : {
+          "start" : 1757708357877,
+          "stop" : 1757708369378,
+          "duration" : 11501
+        }
+      }, {
+        "uid" : "4fc3e8752135b3a2",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/478//#testresult/4fc3e8752135b3a2",
+        "status" : "passed",
+        "time" : {
+          "start" : 1757621826333,
+          "stop" : 1757621839986,
+          "duration" : 13653
+        }
+      }, {
+        "uid" : "bb625423170bf1a2",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/477//#testresult/bb625423170bf1a2",
+        "status" : "passed",
+        "time" : {
+          "start" : 1757535582247,
+          "stop" : 1757535593908,
+          "duration" : 11661
+        }
+      }, {
+        "uid" : "4ae6e0e9446c4c4a",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/476//#testresult/4ae6e0e9446c4c4a",
+        "status" : "passed",
+        "time" : {
+          "start" : 1757449192342,
+          "stop" : 1757449203495,
+          "duration" : 11153
+        }
+      }, {
+        "uid" : "a75335538a01e985",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/475//#testresult/a75335538a01e985",
+        "status" : "passed",
+        "time" : {
+          "start" : 1757362823937,
+          "stop" : 1757362836009,
+          "duration" : 12072
+        }
+      }, {
+        "uid" : "ecfc8869bbdbd13d",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/474//#testresult/ecfc8869bbdbd13d",
+        "status" : "passed",
+        "time" : {
+          "start" : 1757276273323,
+          "stop" : 1757276285018,
+          "duration" : 11695
+        }
+      }, {
+        "uid" : "5d79887007b082ef",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/473//#testresult/5d79887007b082ef",
+        "status" : "passed",
+        "time" : {
+          "start" : 1757189857393,
+          "stop" : 1757189870065,
+          "duration" : 12672
+        }
+      }, {
+        "uid" : "6b029ebee939f2ee",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/472//#testresult/6b029ebee939f2ee",
+        "status" : "passed",
+        "time" : {
+          "start" : 1757103583255,
+          "stop" : 1757103594724,
+          "duration" : 11469
+        }
+      }, {
+        "uid" : "e68f20602993ef0a",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/471//#testresult/e68f20602993ef0a",
+        "status" : "passed",
+        "time" : {
+          "start" : 1757050935091,
+          "stop" : 1757050943868,
+          "duration" : 8777
+        }
+      }, {
+        "uid" : "d1f8ad75c8516029",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/471//#testresult/d1f8ad75c8516029",
+        "status" : "passed",
+        "time" : {
+          "start" : 1757017173879,
+          "stop" : 1757017186191,
+          "duration" : 12312
+        }
+      }, {
+        "uid" : "1fd162ebc78efff6",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/470//#testresult/1fd162ebc78efff6",
+        "status" : "passed",
+        "time" : {
+          "start" : 1756930768492,
+          "stop" : 1756930780344,
+          "duration" : 11852
+        }
+      }, {
+        "uid" : "b1d7b5dcbe75a435",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/469//#testresult/b1d7b5dcbe75a435",
+        "status" : "passed",
+        "time" : {
+          "start" : 1756844330956,
+          "stop" : 1756844338582,
+          "duration" : 7626
+        }
+      }, {
+        "uid" : "867a9584ecc92822",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/468//#testresult/867a9584ecc92822",
+        "status" : "passed",
+        "time" : {
+          "start" : 1756757959712,
+          "stop" : 1756757968320,
+          "duration" : 8608
+        }
+      }, {
+        "uid" : "492fc44e0081e61a",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/467//#testresult/492fc44e0081e61a",
+        "status" : "passed",
+        "time" : {
+          "start" : 1756671560822,
+          "stop" : 1756671569443,
+          "duration" : 8621
+        }
+      }, {
+        "uid" : "cf7704b7c1a0ad5f",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/466//#testresult/cf7704b7c1a0ad5f",
+        "status" : "passed",
+        "time" : {
+          "start" : 1756585103893,
+          "stop" : 1756585111300,
+          "duration" : 7407
+        }
+      } ]
+    },
+    "tags" : [ "auto_test" ]
+  },
+  "source" : "4c480118789d5c01.json",
+  "parameterValues" : [ ]
+}
