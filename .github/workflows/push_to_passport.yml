@@ -46,6 +46,8 @@ jobs:
         CANDIDATES_URL: ${{ secrets.CANDIDATES_URL }}
         REGISTRY_URL: ${{ secrets.REGISTRY_URL }}
         REGISTRY: ${{ secrets.REGISTRY }}
+        EXPORT_API_SEO: ${{ secrets.EXPORT_API_SEO }}
+        EXPORT_API_PROD: ${{ secrets.EXPORT_API_PROD }}
       run: |
         pytest -s -v --alluredir=allure-results
 
