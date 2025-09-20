@@ -1,28 +1,15 @@
 import os
 from dotenv import load_dotenv
-from datetime import datetime
-
+from datetime import datetime, timedelta
 
 load_dotenv()
 
 
-class Tokens:
-
-    # TOKEN = os.environ["PROD_ADMIN"]
-    TOKEN = os.environ["SEO_ADMIN"]
-    # TOKEN = os.environ["TEST_ADMIN"]
-    TOKEN_ADMIN = {'token': TOKEN}
-    MS_PROD = {'Authorization': f'{os.environ["MS_PROD"]}'}
-    MS_TEST = {'Authorization': f'{os.environ["MS_TEST"]}'}
-    PKD = {'Authorization': f'{os.environ["AUTOCRM"]}'}
-    REGISTRY = {'Authorization': f'{os.environ["REGISTRY"]}'}
-
-
 class Urls:
-    # MAIN_URL = os.environ["MAIN_URL_PROD"]
+    MAIN_URL = os.environ["MAIN_URL_PROD"]
     # MAIN_URL = os.environ["MAIN_URL_SEO"]
     # MAIN_URL = os.environ["MAIN_URL_SEO"] + ':3001'
-    MAIN_URL = os.environ["MAIN_URL_SEO"] + ':3011'
+    # MAIN_URL = os.environ["MAIN_URL_SEO"] + ':3011'
     # MAIN_URL = os.environ["MAIN_URL_TEST"]
     MS_URL_TEST = os.environ["MS_URL_TEST"]
     MS_URL_PROD = os.environ["MS_URL_PROD"]
@@ -51,6 +38,7 @@ class Urls:
     EDITOR_URL = "/editor/"
     LOGS_URL = "/logs/"
     EMAIL_LOGS_URL = "/logs/email"
+    STAFF_CHECKED_URL = '/base/staff/?searchText=&page=0&openModal=&dateBegin=&selectedDate=&currentId='
 
     LIST_URLS = [MAIN_URL,
                  MAIN_URL + EDITOR_URL,
@@ -75,24 +63,43 @@ class Urls:
                  MAIN_URL + NOTICES_URL]
 
 
+class Tokens:
+
+    TOKEN = os.environ["PROD_ADMIN"] if Urls.MAIN_URL == os.environ["MAIN_URL_PROD"] else os.environ["TEST_ADMIN"]\
+        if Urls.MAIN_URL == os.environ["MAIN_URL_TEST"] else os.environ["SEO_ADMIN"]
+    TOKEN_TEST = os.environ["SEO_TEST"]
+    TOKEN_EXPORT = os.environ["EXPORT_API_PROD"] if Urls.MAIN_URL == os.environ["MAIN_URL_PROD"]\
+        else os.environ["EXPORT_API_SEO"]
+    TOKEN_ADMIN = {'token': TOKEN}
+    MS_PROD = {'Authorization': f'{os.environ["MS_PROD"]}'}
+    MS_TEST = {'Authorization': f'{os.environ["MS_TEST"]}'}
+    PKD = {'Authorization': f'{os.environ["AUTOCRM"]}'}
+    REGISTRY = {'Authorization': f'{os.environ["REGISTRY"]}'}
+    MY_TOKEN = ''
+
+
 class SRRConstant:
-    # for prod
-    # LIST_GROUPS = ['Возвращение автомобилей на ТО по месяцу контроля\nВозвращение автомобилей на ТО по периоду '
-    #                'продаж\nВозвращение автомобилей на гарантийный ремонт по месяцу контроля\nВозвращение автомобилей '
-    #                'на гарантийный ремонт (свой-чужой) по месяцу контроля\nМашинозаезды в динамике\nМашинозаезды по '
-    #                'дилеру\nСреднесуточный пробег (семейство автомобиля-регион)\nКлиенты не обращавшиеся на гарантийный'
-    #                ' ремонт\nSRR3\nSRR5\nПриглашение клиентов на ТО\nРегистрация ГИБДД\n1С УПП']
-    # # for dev
-    LIST_GROUPS = ['Возвращение автомобилей на ТО по месяцу контроля\nВозвращение автомобилей на ТО по'
-                   ' периоду продаж\nВозвращение автомобилей на гарантийный ремонт по месяцу контроля\nВозвращение'
-                   ' автомобилей на гарантийный ремонт (свой-чужой) по месяцу контроля\nМашинозаезды в'
-                   ' динамике\nМашинозаезды по дилеру\nСреднесуточный пробег (семейство автомобиля-регион)\nКлиенты'
-                   ' не обращавшиеся на гарантийный ремонт\nSRR3\nSRR5\nПриглашение клиентов на ТО\nРегистрация'
-                   ' ГИБДД\nUVIN\nNS\n1С УПП']
+
+    LIST_PROD = ['Возвращение автомобилей на ТО по месяцу контроля\nВозвращение автомобилей на ТО по периоду '
+                 'продаж\nВозвращение автомобилей на гарантийный ремонт по месяцу контроля\nВозвращение автомобилей '
+                 'на гарантийный ремонт (свой-чужой) по месяцу контроля\nМашинозаезды в динамике\nМашинозаезды по '
+                 'дилеру\nСреднесуточный пробег (семейство автомобиля-регион)\nКлиенты не обращавшиеся на гарантийный'
+                 ' ремонт\nSRR3\nSRR5\nПриглашение клиентов на ТО\nРегистрация ГИБДД\n1С УПП']
+
+    LIST_DEV = ['Возвращение автомобилей на ТО по месяцу контроля\nВозвращение автомобилей на ТО по'
+                ' периоду продаж\nВозвращение автомобилей на гарантийный ремонт по месяцу контроля\nВозвращение'
+                ' автомобилей на гарантийный ремонт (свой-чужой) по месяцу контроля\nМашинозаезды в'
+                ' динамике\nМашинозаезды по дилеру\nСреднесуточный пробег (семейство автомобиля-регион)\nКлиенты'
+                ' не обращавшиеся на гарантийный ремонт\nSRR3\nSRR5\nПриглашение клиентов на ТО\nРегистрация'
+                ' ГИБДД\nUVIN\nNS\n1С УПП']
+
+    LIST_GROUPS = LIST_PROD if Urls.MAIN_URL == os.environ["MAIN_URL_PROD"] else LIST_DEV
+
     TEXT_PARAM_BUTTON = 'Параметры'
     TEXT_REPORT_CREATE = 'Сформировать'
     TEXT_REPORT_EXCELL = 'Сохр. в excel'
     TEXT_TITLE_MODAL = 'ОТЧЕТ ВОЗВРАЩЕНИЕ АВТОМОБИЛЕЙ НА ТО (СВОЙ) ПО МЕСЯЦУ КОНТРОЛЯ'
+
     SRR = ['Возвращение автомобилей на ТО (свой) по месяцу контроля',
            'Возвращение автомобилей на ТО (свой-чужой) по месяцу контроля',
            'Возвращение автомобилей на ТО (свой - чужой) по месяцу контроля по семейству автомобилей',
@@ -100,18 +107,20 @@ class SRRConstant:
 
 
 class EditorConstants:
-    # for prod
-    # EDITOR_MENU = ['Глобальный рейтинг', 'Квартили', 'Персонал', 'База сотрудников', 'Подразделения', 'Виды нарушений',
-    #                'Редактор форм заявок-деклараций', 'Справочник должностей', 'Каталог учебных программ',
-    #                'Справочники библиотеки документов', 'Редактор отчетов', 'Справочник информационных систем',
-    #                'Справочник разделов фотогалереи', 'Справочник для выбора адреса', 'Справочник тарифов IVIDEON']
-    # for dev
-    EDITOR_MENU = ['Глобальный рейтинг', 'Квартили', 'Персонал', 'База сотрудников', 'Подразделения',
-                   'Виды нарушений', 'Редактор форм заявок-деклараций', 'Справочник должностей',
-                   'Каталог учебных программ', 'Справочники библиотеки документов', 'Редактор отчетов',
-                   'Справочник зон камер', 'Справочник информационных систем',
-                   'Справочник разделов фотогалереи', 'Шаблоны договоров', 'Справочник для выбора адреса',
-                   'Справочник доверенных лиц', 'Справочник тарифов IVIDEON']
+
+    EDITOR_PROD = ['Глобальный рейтинг', 'Квартили', 'Персонал', 'База сотрудников', 'Подразделения', 'Виды нарушений',
+                   'Редактор форм заявок-деклараций', 'Справочник должностей', 'Каталог учебных программ',
+                   'Справочники библиотеки документов', 'Редактор отчетов', 'Справочник информационных систем',
+                   'Справочник разделов фотогалереи', 'Справочник для выбора адреса', 'Справочник тарифов IVIDEON']
+
+    EDITOR_DEV = ['Глобальный рейтинг', 'Квартили', 'Персонал', 'База сотрудников', 'Подразделения',
+                  'Виды нарушений', 'Редактор форм заявок-деклараций', 'Справочник должностей',
+                  'Каталог учебных программ', 'Справочники библиотеки документов', 'Редактор отчетов',
+                  'Справочник зон камер', 'Справочник информационных систем',
+                  'Справочник разделов фотогалереи', 'Шаблоны договоров', 'Справочник для выбора адреса',
+                  'Справочник доверенных лиц', 'Справочник тарифов IVIDEON']
+
+    EDITOR_MENU = EDITOR_PROD if Urls.MAIN_URL == os.environ["MAIN_URL_PROD"] else EDITOR_DEV
 
 
 class IntegrationsConstants:
@@ -154,11 +163,28 @@ class MainConstant:
 
 
 class Headers:
-    HEADERS = {
-            'accept': '*/*',
-            'Content-Type': 'application/json',
-            'Cookie': f'token={Tokens.TOKEN}'
-        }
+    HEADERS_ADMIN = {
+        'accept': '*/*',
+        'Content-Type': 'application/json',
+        'Cookie': f'token={Tokens.TOKEN}'
+    }
+
+    HEADERS_NO_CONTENT = {
+        'accept': '*/*',
+        'Cookie': f'token={Tokens.TOKEN}'
+    }
+
+    HEADERS_USER = {
+        'accept': '*/*',
+        'Content-Type': 'application/json',
+        'Cookie': f'token={Tokens.TOKEN_TEST}'
+    }
+
+    HEADERS_MY = {'authorization': f'Bearer {Tokens.MY_TOKEN}'}
+
+    HEADERS_EXPORT = {
+        'Authorization': f'Bearer {Tokens.TOKEN_EXPORT}'
+    }
 
 
 class StatusCodes:

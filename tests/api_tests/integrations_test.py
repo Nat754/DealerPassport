@@ -46,13 +46,17 @@ class TestIntegrations:
     def test_get_candidates_health(self):
         url = f'{self.url.CANDIDATES_URL}/health'
         response = self.page.get(url)
-        assert response.status_code == self.status.OK, f'{self.assertion.STATUS} - {response.text}'
+        # pprint(response.json())
+        assert response.status_code == self.status.OK, f'{self.assertion.STATUS}'
 
     @allure.title('Получить ДЦ из Реестра')
     def test_get_registry_dealers(self):
         url = f'{self.url.REGISTRY_URL}/AVWS_PPD_REESTR_DLR'
         headers = self.token.REGISTRY
         response = self.page.get(url, headers=headers)
+        # pprint(response.json())
+        # print([(item['DEALER_ID'], item['PN_INFO']) for item in response.json() if item['DEALER_ID'] == 6427884196])
+        # pprint([item for item in response.json() if item['DEALER_ID'] == 6427884196])
         assert response.status_code == self.status.OK, f'{self.assertion.STATUS} - {response.text}'
 
     @allure.title('Получить пользователей из Реестра')
