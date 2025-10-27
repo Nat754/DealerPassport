@@ -1,0 +1,877 @@
+{
+  "uid" : "98d3104e051c652961429bf95fa0b5d6",
+  "children" : [ {
+    "name" : "tests.api_tests",
+    "children" : [ {
+      "name" : "integrations_test",
+      "children" : [ {
+        "name" : "TestIntegrations",
+        "children" : [ {
+          "name" : "Проверка доступности MSPortal Test",
+          "uid" : "da180a8daa2d56a6",
+          "parentUid" : "2306121beee5f95ea05eb85b2cd84112",
+          "status" : "passed",
+          "time" : {
+            "start" : 1761596335697,
+            "stop" : 1761596337059,
+            "duration" : 1362
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ ]
+        }, {
+          "name" : "Проверка доступности MSPortal Prod",
+          "uid" : "a70e77a8a046d401",
+          "parentUid" : "2306121beee5f95ea05eb85b2cd84112",
+          "status" : "passed",
+          "time" : {
+            "start" : 1761596337060,
+            "stop" : 1761596338208,
+            "duration" : 1148
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ ]
+        }, {
+          "name" : "Получение данные качества тест MSPortal",
+          "uid" : "84dc843212fc2241",
+          "parentUid" : "2306121beee5f95ea05eb85b2cd84112",
+          "status" : "passed",
+          "time" : {
+            "start" : 1761596338209,
+            "stop" : 1761596339344,
+            "duration" : 1135
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ ]
+        }, {
+          "name" : "Получить данные качества прод MSPortal",
+          "uid" : "d9dd0f5d4fbb9e8e",
+          "parentUid" : "2306121beee5f95ea05eb85b2cd84112",
+          "status" : "passed",
+          "time" : {
+            "start" : 1761596339345,
+            "stop" : 1761596341492,
+            "duration" : 2147
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ ]
+        }, {
+          "name" : "Проверить доступности Candidates",
+          "uid" : "c1e744097b4df20f",
+          "parentUid" : "2306121beee5f95ea05eb85b2cd84112",
+          "status" : "passed",
+          "time" : {
+            "start" : 1761596341493,
+            "stop" : 1761596345702,
+            "duration" : 4209
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ ]
+        }, {
+          "name" : "Получить ДЦ из Реестра",
+          "uid" : "23bfc747da5c2932",
+          "parentUid" : "2306121beee5f95ea05eb85b2cd84112",
+          "status" : "passed",
+          "time" : {
+            "start" : 1761596345703,
+            "stop" : 1761596357581,
+            "duration" : 11878
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ ]
+        }, {
+          "name" : "Получить пользователей из Реестра",
+          "uid" : "8ee69136418adf23",
+          "parentUid" : "2306121beee5f95ea05eb85b2cd84112",
+          "status" : "passed",
+          "time" : {
+            "start" : 1761596357582,
+            "stop" : 1761596361765,
+            "duration" : 4183
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ ]
+        } ],
+        "uid" : "2306121beee5f95ea05eb85b2cd84112"
+      } ],
+      "uid" : "fcd890159396098fe0e6dbb58629d341"
+    } ],
+    "uid" : "c9c7d755310a5367586b8217d33736a8"
+  }, {
+    "name" : "tests.ui_tests",
+    "children" : [ {
+      "name" : "editor_page_test",
+      "children" : [ {
+        "name" : "TestEditorPage",
+        "children" : [ {
+          "name" : "Проверить доступность меню в редакторе",
+          "uid" : "54f614a49c710955",
+          "parentUid" : "c096a49eed91d645172c9d623a358567",
+          "status" : "failed",
+          "time" : {
+            "start" : 1761596382000,
+            "stop" : 1761596383400,
+            "duration" : 1400
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ ]
+        } ],
+        "uid" : "c096a49eed91d645172c9d623a358567"
+      } ],
+      "uid" : "08bf038c90436b254f00428792b679ad"
+    }, {
+      "name" : "main_page_test",
+      "children" : [ {
+        "name" : "TestMainPageSmoke",
+        "children" : [ {
+          "name" : "Проверка доступности https://dealer-passport.vaz.ru",
+          "uid" : "904ba4cf04f04059",
+          "parentUid" : "5f060fa52a2108838b6708c32906ad5d",
+          "status" : "passed",
+          "time" : {
+            "start" : 1761596383590,
+            "stop" : 1761596384325,
+            "duration" : 735
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ "'https://dealer-passport.vaz.ru'" ]
+        }, {
+          "name" : "Проверка доступности https://dealer-passport.vaz.ru/editor/",
+          "uid" : "bce9409223fe2b14",
+          "parentUid" : "5f060fa52a2108838b6708c32906ad5d",
+          "status" : "passed",
+          "time" : {
+            "start" : 1761596384327,
+            "stop" : 1761596385054,
+            "duration" : 727
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ "'https://dealer-passport.vaz.ru/editor/'" ]
+        }, {
+          "name" : "Проверка доступности https://dealer-passport.vaz.ru/reports/",
+          "uid" : "e2f76945c62c4e39",
+          "parentUid" : "5f060fa52a2108838b6708c32906ad5d",
+          "status" : "passed",
+          "time" : {
+            "start" : 1761596385056,
+            "stop" : 1761596385788,
+            "duration" : 732
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ "'https://dealer-passport.vaz.ru/reports/'" ]
+        }, {
+          "name" : "Проверка доступности https://dealer-passport.vaz.ru/logs/",
+          "uid" : "ecea152b960bb2cd",
+          "parentUid" : "5f060fa52a2108838b6708c32906ad5d",
+          "status" : "passed",
+          "time" : {
+            "start" : 1761596385790,
+            "stop" : 1761596386529,
+            "duration" : 739
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ "'https://dealer-passport.vaz.ru/logs/'" ]
+        }, {
+          "name" : "Проверка доступности https://dealer-passport.vaz.ru/logs/email",
+          "uid" : "1f8d16e251f0f148",
+          "parentUid" : "5f060fa52a2108838b6708c32906ad5d",
+          "status" : "passed",
+          "time" : {
+            "start" : 1761596386531,
+            "stop" : 1761596387262,
+            "duration" : 731
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ "'https://dealer-passport.vaz.ru/logs/email'" ]
+        }, {
+          "name" : "Проверка доступности https://dealer-passport.vaz.ru/srr/",
+          "uid" : "99be0c2efca452d5",
+          "parentUid" : "5f060fa52a2108838b6708c32906ad5d",
+          "status" : "passed",
+          "time" : {
+            "start" : 1761596387264,
+            "stop" : 1761596388004,
+            "duration" : 740
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ "'https://dealer-passport.vaz.ru/srr/'" ]
+        }, {
+          "name" : "Проверка доступности https://dealer-passport.vaz.ru/accounting/",
+          "uid" : "d241bf1eac9adc74",
+          "parentUid" : "5f060fa52a2108838b6708c32906ad5d",
+          "status" : "passed",
+          "time" : {
+            "start" : 1761596388006,
+            "stop" : 1761596388734,
+            "duration" : 728
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ "'https://dealer-passport.vaz.ru/accounting/'" ]
+        }, {
+          "name" : "Проверка доступности https://dealer-passport.vaz.ru/documents/",
+          "uid" : "955377ebbcbc717e",
+          "parentUid" : "5f060fa52a2108838b6708c32906ad5d",
+          "status" : "passed",
+          "time" : {
+            "start" : 1761596388736,
+            "stop" : 1761596389318,
+            "duration" : 582
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ "'https://dealer-passport.vaz.ru/documents/'" ]
+        }, {
+          "name" : "Проверка доступности https://dealer-passport.vaz.ru/zd/",
+          "uid" : "49187feb38b9424e",
+          "parentUid" : "5f060fa52a2108838b6708c32906ad5d",
+          "status" : "passed",
+          "time" : {
+            "start" : 1761596389320,
+            "stop" : 1761596390046,
+            "duration" : 726
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ "'https://dealer-passport.vaz.ru/zd/'" ]
+        }, {
+          "name" : "Проверка доступности https://dealer-passport.vaz.ru/gr/",
+          "uid" : "d8a683e684770379",
+          "parentUid" : "5f060fa52a2108838b6708c32906ad5d",
+          "status" : "passed",
+          "time" : {
+            "start" : 1761596390048,
+            "stop" : 1761596390780,
+            "duration" : 732
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ "'https://dealer-passport.vaz.ru/gr/'" ]
+        }, {
+          "name" : "Проверка доступности https://dealer-passport.vaz.ru/q/",
+          "uid" : "747670819265c615",
+          "parentUid" : "5f060fa52a2108838b6708c32906ad5d",
+          "status" : "passed",
+          "time" : {
+            "start" : 1761596390782,
+            "stop" : 1761596391364,
+            "duration" : 582
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ "'https://dealer-passport.vaz.ru/q/'" ]
+        }, {
+          "name" : "Проверка доступности https://dealer-passport.vaz.ru/staff/",
+          "uid" : "3624c1c9edecae38",
+          "parentUid" : "5f060fa52a2108838b6708c32906ad5d",
+          "status" : "passed",
+          "time" : {
+            "start" : 1761596391366,
+            "stop" : 1761596391947,
+            "duration" : 581
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ "'https://dealer-passport.vaz.ru/staff/'" ]
+        }, {
+          "name" : "Проверка доступности https://dealer-passport.vaz.ru/dealers/",
+          "uid" : "9c6de862a8636166",
+          "parentUid" : "5f060fa52a2108838b6708c32906ad5d",
+          "status" : "passed",
+          "time" : {
+            "start" : 1761596391949,
+            "stop" : 1761596392673,
+            "duration" : 724
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ "'https://dealer-passport.vaz.ru/dealers/'" ]
+        }, {
+          "name" : "Проверка доступности https://dealer-passport.vaz.ru/users/",
+          "uid" : "1a4f3a09ccdb5b54",
+          "parentUid" : "5f060fa52a2108838b6708c32906ad5d",
+          "status" : "passed",
+          "time" : {
+            "start" : 1761596392675,
+            "stop" : 1761596393403,
+            "duration" : 728
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ "'https://dealer-passport.vaz.ru/users/'" ]
+        }, {
+          "name" : "Проверка доступности https://dealer-passport.vaz.ru/indicators/",
+          "uid" : "106ab3bce29e7719",
+          "parentUid" : "5f060fa52a2108838b6708c32906ad5d",
+          "status" : "passed",
+          "time" : {
+            "start" : 1761596393404,
+            "stop" : 1761596394135,
+            "duration" : 731
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ "'https://dealer-passport.vaz.ru/indicators/'" ]
+        }, {
+          "name" : "Проверка доступности https://dealer-passport.vaz.ru/uploads/",
+          "uid" : "66a9da99706bc087",
+          "parentUid" : "5f060fa52a2108838b6708c32906ad5d",
+          "status" : "passed",
+          "time" : {
+            "start" : 1761596394137,
+            "stop" : 1761596394713,
+            "duration" : 576
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ "'https://dealer-passport.vaz.ru/uploads/'" ]
+        }, {
+          "name" : "Проверка доступности https://dealer-passport.vaz.ru/pkd/",
+          "uid" : "16887c01272b04c4",
+          "parentUid" : "5f060fa52a2108838b6708c32906ad5d",
+          "status" : "passed",
+          "time" : {
+            "start" : 1761596394715,
+            "stop" : 1761596395298,
+            "duration" : 583
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ "'https://dealer-passport.vaz.ru/pkd/'" ]
+        }, {
+          "name" : "Проверка доступности https://dealer-passport.vaz.ru/pkd/indicators/",
+          "uid" : "5bb0a8da93bf50e0",
+          "parentUid" : "5f060fa52a2108838b6708c32906ad5d",
+          "status" : "passed",
+          "time" : {
+            "start" : 1761596396192,
+            "stop" : 1761596396930,
+            "duration" : 738
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ "'https://dealer-passport.vaz.ru/pkd/indicators/'" ]
+        }, {
+          "name" : "Проверка доступности https://dealer-passport.vaz.ru/violations/",
+          "uid" : "d5d1ecf4d5728aaf",
+          "parentUid" : "5f060fa52a2108838b6708c32906ad5d",
+          "status" : "passed",
+          "time" : {
+            "start" : 1761596396932,
+            "stop" : 1761596397524,
+            "duration" : 592
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ "'https://dealer-passport.vaz.ru/violations/'" ]
+        }, {
+          "name" : "Проверка доступности https://dealer-passport.vaz.ru/announcement/",
+          "uid" : "be0fc56abfccf93d",
+          "parentUid" : "5f060fa52a2108838b6708c32906ad5d",
+          "status" : "passed",
+          "time" : {
+            "start" : 1761596397526,
+            "stop" : 1761596398262,
+            "duration" : 736
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ "'https://dealer-passport.vaz.ru/announcement/'" ]
+        }, {
+          "name" : "Проверить отсутствие ошибок при открытии https://dealer-passport.vaz.ru",
+          "uid" : "5337bcaa12192133",
+          "parentUid" : "5f060fa52a2108838b6708c32906ad5d",
+          "status" : "passed",
+          "time" : {
+            "start" : 1761596402108,
+            "stop" : 1761596462654,
+            "duration" : 60546
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ "'https://dealer-passport.vaz.ru'" ]
+        }, {
+          "name" : "Проверить отсутствие ошибок при открытии https://dealer-passport.vaz.ru/editor/",
+          "uid" : "ab578371f63e09db",
+          "parentUid" : "5f060fa52a2108838b6708c32906ad5d",
+          "status" : "passed",
+          "time" : {
+            "start" : 1761596466527,
+            "stop" : 1761596527406,
+            "duration" : 60879
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ "'https://dealer-passport.vaz.ru/editor/'" ]
+        }, {
+          "name" : "Проверить отсутствие ошибок при открытии https://dealer-passport.vaz.ru/reports/",
+          "uid" : "7fc8d17842db44f2",
+          "parentUid" : "5f060fa52a2108838b6708c32906ad5d",
+          "status" : "passed",
+          "time" : {
+            "start" : 1761596531327,
+            "stop" : 1761596592204,
+            "duration" : 60877
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ "'https://dealer-passport.vaz.ru/reports/'" ]
+        }, {
+          "name" : "Проверить отсутствие ошибок при открытии https://dealer-passport.vaz.ru/logs/",
+          "uid" : "47ea8c03a86c33be",
+          "parentUid" : "5f060fa52a2108838b6708c32906ad5d",
+          "status" : "passed",
+          "time" : {
+            "start" : 1761596596112,
+            "stop" : 1761596656984,
+            "duration" : 60872
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ "'https://dealer-passport.vaz.ru/logs/'" ]
+        }, {
+          "name" : "Проверить отсутствие ошибок при открытии https://dealer-passport.vaz.ru/logs/email",
+          "uid" : "493c573e095442b",
+          "parentUid" : "5f060fa52a2108838b6708c32906ad5d",
+          "status" : "passed",
+          "time" : {
+            "start" : 1761596660778,
+            "stop" : 1761596721658,
+            "duration" : 60880
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ "'https://dealer-passport.vaz.ru/logs/email'" ]
+        }, {
+          "name" : "Проверить отсутствие ошибок при открытии https://dealer-passport.vaz.ru/srr/",
+          "uid" : "bb5cc21ed7a9d18a",
+          "parentUid" : "5f060fa52a2108838b6708c32906ad5d",
+          "status" : "passed",
+          "time" : {
+            "start" : 1761596725561,
+            "stop" : 1761596786439,
+            "duration" : 60878
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ "'https://dealer-passport.vaz.ru/srr/'" ]
+        }, {
+          "name" : "Проверить отсутствие ошибок при открытии https://dealer-passport.vaz.ru/accounting/",
+          "uid" : "cf28bbd7ea9b10a8",
+          "parentUid" : "5f060fa52a2108838b6708c32906ad5d",
+          "status" : "passed",
+          "time" : {
+            "start" : 1761596790327,
+            "stop" : 1761596851222,
+            "duration" : 60895
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ "'https://dealer-passport.vaz.ru/accounting/'" ]
+        }, {
+          "name" : "Проверить отсутствие ошибок при открытии https://dealer-passport.vaz.ru/documents/",
+          "uid" : "6f36001941a5a472",
+          "parentUid" : "5f060fa52a2108838b6708c32906ad5d",
+          "status" : "passed",
+          "time" : {
+            "start" : 1761596855141,
+            "stop" : 1761596916010,
+            "duration" : 60869
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ "'https://dealer-passport.vaz.ru/documents/'" ]
+        }, {
+          "name" : "Проверить отсутствие ошибок при открытии https://dealer-passport.vaz.ru/zd/",
+          "uid" : "120149d93f4bb104",
+          "parentUid" : "5f060fa52a2108838b6708c32906ad5d",
+          "status" : "passed",
+          "time" : {
+            "start" : 1761596919938,
+            "stop" : 1761596980861,
+            "duration" : 60923
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ "'https://dealer-passport.vaz.ru/zd/'" ]
+        }, {
+          "name" : "Проверить отсутствие ошибок при открытии https://dealer-passport.vaz.ru/gr/",
+          "uid" : "60f7501553e04e9e",
+          "parentUid" : "5f060fa52a2108838b6708c32906ad5d",
+          "status" : "passed",
+          "time" : {
+            "start" : 1761596984754,
+            "stop" : 1761597045644,
+            "duration" : 60890
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ "'https://dealer-passport.vaz.ru/gr/'" ]
+        }, {
+          "name" : "Проверить отсутствие ошибок при открытии https://dealer-passport.vaz.ru/q/",
+          "uid" : "8d16fa7005f2d21f",
+          "parentUid" : "5f060fa52a2108838b6708c32906ad5d",
+          "status" : "passed",
+          "time" : {
+            "start" : 1761597049550,
+            "stop" : 1761597110523,
+            "duration" : 60973
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ "'https://dealer-passport.vaz.ru/q/'" ]
+        }, {
+          "name" : "Проверить отсутствие ошибок при открытии https://dealer-passport.vaz.ru/staff/",
+          "uid" : "94f3c185f5069976",
+          "parentUid" : "5f060fa52a2108838b6708c32906ad5d",
+          "status" : "passed",
+          "time" : {
+            "start" : 1761597114345,
+            "stop" : 1761597175311,
+            "duration" : 60966
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ "'https://dealer-passport.vaz.ru/staff/'" ]
+        }, {
+          "name" : "Проверить отсутствие ошибок при открытии https://dealer-passport.vaz.ru/dealers/",
+          "uid" : "ad4865f5ba619116",
+          "parentUid" : "5f060fa52a2108838b6708c32906ad5d",
+          "status" : "passed",
+          "time" : {
+            "start" : 1761597179206,
+            "stop" : 1761597240136,
+            "duration" : 60930
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ "'https://dealer-passport.vaz.ru/dealers/'" ]
+        }, {
+          "name" : "Проверить отсутствие ошибок при открытии https://dealer-passport.vaz.ru/users/",
+          "uid" : "2737358df649e67f",
+          "parentUid" : "5f060fa52a2108838b6708c32906ad5d",
+          "status" : "passed",
+          "time" : {
+            "start" : 1761597244022,
+            "stop" : 1761597305003,
+            "duration" : 60981
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ "'https://dealer-passport.vaz.ru/users/'" ]
+        }, {
+          "name" : "Проверить отсутствие ошибок при открытии https://dealer-passport.vaz.ru/indicators/",
+          "uid" : "96fec1baf08ad489",
+          "parentUid" : "5f060fa52a2108838b6708c32906ad5d",
+          "status" : "passed",
+          "time" : {
+            "start" : 1761597308804,
+            "stop" : 1761597369716,
+            "duration" : 60912
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ "'https://dealer-passport.vaz.ru/indicators/'" ]
+        }, {
+          "name" : "Проверить отсутствие ошибок при открытии https://dealer-passport.vaz.ru/uploads/",
+          "uid" : "b986a4693256b07",
+          "parentUid" : "5f060fa52a2108838b6708c32906ad5d",
+          "status" : "passed",
+          "time" : {
+            "start" : 1761597373601,
+            "stop" : 1761597434502,
+            "duration" : 60901
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ "'https://dealer-passport.vaz.ru/uploads/'" ]
+        }, {
+          "name" : "Проверить отсутствие ошибок при открытии https://dealer-passport.vaz.ru/pkd/",
+          "uid" : "81a38a3b51aa40bd",
+          "parentUid" : "5f060fa52a2108838b6708c32906ad5d",
+          "status" : "passed",
+          "time" : {
+            "start" : 1761597438425,
+            "stop" : 1761597499297,
+            "duration" : 60872
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ "'https://dealer-passport.vaz.ru/pkd/'" ]
+        }, {
+          "name" : "Проверить отсутствие ошибок при открытии https://dealer-passport.vaz.ru/pkd/indicators/",
+          "uid" : "9c88b5161d938bd2",
+          "parentUid" : "5f060fa52a2108838b6708c32906ad5d",
+          "status" : "passed",
+          "time" : {
+            "start" : 1761597567871,
+            "stop" : 1761597628747,
+            "duration" : 60876
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ "'https://dealer-passport.vaz.ru/pkd/indicators/'" ]
+        }, {
+          "name" : "Проверить отсутствие ошибок при открытии https://dealer-passport.vaz.ru/violations/",
+          "uid" : "1e325313153ec7e7",
+          "parentUid" : "5f060fa52a2108838b6708c32906ad5d",
+          "status" : "passed",
+          "time" : {
+            "start" : 1761597632641,
+            "stop" : 1761597693546,
+            "duration" : 60905
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ "'https://dealer-passport.vaz.ru/violations/'" ]
+        }, {
+          "name" : "Проверить отсутствие ошибок при открытии https://dealer-passport.vaz.ru/announcement/",
+          "uid" : "71422d9351c5cbdd",
+          "parentUid" : "5f060fa52a2108838b6708c32906ad5d",
+          "status" : "passed",
+          "time" : {
+            "start" : 1761597697340,
+            "stop" : 1761597758340,
+            "duration" : 61000
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ "'https://dealer-passport.vaz.ru/announcement/'" ]
+        }, {
+          "name" : "Проверить поиск по кнопке ВЫБРАТЬ ДИЛЕРА",
+          "uid" : "358b8794970f4d51",
+          "parentUid" : "5f060fa52a2108838b6708c32906ad5d",
+          "status" : "passed",
+          "time" : {
+            "start" : 1761597762244,
+            "stop" : 1761597763079,
+            "duration" : 835
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ ]
+        }, {
+          "name" : "Проверить отображение и кликабельность кнопки ВЫБРАТЬ ДИЛЕРА",
+          "uid" : "9ed5abcd80588ad4",
+          "parentUid" : "5f060fa52a2108838b6708c32906ad5d",
+          "status" : "passed",
+          "time" : {
+            "start" : 1761597766982,
+            "stop" : 1761597767045,
+            "duration" : 63
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ ]
+        }, {
+          "name" : "Проверить отображение и кликабельность кнопки ПКД",
+          "uid" : "b491eaf3ae18d082",
+          "parentUid" : "5f060fa52a2108838b6708c32906ad5d",
+          "status" : "passed",
+          "time" : {
+            "start" : 1761597770969,
+            "stop" : 1761597771031,
+            "duration" : 62
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ ]
+        }, {
+          "name" : "Проверить отображение и кликабельность кнопки НАРУШЕНИЯ",
+          "uid" : "e06428229dd3da52",
+          "parentUid" : "5f060fa52a2108838b6708c32906ad5d",
+          "status" : "passed",
+          "time" : {
+            "start" : 1761597774902,
+            "stop" : 1761597774966,
+            "duration" : 64
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ ]
+        }, {
+          "name" : "Проверить отображение и кликабельность кнопки ОБЪЯВЛЕНИЯ",
+          "uid" : "eec5f85cd5ed88c0",
+          "parentUid" : "5f060fa52a2108838b6708c32906ad5d",
+          "status" : "passed",
+          "time" : {
+            "start" : 1761597778730,
+            "stop" : 1761597778797,
+            "duration" : 67
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ ]
+        }, {
+          "name" : "Проверить отображение и кликабельность кнопки ДОКУМЕНТЫ",
+          "uid" : "2d7d5e01214f2424",
+          "parentUid" : "5f060fa52a2108838b6708c32906ad5d",
+          "status" : "passed",
+          "time" : {
+            "start" : 1761597782609,
+            "stop" : 1761597782675,
+            "duration" : 66
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ ]
+        }, {
+          "name" : "Проверить отображение и кликабельность кнопки БУХГАЛТЕРИЯ",
+          "uid" : "813b4da737681f7b",
+          "parentUid" : "5f060fa52a2108838b6708c32906ad5d",
+          "status" : "passed",
+          "time" : {
+            "start" : 1761597786440,
+            "stop" : 1761597786504,
+            "duration" : 64
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ ]
+        }, {
+          "name" : "Проверить отображение и кликабельность кнопки SRR",
+          "uid" : "79c07b1954c5b162",
+          "parentUid" : "5f060fa52a2108838b6708c32906ad5d",
+          "status" : "passed",
+          "time" : {
+            "start" : 1761597790440,
+            "stop" : 1761597790504,
+            "duration" : 64
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ ]
+        }, {
+          "name" : "Проверить отображение и кликабельность кнопки ОТЧЕТЫ",
+          "uid" : "d1279ed398dfe98c",
+          "parentUid" : "5f060fa52a2108838b6708c32906ad5d",
+          "status" : "passed",
+          "time" : {
+            "start" : 1761597794229,
+            "stop" : 1761597794295,
+            "duration" : 66
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ ]
+        }, {
+          "name" : "Проверить отображение кнопок меню",
+          "uid" : "6d08490692226b15",
+          "parentUid" : "5f060fa52a2108838b6708c32906ad5d",
+          "status" : "passed",
+          "time" : {
+            "start" : 1761597797964,
+            "stop" : 1761597797995,
+            "duration" : 31
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ ]
+        }, {
+          "name" : "Проверить отображение блока о ДЦ",
+          "uid" : "4284df0354957a3e",
+          "parentUid" : "5f060fa52a2108838b6708c32906ad5d",
+          "status" : "passed",
+          "time" : {
+            "start" : 1761597801718,
+            "stop" : 1761597802256,
+            "duration" : 538
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ ]
+        }, {
+          "name" : "Проверить отображение кнопок блока о ДЦ",
+          "uid" : "57255b63478d96a3",
+          "parentUid" : "5f060fa52a2108838b6708c32906ad5d",
+          "status" : "passed",
+          "time" : {
+            "start" : 1761597806029,
+            "stop" : 1761597806571,
+            "duration" : 542
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ ]
+        } ],
+        "uid" : "5f060fa52a2108838b6708c32906ad5d"
+      } ],
+      "uid" : "45edcb187168b664bd914502b0a07ff1"
+    }, {
+      "name" : "srr_page_test",
+      "children" : [ {
+        "name" : "TestSRRPageSmoke",
+        "children" : [ {
+          "name" : "Проверить доступность списка групп отчетов SRR",
+          "uid" : "f165a1fec3526255",
+          "parentUid" : "f66e733d436fe2363fa4c64203319fc0",
+          "status" : "passed",
+          "time" : {
+            "start" : 1761597810488,
+            "stop" : 1761597811809,
+            "duration" : 1321
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ ]
+        }, {
+          "name" : "Проверить формирование отчета SRR в файл excell",
+          "uid" : "66f741ba07ca1629",
+          "parentUid" : "f66e733d436fe2363fa4c64203319fc0",
+          "status" : "passed",
+          "time" : {
+            "start" : 1761597815730,
+            "stop" : 1761597877325,
+            "duration" : 61595
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ ]
+        }, {
+          "name" : "Проверить формирование отчета SRR на экране",
+          "uid" : "6c226f9bd937ab8a",
+          "parentUid" : "f66e733d436fe2363fa4c64203319fc0",
+          "status" : "passed",
+          "time" : {
+            "start" : 1761597881194,
+            "stop" : 1761597942745,
+            "duration" : 61551
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ ]
+        }, {
+          "name" : "Проверить текст в модальном окне",
+          "uid" : "a9c94cb1a38fb4f4",
+          "parentUid" : "f66e733d436fe2363fa4c64203319fc0",
+          "status" : "passed",
+          "time" : {
+            "start" : 1761597946656,
+            "stop" : 1761597948034,
+            "duration" : 1378
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ ]
+        } ],
+        "uid" : "f66e733d436fe2363fa4c64203319fc0"
+      } ],
+      "uid" : "a0c885af08072fda9f505423aea34cdf"
+    } ],
+    "uid" : "638852a12541cb5161b05a5cba1477ef"
+  } ],
+  "name" : "suites"
+}
