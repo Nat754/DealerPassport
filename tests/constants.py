@@ -10,6 +10,7 @@ class Urls:
     # MAIN_URL = os.environ["MAIN_URL_SEO"]
     # MAIN_URL = os.environ["MAIN_URL_SEO"] + ':3001'
     # MAIN_URL = os.environ["MAIN_URL_SEO"] + ':3011'
+    # MAIN_URL = os.environ["MAIN_URL_SEO"] + ':3012'
     # MAIN_URL = os.environ["MAIN_URL_TEST"]
     MS_URL_TEST = os.environ["MS_URL_TEST"]
     MS_URL_PROD = os.environ["MS_URL_PROD"]
@@ -17,16 +18,13 @@ class Urls:
     REGISTRY_URL = os.environ["REGISTRY_URL"]
 
     AUTH = "/auth"
-    PKD_URL = "/pkd/"
-    PKD_INDICATORS_URL = "/pkd/indicators/"
-    PKD_CHECKLISTS_URL = "/pkd/checklists/"
-    INTERRUPTION_URL = "/violations/"
-    NOTICES_URL = "/announcement/"
-    DOCUMENTS_URL = "/documents/"
-    ACCOUNTING_URL = "/accounting/"
-    SRR_URL = "/srr/"
+    EDITOR_URL = "/editor/"
     REPORTS_URL = "/reports/"
-    PASSPORT_BUTTON = MAIN_URL
+    LOGS_URL = "/logs/"
+    EMAIL_LOGS_URL = "/logs/email"
+    SRR_URL = "/srr/"
+    ACCOUNTING_URL = "/accounting/"
+    DOCUMENTS_URL = "/documents/"
     ZD_URL = "/zd/"
     GR_URL = "/gr/"
     Q_URL = "/q/"
@@ -35,9 +33,12 @@ class Urls:
     USERS_URL = "/users/"
     INDICATORS_URL = "/indicators/"
     UPLOADS_URL = "/uploads/"
-    EDITOR_URL = "/editor/"
-    LOGS_URL = "/logs/"
-    EMAIL_LOGS_URL = "/logs/email"
+    PKD_URL = "/pkd/"
+    PKD_INDICATORS_URL = "/pkd/indicators/"
+    PKD_CHECKLISTS_URL = "/pkd/checklists/"
+    INTERRUPTION_URL = "/violations/"
+    NOTICES_URL = "/announcement/"
+    PASSPORT_BUTTON = MAIN_URL
     STAFF_CHECKED_URL = '/base/staff/?searchText=&page=0&openModal=&dateBegin=&selectedDate=&currentId='
 
     LIST_URLS = [MAIN_URL,
@@ -58,9 +59,10 @@ class Urls:
                  MAIN_URL + UPLOADS_URL,
                  MAIN_URL + PKD_URL,
                  MAIN_URL + PKD_INDICATORS_URL,
-                 MAIN_URL + PKD_INDICATORS_URL,
+                 MAIN_URL + PKD_CHECKLISTS_URL,
                  MAIN_URL + INTERRUPTION_URL,
-                 MAIN_URL + NOTICES_URL]
+                 MAIN_URL + NOTICES_URL,
+                 MAIN_URL + STAFF_CHECKED_URL]
 
 
 class Tokens:
@@ -75,7 +77,7 @@ class Tokens:
     MS_TEST = {'Authorization': f'{os.environ["MS_TEST"]}'}
     PKD = {'Authorization': f'{os.environ["AUTOCRM"]}'}
     REGISTRY = {'Authorization': f'{os.environ["REGISTRY"]}'}
-    MY_TOKEN = ''
+    MY_TOKEN = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImxvZ25hbWUiOiJTVVBFUl9BRE1JTiJ9LCJpYXQiOjE2OTA0Njk2MTJ9.f3kv5zYaDTvEYhfB9N5Nw8egdhfMGJBmxnas_5nCvzU'
 
 
 class SRRConstant:
@@ -111,14 +113,15 @@ class EditorConstants:
     EDITOR_PROD = ['Глобальный рейтинг', 'Квартили', 'Персонал', 'База сотрудников', 'Подразделения', 'Виды нарушений',
                    'Редактор форм заявок-деклараций', 'Справочник должностей', 'Каталог учебных программ',
                    'Справочники библиотеки документов', 'Редактор отчетов', 'Справочник информационных систем',
-                   'Справочник разделов фотогалереи', 'Справочник для выбора адреса', 'Справочник тарифов IVIDEON']
+                   'Справочник разделов фотогалереи', 'Справочник для выбора адреса', 'Справочник тарифов IVIDEON',
+                   'Реквизиты АВТОВАЗ']
 
     EDITOR_DEV = ['Глобальный рейтинг', 'Квартили', 'Персонал', 'База сотрудников', 'Подразделения',
                   'Виды нарушений', 'Редактор форм заявок-деклараций', 'Справочник должностей',
                   'Каталог учебных программ', 'Справочники библиотеки документов', 'Редактор отчетов',
                   'Справочник зон камер', 'Справочник информационных систем',
                   'Справочник разделов фотогалереи', 'Шаблоны договоров', 'Справочник для выбора адреса',
-                  'Справочник доверенных лиц', 'Справочник тарифов IVIDEON']
+                  'Справочник доверенных лиц', 'Справочник тарифов IVIDEON', 'Реквизиты АВТОВАЗ']
 
     EDITOR_MENU = EDITOR_PROD if Urls.MAIN_URL == os.environ["MAIN_URL_PROD"] else EDITOR_DEV
 
@@ -184,6 +187,18 @@ class Headers:
 
     HEADERS_EXPORT = {
         'Authorization': f'Bearer {Tokens.TOKEN_EXPORT}'
+    }
+
+    HEADERS_USER_NEW = {
+        'accept': '*/*',
+        'Content-Type': 'application/json',
+        'Cookie': f'token={Tokens.MY_TOKEN}'
+    }
+
+    HEADERS_AN = {
+        'accept': '*/*',
+        'Content-Type': 'application/json',
+        'Authorization': f'Bearer {Tokens.TOKEN}'
     }
 
 

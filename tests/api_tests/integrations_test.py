@@ -1,3 +1,4 @@
+from pprint import pprint
 import allure
 import pytest
 from pages.rest_api_methods import RESTApi
@@ -56,7 +57,10 @@ class TestIntegrations:
         response = self.page.get(url, headers=headers)
         # pprint(response.json())
         # print([(item['DEALER_ID'], item['PN_INFO']) for item in response.json() if item['DEALER_ID'] == 6427884196])
-        # pprint([item for item in response.json() if item['DEALER_ID'] == 6427884196])
+        print()
+        print('DEALER_ID', 'DEALER_NAME', "DEALER_INN", "DEALER_FILIALCODE", 'UR_DIST_CODE')
+        pprint([(item['DEALER_ID'], item['DEALER_NAME'], item["DEALER_INN"], item["DEALER_FILIALCODE"],
+                 item['UR_DIST_CODE']) for item in response.json() if type(item['UR_DIST_CODE']) != type(10)])
         assert response.status_code == self.status.OK, f'{self.assertion.STATUS} - {response.text}'
 
     @allure.title('Получить пользователей из Реестра')
