@@ -1,0 +1,344 @@
+{
+  "uid" : "4c7c3af32693acfd",
+  "name" : "Проверить доступность меню в редакторе",
+  "fullName" : "tests.ui_tests.editor_page_test.TestEditorPage#test_editor_menu",
+  "historyId" : "0b462c0b2fc59b3974f78084eac0c8f9",
+  "time" : {
+    "start" : 1761805114832,
+    "stop" : 1761805114832,
+    "duration" : 0
+  },
+  "status" : "broken",
+  "statusMessage" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x556898b3afba <unknown>\n#1 0x5568985bf6d0 <unknown>\n#2 0x5568986112aa <unknown>\n#3 0x556898611541 <unknown>\n#4 0x55689865f6c4 <unknown>\n#5 0x556898636e5d <unknown>\n#6 0x55689865cb54 <unknown>\n#7 0x556898636c03 <unknown>\n#8 0x5568986037a8 <unknown>\n#9 0x556898604421 <unknown>\n#10 0x556898affb28 <unknown>\n#11 0x556898b0387f <unknown>\n#12 0x556898ae7c49 <unknown>\n#13 0x556898b04405 <unknown>\n#14 0x556898acd4ff <unknown>\n#15 0x556898b28258 <unknown>\n#16 0x556898b28432 <unknown>\n#17 0x556898b39fa3 <unknown>\n#18 0x7f525b49caa4 <unknown>\n#19 0x7f525b529c6c <unknown>",
+  "statusTrace" : "driver = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"ed9dbc90f442406d3278348c3a2f44ad\")>\n\n    @pytest.fixture\n    def auth_user_admin(driver):\n        main_page = MainPage(driver)\n        url = Urls.MAIN_URL + Urls.AUTH\n        cookies = {'name': 'token', 'value': Tokens.TOKEN}\n        driver.get(url)\n        driver.add_cookie(cookies)\n        driver.get(Urls.MAIN_URL)\n>       main_page.check_button_agree().click()\n\ntests/conftest.py:14: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \npages/main_page.py:17: in check_button_agree\n    return self.element_is_visible(self.locator.AGREE_BUTTON)\npages/base_page.py:18: in element_is_visible\n    self.go_to_element(self.element_is_present(locator))\npages/base_page.py:34: in element_is_present\n    return Wait(self.driver, self.timeout).until(ec.presence_of_element_located(locator))\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <selenium.webdriver.support.wait.WebDriverWait (session=\"ed9dbc90f442406d3278348c3a2f44ad\")>\nmethod = <function presence_of_element_located.<locals>._predicate at 0x7ff9210a9260>\nmessage = ''\n\n    def until(self, method: Callable[[D], Union[Literal[False], T]], message: str = \"\") -> T:\n        \"\"\"Calls the method provided with the driver as an argument until the \\\n        return value does not evaluate to ``False``.\n    \n        :param method: callable(WebDriver)\n        :param message: optional message for :exc:`TimeoutException`\n        :returns: the result of the last call to `method`\n        :raises: :exc:`selenium.common.exceptions.TimeoutException` if timeout occurs\n        \"\"\"\n        screen = None\n        stacktrace = None\n    \n        end_time = time.monotonic() + self._timeout\n        while True:\n            try:\n                value = method(self._driver)\n                if value:\n                    return value\n            except self._ignored_exceptions as exc:\n                screen = getattr(exc, \"screen\", None)\n                stacktrace = getattr(exc, \"stacktrace\", None)\n            time.sleep(self._poll)\n            if time.monotonic() > end_time:\n                break\n>       raise TimeoutException(message, screen, stacktrace)\nE       selenium.common.exceptions.TimeoutException: Message: \nE       Stacktrace:\nE       #0 0x556898b3afba <unknown>\nE       #1 0x5568985bf6d0 <unknown>\nE       #2 0x5568986112aa <unknown>\nE       #3 0x556898611541 <unknown>\nE       #4 0x55689865f6c4 <unknown>\nE       #5 0x556898636e5d <unknown>\nE       #6 0x55689865cb54 <unknown>\nE       #7 0x556898636c03 <unknown>\nE       #8 0x5568986037a8 <unknown>\nE       #9 0x556898604421 <unknown>\nE       #10 0x556898affb28 <unknown>\nE       #11 0x556898b0387f <unknown>\nE       #12 0x556898ae7c49 <unknown>\nE       #13 0x556898b04405 <unknown>\nE       #14 0x556898acd4ff <unknown>\nE       #15 0x556898b28258 <unknown>\nE       #16 0x556898b28432 <unknown>\nE       #17 0x556898b39fa3 <unknown>\nE       #18 0x7f525b49caa4 <unknown>\nE       #19 0x7f525b529c6c <unknown>\n\n/opt/hostedtoolcache/Python/3.12.11/x64/lib/python3.12/site-packages/selenium/webdriver/support/wait.py:105: TimeoutException",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "auth_user_admin",
+    "time" : {
+      "start" : 1761805122351,
+      "stop" : 1761805201913,
+      "duration" : 79562
+    },
+    "status" : "broken",
+    "statusMessage" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x556898b3afba <unknown>\n#1 0x5568985bf6d0 <unknown>\n#2 0x5568986112aa <unknown>\n#3 0x556898611541 <unknown>\n#4 0x55689865f6c4 <unknown>\n#5 0x556898636e5d <unknown>\n#6 0x55689865cb54 <unknown>\n#7 0x556898636c03 <unknown>\n#8 0x5568986037a8 <unknown>\n#9 0x556898604421 <unknown>\n#10 0x556898affb28 <unknown>\n#11 0x556898b0387f <unknown>\n#12 0x556898ae7c49 <unknown>\n#13 0x556898b04405 <unknown>\n#14 0x556898acd4ff <unknown>\n#15 0x556898b28258 <unknown>\n#16 0x556898b28432 <unknown>\n#17 0x556898b39fa3 <unknown>\n#18 0x7f525b49caa4 <unknown>\n#19 0x7f525b529c6c <unknown>\n\n",
+    "statusTrace" : "  File \"/opt/hostedtoolcache/Python/3.12.11/x64/lib/python3.12/site-packages/pluggy/_callers.py\", line 38, in run_old_style_hookwrapper\n    res = yield\n          ^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.11/x64/lib/python3.12/site-packages/pluggy/_callers.py\", line 139, in _multicall\n    teardown.throw(exception)\n  File \"/opt/hostedtoolcache/Python/3.12.11/x64/lib/python3.12/site-packages/_pytest/setuponly.py\", line 36, in pytest_fixture_setup\n    return (yield)\n            ^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.11/x64/lib/python3.12/site-packages/pluggy/_callers.py\", line 121, in _multicall\n    res = hook_impl.function(*args)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.11/x64/lib/python3.12/site-packages/_pytest/fixtures.py\", line 1140, in pytest_fixture_setup\n    result = call_fixture_func(fixturefunc, request, kwargs)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.11/x64/lib/python3.12/site-packages/_pytest/fixtures.py\", line 917, in call_fixture_func\n    fixture_result = fixturefunc(**kwargs)\n                     ^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/DealerPassport/DealerPassport/tests/conftest.py\", line 14, in auth_user_admin\n    main_page.check_button_agree().click()\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.11/x64/lib/python3.12/site-packages/allure_commons/_allure.py\", line 192, in impl\n    return func(*a, **kw)\n           ^^^^^^^^^^^^^^\n  File \"/home/runner/work/DealerPassport/DealerPassport/pages/main_page.py\", line 17, in check_button_agree\n    return self.element_is_visible(self.locator.AGREE_BUTTON)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/DealerPassport/DealerPassport/pages/base_page.py\", line 18, in element_is_visible\n    self.go_to_element(self.element_is_present(locator))\n                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/DealerPassport/DealerPassport/pages/base_page.py\", line 34, in element_is_present\n    return Wait(self.driver, self.timeout).until(ec.presence_of_element_located(locator))\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.11/x64/lib/python3.12/site-packages/selenium/webdriver/support/wait.py\", line 105, in until\n    raise TimeoutException(message, screen, stacktrace)\n",
+    "steps" : [ {
+      "name" : "Проверка видимости кнопки '('xpath', '//span[text()=\"Согласен\"]')' на главной странице",
+      "time" : {
+        "start" : 1761805141761,
+        "stop" : 1761805201912,
+        "duration" : 60151
+      },
+      "status" : "broken",
+      "statusMessage" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\n#0 0x556898b3afba <unknown>\n#1 0x5568985bf6d0 <unknown>\n#2 0x5568986112aa <unknown>\n#3 0x556898611541 <unknown>\n#4 0x55689865f6c4 <unknown>\n#5 0x556898636e5d <unknown>\n#6 0x55689865cb54 <unknown>\n#7 0x556898636c03 <unknown>\n#8 0x5568986037a8 <unknown>\n#9 0x556898604421 <unknown>\n#10 0x556898affb28 <unknown>\n#11 0x556898b0387f <unknown>\n#12 0x556898ae7c49 <unknown>\n#13 0x556898b04405 <unknown>\n#14 0x556898acd4ff <unknown>\n#15 0x556898b28258 <unknown>\n#16 0x556898b28432 <unknown>\n#17 0x556898b39fa3 <unknown>\n#18 0x7f525b49caa4 <unknown>\n#19 0x7f525b529c6c <unknown>\n\n",
+      "statusTrace" : "  File \"/opt/hostedtoolcache/Python/3.12.11/x64/lib/python3.12/site-packages/allure_commons/_allure.py\", line 192, in impl\n    return func(*a, **kw)\n           ^^^^^^^^^^^^^^\n  File \"/home/runner/work/DealerPassport/DealerPassport/pages/main_page.py\", line 17, in check_button_agree\n    return self.element_is_visible(self.locator.AGREE_BUTTON)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/DealerPassport/DealerPassport/pages/base_page.py\", line 18, in element_is_visible\n    self.go_to_element(self.element_is_present(locator))\n                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/DealerPassport/DealerPassport/pages/base_page.py\", line 34, in element_is_present\n    return Wait(self.driver, self.timeout).until(ec.presence_of_element_located(locator))\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.11/x64/lib/python3.12/site-packages/selenium/webdriver/support/wait.py\", line 105, in until\n    raise TimeoutException(message, screen, stacktrace)\n",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : true,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 1,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  }, {
+    "name" : "clear_allure_results_folder",
+    "time" : {
+      "start" : 1761805089697,
+      "stop" : 1761805089697,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "driver",
+    "time" : {
+      "start" : 1761805114833,
+      "stop" : 1761805122351,
+      "duration" : 7518
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "afterStages" : [ {
+    "name" : "driver::0",
+    "time" : {
+      "start" : 1761805201953,
+      "stop" : 1761805202041,
+      "duration" : 88
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "epic",
+    "value" : "Тестирование страницы 'Редактор'"
+  }, {
+    "name" : "tag",
+    "value" : "auto_test"
+  }, {
+    "name" : "parentSuite",
+    "value" : "tests.ui_tests"
+  }, {
+    "name" : "suite",
+    "value" : "editor_page_test"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestEditorPage"
+  }, {
+    "name" : "host",
+    "value" : "runnervmwhb2z"
+  }, {
+    "name" : "thread",
+    "value" : "2570-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.ui_tests.editor_page_test"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Test defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 6,
+        "broken" : 1,
+        "skipped" : 0,
+        "passed" : 37,
+        "unknown" : 0,
+        "total" : 44
+      },
+      "items" : [ {
+        "uid" : "74ba61b5c1021a84",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/526//#testresult/74ba61b5c1021a84",
+        "status" : "passed",
+        "time" : {
+          "start" : 1761769339790,
+          "stop" : 1761769349761,
+          "duration" : 9971
+        }
+      }, {
+        "uid" : "df506dbf7e64ae10",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/28//#testresult/df506dbf7e64ae10",
+        "status" : "passed",
+        "time" : {
+          "start" : 1761762693344,
+          "stop" : 1761762696429,
+          "duration" : 3085
+        }
+      }, {
+        "uid" : "dac6404def6253c8",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/525//#testresult/dac6404def6253c8",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Меню редактора изменилось\nassert ['Глобальный ...рушений', ...] == ['Глобальный ...рушений', ...]\n  \n  Left contains one more item: 'Реквизиты АВТОВАЗ'\n  \n  Full diff:\n    [\n        'Глобальный рейтинг',\n        'Квартили',\n        'Персонал',\n        'База сотрудников',\n        'Подразделения',\n        'Виды нарушений',\n        'Редактор форм заявок-деклараций',\n        'Справочник должностей',\n        'Каталог учебных программ',\n        'Справочники библиотеки документов',\n        'Редактор отчетов',\n        'Справочник информационных систем',\n        'Справочник разделов фотогалереи',\n        'Справочник для выбора адреса',\n        'Справочник тарифов IVIDEON',\n  +     'Реквизиты АВТОВАЗ',\n    ]",
+        "time" : {
+          "start" : 1761682985290,
+          "stop" : 1761682986831,
+          "duration" : 1541
+        }
+      }, {
+        "uid" : "54f614a49c710955",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/524//#testresult/54f614a49c710955",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Меню редактора изменилось\nassert ['Глобальный ...рушений', ...] == ['Глобальный ...рушений', ...]\n  \n  Left contains one more item: 'Реквизиты АВТОВАЗ'\n  \n  Full diff:\n    [\n        'Глобальный рейтинг',\n        'Квартили',\n        'Персонал',\n        'База сотрудников',\n        'Подразделения',\n        'Виды нарушений',\n        'Редактор форм заявок-деклараций',\n        'Справочник должностей',\n        'Каталог учебных программ',\n        'Справочники библиотеки документов',\n        'Редактор отчетов',\n        'Справочник информационных систем',\n        'Справочник разделов фотогалереи',\n        'Справочник для выбора адреса',\n        'Справочник тарифов IVIDEON',\n  +     'Реквизиты АВТОВАЗ',\n    ]",
+        "time" : {
+          "start" : 1761596382000,
+          "stop" : 1761596383400,
+          "duration" : 1400
+        }
+      }, {
+        "uid" : "d30ee43d9762e2e4",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/523//#testresult/d30ee43d9762e2e4",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Меню редактора изменилось\nassert ['Глобальный ...рушений', ...] == ['Глобальный ...рушений', ...]\n  \n  Left contains one more item: 'Реквизиты АВТОВАЗ'\n  \n  Full diff:\n    [\n        'Глобальный рейтинг',\n        'Квартили',\n        'Персонал',\n        'База сотрудников',\n        'Подразделения',\n        'Виды нарушений',\n        'Редактор форм заявок-деклараций',\n        'Справочник должностей',\n        'Каталог учебных программ',\n        'Справочники библиотеки документов',\n        'Редактор отчетов',\n        'Справочник информационных систем',\n        'Справочник разделов фотогалереи',\n        'Справочник для выбора адреса',\n        'Справочник тарифов IVIDEON',\n  +     'Реквизиты АВТОВАЗ',\n    ]",
+        "time" : {
+          "start" : 1761510041024,
+          "stop" : 1761510042625,
+          "duration" : 1601
+        }
+      }, {
+        "uid" : "bc79f90c650f144b",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/522//#testresult/bc79f90c650f144b",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Меню редактора изменилось\nassert ['Глобальный ...рушений', ...] == ['Глобальный ...рушений', ...]\n  \n  Left contains one more item: 'Реквизиты АВТОВАЗ'\n  \n  Full diff:\n    [\n        'Глобальный рейтинг',\n        'Квартили',\n        'Персонал',\n        'База сотрудников',\n        'Подразделения',\n        'Виды нарушений',\n        'Редактор форм заявок-деклараций',\n        'Справочник должностей',\n        'Каталог учебных программ',\n        'Справочники библиотеки документов',\n        'Редактор отчетов',\n        'Справочник информационных систем',\n        'Справочник разделов фотогалереи',\n        'Справочник для выбора адреса',\n        'Справочник тарифов IVIDEON',\n  +     'Реквизиты АВТОВАЗ',\n    ]",
+        "time" : {
+          "start" : 1761423618121,
+          "stop" : 1761423619567,
+          "duration" : 1446
+        }
+      }, {
+        "uid" : "f2e760036c752daa",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/521//#testresult/f2e760036c752daa",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Меню редактора изменилось\nassert ['Глобальный ...рушений', ...] == ['Глобальный ...рушений', ...]\n  \n  Left contains one more item: 'Реквизиты АВТОВАЗ'\n  \n  Full diff:\n    [\n        'Глобальный рейтинг',\n        'Квартили',\n        'Персонал',\n        'База сотрудников',\n        'Подразделения',\n        'Виды нарушений',\n        'Редактор форм заявок-деклараций',\n        'Справочник должностей',\n        'Каталог учебных программ',\n        'Справочники библиотеки документов',\n        'Редактор отчетов',\n        'Справочник информационных систем',\n        'Справочник разделов фотогалереи',\n        'Справочник для выбора адреса',\n        'Справочник тарифов IVIDEON',\n  +     'Реквизиты АВТОВАЗ',\n    ]",
+        "time" : {
+          "start" : 1761337297260,
+          "stop" : 1761337298824,
+          "duration" : 1564
+        }
+      }, {
+        "uid" : "eb5c93834e892871",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/520//#testresult/eb5c93834e892871",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Меню редактора изменилось\nassert ['Глобальный ...рушений', ...] == ['Глобальный ...рушений', ...]\n  \n  Left contains one more item: 'Реквизиты АВТОВАЗ'\n  \n  Full diff:\n    [\n        'Глобальный рейтинг',\n        'Квартили',\n        'Персонал',\n        'База сотрудников',\n        'Подразделения',\n        'Виды нарушений',\n        'Редактор форм заявок-деклараций',\n        'Справочник должностей',\n        'Каталог учебных программ',\n        'Справочники библиотеки документов',\n        'Редактор отчетов',\n        'Справочник информационных систем',\n        'Справочник разделов фотогалереи',\n        'Справочник для выбора адреса',\n        'Справочник тарифов IVIDEON',\n  +     'Реквизиты АВТОВАЗ',\n    ]",
+        "time" : {
+          "start" : 1761250862722,
+          "stop" : 1761250864335,
+          "duration" : 1613
+        }
+      }, {
+        "uid" : "315a7fc73b7c73c4",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/519//#testresult/315a7fc73b7c73c4",
+        "status" : "passed",
+        "time" : {
+          "start" : 1761164592177,
+          "stop" : 1761164593551,
+          "duration" : 1374
+        }
+      }, {
+        "uid" : "ba491741ed6a2823",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/518//#testresult/ba491741ed6a2823",
+        "status" : "passed",
+        "time" : {
+          "start" : 1761078182888,
+          "stop" : 1761078184318,
+          "duration" : 1430
+        }
+      }, {
+        "uid" : "7cec479d5a26724e",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/517//#testresult/7cec479d5a26724e",
+        "status" : "passed",
+        "time" : {
+          "start" : 1760991710017,
+          "stop" : 1760991711394,
+          "duration" : 1377
+        }
+      }, {
+        "uid" : "9c30ea604563803d",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/516//#testresult/9c30ea604563803d",
+        "status" : "passed",
+        "time" : {
+          "start" : 1760905203441,
+          "stop" : 1760905204821,
+          "duration" : 1380
+        }
+      }, {
+        "uid" : "371ecac846640bcf",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/515//#testresult/371ecac846640bcf",
+        "status" : "passed",
+        "time" : {
+          "start" : 1760818778069,
+          "stop" : 1760818779758,
+          "duration" : 1689
+        }
+      }, {
+        "uid" : "8d3139c795125761",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/514//#testresult/8d3139c795125761",
+        "status" : "passed",
+        "time" : {
+          "start" : 1760732488046,
+          "stop" : 1760732489642,
+          "duration" : 1596
+        }
+      }, {
+        "uid" : "f930365aa4e07f74",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/513//#testresult/f930365aa4e07f74",
+        "status" : "passed",
+        "time" : {
+          "start" : 1760646071695,
+          "stop" : 1760646073070,
+          "duration" : 1375
+        }
+      }, {
+        "uid" : "c023d22a38641791",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/512//#testresult/c023d22a38641791",
+        "status" : "passed",
+        "time" : {
+          "start" : 1760559733357,
+          "stop" : 1760559734791,
+          "duration" : 1434
+        }
+      }, {
+        "uid" : "2263452186a0931",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/511//#testresult/2263452186a0931",
+        "status" : "passed",
+        "time" : {
+          "start" : 1760473301943,
+          "stop" : 1760473303470,
+          "duration" : 1527
+        }
+      }, {
+        "uid" : "6bf8ececf252c52f",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/510//#testresult/6bf8ececf252c52f",
+        "status" : "passed",
+        "time" : {
+          "start" : 1760386869503,
+          "stop" : 1760386870945,
+          "duration" : 1442
+        }
+      }, {
+        "uid" : "d62afea8ae1e8ab5",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/509//#testresult/d62afea8ae1e8ab5",
+        "status" : "passed",
+        "time" : {
+          "start" : 1760300374812,
+          "stop" : 1760300376373,
+          "duration" : 1561
+        }
+      }, {
+        "uid" : "502f614871374b57",
+        "reportUrl" : "https://Nat754.github.io/DealerPassport/508//#testresult/502f614871374b57",
+        "status" : "passed",
+        "time" : {
+          "start" : 1760213898059,
+          "stop" : 1760213899486,
+          "duration" : 1427
+        }
+      } ]
+    },
+    "tags" : [ "auto_test" ]
+  },
+  "source" : "4c7c3af32693acfd.json",
+  "parameterValues" : [ ]
+}
