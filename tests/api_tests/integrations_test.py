@@ -1,6 +1,8 @@
 from pprint import pprint
 import allure
 import pytest
+import requests
+
 from pages.rest_api_methods import RESTApi
 from tests.constants import Urls, IntegrationsConstants, Tokens, StatusCodes, Assertions
 
@@ -68,4 +70,12 @@ class TestIntegrations:
         url = f'{self.url.REGISTRY_URL}/AVWS_PPD_USER_REESTR'
         headers = self.token.REGISTRY
         response = self.page.get(url, headers=headers)
+        assert response.status_code == self.status.OK, f'{self.assertion.STATUS} - {response.text}'
+
+    @allure.title('Получить чек-листы из autocrm (ПКД)')
+    def test_pkd_integration(self):
+        url = self.url.AUTOCRM_URL
+        headers = self.token.AUTOCRM
+        response = requests.get(url=url, headers=headers)
+        # print([item["dealer_code"] for item in response.json()])
         assert response.status_code == self.status.OK, f'{self.assertion.STATUS} - {response.text}'

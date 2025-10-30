@@ -16,6 +16,7 @@ class Urls:
     MS_URL_PROD = os.environ["MS_URL_PROD"]
     CANDIDATES_URL = os.environ["CANDIDATES_URL"]
     REGISTRY_URL = os.environ["REGISTRY_URL"]
+    AUTOCRM_URL = os.environ["AUTOCRM_URL"]
 
     AUTH = "/auth"
     EDITOR_URL = "/editor/"
@@ -75,9 +76,9 @@ class Tokens:
     TOKEN_ADMIN = {'token': TOKEN}
     MS_PROD = {'Authorization': f'{os.environ["MS_PROD"]}'}
     MS_TEST = {'Authorization': f'{os.environ["MS_TEST"]}'}
-    PKD = {'Authorization': f'{os.environ["AUTOCRM"]}'}
+    AUTOCRM = {'Authorization': f'{os.environ["AUTOCRM"]}'}
     REGISTRY = {'Authorization': f'{os.environ["REGISTRY"]}'}
-    MY_TOKEN = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImxvZ25hbWUiOiJTVVBFUl9BRE1JTiJ9LCJpYXQiOjE2OTA0Njk2MTJ9.f3kv5zYaDTvEYhfB9N5Nw8egdhfMGJBmxnas_5nCvzU'
+    MY_TOKEN = ''
 
 
 class SRRConstant:
