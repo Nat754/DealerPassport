@@ -67,11 +67,10 @@ class Urls:
 
 
 class Tokens:
-
-    TOKEN = os.environ["PROD_ADMIN"] if Urls.MAIN_URL == os.environ["MAIN_URL_PROD"] else os.environ["TEST_ADMIN"]\
+    TOKEN = os.environ["PROD_ADMIN"] if Urls.MAIN_URL == os.environ["MAIN_URL_PROD"] else os.environ["TEST_ADMIN"] \
         if Urls.MAIN_URL == os.environ["MAIN_URL_TEST"] else os.environ["SEO_ADMIN"]
     TOKEN_TEST = os.environ["SEO_TEST"]
-    TOKEN_EXPORT = os.environ["EXPORT_API_PROD"] if Urls.MAIN_URL == os.environ["MAIN_URL_PROD"]\
+    TOKEN_EXPORT = os.environ["EXPORT_API_PROD"] if Urls.MAIN_URL == os.environ["MAIN_URL_PROD"] \
         else os.environ["EXPORT_API_SEO"]
     TOKEN_ADMIN = {'token': TOKEN}
     MS_PROD = {'Authorization': f'{os.environ["MS_PROD"]}'}
@@ -82,7 +81,6 @@ class Tokens:
 
 
 class SRRConstant:
-
     LIST_PROD = ['Возвращение автомобилей на ТО по месяцу контроля\nВозвращение автомобилей на ТО по периоду '
                  'продаж\nВозвращение автомобилей на гарантийный ремонт по месяцу контроля\nВозвращение автомобилей '
                  'на гарантийный ремонт (свой-чужой) по месяцу контроля\nМашинозаезды в динамике\nМашинозаезды по '
@@ -110,19 +108,18 @@ class SRRConstant:
 
 
 class EditorConstants:
-
     EDITOR_PROD = ['Глобальный рейтинг', 'Квартили', 'Персонал', 'База сотрудников', 'Подразделения', 'Виды нарушений',
                    'Редактор форм заявок-деклараций', 'Справочник должностей', 'Каталог учебных программ',
                    'Справочники библиотеки документов', 'Редактор отчетов', 'Справочник информационных систем',
-                   'Справочник разделов фотогалереи', 'Справочник для выбора адреса', 'Справочник тарифов IVIDEON',
-                   'Реквизиты АВТОВАЗ']
+                   'Справочник разделов фотогалереи', 'Шаблоны договоров', 'Справочник для выбора адреса',
+                   'Справочник доверенных лиц', 'Справочник тарифов IVIDEON', 'Реквизиты АВТОВАЗ']
 
-    EDITOR_DEV = ['Глобальный рейтинг', 'Квартили', 'Персонал', 'База сотрудников', 'Подразделения',
-                  'Виды нарушений', 'Редактор форм заявок-деклараций', 'Справочник должностей',
-                  'Каталог учебных программ', 'Справочники библиотеки документов', 'Редактор отчетов',
-                  'Справочник зон камер', 'Справочник информационных систем',
-                  'Справочник разделов фотогалереи', 'Шаблоны договоров', 'Справочник для выбора адреса',
-                  'Справочник доверенных лиц', 'Справочник тарифов IVIDEON', 'Реквизиты АВТОВАЗ']
+    EDITOR_DEV = ['Глобальный рейтинг', 'Квартили', 'Персонал', 'База сотрудников', 'Подразделения', 'Виды нарушений',
+                  'Редактор форм заявок-деклараций', 'Справочник должностей', 'Каталог учебных программ',
+                  'Справочники библиотеки документов', 'Редактор отчетов', 'Справочник зон камер',
+                  'Справочник информационных систем', 'Справочник разделов фотогалереи', 'Шаблоны договоров',
+                  'Справочник для выбора адреса', 'Справочник доверенных лиц', 'Справочник тарифов IVIDEON',
+                  'Реквизиты АВТОВАЗ']
 
     EDITOR_MENU = EDITOR_PROD if Urls.MAIN_URL == os.environ["MAIN_URL_PROD"] else EDITOR_DEV
 
@@ -184,7 +181,10 @@ class Headers:
         'Cookie': f'token={Tokens.TOKEN_TEST}'
     }
 
-    HEADERS_MY = {'authorization': f'Bearer {Tokens.MY_TOKEN}'}
+    HEADERS_MY = {'accept': '*/*',
+                  'Content-Type': 'application/json',
+                  'Cookie': f'token={Tokens.MY_TOKEN}'
+                  }
 
     HEADERS_EXPORT = {
         'Authorization': f'Bearer {Tokens.TOKEN_EXPORT}'
