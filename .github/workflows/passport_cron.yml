@@ -7,10 +7,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
-    - name: Pass credentials
-      run: |
-        sudo echo "${{ secrets.CREDENTIALS }}" > data.py
-
     - name: Set up Python 3.12
       uses: actions/setup-python@v5
       with:
@@ -49,6 +45,8 @@ jobs:
         REGISTRY: ${{ secrets.REGISTRY }}
         EXPORT_API_SEO: ${{ secrets.EXPORT_API_SEO }}
         EXPORT_API_PROD: ${{ secrets.EXPORT_API_PROD }}
+        SA_SEO: ${{ secrets.SA_SEO }}
+        USER_NEW_SEO: ${{ secrets.USER_NEW_SEO }}
       run: |
         pytest -s -v --alluredir=allure-results
 
