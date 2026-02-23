@@ -79,6 +79,6 @@ class MainPage(BasePage):
     def check_block_about(self):
         return self.element_is_visible(self.locator.BLOCK_ABOUT)
 
-    @allure.step(f"Проверка видимости кнопок в блоке информации о ДЦ")
+    @allure.step("Проверка видимости кнопок в блоке информации о ДЦ")
     def check_block_about_buttons(self):
         return self.elements_are_visible(self.locator.BLOCK_ABOUT_BUTTONS)

@@ -16,5 +16,5 @@ class RESTApi:
         return requests.put(url=url, headers=headers, data=data, cookies=cookies)
 
     @staticmethod
-    def delete(url: str, data: dict = None, headers: dict = None, cookies: dict = None):
+    def delete(url: str, data: str = None, headers: dict = None, cookies: dict = None):
         return requests.delete(url=url, headers=headers, data=data, cookies=cookies)

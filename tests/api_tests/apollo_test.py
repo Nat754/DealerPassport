@@ -1,3 +1,4 @@
+import allure
 import pytest
 import json
 from pages.rest_api_methods import RESTApi
@@ -13,7 +14,8 @@ class TestGQL:
     const = IntegrationsConstants
     code = StatusCodes
 
-    @pytest.mark.manual_test
+    @allure.epic("Тестирование GQL")
+    @pytest.mark.auto_test
     def test_gql(self):
         url = f"{self.url.MAIN_URL}/graphql"
         payload = json.dumps({

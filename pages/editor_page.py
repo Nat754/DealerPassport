@@ -11,4 +11,3 @@ class EditorPage(BasePage):
         editor_menu = self.elements_are_visible(self.locator.ITEMS_LIST)
         items_list = [item.text for item in editor_menu]
         return items_list
-
