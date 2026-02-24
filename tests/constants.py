@@ -1,6 +1,6 @@
 import os
 from dotenv import load_dotenv
-from datetime import datetime, timedelta
+from datetime import datetime
 
 load_dotenv()
 
@@ -72,12 +72,16 @@ class Tokens:
     TOKEN_TEST = os.environ["SEO_TEST"]
     TOKEN_EXPORT = os.environ["EXPORT_API_PROD"] if Urls.MAIN_URL == os.environ["MAIN_URL_PROD"] \
         else os.environ["EXPORT_API_SEO"]
+    TOKEN_EXPORT_NEW = os.environ["EXPORT_API_PROD_NEW"] if Urls.MAIN_URL == os.environ["MAIN_URL_PROD"] \
+        else os.environ["NEW_EXPORT_SEO"]
     TOKEN_ADMIN = {'token': TOKEN}
     MS_PROD = {'Authorization': f'{os.environ["MS_PROD"]}'}
     MS_TEST = {'Authorization': f'{os.environ["MS_TEST"]}'}
     AUTOCRM = {'Authorization': f'{os.environ["AUTOCRM"]}'}
     REGISTRY = {'Authorization': f'{os.environ["REGISTRY"]}'}
-    MY_TOKEN = ''
+    SA_SEO = os.environ["SA_SEO"]
+    USER_NEW_SEO = os.environ["USER_NEW_SEO"]
+    TOKEN_EXPORT_NEW_TEST = os.environ["EXPORT_API_TEST"]
 
 
 class SRRConstant:
@@ -133,6 +137,10 @@ class IntegrationsConstants:
     url_test = f'{Urls.MS_URL_TEST}?year={YEAR}&quarter={QUARTER}'
     url_prod = f'{Urls.MS_URL_PROD}?year={YEAR}&quarter={QUARTER}'
 
+    invoices = []
+
+    appeals = []
+
 
 class HeaderConstant:
     PASSPORT_TEXT = 'ПАСПОРТ'
@@ -181,19 +189,27 @@ class Headers:
         'Cookie': f'token={Tokens.TOKEN_TEST}'
     }
 
-    HEADERS_MY = {'accept': '*/*',
-                  'Content-Type': 'application/json',
-                  'Cookie': f'token={Tokens.MY_TOKEN}'
-                  }
+    HEADERS_SA_SEO = {'accept': '*/*',
+                      'Content-Type': 'application/json',
+                      'Cookie': f'token={Tokens.SA_SEO}'
+                      }
 
     HEADERS_EXPORT = {
         'Authorization': f'Bearer {Tokens.TOKEN_EXPORT}'
     }
 
-    HEADERS_USER_NEW = {
+    HEADERS_EXPORT_NEW = {
+        'Authorization': f'Bearer {Tokens.TOKEN_EXPORT_NEW}'
+    }
+
+    HEADERS_EXPORT_NEW_TEST = {
+        'Authorization': f'{Tokens.TOKEN_EXPORT_NEW_TEST}'
+    }
+
+    HEADERS_USER_NEW_SEO = {
         'accept': '*/*',
         'Content-Type': 'application/json',
-        'Cookie': f'token={Tokens.MY_TOKEN}'
+        'Cookie': f'token={Tokens.USER_NEW_SEO}'
     }
 
     HEADERS_AN = {

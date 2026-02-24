@@ -47,6 +47,9 @@ jobs:
         EXPORT_API_PROD: ${{ secrets.EXPORT_API_PROD }}
         SA_SEO: ${{ secrets.SA_SEO }}
         USER_NEW_SEO: ${{ secrets.USER_NEW_SEO }}
+        NEW_EXPORT_SEO: ${{ secrets.NEW_EXPORT_SEO }}
+        EXPORT_API_TEST: ${{ secrets.EXPORT_API_TEST }}
+        EXPORT_API_PROD_NEW: ${{ secrets.EXPORT_API_PROD_NEW }}
       run: |
         pytest -s -v --alluredir=allure-results
 
