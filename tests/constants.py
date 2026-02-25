@@ -134,8 +134,8 @@ class IntegrationsConstants:
     MONTH = datetime.now().month
     DATE_NOW = datetime.now().date()
     DEALER_ID = '1197057857'
-    url_test = f'{Urls.MS_URL_TEST}?year={YEAR}&quarter={QUARTER}'
-    url_prod = f'{Urls.MS_URL_PROD}?year={YEAR}&quarter={QUARTER}'
+    MS_URL_TEST = Urls.MS_URL_TEST
+    MS_URL_PROD = Urls.MS_URL_PROD
 
     invoices = []
 

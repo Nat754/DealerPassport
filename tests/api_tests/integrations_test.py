@@ -1,4 +1,3 @@
-# from pprint import pprint
 import allure
 import pytest
 import requests
@@ -19,30 +18,48 @@ class TestIntegrations:
 
     @allure.title('Проверка доступности MSPortal Test')
     def test_get_ms_portal_test(self):
-        response_test = self.page.get(self.const.url_test, headers=self.token.MS_PROD)
+        response_test = self.page.get(self.const.MS_URL_TEST, headers=self.token.MS_PROD)
         assert response_test.status_code == self.status.OK, f'{self.assertion.STATUS} - {response_test.text}'
 
     @allure.title('Проверка доступности MSPortal Prod')
     def test_get_ms_portal_prod(self):
-        response_prod = self.page.get(self.const.url_test, headers=self.token.MS_PROD)
+        response_prod = self.page.get(self.const.MS_URL_TEST, headers=self.token.MS_PROD)
         assert response_prod.status_code == self.status.OK, f'{self.assertion.STATUS} - {response_prod.text}'
 
     @allure.title('Получение данные качества тест MSPortal')
     def test_get_indicators_test(self):
-        response_test = self.page.get(self.const.url_test, headers=self.token.MS_PROD)
+        url = f'{self.const.MS_URL_TEST}resultByQuarter?year={self.const.YEAR}&quarter={self.const.QUARTER}'
+        response_test = self.page.get(url=url, headers=self.token.MS_PROD)
         # dealers = [item['dealer_id'] for item in response_test.json()]
         # for dealer in dealers:
         #     print(f'\nСписок индикаторов для ДЦ {dealer} на тесте ({self.const.QUARTER}Q{self.const.YEAR % 2000}):',
-        #           [item['mark'] for item in response_test if item['dealer_id'] == dealer], sep='\n')
+        #           [item['mark'] for item in response_test.json() if item['dealer_id'] == dealer], sep='\n')
         assert response_test.status_code == self.status.OK, f'{self.assertion.STATUS} - {response_test.text}'
 
     @allure.title('Получить данные качества прод MSPortal')
     def test_get_indicators_prod(self):
-        response_prod = self.page.get(url=self.const.url_prod, headers=self.token.MS_PROD)
+        url = f'{self.const.MS_URL_PROD}resultByQuarter?year={self.const.YEAR - 1}&quarter={self.const.QUARTER + 3}'
+        response_prod = self.page.get(url=url, headers=self.token.MS_PROD)
+        # pprint(response_prod.json())
         # dealers = [item['dealer_id'] for item in response_prod.json()]
         # for dealer in dealers:
         #     print(f'\nСписок индикаторов для ДЦ {dealer} на прод ({self.const.QUARTER}Q{self.const.YEAR % 2000}):',
-        #           [item['mark'] for item in response_prod if item['dealer_id'] == dealer], sep='\n')
+        #           [f"{item['mark']} = {item['kindForm']} + {item['typeForm']}" for item in response_prod.json()
+        #            if item['dealer_id'] == dealer], sep='\n')
+        assert response_prod.status_code == self.status.OK, f'{self.assertion.STATUS} - {response_prod.text}'
+
+    @allure.title('Получить данные качества прод MSPortal kindForm')
+    def test_get_kind_form_prod(self):
+        url = f'{self.const.MS_URL_PROD}kindForm'
+        response_prod = self.page.get(url=url, headers=self.token.MS_PROD)
+        # pprint(response_prod.json())
+        assert response_prod.status_code == self.status.OK, f'{self.assertion.STATUS} - {response_prod.text}'
+
+    @allure.title('Получить данные качества прод MSPortal typeForm')
+    def test_get_type_form(self):
+        url = f'{self.const.MS_URL_PROD}typeForm'
+        response_prod = self.page.get(url=url, headers=self.token.MS_PROD)
+        # pprint(response_prod.json())
         assert response_prod.status_code == self.status.OK, f'{self.assertion.STATUS} - {response_prod.text}'
 
     @allure.title('Проверить доступности Candidates')
