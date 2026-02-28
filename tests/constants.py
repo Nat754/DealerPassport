@@ -222,7 +222,3 @@ class Headers:
 class StatusCodes:
     OK = 200
     CREATE = 201
-
-
-class Assertions:
-    STATUS = 'Неверный ответ сервера'
