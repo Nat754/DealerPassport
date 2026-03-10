@@ -28,9 +28,9 @@ class TestCourses(TestApi):
         @pytest.mark.auto_test
         @allure.title('Получить Курс')
         def test_get_employee_courses(self):
-            url = (f'{self.url.MAIN_URL}/internal-api/employee/courses?actualOn={self.const.DATE_NOW}&page=0&count=2'
-                   f'&code=%D1%80%D0%BE%D0%BF&codeIS=5552&name=%D1%80%D0%BE%D0%BF&levelId=2&searchText=%D1%80%D0%BE'
-                   f'%D0%B7%D1%87&sortField=code&sortType=ASC')
+            url = f'{self.url.MAIN_URL}/internal-api/employee/courses?actualOn={self.const.DATE_NOW}&page=0&count=2'
+                   # f'&code=%D1%80%D0%BE%D0%BF&codeIS=5552&name=%D1%80%D0%BE%D0%BF&levelId=2&searchText=%D1%80%D0%BE'
+                   # f'%D0%B7%D1%87&sortField=code&sortType=ASC'
             headers = self.header.HEADERS_ADMIN
             response = self.page.get(url=url, headers=headers)
             # print(response.status_code)
