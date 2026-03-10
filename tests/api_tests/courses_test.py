@@ -1,8 +1,7 @@
-from pprint import pprint
 import allure
 import pytest
 # import json
-# from datetime import datetime, timedelta
+# from pprint import pprint
 from pages.rest_api_methods import RESTApi
 from tests.constants import Urls, Tokens, Headers, IntegrationsConstants, StatusCodes
 from pages.assertions import Assertions
@@ -29,7 +28,9 @@ class TestCourses(TestApi):
         @pytest.mark.auto_test
         @allure.title('Получить Курс')
         def test_get_employee_courses(self):
-            url = f'{self.url.MAIN_URL}/internal-api/employee/courses?actualOn=2026-02-17&codeIS=9992'
+            url = (f'{self.url.MAIN_URL}/internal-api/employee/courses?actualOn={self.const.DATE_NOW}&page=0&count=2'
+                   f'&code=%D1%80%D0%BE%D0%BF&codeIS=5552&name=%D1%80%D0%BE%D0%BF&levelId=2&searchText=%D1%80%D0%BE'
+                   f'%D0%B7%D1%87&sortField=code&sortType=ASC')
             headers = self.header.HEADERS_ADMIN
             response = self.page.get(url=url, headers=headers)
             # print(response.status_code)
