@@ -15,6 +15,7 @@ class Urls:
     MS_URL_TEST = os.environ["MS_URL_TEST"]
     MS_URL_PROD = os.environ["MS_URL_PROD"]
     CANDIDATES_URL = os.environ["CANDIDATES_URL"]
+    CANDIDATES_TEST_URL = os.environ["CANDIDATES_TEST_URL"]
     REGISTRY_URL = os.environ["REGISTRY_URL"]
     AUTOCRM_URL = os.environ["AUTOCRM_URL"]
 

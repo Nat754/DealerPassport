@@ -1,4 +1,3 @@
-from pprint import pprint
 import allure
 import pytest
 from pages.rest_api_methods import RESTApi
@@ -25,7 +24,6 @@ class TestLog(TestApi):
         url = f'{self.url.MAIN_URL}/internal-api/logs/activity'
         headers = self.header.HEADERS_ADMIN
         response = self.page.get(url, headers=headers)
-        # pprint(response.json())
         Assertions.assert_status_code(response, self.code.OK)
 
     @allure.title('Получить список всех типов событий')
@@ -33,7 +31,6 @@ class TestLog(TestApi):
         url = f'{self.url.MAIN_URL}/internal-api/logs/event-types'
         headers = self.header.HEADERS_ADMIN
         response = self.page.get(url, headers=headers)
-        pprint(response.json())
         Assertions.assert_status_code(response, self.code.OK)
 
     @allure.title('генерировать Excel отчёт по логам активности')
@@ -41,7 +38,6 @@ class TestLog(TestApi):
         url = f'{self.url.MAIN_URL}/internal-api/logs/activity-report'
         headers = self.header.HEADERS_ADMIN
         response = self.page.get(url, headers=headers)
-        # pprint(response.json())
         Assertions.assert_status_code(response, self.code.OK)
 
     @allure.title('Получить логи cron задач')
@@ -49,7 +45,6 @@ class TestLog(TestApi):
         url = f'{self.url.MAIN_URL}/internal-api/logs/cron?name=LadaAcademiaIntegration'
         headers = self.header.HEADERS_ADMIN
         response = self.page.get(url, headers=headers)
-        # pprint(response.json())
         Assertions.assert_status_code(response, self.code.OK)
 
     @allure.title('Получить список уникальных имен cron задач')
@@ -57,5 +52,4 @@ class TestLog(TestApi):
         url = f'{self.url.MAIN_URL}/internal-api/logs/cron/names'
         headers = self.header.HEADERS_ADMIN
         response = self.page.get(url, headers=headers)
-        # pprint(response.json())
         Assertions.assert_status_code(response, self.code.OK)

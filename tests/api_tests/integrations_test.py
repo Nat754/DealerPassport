@@ -3,7 +3,7 @@ import pytest
 import requests
 from pages.assertions import Assertions
 from pages.rest_api_methods import RESTApi
-from tests.constants import Urls, IntegrationsConstants, Tokens, StatusCodes
+from tests.constants import Urls, IntegrationsConstants, Tokens, StatusCodes, Headers
 
 
 @allure.epic("Test integrations")
@@ -14,6 +14,7 @@ class TestIntegrations:
     token = Tokens
     page = RESTApi
     code = StatusCodes
+    header = Headers
 
     @allure.title('Проверка доступности MSPortal Test')
     def test_get_ms_portal_test(self):
@@ -67,6 +68,20 @@ class TestIntegrations:
         response = self.page.get(url)
         # pprint(response.json())
         Assertions.assert_status_code(response, self.code.OK)
+
+    # @allure.title('Проверить доступности Candidates users')
+    # def test_get_candidates_passport_import_users(self):
+    #     url = f'{self.url.CANDIDATES_URL}/passport/importUsers'
+    #     header = self.header.HEADERS_ADMIN
+    #     response = self.page.get(url=url, headers=header)
+    #     Assertions.assert_status_code(response, self.code.OK)
+    #
+    # @allure.title('Проверить доступности Candidates dealers')
+    # def test_get_candidates_passport_import_dealers(self):
+    #     url = f'{self.url.CANDIDATES_URL}/passport/dealers'
+    #     header = self.header.HEADERS_ADMIN
+    #     response = self.page.get(url=url, headers=header)
+    #     Assertions.assert_status_code(response, self.code.OK)
 
     @allure.title('Получить ДЦ из Реестра')
     def test_get_registry_dealers(self):
