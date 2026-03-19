@@ -1,5 +1,3 @@
-from pprint import pprint
-
 import allure
 import pytest
 from pages.rest_api_methods import RESTApi
@@ -28,7 +26,6 @@ class TestExternalApi(ExternalApi):
                f']=1197057857')
         headers = self.header.HEADERS_EXPORT_NEW
         response = self.page.get(url=url, headers=headers)
-        pprint(response.json())
         Assertions.assert_status_code(response, self.code.OK)
 
     @allure.title('Получить список сотрудников')
