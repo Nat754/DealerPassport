@@ -50,5 +50,4 @@ class TestExternalApi(ExternalApi):
         url = f'{self.url.MAIN_URL}/external-api/dealers/1197057857/personal'
         headers = self.header.HEADERS_EXPORT_NEW
         response = self.page.get(url=url, headers=headers)
-        # print(response.text)
         Assertions.assert_status_code(response, self.code.OK)
