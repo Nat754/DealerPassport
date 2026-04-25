@@ -2,7 +2,7 @@ name: PushToPassportDealer
 on:
   push:
 permissions:
-  contents: write
+  contents: read
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -75,6 +75,6 @@ jobs:
       if: always()
       uses: peaceiris/actions-gh-pages@v2
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        PERSONAL_TOKEN: ${{ secrets.MY_TOKEN }}
         PUBLISH_BRANCH: gh-pages
         PUBLISH_DIR: allure-history
