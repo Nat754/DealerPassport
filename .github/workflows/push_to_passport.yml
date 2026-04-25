@@ -1,7 +1,8 @@
 name: PushToPassportDealer
 on:
   push:
-
+permissions:
+  contents: read
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -72,7 +73,7 @@ jobs:
 
     - name: Commit Allure report
       if: always()
-      uses: peaceiris/actions-gh-pages@v4
+      uses: peaceiris/actions-gh-pages@v2
       env:
         PERSONAL_TOKEN: ${{ secrets.MY_TOKEN }}
         PUBLISH_BRANCH: gh-pages
