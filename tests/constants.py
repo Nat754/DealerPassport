@@ -6,10 +6,10 @@ load_dotenv()
 
 
 class Urls:
-    MAIN_URL = os.environ["MAIN_URL_PROD"]
+    # MAIN_URL = os.environ["MAIN_URL_PROD"]
     # MAIN_URL = os.environ["MAIN_URL_SEO"]
     # MAIN_URL = os.environ["MAIN_URL_SEO"] + ':3001'
-    # MAIN_URL = os.environ["MAIN_URL_SEO"] + ':3011'
+    MAIN_URL = os.environ["MAIN_URL_SEO"] + ':3011'
     # MAIN_URL = os.environ["MAIN_URL_SEO"] + ':3012'
     # MAIN_URL = os.environ["MAIN_URL_TEST"]
     MS_URL_TEST = os.environ["MS_URL_TEST"]
